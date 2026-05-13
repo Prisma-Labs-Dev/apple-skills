@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-05-13
+
+- Added the `core-animation` skill with the full QuartzCore framework index and per-symbol reference pages for `CALayer`, the animation classes (`CAAnimation`, `CABasicAnimation`, `CAKeyframeAnimation`, `CASpringAnimation`, `CAPropertyAnimation`, `CAAnimationGroup`, `CATransition`), `CATransaction`, `CAMediaTiming`, `CATransform3D`, common layer subclasses (`CAShapeLayer`, `CAGradientLayer`, `CAEmitterLayer`, `CAEmitterCell`, `CAReplicatorLayer`, `CAMetalLayer`, `CATextLayer`, `CATiledLayer`), and `CADisplayLink`.
+- Added SwiftUI `Canvas` and `GraphicsContext` reference pages and surfaced them in the `swiftui` skill table.
+- Listed Core Animation in the `apple-docs-index` framework table.
+
 ## 2026-04-10
 
 - Added the `uikit` skill with a full UIKit framework index and focused core API pages fetched through the direct Apple DocC workflow.

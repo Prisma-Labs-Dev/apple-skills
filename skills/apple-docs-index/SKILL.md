@@ -1,7 +1,7 @@
 ---
 name: apple-docs-index
 user-invocable: true
-description: Index of Apple developer documentation for iOS, macOS, and related frameworks. Use when looking up what APIs exist in a framework, browsing available documentation, or deciding what docs to fetch. Covers SwiftUI, UIKit, XCTest, HealthKit, Combine, SwiftData, and more.
+description: Index of Apple developer documentation for iOS, macOS, and related frameworks. Use when looking up what APIs exist in a framework, browsing available documentation, or deciding what docs to fetch. Covers SwiftUI, UIKit, Core Animation (QuartzCore), XCTest, HealthKit, Combine, SwiftData, and more.
 ---
 
 # Apple Documentation Index
@@ -19,6 +19,7 @@ This skill provides indexes of Apple framework documentation. Use these to:
 | XCTest | `xctest-index.md` | 55KB | Testing, assertions, expectations |
 | XCUIAutomation | `xcuiautomation-index.md` | 58KB | UI testing, elements, queries |
 | UIKit | `../uikit/uikit-overview.md` | 1.8MB | Views, controllers, controls, scenes |
+| Core Animation | `../core-animation/core-animation-index.md` | 80KB | CALayer, CAAnimation, CATransaction, layer subclasses |
 | HealthKit | `healthkit-index.md` | 312KB | Health data, workouts, records |
 | Combine | `combine-index.md` | 153KB | Publishers, subscribers, operators |
 | SwiftData | `swiftdata-index.md` | 86KB | Models, containers, queries |
