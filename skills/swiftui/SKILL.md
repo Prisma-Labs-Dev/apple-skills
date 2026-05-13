@@ -26,6 +26,8 @@ The following Apple documentation pages are available locally (grep-friendly):
 | [navigationsplitview.md](navigationsplitview.md) | NavigationSplitView |
 | [tabview.md](tabview.md) | TabView |
 | [list.md](list.md) | List view |
+| [canvas.md](canvas.md) | Canvas — immediate-mode drawing (iOS 15+) |
+| [graphicscontext.md](graphicscontext.md) | GraphicsContext — drawing API used inside Canvas |
 
 ## Fetching More Docs
 
@@ -57,6 +59,8 @@ The following Apple documentation pages are available locally (grep-friendly):
 | LazyHStack | `swiftui/lazyhstack` |
 | NavigationLink | `swiftui/navigationlink` |
 | ToolbarItem | `swiftui/toolbaritem` |
+| Canvas | `swiftui/canvas` |
+| GraphicsContext | `swiftui/graphicscontext` |
 
 ## Usage Instructions
 
