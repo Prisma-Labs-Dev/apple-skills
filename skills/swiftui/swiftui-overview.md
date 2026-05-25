@@ -3,7 +3,7 @@ title: SwiftUI
 source: https://developer.apple.com/documentation/swiftui
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/index/swiftui
-timestamp: 2026-05-10T06:22:50.035Z
+timestamp: 2026-05-25T06:52:05.352Z
 ---
 
 **Navigation:** [SwiftUI](/documentation/swiftui)
@@ -915,10 +915,6 @@ timestamp: 2026-05-10T06:22:50.035Z
 
 - [func fileWrapper(configuration: Self.WriteConfiguration) throws -> FileWrapper](/documentation/swiftui/filedocument/filewrapper(configuration:))
 - [static var writableContentTypes: [UTType]](/documentation/swiftui/filedocument/writablecontenttypes)
-##### FileDocument Implementations
-
-- [static var writableContentTypes: [UTType]](/documentation/swiftui/filedocument/writablecontenttypes-289b3)
-
 - [FileDocument.WriteConfiguration](/documentation/swiftui/filedocument/writeconfiguration)
 
 - [FileDocumentConfiguration](/documentation/swiftui/filedocumentconfiguration)
@@ -947,10 +943,6 @@ timestamp: 2026-05-10T06:22:50.035Z
 
 - [func fileWrapper(snapshot: Self.Snapshot, configuration: Self.WriteConfiguration) throws -> FileWrapper](/documentation/swiftui/referencefiledocument/filewrapper(snapshot:configuration:))
 - [static var writableContentTypes: [UTType]](/documentation/swiftui/referencefiledocument/writablecontenttypes)
-##### ReferenceFileDocument Implementations
-
-- [static var writableContentTypes: [UTType]](/documentation/swiftui/referencefiledocument/writablecontenttypes-41rwk)
-
 - [ReferenceFileDocument.WriteConfiguration](/documentation/swiftui/referencefiledocument/writeconfiguration)
 
 - [ReferenceFileDocumentConfiguration](/documentation/swiftui/referencefiledocumentconfiguration)
@@ -2374,10 +2366,6 @@ timestamp: 2026-05-10T06:22:50.035Z
 #### Updating the value
 
 - [func update()](/documentation/swiftui/dynamicproperty/update())
-##### DynamicProperty Implementations
-
-- [func update()](/documentation/swiftui/dynamicproperty/update()-9fxv4)
-
 
 
 - [Environment values](/documentation/swiftui/environment-values)
@@ -2632,10 +2620,6 @@ timestamp: 2026-05-10T06:22:50.035Z
 #### Getting the default value
 
 - [static var defaultValue: Self.Value](/documentation/swiftui/preferencekey/defaultvalue)
-##### PreferenceKey Implementations
-
-- [static var defaultValue: Self.Value](/documentation/swiftui/preferencekey/defaultvalue-23qgw)
-
 - [Value](/documentation/swiftui/preferencekey/value)
 #### Combining preferences
 
@@ -2808,25 +2792,6 @@ timestamp: 2026-05-10T06:22:50.035Z
 #### Implementing a custom view
 
 - [var body: Self.Body](/documentation/swiftui/view/body-8kl5o)
-##### NSViewControllerRepresentable Implementations
-
-- [var body: Never](/documentation/swiftui/nsviewcontrollerrepresentable/body)
-##### NSViewRepresentable Implementations
-
-- [var body: Never](/documentation/swiftui/nsviewrepresentable/body)
-##### UIViewControllerRepresentable Implementations
-
-- [var body: Never](/documentation/swiftui/uiviewcontrollerrepresentable/body)
-##### UIViewRepresentable Implementations
-
-- [var body: Never](/documentation/swiftui/uiviewrepresentable/body)
-##### View Implementations
-
-- [var body: _ShapeView<Self, ForegroundStyle>](/documentation/swiftui/view/body-44706)
-##### WKInterfaceObjectRepresentable Implementations
-
-- [var body: Never](/documentation/swiftui/wkinterfaceobjectrepresentable/body)
-
 - [Body](/documentation/swiftui/view/body-swift.associatedtype)
 - [func modifier<T>(T) -> ModifiedContent<Self, T>](/documentation/swiftui/view/modifier(_:))
 - [Previews in Xcode](/documentation/swiftui/previews-in-xcode)
@@ -2855,10 +2820,6 @@ timestamp: 2026-05-10T06:22:50.035Z
 ###### Specifying the platform
 
 - [static var platform: PreviewPlatform?](/documentation/swiftui/previewprovider/platform)
-###### PreviewProvider Implementations
-
-- [static var platform: PreviewPlatform?](/documentation/swiftui/previewprovider/platform-5gkzc)
-
 
 - [PreviewPlatform](/documentation/swiftui/previewplatform)
 ###### Getting an operating system
@@ -2883,10 +2844,6 @@ timestamp: 2026-05-10T06:22:50.035Z
 ###### Type Methods
 
 - [static func makeSharedContext() async throws -> Self.Context](/documentation/swiftui/previewmodifier/makesharedcontext())
-###### PreviewModifier Implementations
-
-- [static func makeSharedContext() async throws -> Self.Context](/documentation/swiftui/previewmodifier/makesharedcontext()-4zi8r)
-
 
 - [PreviewModifierContent](/documentation/swiftui/previewmodifiercontent)
 ##### Customizing a preview
@@ -4235,10 +4192,6 @@ timestamp: 2026-05-10T06:22:50.035Z
 #### Creating a view modifier
 
 - [func body(content: Self.Content) -> Self.Body](/documentation/swiftui/viewmodifier/body(content:))
-##### ViewModifier Implementations
-
-- [func body(content: Self.Content) -> Self.Body](/documentation/swiftui/viewmodifier/body(content:)-70h6f)
-
 - [Body](/documentation/swiftui/viewmodifier/body)
 - [ViewModifier.Content](/documentation/swiftui/viewmodifier/content)
 #### Adding animations to a view
@@ -5883,17 +5836,9 @@ timestamp: 2026-05-10T06:22:50.035Z
 #### Getting the velocity
 
 - [func velocity<V>(value: V, time: TimeInterval, context: AnimationContext<V>) -> V?](/documentation/swiftui/customanimation/velocity(value:time:context:))
-##### CustomAnimation Implementations
-
-- [func velocity<V>(value: V, time: TimeInterval, context: AnimationContext<V>) -> V?](/documentation/swiftui/customanimation/velocity(value:time:context:)-78qjv)
-
 #### Determining whether to merge
 
 - [func shouldMerge<V>(previous: Animation, value: V, time: TimeInterval, context: inout AnimationContext<V>) -> Bool](/documentation/swiftui/customanimation/shouldmerge(previous:value:time:context:))
-##### CustomAnimation Implementations
-
-- [func shouldMerge<V>(previous: Animation, value: V, time: TimeInterval, context: inout AnimationContext<V>) -> Bool](/documentation/swiftui/customanimation/shouldmerge(previous:value:time:context:)-9171c)
-
 
 - [AnimationContext](/documentation/swiftui/animationcontext)
 #### Managing state
@@ -5998,11 +5943,6 @@ timestamp: 2026-05-10T06:22:50.035Z
 - [macro Animatable()](/documentation/swiftui/animatable())
 - [macro AnimatableIgnored()](/documentation/swiftui/animatableignored())
 - [var animatableData: Self.AnimatableData](/documentation/swiftui/animatable/animatabledata-6nydg)
-##### Animatable Implementations
-
-- [var animatableData: EmptyAnimatableData](/documentation/swiftui/animatable/animatabledata-1gesb)
-- [var animatableData: Self](/documentation/swiftui/animatable/animatabledata-bqi8)
-
 - [AnimatableData](/documentation/swiftui/animatable/animatabledata-swift.associatedtype)
 
 - [AnimatableValues](/documentation/swiftui/animatablevalues)
@@ -6031,10 +5971,6 @@ timestamp: 2026-05-10T06:22:50.035Z
 
 - [var magnitudeSquared: Double](/documentation/swiftui/vectorarithmetic/magnitudesquared)
 - [func scale(by: Double)](/documentation/swiftui/vectorarithmetic/scale(by:))
-##### VectorArithmetic Implementations
-
-- [func scale(by: Double)](/documentation/swiftui/vectorarithmetic/scale(by:)-1ojq4)
-
 - [func scaled(by: Double) -> Self](/documentation/swiftui/vectorarithmetic/scaled(by:))
 - [func interpolate(towards: Self, amount: Double)](/documentation/swiftui/vectorarithmetic/interpolate(towards:amount:))
 - [func interpolated(towards: Self, amount: Double) -> Self](/documentation/swiftui/vectorarithmetic/interpolated(towards:amount:))
@@ -6187,10 +6123,6 @@ timestamp: 2026-05-10T06:22:50.035Z
 
 - [func animation(Animation?) -> some Transition](/documentation/swiftui/transition/animation(_:))
 - [static var properties: TransitionProperties](/documentation/swiftui/transition/properties)
-##### Transition Implementations
-
-- [static var properties: TransitionProperties](/documentation/swiftui/transition/properties-3v8pe)
-
 #### Using a transition
 
 - [func apply<V>(content: V, phase: TransitionPhase) -> some View](/documentation/swiftui/transition/apply(content:phase:))
@@ -6923,10 +6855,6 @@ timestamp: 2026-05-10T06:22:50.035Z
 #### Instance Properties
 
 - [var body: Self.Body](/documentation/swiftui/attributedtextformattingdefinition/body-1b01t)
-##### AttributedTextFormattingDefinition Implementations
-
-- [var body: Self](/documentation/swiftui/attributedtextformattingdefinition/body-48m9l)
-
 #### Instance Methods
 
 - [func constrain(_:)](/documentation/swiftui/attributedtextformattingdefinition/constrain(_:))
@@ -7027,18 +6955,10 @@ timestamp: 2026-05-10T06:22:50.035Z
 #### Instance Properties
 
 - [var displayPadding: EdgeInsets](/documentation/swiftui/textrenderer/displaypadding)
-##### TextRenderer Implementations
-
-- [var displayPadding: EdgeInsets](/documentation/swiftui/textrenderer/displaypadding-9l6t9)
-
 #### Instance Methods
 
 - [func draw(layout: Text.Layout, in: inout GraphicsContext)](/documentation/swiftui/textrenderer/draw(layout:in:))
 - [func sizeThatFits(proposal: ProposedViewSize, text: TextProxy) -> CGSize](/documentation/swiftui/textrenderer/sizethatfits(proposal:text:))
-##### TextRenderer Implementations
-
-- [func sizeThatFits(proposal: ProposedViewSize, text: TextProxy) -> CGSize](/documentation/swiftui/textrenderer/sizethatfits(proposal:text:)-3wr9v)
-
 
 - [TextProxy](/documentation/swiftui/textproxy)
 #### Instance Methods
@@ -8439,10 +8359,6 @@ timestamp: 2026-05-10T06:22:50.035Z
 #### Defining a shape’s size and path
 
 - [func sizeThatFits(ProposedViewSize) -> CGSize](/documentation/swiftui/shape/sizethatfits(_:))
-##### Shape Implementations
-
-- [func sizeThatFits(ProposedViewSize) -> CGSize](/documentation/swiftui/shape/sizethatfits(_:)-2vtnh)
-
 - [func path(in: CGRect) -> Path](/documentation/swiftui/shape/path(in:))
 #### Transforming a shape
 
@@ -8470,17 +8386,9 @@ timestamp: 2026-05-10T06:22:50.035Z
 #### Setting the role
 
 - [static var role: ShapeRole](/documentation/swiftui/shape/role)
-##### Shape Implementations
-
-- [static var role: ShapeRole](/documentation/swiftui/shape/role-681up)
-
 #### Indicating a layout direction
 
 - [var layoutDirectionBehavior: LayoutDirectionBehavior](/documentation/swiftui/shape/layoutdirectionbehavior)
-##### Shape Implementations
-
-- [var layoutDirectionBehavior: LayoutDirectionBehavior](/documentation/swiftui/shape/layoutdirectionbehavior-5wfat)
-
 #### Performing operations on a shape
 
 - [func intersection<T>(T, eoFill: Bool) -> some Shape](/documentation/swiftui/shape/intersection(_:eofill:))
@@ -9079,10 +8987,6 @@ timestamp: 2026-05-10T06:22:50.035Z
 #### Resolving a shape style in an environment
 
 - [func resolve(in: EnvironmentValues) -> Self.Resolved](/documentation/swiftui/shapestyle/resolve(in:))
-##### ShapeStyle Implementations
-
-- [func resolve(in: EnvironmentValues) -> Never](/documentation/swiftui/shapestyle/resolve(in:)-6feyg)
-
 - [Resolved](/documentation/swiftui/shapestyle/resolved)
 #### Using a shape style as a view
 
@@ -10484,33 +10388,12 @@ timestamp: 2026-05-10T06:22:50.035Z
 #### Reporting layout container characteristics
 
 - [func explicitAlignment(of:in:proposal:subviews:cache:)](/documentation/swiftui/layout/explicitalignment(of:in:proposal:subviews:cache:))
-##### Layout Implementations
-
-- [func explicitAlignment(of: VerticalAlignment, in: CGRect, proposal: ProposedViewSize, subviews: Self.Subviews, cache: inout Self.Cache) -> CGFloat?](/documentation/swiftui/layout/explicitalignment(of:in:proposal:subviews:cache:)-755bz)
-- [func explicitAlignment(of: HorizontalAlignment, in: CGRect, proposal: ProposedViewSize, subviews: Self.Subviews, cache: inout Self.Cache) -> CGFloat?](/documentation/swiftui/layout/explicitalignment(of:in:proposal:subviews:cache:)-8cl0p)
-
 - [func spacing(subviews: Self.Subviews, cache: inout Self.Cache) -> ViewSpacing](/documentation/swiftui/layout/spacing(subviews:cache:))
-##### Layout Implementations
-
-- [func spacing(subviews: Self.Subviews, cache: inout Self.Cache) -> ViewSpacing](/documentation/swiftui/layout/spacing(subviews:cache:)-1z0gt)
-
 - [static var layoutProperties: LayoutProperties](/documentation/swiftui/layout/layoutproperties)
-##### Layout Implementations
-
-- [static var layoutProperties: LayoutProperties](/documentation/swiftui/layout/layoutproperties-6h7w0)
-
 #### Managing a cache
 
 - [func makeCache(subviews: Self.Subviews) -> Self.Cache](/documentation/swiftui/layout/makecache(subviews:))
-##### Layout Implementations
-
-- [func makeCache(subviews: Self.Subviews) -> Self.Cache](/documentation/swiftui/layout/makecache(subviews:)-4fu1k)
-
 - [func updateCache(inout Self.Cache, subviews: Self.Subviews)](/documentation/swiftui/layout/updatecache(_:subviews:))
-##### Layout Implementations
-
-- [func updateCache(inout Self.Cache, subviews: Self.Subviews)](/documentation/swiftui/layout/updatecache(_:subviews:)-75zac)
-
 - [Cache](/documentation/swiftui/layout/cache)
 #### Supporting types
 
@@ -11367,10 +11250,6 @@ timestamp: 2026-05-10T06:22:50.035Z
 #### Instance Methods
 
 - [func properties(context: Self.PropertiesContext) -> Self.Properties](/documentation/swiftui/scrolltargetbehavior/properties(context:))
-##### ScrollTargetBehavior Implementations
-
-- [func properties(context: Self.PropertiesContext) -> Self.Properties](/documentation/swiftui/scrolltargetbehavior/properties(context:)-9ahhx)
-
 #### Type Aliases
 
 - [ScrollTargetBehavior.Properties](/documentation/swiftui/scrolltargetbehavior/properties)
@@ -12300,10 +12179,6 @@ timestamp: 2026-05-10T06:22:50.035Z
 #### Instance Methods
 
 - [func body(content: Self.Content) -> Self.Body](/documentation/swiftui/customhovereffect/body(content:))
-##### CustomHoverEffect Implementations
-
-- [func body(content: Self.Content) -> Self.Body](/documentation/swiftui/customhovereffect/body(content:)-1hbi3)
-
 - [func hoverEffectPhaseOverride(HoverEffectPhaseOverride?) -> some CustomHoverEffect](/documentation/swiftui/customhovereffect/hovereffectphaseoverride(_:))
 #### Type Aliases
 
@@ -12615,25 +12490,9 @@ timestamp: 2026-05-10T06:22:50.035Z
 #### Receiving drop information
 
 - [func dropEntered(info: DropInfo)](/documentation/swiftui/dropdelegate/dropentered(info:))
-##### DropDelegate Implementations
-
-- [func dropEntered(info: DropInfo)](/documentation/swiftui/dropdelegate/dropentered(info:)-2tqut)
-
 - [func dropExited(info: DropInfo)](/documentation/swiftui/dropdelegate/dropexited(info:))
-##### DropDelegate Implementations
-
-- [func dropExited(info: DropInfo)](/documentation/swiftui/dropdelegate/dropexited(info:)-7w9t2)
-
 - [func dropUpdated(info: DropInfo) -> DropProposal?](/documentation/swiftui/dropdelegate/dropupdated(info:))
-##### DropDelegate Implementations
-
-- [func dropUpdated(info: DropInfo) -> DropProposal?](/documentation/swiftui/dropdelegate/dropupdated(info:)-2mktz)
-
 - [func validateDrop(info: DropInfo) -> Bool](/documentation/swiftui/dropdelegate/validatedrop(info:))
-##### DropDelegate Implementations
-
-- [func validateDrop(info: DropInfo) -> Bool](/documentation/swiftui/dropdelegate/validatedrop(info:)-1hqfh)
-
 - [func performDrop(info: DropInfo) -> Bool](/documentation/swiftui/dropdelegate/performdrop(info:))
 
 - [DropProposal](/documentation/swiftui/dropproposal)
@@ -13170,10 +13029,6 @@ timestamp: 2026-05-10T06:22:50.035Z
 
 - [func makeChartDescriptor() -> AXChartDescriptor](/documentation/swiftui/axchartdescriptorrepresentable/makechartdescriptor())
 - [func updateChartDescriptor(AXChartDescriptor)](/documentation/swiftui/axchartdescriptorrepresentable/updatechartdescriptor(_:))
-##### AXChartDescriptorRepresentable Implementations
-
-- [func updateChartDescriptor(AXChartDescriptor)](/documentation/swiftui/axchartdescriptorrepresentable/updatechartdescriptor(_:)-7cxy6)
-
 
 ### Adding custom descriptions
 
@@ -13476,24 +13331,12 @@ timestamp: 2026-05-10T06:22:50.035Z
 #### Specifying a size
 
 - [func sizeThatFits(ProposedViewSize, nsView: Self.NSViewType, context: Self.Context) -> CGSize?](/documentation/swiftui/nsviewrepresentable/sizethatfits(_:nsview:context:))
-##### NSViewRepresentable Implementations
-
-- [func sizeThatFits(ProposedViewSize, nsView: Self.NSViewType, context: Self.Context) -> CGSize?](/documentation/swiftui/nsviewrepresentable/sizethatfits(_:nsview:context:)-fuqx)
-
 #### Cleaning up the view
 
 - [static func dismantleNSView(Self.NSViewType, coordinator: Self.Coordinator)](/documentation/swiftui/nsviewrepresentable/dismantlensview(_:coordinator:))
-##### NSViewRepresentable Implementations
-
-- [static func dismantleNSView(Self.NSViewType, coordinator: Self.Coordinator)](/documentation/swiftui/nsviewrepresentable/dismantlensview(_:coordinator:)-21agq)
-
 #### Providing a custom coordinator object
 
 - [func makeCoordinator() -> Self.Coordinator](/documentation/swiftui/nsviewrepresentable/makecoordinator())
-##### NSViewRepresentable Implementations
-
-- [func makeCoordinator() -> Self.Coordinator](/documentation/swiftui/nsviewrepresentable/makecoordinator()-6l2eg)
-
 - [Coordinator](/documentation/swiftui/nsviewrepresentable/coordinator)
 #### Performing layout
 
@@ -13521,24 +13364,12 @@ timestamp: 2026-05-10T06:22:50.035Z
 #### Specifying a size
 
 - [func sizeThatFits(ProposedViewSize, nsViewController: Self.NSViewControllerType, context: Self.Context) -> CGSize?](/documentation/swiftui/nsviewcontrollerrepresentable/sizethatfits(_:nsviewcontroller:context:))
-##### NSViewControllerRepresentable Implementations
-
-- [func sizeThatFits(ProposedViewSize, nsViewController: Self.NSViewControllerType, context: Self.Context) -> CGSize?](/documentation/swiftui/nsviewcontrollerrepresentable/sizethatfits(_:nsviewcontroller:context:)-52cs0)
-
 #### Cleaning up the view controller
 
 - [static func dismantleNSViewController(Self.NSViewControllerType, coordinator: Self.Coordinator)](/documentation/swiftui/nsviewcontrollerrepresentable/dismantlensviewcontroller(_:coordinator:))
-##### NSViewControllerRepresentable Implementations
-
-- [static func dismantleNSViewController(Self.NSViewControllerType, coordinator: Self.Coordinator)](/documentation/swiftui/nsviewcontrollerrepresentable/dismantlensviewcontroller(_:coordinator:)-t6ob)
-
 #### Providing a custom coordinator object
 
 - [func makeCoordinator() -> Self.Coordinator](/documentation/swiftui/nsviewcontrollerrepresentable/makecoordinator())
-##### NSViewControllerRepresentable Implementations
-
-- [func makeCoordinator() -> Self.Coordinator](/documentation/swiftui/nsviewcontrollerrepresentable/makecoordinator()-72re2)
-
 - [Coordinator](/documentation/swiftui/nsviewcontrollerrepresentable/coordinator)
 #### Performing layout
 
@@ -13566,21 +13397,9 @@ timestamp: 2026-05-10T06:22:50.035Z
 #### Instance Methods
 
 - [func handleNSGestureRecognizerAction(Self.NSGestureRecognizerType, context: Self.Context)](/documentation/swiftui/nsgesturerecognizerrepresentable/handlensgesturerecognizeraction(_:context:))
-##### NSGestureRecognizerRepresentable Implementations
-
-- [func handleNSGestureRecognizerAction(Self.NSGestureRecognizerType, context: Self.Context)](/documentation/swiftui/nsgesturerecognizerrepresentable/handlensgesturerecognizeraction(_:context:)-8n3is)
-
 - [func makeCoordinator(converter: Self.CoordinateSpaceConverter) -> Self.Coordinator](/documentation/swiftui/nsgesturerecognizerrepresentable/makecoordinator(converter:))
-##### NSGestureRecognizerRepresentable Implementations
-
-- [func makeCoordinator(converter: Self.CoordinateSpaceConverter)](/documentation/swiftui/nsgesturerecognizerrepresentable/makecoordinator(converter:)-8fzsl)
-
 - [func makeNSGestureRecognizer(context: Self.Context) -> Self.NSGestureRecognizerType](/documentation/swiftui/nsgesturerecognizerrepresentable/makensgesturerecognizer(context:))
 - [func updateNSGestureRecognizer(Self.NSGestureRecognizerType, context: Self.Context)](/documentation/swiftui/nsgesturerecognizerrepresentable/updatensgesturerecognizer(_:context:))
-##### NSGestureRecognizerRepresentable Implementations
-
-- [func updateNSGestureRecognizer(Self.NSGestureRecognizerType, context: Self.Context)](/documentation/swiftui/nsgesturerecognizerrepresentable/updatensgesturerecognizer(_:context:)-1s5x4)
-
 #### Type Aliases
 
 - [NSGestureRecognizerRepresentable.Context](/documentation/swiftui/nsgesturerecognizerrepresentable/context)
@@ -13715,24 +13534,12 @@ timestamp: 2026-05-10T06:22:50.035Z
 #### Specifying a size
 
 - [func sizeThatFits(ProposedViewSize, uiView: Self.UIViewType, context: Self.Context) -> CGSize?](/documentation/swiftui/uiviewrepresentable/sizethatfits(_:uiview:context:))
-##### UIViewRepresentable Implementations
-
-- [func sizeThatFits(ProposedViewSize, uiView: Self.UIViewType, context: Self.Context) -> CGSize?](/documentation/swiftui/uiviewrepresentable/sizethatfits(_:uiview:context:)-5tdxh)
-
 #### Cleaning up the view
 
 - [static func dismantleUIView(Self.UIViewType, coordinator: Self.Coordinator)](/documentation/swiftui/uiviewrepresentable/dismantleuiview(_:coordinator:))
-##### UIViewRepresentable Implementations
-
-- [static func dismantleUIView(Self.UIViewType, coordinator: Self.Coordinator)](/documentation/swiftui/uiviewrepresentable/dismantleuiview(_:coordinator:)-94s0o)
-
 #### Providing a custom coordinator object
 
 - [func makeCoordinator() -> Self.Coordinator](/documentation/swiftui/uiviewrepresentable/makecoordinator())
-##### UIViewRepresentable Implementations
-
-- [func makeCoordinator() -> Self.Coordinator](/documentation/swiftui/uiviewrepresentable/makecoordinator()-9405l)
-
 - [Coordinator](/documentation/swiftui/uiviewrepresentable/coordinator)
 #### Performing layout
 
@@ -13760,24 +13567,12 @@ timestamp: 2026-05-10T06:22:50.035Z
 #### Specifying a size
 
 - [func sizeThatFits(ProposedViewSize, uiViewController: Self.UIViewControllerType, context: Self.Context) -> CGSize?](/documentation/swiftui/uiviewcontrollerrepresentable/sizethatfits(_:uiviewcontroller:context:))
-##### UIViewControllerRepresentable Implementations
-
-- [func sizeThatFits(ProposedViewSize, uiViewController: Self.UIViewControllerType, context: Self.Context) -> CGSize?](/documentation/swiftui/uiviewcontrollerrepresentable/sizethatfits(_:uiviewcontroller:context:)-7x9zd)
-
 #### Cleaning up the view controller
 
 - [static func dismantleUIViewController(Self.UIViewControllerType, coordinator: Self.Coordinator)](/documentation/swiftui/uiviewcontrollerrepresentable/dismantleuiviewcontroller(_:coordinator:))
-##### UIViewControllerRepresentable Implementations
-
-- [static func dismantleUIViewController(Self.UIViewControllerType, coordinator: Self.Coordinator)](/documentation/swiftui/uiviewcontrollerrepresentable/dismantleuiviewcontroller(_:coordinator:)-30a1m)
-
 #### Providing a custom coordinator object
 
 - [func makeCoordinator() -> Self.Coordinator](/documentation/swiftui/uiviewcontrollerrepresentable/makecoordinator())
-##### UIViewControllerRepresentable Implementations
-
-- [func makeCoordinator() -> Self.Coordinator](/documentation/swiftui/uiviewcontrollerrepresentable/makecoordinator()-9vwm8)
-
 - [Coordinator](/documentation/swiftui/uiviewcontrollerrepresentable/coordinator)
 #### Performing layout
 
@@ -13805,21 +13600,9 @@ timestamp: 2026-05-10T06:22:50.035Z
 #### Instance Methods
 
 - [func handleUIGestureRecognizerAction(Self.UIGestureRecognizerType, context: Self.Context)](/documentation/swiftui/uigesturerecognizerrepresentable/handleuigesturerecognizeraction(_:context:))
-##### UIGestureRecognizerRepresentable Implementations
-
-- [func handleUIGestureRecognizerAction(Self.UIGestureRecognizerType, context: Self.Context)](/documentation/swiftui/uigesturerecognizerrepresentable/handleuigesturerecognizeraction(_:context:)-8u4zs)
-
 - [func makeCoordinator(converter: Self.CoordinateSpaceConverter) -> Self.Coordinator](/documentation/swiftui/uigesturerecognizerrepresentable/makecoordinator(converter:))
-##### UIGestureRecognizerRepresentable Implementations
-
-- [func makeCoordinator(converter: Self.CoordinateSpaceConverter)](/documentation/swiftui/uigesturerecognizerrepresentable/makecoordinator(converter:)-504ge)
-
 - [func makeUIGestureRecognizer(context: Self.Context) -> Self.UIGestureRecognizerType](/documentation/swiftui/uigesturerecognizerrepresentable/makeuigesturerecognizer(context:))
 - [func updateUIGestureRecognizer(Self.UIGestureRecognizerType, context: Self.Context)](/documentation/swiftui/uigesturerecognizerrepresentable/updateuigesturerecognizer(_:context:))
-##### UIGestureRecognizerRepresentable Implementations
-
-- [func updateUIGestureRecognizer(Self.UIGestureRecognizerType, context: Self.Context)](/documentation/swiftui/uigesturerecognizerrepresentable/updateuigesturerecognizer(_:context:)-10jv)
-
 #### Type Aliases
 
 - [UIGestureRecognizerRepresentable.Context](/documentation/swiftui/uigesturerecognizerrepresentable/context)
@@ -13906,17 +13689,9 @@ timestamp: 2026-05-10T06:22:50.035Z
 #### Cleaning up the interface object
 
 - [static func dismantleWKInterfaceObject(Self.WKInterfaceObjectType, coordinator: Self.Coordinator)](/documentation/swiftui/wkinterfaceobjectrepresentable/dismantlewkinterfaceobject(_:coordinator:))
-##### WKInterfaceObjectRepresentable Implementations
-
-- [static func dismantleWKInterfaceObject(Self.WKInterfaceObjectType, coordinator: Self.Coordinator)](/documentation/swiftui/wkinterfaceobjectrepresentable/dismantlewkinterfaceobject(_:coordinator:)-qd0y)
-
 #### Providing a custom coordinator object
 
 - [func makeCoordinator() -> Self.Coordinator](/documentation/swiftui/wkinterfaceobjectrepresentable/makecoordinator())
-##### WKInterfaceObjectRepresentable Implementations
-
-- [func makeCoordinator() -> Self.Coordinator](/documentation/swiftui/wkinterfaceobjectrepresentable/makecoordinator()-80qlf)
-
 - [Coordinator](/documentation/swiftui/wkinterfaceobjectrepresentable/coordinator)
 - [WKInterfaceObjectType](/documentation/swiftui/wkinterfaceobjectrepresentable/wkinterfaceobjecttype)
 
@@ -14145,10 +13920,6 @@ timestamp: 2026-05-10T06:22:50.035Z
 #### Specifying the platform
 
 - [static var platform: PreviewPlatform?](/documentation/swiftui/previewprovider/platform)
-##### PreviewProvider Implementations
-
-- [static var platform: PreviewPlatform?](/documentation/swiftui/previewprovider/platform-5gkzc)
-
 
 - [PreviewPlatform](/documentation/swiftui/previewplatform)
 #### Getting an operating system
@@ -14173,10 +13944,6 @@ timestamp: 2026-05-10T06:22:50.035Z
 #### Type Methods
 
 - [static func makeSharedContext() async throws -> Self.Context](/documentation/swiftui/previewmodifier/makesharedcontext())
-##### PreviewModifier Implementations
-
-- [static func makeSharedContext() async throws -> Self.Context](/documentation/swiftui/previewmodifier/makesharedcontext()-4zi8r)
-
 
 - [PreviewModifierContent](/documentation/swiftui/previewmodifiercontent)
 ### Customizing a preview
