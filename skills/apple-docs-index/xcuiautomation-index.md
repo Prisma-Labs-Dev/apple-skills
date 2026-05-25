@@ -3,7 +3,7 @@ title: XCUIAutomation
 source: https://developer.apple.com/documentation/xcuiautomation
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/index/xcuiautomation
-timestamp: 2026-05-10T06:22:46.767Z
+timestamp: 2026-05-25T06:52:04.373Z
 ---
 
 **Navigation:** [XCUIAutomation](/documentation/xcuiautomation)
@@ -813,7 +813,7 @@ timestamp: 2026-05-10T06:22:46.767Z
 
 - [func press(XCUIRemote.Button)](/documentation/xcuiautomation/xcuiremote/press(_:))
 - [func press(XCUIRemote.Button, forDuration: TimeInterval)](/documentation/xcuiautomation/xcuiremote/press(_:forduration:))
-- [XCUIRemoteButton](/documentation/xcuiautomation/xcuiremotebutton)
+- [XCUIRemoteButton](/documentation/xcuiautomation/xcuiremote/button)
 #### Remote buttons
 
 - [case up](/documentation/xcuiautomation/xcuiremotebutton/up)

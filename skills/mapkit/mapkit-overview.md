@@ -3,7 +3,7 @@ title: MapKit
 source: https://developer.apple.com/documentation/mapkit
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/index/mapkit
-timestamp: 2026-05-13T06:32:18.331Z
+timestamp: 2026-05-25T06:52:05.030Z
 ---
 
 **Navigation:** [MapKit](/documentation/mapkit)
@@ -2158,7 +2158,11 @@ timestamp: 2026-05-13T06:32:18.331Z
 #### Initializers
 
 - [init<SelectedValue, C>(bounds: MapCameraBounds?, interactionModes: MapInteractionModes, selection: Binding<SelectedValue?>, scope: Namespace.ID?, content: () -> C)](/documentation/mapkit/map/init(bounds:interactionmodes:selection:scope:content:)-335qt)
+- [init(coordinateRegion: Binding<MKCoordinateRegion>, interactionModes: MapInteractionModes, showsUserLocation: Bool, userTrackingMode: Binding<MapUserTrackingMode>?)](/documentation/mapkit/map/init(coordinateregion:interactionmodes:showsuserlocation:usertrackingmode:))
+- [init<Items, Annotation>(coordinateRegion: Binding<MKCoordinateRegion>, interactionModes: MapInteractionModes, showsUserLocation: Bool, userTrackingMode: Binding<MapUserTrackingMode>?, annotationItems: Items, annotationContent: (Items.Element) -> Annotation)](/documentation/mapkit/map/init(coordinateregion:interactionmodes:showsuserlocation:usertrackingmode:annotationitems:annotationcontent:))
 - [init<SelectedValue, C>(initialPosition: MapCameraPosition, bounds: MapCameraBounds?, interactionModes: MapInteractionModes, selection: Binding<SelectedValue?>, scope: Namespace.ID?, content: () -> C)](/documentation/mapkit/map/init(initialposition:bounds:interactionmodes:selection:scope:content:)-2u4ry)
+- [init(mapRect: Binding<MKMapRect>, interactionModes: MapInteractionModes, showsUserLocation: Bool, userTrackingMode: Binding<MapUserTrackingMode>?)](/documentation/mapkit/map/init(maprect:interactionmodes:showsuserlocation:usertrackingmode:))
+- [init<Items, Annotation>(mapRect: Binding<MKMapRect>, interactionModes: MapInteractionModes, showsUserLocation: Bool, userTrackingMode: Binding<MapUserTrackingMode>?, annotationItems: Items, annotationContent: (Items.Element) -> Annotation)](/documentation/mapkit/map/init(maprect:interactionmodes:showsuserlocation:usertrackingmode:annotationitems:annotationcontent:))
 - [init<SelectedValue, C>(position: Binding<MapCameraPosition>, bounds: MapCameraBounds?, interactionModes: MapInteractionModes, selection: Binding<SelectedValue?>, scope: Namespace.ID?, content: () -> C)](/documentation/mapkit/map/init(position:bounds:interactionmodes:selection:scope:content:)-96bhq)
 
 - [MapStyle](/documentation/mapkit/mapstyle)
