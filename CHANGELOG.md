@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-07-04
+
+- `xcuitest`: restructured to match the collection's pattern — `SKILL.md` is now a short intro + table of contents (quick-reference snippet, topic guide table, downloaded-docs table, sources), with the bulk moved into topic files alongside the existing reference docs: `element-queries.md`, `interactions.md`, `waiting.md`, `swift6-concurrency.md`, `assertions.md`, `screenshots.md`, `launch-arguments.md`, `permissions.md`, `test-helpers.md`, and `troubleshooting.md`. No content was removed.
+
 ## 2026-07-04 (1.0.14)
 
 - `ios-dev`: added the craft-bar operating rule — apps should feel current-generation (fluid, design-forward; custom components, novel interactions, and Metal shaders in-bounds), while the aesthetic direction itself stays the model's per-app judgment. High ambition, no prescribed style.
