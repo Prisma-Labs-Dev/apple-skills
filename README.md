@@ -95,8 +95,6 @@ npx skills remove -g
 |-------|-------------|
 | **hig** | Apple Human Interface Guidelines |
 | **ios-liquid-glass** | Liquid Glass API reference (iOS 26+) |
-| **ios-design-consultant** | UX/design guidance for Liquid Glass apps |
-| **ios-ui-craft** | Production-grade SwiftUI with Apple Design Award-quality aesthetics |
 
 ### Workflow & Pattern Guides
 
@@ -111,8 +109,17 @@ npx skills remove -g
 | **guide-swiftui-charts** | Swift Charts — marks, axes, selection, styling, Chart3D, accessibility | [AvdLee/SwiftUI-Agent-Skill](https://github.com/AvdLee/SwiftUI-Agent-Skill) |
 | **guide-swiftui-performance-audit** | Audit and improve SwiftUI runtime performance | [Dimillian/Skills](https://github.com/Dimillian/Skills) |
 | **guide-swiftui-ui-patterns** | Best practices for building SwiftUI views and components | [Dimillian/Skills](https://github.com/Dimillian/Skills), [twostraws/SwiftUI-Agent-Skill](https://github.com/twostraws/SwiftUI-Agent-Skill) |
-| **guide-swiftui-view-refactor** | Refactor SwiftUI views for consistent structure and Observation usage | [Dimillian/Skills](https://github.com/Dimillian/Skills) |
 | **guide-macos-spm-packaging** | Scaffold, build, and package SwiftPM-based macOS apps without Xcode | [Dimillian/Skills](https://github.com/Dimillian/Skills) |
+
+### Disabled Skills
+
+Skills in `disabled-skills/` are kept in the repo but not loaded by agents. They impose a specific taste or architecture (aesthetic manifestos, MV-over-MVVM mandates, "Apple-approved" design gatekeeping) — the model should form its own design judgment and use the reference docs for facts. Move a directory back into `skills/` to re-enable it.
+
+| Skill | Why disabled |
+|-------|--------------|
+| **ios-ui-craft** | Aesthetic manifesto (anti-pattern tables, "design dark first", font/color mandates) |
+| **ios-design-consultant** | "Apple-approved" / Design Award framing forces HIG conformity |
+| **guide-swiftui-view-refactor** | Mandates MV over MVVM and strict property ordering |
 
 ### Utilities
 

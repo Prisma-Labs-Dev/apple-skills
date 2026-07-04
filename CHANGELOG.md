@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-07-04 (1.0.13)
+
+De-opinionate the collection: reference docs stay, taste mandates go. The model should form its own design judgment; skills provide facts.
+
+- Moved `ios-ui-craft`, `ios-design-consultant`, and `guide-swiftui-view-refactor` to `disabled-skills/` (kept in repo, not loaded by agents) — they impose aesthetic manifestos, "Apple-approved" gatekeeping, and MV-over-MVVM architecture mandates.
+- `ios-dev`: UIKit is now first-class alongside SwiftUI (removed the no-bridging rule); removed the Liquid Glass default-design-system mandate; added an explicit rule against imposing a house style; removed routing to the disabled skills.
+- `ios-liquid-glass`: stripped the design manifesto (anti-pattern tables, typography/color/dark-mode-first directives, "The Mandate"); now a pure API reference with Apple's stated principles noted as reference material.
+
 ## 2026-05-13
 
 - Added the `core-animation` skill with the full QuartzCore framework index and per-symbol reference pages for `CALayer`, the animation classes (`CAAnimation`, `CABasicAnimation`, `CAKeyframeAnimation`, `CASpringAnimation`, `CAPropertyAnimation`, `CAAnimationGroup`, `CATransition`), `CATransaction`, `CAMediaTiming`, `CATransform3D`, common layer subclasses (`CAShapeLayer`, `CAGradientLayer`, `CAEmitterLayer`, `CAEmitterCell`, `CAReplicatorLayer`, `CAMetalLayer`, `CATextLayer`, `CATiledLayer`), and `CADisplayLink`.

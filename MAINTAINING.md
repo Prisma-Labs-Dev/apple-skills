@@ -101,7 +101,7 @@ Biome also enforces line-count limits so the refresh tooling stays modular inste
 ## Repo Structure
 
 ```
-skills/                     # 31 skills (27 reference + 4 guides)
+skills/                     # loaded skills (reference docs + guides)
 ├── swiftui/                # SwiftUI reference docs
 ├── uikit/                  # UIKit framework index and core APIs
 ├── hig/                    # 41 HIG reference files
@@ -116,8 +116,8 @@ skills/                     # 31 skills (27 reference + 4 guides)
 ├── apple-docs-index/       # Framework doc indexes
 ├── guide-swiftui-performance-audit/  # Performance audit guide
 ├── guide-swiftui-ui-patterns/        # UI patterns guide (26 references)
-├── guide-swiftui-view-refactor/      # View refactoring guide
 └── guide-macos-spm-packaging/        # macOS SPM packaging guide
+disabled-skills/            # taste/architecture-forcing skills, kept but not loaded
 scripts/
 └── refresh-docs.sh         # Refresh docs from Apple DocC JSON
 ```

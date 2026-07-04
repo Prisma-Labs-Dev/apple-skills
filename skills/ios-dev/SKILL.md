@@ -10,9 +10,9 @@ Start here. This skill coordinates the Apple skills collection — it tells you 
 
 ## Operating Rules
 
-- Do not bridge UIKit/AppKit when SwiftUI has a native solution — bridging adds state-sync bugs, breaks SwiftUI composition (animations, environment), and complicates lifecycle management
+- SwiftUI and UIKit are both first-class — pick whichever fits the task. UIKit is a valid choice whenever it gives more control or flexibility; when bridging the two, watch state sync, lifecycle, and animation/environment boundaries.
 - Do not enforce specific architectures (MVVM, VIPER, MV, TCA, etc.) — encourage separating business logic from views without mandating how
-- Liquid Glass is the default iOS 26+ design system — use system glass behaviors naturally, but add custom `GlassEffect` modifiers only when they serve the UI, not for decoration
+- Do not impose a house style or an "Apple-approved" aesthetic — design direction comes from the task and your own judgment. The `hig` and `ios-liquid-glass` skills document what the system provides; they are references, not style mandates.
 - Present performance optimizations as suggestions backed by reasoning, not blanket requirements
 - When you need exact API details, grep the framework reference skills — they contain full Apple documentation
 
@@ -29,10 +29,8 @@ Start here. This skill coordinates the Apple skills collection — it tells you 
 
 1. Run the correctness checklist first
 2. For performance issues: use `guide-swiftui-performance-audit`
-3. For view structure / long bodies: use `guide-swiftui-view-refactor`
-4. For navigation, state, or pattern questions: use `guide-swiftui-ui-patterns`
-5. For visual quality: use `ios-ui-craft`
-6. For API details: grep the matching framework reference skill
+3. For navigation, state, or pattern questions: use `guide-swiftui-ui-patterns`
+4. For API details: grep the matching framework reference skill
 
 ### Build a new feature
 
@@ -41,7 +39,6 @@ Start here. This skill coordinates the Apple skills collection — it tells you 
 3. For API details: grep the matching framework reference skill
 4. Structure views for optimal diffing — extract subviews early
 5. Run the correctness checklist before finishing
-6. For visual polish: use `ios-ui-craft`
 
 ## Topic Router
 
@@ -50,7 +47,7 @@ The **Guide** column has opinionated, short pattern guides. The **API Reference*
 | Topic | Guide | API Reference |
 |-------|-------|---------------|
 | State management | `guide-swiftui-ui-patterns` | `swiftui` (state.md, binding.md, observation.md, environment.md) |
-| View composition | `guide-swiftui-view-refactor` | `swiftui` (view-protocol.md) |
+| View composition | — | `swiftui` (view-protocol.md) |
 | Performance | `guide-swiftui-performance-audit` | — |
 | Navigation | `guide-swiftui-ui-patterns` | `swiftui` (navigationstack.md, navigationsplitview.md, navigationlink.md) |
 | Sheets & modals | `guide-swiftui-ui-patterns` | `swiftui` (sheet.md, inspector.md, alert.md, confirmationdialog.md) |
@@ -61,8 +58,8 @@ The **Guide** column has opinionated, short pattern guides. The **API Reference*
 | Animations | `guide-swiftui-animations` | `swiftui` (swiftui-overview.md) |
 | Layout | `guide-swiftui-ui-patterns` | `swiftui` (geometryreader.md, grid.md, hstack.md, vstack.md, zstack.md, spacer.md) |
 | TabView | `guide-swiftui-ui-patterns` | `swiftui` (tabview.md) |
-| Liquid Glass | `ios-design-consultant` | `ios-liquid-glass` |
-| Visual design | `ios-ui-craft` | `hig` |
+| Liquid Glass | — | `ios-liquid-glass` |
+| Visual design | — | `hig` |
 | Accessibility | `guide-swiftui-ui-patterns` | `hig` |
 | macOS apps | `guide-macos-spm-packaging` | `swiftui`, `uikit` |
 | Data persistence | `guide-swiftdata` | `swiftdata` |
@@ -97,16 +94,13 @@ These are hard rules — violations are always bugs:
 
 ## Related Skills
 
-**Design trio:**
-- `/ios-ui-craft` — Build visually striking interfaces (produces code)
-- `/ios-design-consultant` — Design advice and rationale (no code)
+**Design reference:**
 - `/ios-liquid-glass` — Liquid Glass API reference
 
 **Workflow guides:**
 - `/guide-swiftui-ui-patterns` — Navigation, state, sheets, component patterns
 - `/guide-swiftui-animations` — Implicit/explicit animation, transitions, keyframes
 - `/guide-swiftui-charts` — Marks, axes, selection, styling, accessibility
-- `/guide-swiftui-view-refactor` — View structure, extraction, MV patterns
 - `/guide-swiftui-performance-audit` — Diagnose and fix performance issues
 - `/guide-swift-testing` — Swift Testing patterns, async tests, common agent mistakes
 - `/guide-swift-concurrency` — Concurrency patterns, actors, diagnostics, bug patterns
