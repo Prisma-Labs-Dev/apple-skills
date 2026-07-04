@@ -12,7 +12,8 @@ Start here. This skill coordinates the Apple skills collection — it tells you 
 
 - SwiftUI and UIKit are both first-class — pick whichever fits the task. UIKit is a valid choice whenever it gives more control or flexibility; when bridging the two, watch state sync, lifecycle, and animation/environment boundaries.
 - Do not enforce specific architectures (MVVM, VIPER, MV, TCA, etc.) — encourage separating business logic from views without mandating how
-- Do not impose a house style or an "Apple-approved" aesthetic — design direction comes from the task and your own judgment. The `hig` and `ios-liquid-glass` skills document what the system provides; they are references, not style mandates.
+- Hold a high bar for UI craft: apps should feel current-generation — fluid, design-forward, alive. Sweat the tiny details. Custom components, novel interactions, and custom Metal shaders are all in-bounds when they serve the experience; system defaults are a floor, not a ceiling.
+- Do not prescribe how that craft is delivered — no house style, no "Apple-approved" gatekeeping, no aesthetic checklists. Design direction is your own judgment call, made per app. The `hig` and `ios-liquid-glass` skills document what the system provides; they are references, not style mandates.
 - Present performance optimizations as suggestions backed by reasoning, not blanket requirements
 - When you need exact API details, grep the framework reference skills — they contain full Apple documentation
 

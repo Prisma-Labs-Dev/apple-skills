@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-07-04 (1.0.14)
+
+- `ios-dev`: added the craft-bar operating rule — apps should feel current-generation (fluid, design-forward; custom components, novel interactions, and Metal shaders in-bounds), while the aesthetic direction itself stays the model's per-app judgment. High ambition, no prescribed style.
+
 ## 2026-07-04 (1.0.13)
 
 De-opinionate the collection: reference docs stay, taste mandates go. The model should form its own design judgment; skills provide facts.
