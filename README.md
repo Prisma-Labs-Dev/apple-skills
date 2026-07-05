@@ -10,7 +10,7 @@ Pick your agent:
 <summary>Claude Code</summary>
 
 ```bash
-claude plugin marketplace add vabole/apple-skills
+claude plugin marketplace add Prisma-Labs-Dev/apple-skills
 claude plugin install apple-skills@apple-skills
 ```
 
@@ -20,7 +20,7 @@ claude plugin install apple-skills@apple-skills
 <summary>Codex</summary>
 
 ```bash
-npx skills add vabole/apple-skills --agent codex --skill '*' -g -y
+npx skills add Prisma-Labs-Dev/apple-skills --agent codex --skill '*' -g -y
 ```
 
 </details>
@@ -29,7 +29,7 @@ npx skills add vabole/apple-skills --agent codex --skill '*' -g -y
 <summary>Cursor</summary>
 
 ```bash
-npx skills add vabole/apple-skills --agent cursor --skill '*' -g -y
+npx skills add Prisma-Labs-Dev/apple-skills --agent cursor --skill '*' -g -y
 ```
 
 </details>
