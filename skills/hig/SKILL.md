@@ -1,14 +1,23 @@
 ---
 name: hig
 user-invocable: true
-description: "API reference: Apple Human Interface Guidelines. Query for design patterns, UI components, accessibility, color, typography, layout, haptics."
+description: "Fact lookup: Apple Human Interface Guidelines corpus (greppable markdown). Query on demand for accessibility and ergonomic minimums (hit-target sizes, Dynamic Type), platform terminology, system component capabilities, and App-Review-relevant conventions. Not design direction."
 context: fork
 agent: Explore
 ---
 
 # Human Interface Guidelines Reference
 
-Comprehensive reference for designing interfaces that follow Apple's Human Interface Guidelines.
+Local greppable copy of Apple's Human Interface Guidelines — an on-demand fact
+lookup, not design direction.
+
+Use it to answer factual questions: what a system component can do, what Apple
+calls something, accessibility and ergonomic minimums (44pt hit targets,
+Dynamic Type behavior, contrast), and conventions App Review actually checks.
+
+**Visual design in our repos is the designing model's own taste.** Consult the
+HIG for facts, never for aesthetics — it describes what the system provides
+and requires, not what your screen should look like.
 
 ## Downloaded Reference Files
 
@@ -118,14 +127,16 @@ grep -i "navigation" hig-index.md
 | Sheets | `human-interface-guidelines/sheets` |
 | Alerts | `human-interface-guidelines/alerts` |
 
-## Quick Reference
+## Quick Facts
 
-### Button Styles (iOS)
+### System Button Styles (iOS)
+
+What the system provides out of the box:
 
 - **Plain** - Text only, minimal visual weight
-- **Gray** - Gray background, for secondary actions
+- **Gray** - Gray background
 - **Tinted** - Tinted background with accent color
-- **Filled** - Solid background, for primary actions
+- **Filled** - Solid background
 - **Bordered** - Outlined with border
 - **Bordered Prominent** - Filled background, high prominence
 
@@ -135,11 +146,13 @@ grep -i "navigation" hig-index.md
 - **Impact** - Light/medium/heavy/rigid/soft for collisions
 - **Notification** - Success/warning/error for outcomes
 
-### Safe Areas
+### Safe Areas (ergonomic facts)
 
-- Always respect safe areas for content
-- Extend backgrounds edge-to-edge
-- Place interactive elements within safe areas
+- Content outside safe areas can be clipped by the notch/Dynamic Island, home
+  indicator, or rounded corners
+- Interactive elements outside safe areas may be unreachable or intercepted by
+  system gestures
+- Backgrounds can extend edge-to-edge without those risks
 
 ## Sources
 

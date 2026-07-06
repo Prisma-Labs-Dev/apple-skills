@@ -2,7 +2,7 @@
 
 ## Intent
 
-Use native controls for settings and configuration screens, keeping labels accessible and state bindings clear.
+How to wire the built-in controls (Toggle, Picker, Stepper, Slider) with accessible labels and clear state bindings.
 
 ## Core patterns
 

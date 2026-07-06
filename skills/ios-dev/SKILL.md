@@ -13,7 +13,7 @@ Start here. This skill coordinates the Apple skills collection — it tells you 
 - SwiftUI and UIKit are both first-class — pick whichever fits the task. UIKit is a valid choice whenever it gives more control or flexibility; when bridging the two, watch state sync, lifecycle, and animation/environment boundaries.
 - Do not enforce specific architectures (MVVM, VIPER, MV, TCA, etc.) — encourage separating business logic from views without mandating how
 - Hold a high bar for UI craft: apps should feel current-generation — fluid, design-forward, alive. Sweat the tiny details. Custom components, novel interactions, and custom Metal shaders are all in-bounds when they serve the experience; system defaults are a floor, not a ceiling.
-- Do not prescribe how that craft is delivered — no house style, no "Apple-approved" gatekeeping, no aesthetic checklists. Design direction is your own judgment call, made per app. The `hig` and `ios-liquid-glass` skills document what the system provides; they are references, not style mandates.
+- Do not prescribe how that craft is delivered — no house style, no "Apple-approved" gatekeeping, no aesthetic checklists. Design direction is your own judgment call, made per app. The `hig` and `ios-liquid-glass` skills document what the system provides; they are references, not style mandates. **When the task is designing a screen or making it look good, there is no doc to route to** — design from your own taste; grep references only when you need API mechanics or a factual minimum (e.g. hit-target sizes).
 - Present performance optimizations as suggestions backed by reasoning, not blanket requirements
 - When you need exact API details, grep the framework reference skills — they contain full Apple documentation
 
@@ -60,8 +60,7 @@ The **Guide** column has opinionated, short pattern guides. The **API Reference*
 | Layout | `guide-swiftui-ui-patterns` | `swiftui` (geometryreader.md, grid.md, hstack.md, vstack.md, zstack.md, spacer.md) |
 | TabView | `guide-swiftui-ui-patterns` | `swiftui` (tabview.md) |
 | Liquid Glass | — | `ios-liquid-glass` |
-| Visual design | — | `hig` |
-| Accessibility | `guide-swiftui-ui-patterns` | `hig` |
+| Accessibility | `guide-swiftui-ui-patterns` | `hig` (a11y/ergonomic facts) |
 | macOS apps | `guide-macos-spm-packaging` | `swiftui`, `uikit` |
 | Data persistence | `guide-swiftdata` | `swiftdata` |
 | Testing | `guide-swift-testing` | `swift-testing`, `xcuitest` |
@@ -95,7 +94,7 @@ These are hard rules — violations are always bugs:
 
 ## Related Skills
 
-**Design reference:**
+**System API reference:**
 - `/ios-liquid-glass` — Liquid Glass API reference
 
 **Workflow guides:**

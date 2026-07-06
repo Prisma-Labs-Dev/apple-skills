@@ -62,10 +62,10 @@ struct SettingsView: View {
 ## Skip navigation
 
 - Avoid wrapping `SettingsView` in a `NavigationStack` unless you truly need deep push navigation.
-- Prefer tabs or sections; Settings is already presented as a separate window and should feel flat.
+- Tabs or sections map directly onto the Settings window model; push navigation adds a second hierarchy inside a window that is itself already a destination.
 - If you must show hierarchical settings, use a single `NavigationSplitView` with a sidebar list of categories.
 
 ## Pitfalls
 
-- Don’t reuse iOS-only settings layouts (full-screen stacks, toolbar-heavy flows).
+- iOS-only settings scaffolding (full-screen stacks, toolbar-heavy flows) assumes navigation chrome a macOS Settings window doesn't provide.
 - Avoid large custom view hierarchies inside `Form`; keep rows focused and accessible.
