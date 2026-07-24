@@ -1,10 +1,10 @@
 ---
 title: confirmationDialog(_:isPresented:titleVisibility:actions:)
-description: Presents a confirmation dialog when a given condition is true, using a text view for the title.
+description: Presents a confirmation dialog when a given condition is true, using a localized string resource for the title.
 source: https://developer.apple.com/documentation/swiftui/view/confirmationdialog(_:ispresented:titlevisibility:actions:)
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/swiftui/view/confirmationdialog(_:ispresented:titlevisibility:actions:).json
-timestamp: 2026-06-26T06:39:36.627Z
+timestamp: 2026-07-24T07:42:58.868Z
 ---
 
 **Navigation:** [SwiftUI](/documentation/swiftui) › [View](/documentation/swiftui/view)
@@ -13,19 +13,19 @@ timestamp: 2026-06-26T06:39:36.627Z
 
 # confirmationDialog(_:isPresented:titleVisibility:actions:)
 
-**Available on:** iOS 15.0+, iPadOS 15.0+, Mac Catalyst 15.0+, macOS 12.0+, tvOS 15.0+, visionOS 1.0+, watchOS 8.0+
+**Available on:** iOS 16.0+, iPadOS 16.0+, Mac Catalyst 16.0+, macOS 13.0+, tvOS 16.0+, visionOS 1.0+, watchOS 9.0+
 
-> Presents a confirmation dialog when a given condition is true, using a text view for the title.
+> Presents a confirmation dialog when a given condition is true, using a localized string resource for the title.
 
 ```swift
-nonisolated func confirmationDialog<A>(_ title: Text, isPresented: Binding<Bool>, titleVisibility: Visibility = .automatic, @ContentBuilder actions: () -> A) -> some View where A : View
+@export(implementation) nonisolated func confirmationDialog<A>(_ titleResource: LocalizedStringResource, isPresented: Binding<Bool>, titleVisibility: Visibility = .automatic, @ContentBuilder actions: () -> A) -> some View where A : View
 ```
 
 ## Parameters
 
-**title**
+**titleResource**
 
-The title of the dialog.
+Text resource for the localized string that describes the title of the dialog.
 
 **isPresented**
 
@@ -51,7 +51,7 @@ struct ConfirmEraseItems: View {
             isShowingDialog = true
         }
         .confirmationDialog(
-            Text("Permanently erase the items in the trash?"),
+            "Permanently erase the items in the Trash?",
             isPresented: $isShowingDialog
         ) {
             Button("Empty Trash", role: .destructive) {
@@ -70,9 +70,13 @@ Dialogs include a standard dismiss action by default. If you provide a button wi
 
 > **Note:** In regular size classes in iOS, the system renders confirmation dialogs as a popover that the user dismisses by tapping anywhere outside the popover, rather than displaying the standard dismiss action.
 
+On iOS, tvOS, and watchOS, confirmation dialogs only support controls with labels that are [Text](/documentation/swiftui/text). Passing any other type of view results in the content being omitted.
+
+This modifier creates a [Text](/documentation/swiftui/text) view for the title on your behalf. See [Text](/documentation/swiftui/text) for more information about localizing strings.
+
 ## Getting confirmation for an action
 
-- [confirmationDialog(_:isPresented:titleVisibility:presenting:actions:)](/documentation/swiftui/view/confirmationdialog(_:ispresented:titlevisibility:presenting:actions:)) Presents a confirmation dialog using data to produce the dialog’s content and a text view for the title.
+- [confirmationDialog(_:isPresented:titleVisibility:presenting:actions:)](/documentation/swiftui/view/confirmationdialog(_:ispresented:titlevisibility:presenting:actions:)) Presents a confirmation dialog using data to produce the dialog’s content and a localized string resource for the title.
 - [dismissalConfirmationDialog(_:shouldPresent:actions:)](/documentation/swiftui/view/dismissalconfirmationdialog(_:shouldpresent:actions:)) Presents a confirmation dialog when a dismiss action has been triggered.
 
 ---

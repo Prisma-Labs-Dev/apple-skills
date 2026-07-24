@@ -4,7 +4,7 @@ description: A group that contains dynamically created child tasks.
 source: https://developer.apple.com/documentation/swift/taskgroup
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/swift/taskgroup.json
-timestamp: 2026-04-14T13:14:33.000Z
+timestamp: 2026-07-24T07:42:58.772Z
 ---
 
 **Navigation:** [Swift](/documentation/swift)
@@ -113,7 +113,7 @@ For information about the language-level concurrency model that `TaskGroup` is p
 - [next()](/documentation/swift/taskgroup/next())
 - [next(isolation:)](/documentation/swift/taskgroup/next(isolation:)) Waits for the next child task to complete, and returns the value it returned.
 - [isEmpty](/documentation/swift/taskgroup/isempty) A Boolean value that indicates whether the group has any remaining tasks.
-- [waitForAll(isolation:)](/documentation/swift/taskgroup/waitforall(isolation:)) Wait for all of the group’s remaining tasks to complete.
+- [waitForAll()](/documentation/swift/taskgroup/waitforall()) Wait for all of the group’s remaining tasks to complete.
 
 ## Accessing an Asynchronous Sequence of Results
 
@@ -157,6 +157,7 @@ For information about the language-level concurrency model that `TaskGroup` is p
 - [asyncUnlessCancelled(priority:operation:)](/documentation/swift/taskgroup/asyncunlesscancelled(priority:operation:))
 - [spawn(priority:operation:)](/documentation/swift/taskgroup/spawn(priority:operation:))
 - [spawnUnlessCancelled(priority:operation:)](/documentation/swift/taskgroup/spawnunlesscancelled(priority:operation:))
+- [waitForAll(isolation:)](/documentation/swift/taskgroup/waitforall(isolation:)) Wait for all of the group’s remaining tasks to complete.
 
 ## Default Implementations
 

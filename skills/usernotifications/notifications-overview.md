@@ -3,7 +3,7 @@ title: User Notifications
 source: https://developer.apple.com/documentation/usernotifications
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/index/usernotifications
-timestamp: 2026-06-26T06:39:37.134Z
+timestamp: 2026-07-24T07:42:59.350Z
 ---
 
 **Navigation:** [UserNotifications](/documentation/usernotifications)
@@ -103,7 +103,6 @@ timestamp: 2026-06-26T06:39:37.134Z
 - [static var contentProvidingInvalid: UNError.Code](/documentation/usernotifications/unerror/contentprovidinginvalid)
 - [static var contentProvidingObjectNotAllowed: UNError.Code](/documentation/usernotifications/unerror/contentprovidingobjectnotallowed)
 - [static var badgeInputInvalid: UNError.Code](/documentation/usernotifications/unerror/badgeinputinvalid)
-- [static var attachmentUnsupportedType: UNError.Code](/documentation/usernotifications/unerror/attachmentunsupportedtype)
 #### Error Information
 
 - [static var errorDomain: String](/documentation/usernotifications/unerror/errordomain)
@@ -125,7 +124,6 @@ timestamp: 2026-06-26T06:39:37.134Z
 ##### Enumeration Cases
 
 - [case badgeInputInvalid](/documentation/usernotifications/unerror/code/badgeinputinvalid)
-- [case attachmentUnsupportedType](/documentation/usernotifications/unerror/code/attachmentunsupportedtype)
 ##### Initializers
 
 - [init?(rawValue: Int)](/documentation/usernotifications/unerror/code/init(rawvalue:))
@@ -148,7 +146,6 @@ timestamp: 2026-06-26T06:39:37.134Z
 #### Enumeration Cases
 
 - [case badgeInputInvalid](/documentation/usernotifications/unerror/code/badgeinputinvalid)
-- [case attachmentUnsupportedType](/documentation/usernotifications/unerror/code/attachmentunsupportedtype)
 #### Initializers
 
 - [init?(rawValue: Int)](/documentation/usernotifications/unerror/code/init(rawvalue:))

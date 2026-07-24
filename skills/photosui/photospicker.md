@@ -4,7 +4,7 @@ description: A view that displays a Photos picker for choosing assets from the p
 source: https://developer.apple.com/documentation/photosui/photospicker
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/photosui/photospicker.json
-timestamp: 2026-04-14T13:14:29.651Z
+timestamp: 2026-07-24T07:42:58.695Z
 ---
 
 **Navigation:** [PhotosUI](/documentation/photosui)
@@ -13,7 +13,7 @@ timestamp: 2026-04-14T13:14:29.651Z
 
 # PhotosPicker
 
-**Available on:** iOS 16.0+, iPadOS 16.0+, Mac Catalyst, macOS 13.0+, visionOS, watchOS 9.0+
+**Available on:** iOS 16.0+, iPadOS 16.0+, Mac Catalyst 16.0+, macOS 13.0+, visionOS, watchOS 9.0+
 
 > A view that displays a Photos picker for choosing assets from the photo library.
 

@@ -4,7 +4,7 @@ description: A view that switches between multiple child views using interactive
 source: https://developer.apple.com/documentation/swiftui/tabview
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/swiftui/tabview.json
-timestamp: 2026-06-26T06:39:36.829Z
+timestamp: 2026-07-24T07:42:59.085Z
 ---
 
 **Navigation:** [SwiftUI](/documentation/swiftui)
@@ -23,7 +23,7 @@ nonisolated struct TabView<SelectionValue, Content> where SelectionValue : Hasha
 
 ## Overview
 
-To create a user interface with tabs, place [Tab](/documentation/swiftui/tab)s  in a `TabView`. On iOS, you can also use one of the badge modifiers, like [badge(_:)](/documentation/swiftui/tabcontent/badge(_:)), to assign a badge to each of the tabs.
+To create a user interface with tabs, place instances of [Tab](/documentation/swiftui/tab)  in a `TabView`. On iOS, you can also use one of the badge modifiers, like [badge(_:)](/documentation/swiftui/tabcontent/badge(_:)), to assign a badge to each of the tabs.
 
 The following example creates a tab view with three tabs, each presenting a custom child view. The first tab has a numeric badge and the third has a string badge.
 

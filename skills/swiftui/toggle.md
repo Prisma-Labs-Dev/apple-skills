@@ -4,7 +4,7 @@ description: A control that toggles between on and off states.
 source: https://developer.apple.com/documentation/swiftui/toggle
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/swiftui/toggle.json
-timestamp: 2026-06-26T06:39:36.843Z
+timestamp: 2026-07-24T07:42:59.099Z
 ---
 
 **Navigation:** [SwiftUI](/documentation/swiftui)
@@ -96,16 +96,16 @@ You can also define custom styles by creating a type that conforms to the [Toggl
 
 ## Creating a toggle
 
-- [init(_:isOn:)](/documentation/swiftui/toggle/init(_:ison:)) Creates a toggle that generates its label from a localized string key.
+- [init(_:isOn:)](/documentation/swiftui/toggle/init(_:ison:)) Creates a toggle that generates its label from a localized string resource.
 - [init(isOn:label:)](/documentation/swiftui/toggle/init(ison:label:)) Creates a toggle that displays a custom label.
-- [init(_:image:isOn:)](/documentation/swiftui/toggle/init(_:image:ison:)) Creates a toggle that generates its label from a localized string key and image resource.
+- [init(_:image:isOn:)](/documentation/swiftui/toggle/init(_:image:ison:)) Creates a toggle that generates its label from a localized string resource and image resource.
 - [init(_:systemImage:isOn:)](/documentation/swiftui/toggle/init(_:systemimage:ison:)) Creates a toggle that generates its label from a localized string key and system image.
 
 ## Creating a toggle for a collection
 
-- [init(_:sources:isOn:)](/documentation/swiftui/toggle/init(_:sources:ison:)) Creates a toggle representing a collection of values that generates its label from a localized string key.
+- [init(_:sources:isOn:)](/documentation/swiftui/toggle/init(_:sources:ison:)) Creates a toggle representing a collection of values that generates its label from a localized string resource.
 - [init(sources:isOn:label:)](/documentation/swiftui/toggle/init(sources:ison:label:)) Creates a toggle representing a collection of values with a custom label.
-- [init(_:image:sources:isOn:)](/documentation/swiftui/toggle/init(_:image:sources:ison:)) Creates a toggle representing a collection of values that generates its label from a localized string key and image resource.
+- [init(_:image:sources:isOn:)](/documentation/swiftui/toggle/init(_:image:sources:ison:)) Creates a toggle representing a collection of values that generates its label from a localized string resource and image resource.
 - [init(_:systemImage:sources:isOn:)](/documentation/swiftui/toggle/init(_:systemimage:sources:ison:)) Creates a toggle representing a collection of values that generates its label from a localized string key and system image.
 
 ## Creating a toggle from a configuration

@@ -4,7 +4,7 @@ description: A view that allows the scrolling and zooming of its contained views
 source: https://developer.apple.com/documentation/uikit/uiscrollview
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/uikit/uiscrollview.json
-timestamp: 2026-06-26T06:39:37.072Z
+timestamp: 2026-07-24T07:42:59.290Z
 ---
 
 **Navigation:** [UIKit](/documentation/uikit)
@@ -211,6 +211,7 @@ If you assign a value to this view’s [restorationIdentifier](/documentation/ui
 - [Collection views](/documentation/uikit/collection-views) Display nested views using a configurable and highly customizable layout.
 - [Table views](/documentation/uikit/table-views) Display data in a single column of customizable rows.
 - [UIStackView](/documentation/uikit/uistackview) A streamlined interface for laying out a collection of views in either a column or a row.
+- [UILookToScrollInteraction](/documentation/uikit/uilooktoscrollinteraction)
 
 ---
 

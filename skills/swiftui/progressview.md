@@ -4,7 +4,7 @@ description: A view that shows the progress toward completion of a task.
 source: https://developer.apple.com/documentation/swiftui/progressview
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/swiftui/progressview.json
-timestamp: 2026-06-26T06:39:36.769Z
+timestamp: 2026-07-24T07:42:59.015Z
 ---
 
 **Navigation:** [SwiftUI](/documentation/swiftui)
@@ -131,7 +131,7 @@ On platforms other than macOS, the circular style may appear as an indeterminate
 
 - [init(_:)](/documentation/swiftui/progressview/init(_:)-l5vj) Creates a progress view for visualizing the given progress instance.
 - [init(value:total:)](/documentation/swiftui/progressview/init(value:total:)) Creates a progress view for showing determinate progress.
-- [init(_:value:total:)](/documentation/swiftui/progressview/init(_:value:total:)) Creates a progress view for showing determinate progress that generates its label from a string.
+- [init(_:value:total:)](/documentation/swiftui/progressview/init(_:value:total:)) Creates a progress view for showing determinate progress that generates its label from a localized string resource.
 - [init(value:total:label:)](/documentation/swiftui/progressview/init(value:total:label:)) Creates a progress view for showing determinate progress, with a custom label.
 - [init(value:total:label:currentValueLabel:)](/documentation/swiftui/progressview/init(value:total:label:currentvaluelabel:)) Creates a progress view for showing determinate progress, with a custom label.
 
@@ -143,7 +143,7 @@ On platforms other than macOS, the circular style may appear as an indeterminate
 
 ## Initializers
 
-- [init(_:)](/documentation/swiftui/progressview/init(_:)) Creates a progress view based on a style configuration.
+- [init(_:)](/documentation/swiftui/progressview/init(_:)) Creates a progress view for showing indeterminate progress that generates its label from a localized string resource.
 
 ## Indicating a value
 

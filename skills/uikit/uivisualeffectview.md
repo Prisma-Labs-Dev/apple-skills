@@ -4,7 +4,7 @@ description: An object that implements some complex visual effects.
 source: https://developer.apple.com/documentation/uikit/uivisualeffectview
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/uikit/uivisualeffectview.json
-timestamp: 2026-06-26T06:39:37.120Z
+timestamp: 2026-07-24T07:42:59.336Z
 ---
 
 **Navigation:** [UIKit](/documentation/uikit)
@@ -91,6 +91,7 @@ Many effects require support from the window that hosts the [UIVisualEffectView]
 - [UIVisualEffect](/documentation/uikit/uivisualeffect) An initializer for visual effect views and blur and vibrancy effect objects.
 - [UIVibrancyEffect](/documentation/uikit/uivibrancyeffect) An object that amplifies and adjusts the color of the content layered behind a visual effect view.
 - [UIBlurEffect](/documentation/uikit/uiblureffect) An object that applies a blurring effect to the content layered behind a visual effect view.
+- [UIColorEffect](/documentation/uikit/uicoloreffect) A visual effect that applies a solid color background.
 
 ---
 

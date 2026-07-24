@@ -4,7 +4,7 @@ description: A control for presenting a menu of actions.
 source: https://developer.apple.com/documentation/swiftui/menu
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/swiftui/menu.json
-timestamp: 2026-06-26T06:39:36.691Z
+timestamp: 2026-07-24T07:42:58.926Z
 ---
 
 **Navigation:** [SwiftUI](/documentation/swiftui)
@@ -108,16 +108,16 @@ Menu("Editing") {
 
 ## Creating a menu from content
 
-- [init(_:content:)](/documentation/swiftui/menu/init(_:content:)) Creates a menu that generates its label from a localized string key.
+- [init(_:content:)](/documentation/swiftui/menu/init(_:content:)) Creates a menu that generates its label from a localized string resource.
 - [init(content:label:)](/documentation/swiftui/menu/init(content:label:)) Creates a menu with a custom label.
-- [init(_:image:content:)](/documentation/swiftui/menu/init(_:image:content:)) Creates a menu that generates its label from a localized string key and image resource.
+- [init(_:image:content:)](/documentation/swiftui/menu/init(_:image:content:)) Creates a menu that generates its label from a localized string resource and image resource.
 - [init(_:systemImage:content:)](/documentation/swiftui/menu/init(_:systemimage:content:)) Creates a menu that generates its label from a localized string key and system image.
 
 ## Creating a menu with a primary action
 
-- [init(_:content:primaryAction:)](/documentation/swiftui/menu/init(_:content:primaryaction:)) Creates a menu with a custom primary action that generates its label from a localized string key.
+- [init(_:content:primaryAction:)](/documentation/swiftui/menu/init(_:content:primaryaction:)) Creates a menu with a custom primary action that generates its label from a localized string resource.
 - [init(content:label:primaryAction:)](/documentation/swiftui/menu/init(content:label:primaryaction:)) Creates a menu with a custom primary action and custom label.
-- [init(_:image:content:primaryAction:)](/documentation/swiftui/menu/init(_:image:content:primaryaction:)) Creates a menu with a custom primary action that generates its label from a localized string key.
+- [init(_:image:content:primaryAction:)](/documentation/swiftui/menu/init(_:image:content:primaryaction:)) Creates a menu with a custom primary action that generates its label from a localized string resource.
 - [init(_:systemImage:content:primaryAction:)](/documentation/swiftui/menu/init(_:systemimage:content:primaryaction:)) Creates a menu with a custom primary action that generates its label from a localized string key and system image.
 
 ## Creating a menu from a configuration

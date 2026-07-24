@@ -4,7 +4,7 @@ description: A view that controls a navigation presentation.
 source: https://developer.apple.com/documentation/swiftui/navigationlink
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/swiftui/navigationlink.json
-timestamp: 2026-06-26T06:39:36.696Z
+timestamp: 2026-07-24T07:42:58.930Z
 ---
 
 **Navigation:** [SwiftUI](/documentation/swiftui)
@@ -148,7 +148,7 @@ The list coordinates with the navigation logic so that changing the selection st
 
 ## Presenting a value
 
-- [init(_:value:)](/documentation/swiftui/navigationlink/init(_:value:)) Creates a navigation link that presents the view corresponding to a codable value, with a text label that the link generates from a localized string key.
+- [init(_:value:)](/documentation/swiftui/navigationlink/init(_:value:)) Creates a navigation link that presents the view corresponding to a codable value, with a text label that the link generates from a localized string resource.
 - [init(value:label:)](/documentation/swiftui/navigationlink/init(value:label:)) Creates a navigation link that presents the view corresponding to a codable value.
 
 ## Configuring the link

@@ -4,7 +4,7 @@ description: Provide people with a way to mark their adventures by displaying an
 source: https://developer.apple.com/documentation/swiftui/landmarks-displaying-custom-activity-badges
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/swiftui/landmarks-displaying-custom-activity-badges.json
-timestamp: 2026-04-14T13:14:25.672Z
+timestamp: 2026-07-24T07:42:58.584Z
 ---
 
 **Navigation:** [SwiftUI](/documentation/swiftui)
@@ -21,7 +21,7 @@ timestamp: 2026-04-14T13:14:25.672Z
 
 The Landmarks app lets people track their adventures as they explore sites around the world. Whether it’s a national park near their home or a far-flung location on a different continent, the app provides a way for people to mark their adventures and receive custom activity badges along the way.
 
-![An image of the landmarks view on an iPhone, with the badges view visible over some landmarks.](https://docs-assets.developer.apple.com/published/0906c5ecab4688f18b19faf293acb363/Landmarks-Building-an-app-with-Liquid-Glass-5%402x.png)
+![An image of the landmarks view on an iPhone, with the badges view visible over some landmarks.](https://docs-assets.developer.apple.com/published/9587c4198233b237bd7b40434c3286e8/Landmarks-Building-an-app-with-Liquid-Glass-5%402x.png)
 
 This sample displays the badges in a vertical view that includes a toggle button for showing or hiding the badges. The Landmarks app includes a custom modifier that makes it easier for other views to adopt the badge view. By configuring the badges to use Liquid Glass, the badges gain the advantage of using the morphing animation when you show or hide the badges.
 

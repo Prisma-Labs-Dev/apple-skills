@@ -3,7 +3,7 @@ title: SwiftUI
 source: https://developer.apple.com/documentation/swiftui
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/index/swiftui
-timestamp: 2026-06-26T06:39:36.817Z
+timestamp: 2026-07-24T07:42:59.072Z
 ---
 
 **Navigation:** [SwiftUI](/documentation/swiftui)
@@ -913,14 +913,15 @@ timestamp: 2026-06-26T06:39:36.817Z
 - [Documents](/documentation/swiftui/documents)
 ### Creating a document
 
+- [Creating a document-based app](/documentation/swiftui/creating-a-document-based-app)
+- [Handling advanced document scenarios](/documentation/swiftui/handling-advanced-document-scenarios)
+- [Updating your document-based app](/documentation/swiftui/updating-your-document-based-app)
 - [Building a document-based app with SwiftUI](/documentation/swiftui/building-a-document-based-app-with-swiftui)
 - [Building a document-based app using SwiftData](/documentation/swiftui/building-a-document-based-app-using-swiftdata)
 - [DocumentGroup](/documentation/swiftui/documentgroup)
 #### Creating a document group
 
-- [init(allowCreating:editor:makeDocument:)](/documentation/swiftui/documentgroup/init(allowcreating:editor:makedocument:))
-- [init(newDocument:editor:)](/documentation/swiftui/documentgroup/init(newdocument:editor:))
-- [init(viewing:viewer:)](/documentation/swiftui/documentgroup/init(viewing:viewer:))
+- [init(allowCreating: Bool, editor: (Document) -> Content, makeDocument: (URLDocumentConfiguration, DocumentCreationContext) async throws -> Document)](/documentation/swiftui/documentgroup/init(allowcreating:editor:makedocument:))
 - [init(viewer: (Document) -> Content, makeReadableDocument: (URLDocumentConfiguration, DocumentCreationContext) async throws -> Document)](/documentation/swiftui/documentgroup/init(viewer:makereadabledocument:))
 #### Editing a document backed by a persistent store
 
@@ -930,37 +931,10 @@ timestamp: 2026-06-26T06:39:36.817Z
 
 - [init(viewing:contentType:viewer:)](/documentation/swiftui/documentgroup/init(viewing:contenttype:viewer:))
 - [init(viewing: UTType, migrationPlan: any SchemaMigrationPlan.Type, viewer: () -> Content)](/documentation/swiftui/documentgroup/init(viewing:migrationplan:viewer:))
+#### Deprecated
 
-### Storing document data in a value type
-
-- [FileDocument](/documentation/swiftui/filedocument)
-#### Reading a document
-
-- [init(configuration: Self.ReadConfiguration) throws](/documentation/swiftui/filedocument/init(configuration:))
-- [static var readableContentTypes: [UTType]](/documentation/swiftui/filedocument/readablecontenttypes)
-- [FileDocument.ReadConfiguration](/documentation/swiftui/filedocument/readconfiguration)
-#### Writing a document
-
-- [func fileWrapper(configuration: Self.WriteConfiguration) throws -> FileWrapper](/documentation/swiftui/filedocument/filewrapper(configuration:))
-- [static var writableContentTypes: [UTType]](/documentation/swiftui/filedocument/writablecontenttypes)
-##### FileDocument Implementations
-
-- [static var writableContentTypes: [UTType]](/documentation/swiftui/filedocument/writablecontenttypes-289b3)
-
-- [FileDocument.WriteConfiguration](/documentation/swiftui/filedocument/writeconfiguration)
-
-- [FileDocumentConfiguration](/documentation/swiftui/filedocumentconfiguration)
-#### Getting and setting the document
-
-- [var document: Document](/documentation/swiftui/filedocumentconfiguration/document)
-- [var $document: Binding<Document>](/documentation/swiftui/filedocumentconfiguration/$document)
-#### Getting document properties
-
-- [var fileURL: URL?](/documentation/swiftui/filedocumentconfiguration/fileurl)
-- [var isEditable: Bool](/documentation/swiftui/filedocumentconfiguration/iseditable)
-#### Instance Properties
-
-- [var creationSource: DocumentCreationSource?](/documentation/swiftui/filedocumentconfiguration/creationsource)
+- [init(newDocument:editor:)](/documentation/swiftui/documentgroup/init(newdocument:editor:))
+- [init(viewing:viewer:)](/documentation/swiftui/documentgroup/init(viewing:viewer:))
 
 ### Storing document data in a reference type instance
 
@@ -973,8 +947,6 @@ timestamp: 2026-06-26T06:39:36.817Z
 - [Reader](/documentation/swiftui/readabledocument/reader)
 - [func reader(configuration: sending Self.ReadConfiguration) -> sending Self.Reader](/documentation/swiftui/readabledocument/reader(configuration:))
 - [func apply(snapshot: sending Self.Reader.Snapshot, previous: sending Self.Reader.Snapshot?) async throws](/documentation/swiftui/readabledocument/apply(snapshot:previous:))
-#### Type Properties
-
 - [static var writableContentTypes: [UTType]](/documentation/swiftui/readabledocument/writablecontenttypes)
 
 - [WritableDocument](/documentation/swiftui/writabledocument)
@@ -1031,18 +1003,6 @@ timestamp: 2026-06-26T06:39:36.817Z
 
 - [var contentType: UTType](/documentation/swiftui/documentwriteconfiguration/contenttype)
 
-- [FileDocumentReadConfiguration](/documentation/swiftui/filedocumentreadconfiguration)
-#### Reading the content
-
-- [let contentType: UTType](/documentation/swiftui/filedocumentreadconfiguration/contenttype)
-- [let file: FileWrapper](/documentation/swiftui/filedocumentreadconfiguration/file)
-
-- [FileDocumentWriteConfiguration](/documentation/swiftui/filedocumentwriteconfiguration)
-#### Writing the content
-
-- [let contentType: UTType](/documentation/swiftui/filedocumentwriteconfiguration/contenttype)
-- [let existingFile: FileWrapper?](/documentation/swiftui/filedocumentwriteconfiguration/existingfile)
-
 - [DocumentReader](/documentation/swiftui/documentreader)
 #### Reading a document
 
@@ -1053,7 +1013,7 @@ timestamp: 2026-06-26T06:39:36.817Z
 - [DocumentWriter](/documentation/swiftui/documentwriter)
 #### Writing a document
 
-- [func write(content: sending Self.Snapshot, to: sending Self.Destination, previous: sending Self.Snapshot?, progress: consuming Subprogress) async throws](/documentation/swiftui/documentwriter/write(content:to:previous:progress:))
+- [func write(snapshot: sending Self.Snapshot, to: sending Self.Destination, previous: sending Self.Snapshot?, progress: consuming Subprogress) async throws](/documentation/swiftui/documentwriter/write(snapshot:to:previous:progress:))
 - [Snapshot](/documentation/swiftui/documentwriter/snapshot)
 - [Destination](/documentation/swiftui/documentwriter/destination)
 
@@ -1066,19 +1026,12 @@ timestamp: 2026-06-26T06:39:36.817Z
 - [FileWrapperDocumentWriter](/documentation/swiftui/filewrapperdocumentwriter)
 #### Creating a writer
 
-- [init(sending FileWrapperDocumentWriter<Snapshot>.WriteConfiguration, makeFileWrapper: (Snapshot) async throws -> FileWrapper)](/documentation/swiftui/filewrapperdocumentwriter/init(_:makefilewrapper:))
+- [init(sending FileWrapperDocumentWriter<Snapshot>.WriteConfiguration, makeFileWrapper: (Snapshot, FileWrapper?) async throws -> FileWrapper)](/documentation/swiftui/filewrapperdocumentwriter/init(_:makefilewrapper:))
 - [FileWrapperDocumentWriter.WriteConfiguration](/documentation/swiftui/filewrapperdocumentwriter/writeconfiguration)
 
 ### Opening a document programmatically
 
 - [var newDocument: NewDocumentAction](/documentation/swiftui/environmentvalues/newdocument)
-- [NewDocumentAction](/documentation/swiftui/newdocumentaction)
-#### Calling the action
-
-- [func callAsFunction(_:)](/documentation/swiftui/newdocumentaction/callasfunction(_:))
-- [func callAsFunction(contentType: UTType)](/documentation/swiftui/newdocumentaction/callasfunction(contenttype:))
-- [func callAsFunction(contentType: UTType, prepareDocument: (ModelContext) -> Void)](/documentation/swiftui/newdocumentaction/callasfunction(contenttype:preparedocument:))
-
 - [var openDocument: OpenDocumentAction](/documentation/swiftui/environmentvalues/opendocument)
 - [OpenDocumentAction](/documentation/swiftui/opendocumentaction)
 #### Calling the action
@@ -1088,12 +1041,14 @@ timestamp: 2026-06-26T06:39:36.817Z
 ### Configuring the document launch experience
 
 - [DocumentGroupLaunchScene](/documentation/swiftui/documentgrouplaunchscene)
-#### Initializers
+#### Creating a launch scene with a background view
 
 - [init(_:_:background:)](/documentation/swiftui/documentgrouplaunchscene/init(_:_:background:))
 - [init(_:_:background:backgroundAccessoryView:)](/documentation/swiftui/documentgrouplaunchscene/init(_:_:background:backgroundaccessoryview:))
 - [init(_:_:background:backgroundAccessoryView:overlayAccessoryView:)](/documentation/swiftui/documentgrouplaunchscene/init(_:_:background:backgroundaccessoryview:overlayaccessoryview:))
 - [init(_:_:background:overlayAccessoryView:)](/documentation/swiftui/documentgrouplaunchscene/init(_:_:background:overlayaccessoryview:))
+#### Creating a launch scene with a background style
+
 - [init(_:backgroundStyle:_:)](/documentation/swiftui/documentgrouplaunchscene/init(_:backgroundstyle:_:))
 - [init(_:backgroundStyle:_:backgroundAccessoryView:)](/documentation/swiftui/documentgrouplaunchscene/init(_:backgroundstyle:_:backgroundaccessoryview:))
 - [init(_:backgroundStyle:_:backgroundAccessoryView:overlayAccessoryView:)](/documentation/swiftui/documentgrouplaunchscene/init(_:backgroundstyle:_:backgroundaccessoryview:overlayaccessoryview:))
@@ -1102,7 +1057,7 @@ timestamp: 2026-06-26T06:39:36.817Z
 - [func documentLaunchTitle(_:)](/documentation/swiftui/scene/documentlaunchtitle(_:))
 - [func documentLaunchSubtitle(_:)](/documentation/swiftui/scene/documentlaunchsubtitle(_:))
 - [DocumentLaunchView](/documentation/swiftui/documentlaunchview)
-#### Initializers
+#### Creating a launch view with a background view
 
 - [init(_:for:_:onDocumentOpen:)](/documentation/swiftui/documentlaunchview/init(_:for:_:ondocumentopen:))
 - [init(_:for:_:onDocumentOpen:background:)](/documentation/swiftui/documentlaunchview/init(_:for:_:ondocumentopen:background:))
@@ -1112,11 +1067,13 @@ timestamp: 2026-06-26T06:39:36.817Z
 - [init(_:for:_:onDocumentOpen:backgroundAccessoryView:)](/documentation/swiftui/documentlaunchview/init(_:for:_:ondocumentopen:backgroundaccessoryview:))
 - [init(_:for:_:onDocumentOpen:backgroundAccessoryView:overlayAccessoryView:)](/documentation/swiftui/documentlaunchview/init(_:for:_:ondocumentopen:backgroundaccessoryview:overlayaccessoryview:))
 - [init(_:for:_:onDocumentOpen:overlayAccessoryView:)](/documentation/swiftui/documentlaunchview/init(_:for:_:ondocumentopen:overlayaccessoryview:))
+#### Creating a launch view with a background style
+
 - [init(_:for:backgroundStyle:_:onDocumentOpen:)](/documentation/swiftui/documentlaunchview/init(_:for:backgroundstyle:_:ondocumentopen:))
 - [init(_:for:backgroundStyle:_:onDocumentOpen:backgroundAccessoryView:)](/documentation/swiftui/documentlaunchview/init(_:for:backgroundstyle:_:ondocumentopen:backgroundaccessoryview:))
 - [init(_:for:backgroundStyle:_:onDocumentOpen:backgroundAccessoryView:overlayAccessoryView:)](/documentation/swiftui/documentlaunchview/init(_:for:backgroundstyle:_:ondocumentopen:backgroundaccessoryview:overlayaccessoryview:))
 - [init(_:for:backgroundStyle:_:onDocumentOpen:overlayAccessoryView:)](/documentation/swiftui/documentlaunchview/init(_:for:backgroundstyle:_:ondocumentopen:overlayaccessoryview:))
-#### Instance Properties
+#### Displaying the launch view
 
 - [var body: some View](/documentation/swiftui/documentlaunchview/body)
 
@@ -1124,42 +1081,35 @@ timestamp: 2026-06-26T06:39:36.817Z
 - [func documentLaunchSubtitle(_:)](/documentation/swiftui/view/documentlaunchsubtitle(_:))
 - [func documentBrowserContextMenu(([URL]?) -> some View) -> some View](/documentation/swiftui/view/documentbrowsercontextmenu(_:))
 - [DocumentLaunchGeometryProxy](/documentation/swiftui/documentlaunchgeometryproxy)
-#### Instance Properties
+#### Getting the geometry
 
 - [var frame: CGRect](/documentation/swiftui/documentlaunchgeometryproxy/frame)
 - [var titleViewFrame: CGRect](/documentation/swiftui/documentlaunchgeometryproxy/titleviewframe)
 
 - [DefaultDocumentGroupLaunchActions](/documentation/swiftui/defaultdocumentgrouplaunchactions)
-#### Initializers
+#### Creating the default launch actions
 
 - [init()](/documentation/swiftui/defaultdocumentgrouplaunchactions/init())
 
 - [NewDocumentButton](/documentation/swiftui/newdocumentbutton)
-#### Initializers
+#### Creating and opening a document
 
 - [init(_:contentType:)](/documentation/swiftui/newdocumentbutton/init(_:contenttype:))
 - [init(_:contentType:prepareDocumentURL:)](/documentation/swiftui/newdocumentbutton/init(_:contenttype:preparedocumenturl:))
+#### Creating and opening a document with a creation source
+
 - [init(_:contentType:source:)](/documentation/swiftui/newdocumentbutton/init(_:contenttype:source:))
 - [init(Text?, contentType: UTType, source: DocumentCreationSource, () async throws -> URL?)](/documentation/swiftui/newdocumentbutton/init(_:contenttype:source:_:))
 - [init(_:contentType:source:prepareDocumentURL:)](/documentation/swiftui/newdocumentbutton/init(_:contenttype:source:preparedocumenturl:))
+#### Deprecated
+
 - [init(_:for:contentType:prepareDocument:)](/documentation/swiftui/newdocumentbutton/init(_:for:contenttype:preparedocument:))
-- [init(_:for:contentType:source:_:)](/documentation/swiftui/newdocumentbutton/init(_:for:contenttype:source:_:))
-- [init(for:source:)](/documentation/swiftui/newdocumentbutton/init(for:source:))
-- [init(source: NewDocumentButtonDataSource)](/documentation/swiftui/newdocumentbutton/init(source:))
 
-- [NewDocumentButtonDataSource](/documentation/swiftui/newdocumentbuttondatasource)
 - [DefaultNewDocumentButtonLabel](/documentation/swiftui/defaultnewdocumentbuttonlabel)
-#### Creating a label
-
-- [init()](/documentation/swiftui/defaultnewdocumentbuttonlabel/init())
-
 - [DocumentCreationSource](/documentation/swiftui/documentcreationsource)
 #### Creating a source
 
 - [init(id: String)](/documentation/swiftui/documentcreationsource/init(id:))
-#### Identifying a source
-
-- [let id: String](/documentation/swiftui/documentcreationsource/id)
 
 ### Renaming a document
 
@@ -1176,6 +1126,54 @@ timestamp: 2026-06-26T06:39:36.817Z
 - [func callAsFunction()](/documentation/swiftui/renameaction/callasfunction())
 
 ### Deprecated
+
+- [FileDocument](/documentation/swiftui/filedocument)
+#### Reading a document
+
+- [init(configuration: Self.ReadConfiguration) throws](/documentation/swiftui/filedocument/init(configuration:))
+- [static var readableContentTypes: [UTType]](/documentation/swiftui/filedocument/readablecontenttypes)
+- [FileDocument.ReadConfiguration](/documentation/swiftui/filedocument/readconfiguration)
+#### Writing a document
+
+- [func fileWrapper(configuration: Self.WriteConfiguration) throws -> FileWrapper](/documentation/swiftui/filedocument/filewrapper(configuration:))
+- [static var writableContentTypes: [UTType]](/documentation/swiftui/filedocument/writablecontenttypes)
+##### FileDocument Implementations
+
+- [static var writableContentTypes: [UTType]](/documentation/swiftui/filedocument/writablecontenttypes-289b3)
+
+- [FileDocument.WriteConfiguration](/documentation/swiftui/filedocument/writeconfiguration)
+
+- [FileDocumentConfiguration](/documentation/swiftui/filedocumentconfiguration)
+#### Getting and setting the document
+
+- [var document: Document](/documentation/swiftui/filedocumentconfiguration/document)
+- [var $document: Binding<Document>](/documentation/swiftui/filedocumentconfiguration/$document)
+#### Getting document properties
+
+- [var fileURL: URL?](/documentation/swiftui/filedocumentconfiguration/fileurl)
+- [var isEditable: Bool](/documentation/swiftui/filedocumentconfiguration/iseditable)
+#### Instance Properties
+
+- [var creationSource: DocumentCreationSource?](/documentation/swiftui/filedocumentconfiguration/creationsource)
+
+- [FileDocumentReadConfiguration](/documentation/swiftui/filedocumentreadconfiguration)
+#### Reading the content
+
+- [let contentType: UTType](/documentation/swiftui/filedocumentreadconfiguration/contenttype)
+- [let file: FileWrapper](/documentation/swiftui/filedocumentreadconfiguration/file)
+
+- [FileDocumentWriteConfiguration](/documentation/swiftui/filedocumentwriteconfiguration)
+#### Writing the content
+
+- [let contentType: UTType](/documentation/swiftui/filedocumentwriteconfiguration/contenttype)
+- [let existingFile: FileWrapper?](/documentation/swiftui/filedocumentwriteconfiguration/existingfile)
+
+- [NewDocumentAction](/documentation/swiftui/newdocumentaction)
+#### Calling the action
+
+- [func callAsFunction(_:)](/documentation/swiftui/newdocumentaction/callasfunction(_:))
+- [func callAsFunction(contentType: UTType)](/documentation/swiftui/newdocumentaction/callasfunction(contenttype:))
+- [func callAsFunction(contentType: UTType, prepareDocument: (ModelContext) -> Void)](/documentation/swiftui/newdocumentaction/callasfunction(contenttype:preparedocument:))
 
 - [ReferenceFileDocument](/documentation/swiftui/referencefiledocument)
 #### Reading a document
@@ -1784,12 +1782,12 @@ timestamp: 2026-06-26T06:39:36.817Z
 - [func alert(_:isPresented:actions:)](/documentation/swiftui/view/alert(_:ispresented:actions:))
 - [func alert(_:isPresented:presenting:actions:)](/documentation/swiftui/view/alert(_:ispresented:presenting:actions:))
 - [func alert(_:item:actions:)](/documentation/swiftui/view/alert(_:item:actions:))
-- [func alert<E, A>(error: Binding<E?>, actions: () -> A) -> some View](/documentation/swiftui/view/alert(error:actions:))
+- [func alert(error:actions:)](/documentation/swiftui/view/alert(error:actions:))
 - [func alert<E, A>(isPresented: Binding<Bool>, error: E?, actions: () -> A) -> some View](/documentation/swiftui/view/alert(ispresented:error:actions:))
 - [func alert(_:isPresented:actions:message:)](/documentation/swiftui/view/alert(_:ispresented:actions:message:))
 - [func alert(_:isPresented:presenting:actions:message:)](/documentation/swiftui/view/alert(_:ispresented:presenting:actions:message:))
 - [func alert(_:item:actions:message:)](/documentation/swiftui/view/alert(_:item:actions:message:))
-- [func alert<E, A, M>(error: Binding<E?>, actions: (E) -> A, message: (E) -> M) -> some View](/documentation/swiftui/view/alert(error:actions:message:))
+- [func alert(error:actions:message:)](/documentation/swiftui/view/alert(error:actions:message:))
 - [func alert<E, A, M>(isPresented: Binding<Bool>, error: E?, actions: (E) -> A, message: (E) -> M) -> some View](/documentation/swiftui/view/alert(ispresented:error:actions:message:))
 ### Getting confirmation for an action
 
@@ -2193,16 +2191,21 @@ timestamp: 2026-06-26T06:39:36.817Z
 
 ### Minimizing a toolbar
 
-- [func toolbarMinimizeBehavior(ToolbarMinimizeBehavior, for: ToolbarPlacement...) -> some View](/documentation/swiftui/view/toolbarminimizebehavior(_:for:))
-- [ToolbarMinimizeBehavior](/documentation/swiftui/toolbarminimizebehavior)
+- [func toolbarMinimizationBehavior(ToolbarMinimizationBehavior, for: ToolbarPlacement...) -> some View](/documentation/swiftui/view/toolbarminimizationbehavior(_:for:))
+- [ToolbarMinimizationBehavior](/documentation/swiftui/toolbarminimizationbehavior)
 #### Getting behaviors
 
-- [static var automatic: ToolbarMinimizeBehavior](/documentation/swiftui/toolbarminimizebehavior/automatic)
-#### Type Properties
+- [static var automatic: ToolbarMinimizationBehavior](/documentation/swiftui/toolbarminimizationbehavior/automatic)
+- [static let never: ToolbarMinimizationBehavior](/documentation/swiftui/toolbarminimizationbehavior/never)
+- [static let onScrollDown: ToolbarMinimizationBehavior](/documentation/swiftui/toolbarminimizationbehavior/onscrolldown)
+- [static let onScrollUp: ToolbarMinimizationBehavior](/documentation/swiftui/toolbarminimizationbehavior/onscrollup)
 
-- [static let never: ToolbarMinimizeBehavior](/documentation/swiftui/toolbarminimizebehavior/never)
-- [static let onScrollDown: ToolbarMinimizeBehavior](/documentation/swiftui/toolbarminimizebehavior/onscrolldown)
-- [static let onScrollUp: ToolbarMinimizeBehavior](/documentation/swiftui/toolbarminimizebehavior/onscrollup)
+- [func toolbarMinimizationRestoration(ToolbarMinimizationRestoration, for: ToolbarPlacement...) -> some View](/documentation/swiftui/view/toolbarminimizationrestoration(_:for:))
+- [ToolbarMinimizationRestoration](/documentation/swiftui/toolbarminimizationrestoration)
+#### Getting restoration options
+
+- [static let atScrollEdge: ToolbarMinimizationRestoration](/documentation/swiftui/toolbarminimizationrestoration/atscrolledge)
+- [static let automatic: ToolbarMinimizationRestoration](/documentation/swiftui/toolbarminimizationrestoration/automatic)
 
 - [func toolbarMinimizationSafeAreaAdjustment(ToolbarMinimizationSafeAreaAdjustment, for: ToolbarPlacement...) -> some View](/documentation/swiftui/view/toolbarminimizationsafeareaadjustment(_:for:))
 - [ToolbarMinimizationSafeAreaAdjustment](/documentation/swiftui/toolbarminimizationsafeareaadjustment)
@@ -2320,7 +2323,7 @@ timestamp: 2026-06-26T06:39:36.817Z
 - [App extensions](/documentation/swiftui/app-extensions)
 ### Creating widgets
 
-- [Building Widgets Using WidgetKit and SwiftUI](/documentation/widgetkit/building_widgets_using_widgetkit_and_swiftui)
+- [Building Widgets Using WidgetKit and SwiftUI](/documentation/widgetkit/building-widgets-using-widgetkit-and-swiftui)
 - [Creating a widget extension](/documentation/widgetkit/creating-a-widget-extension)
 - [Keeping a widget up to date](/documentation/widgetkit/keeping-a-widget-up-to-date)
 - [Making a configurable widget](/documentation/widgetkit/making-a-configurable-widget)
@@ -2735,7 +2738,6 @@ timestamp: 2026-06-26T06:39:36.817Z
 - [var minimumScaleFactor: CGFloat](/documentation/swiftui/environmentvalues/minimumscalefactor)
 - [var multilineTextAlignment: TextAlignment](/documentation/swiftui/environmentvalues/multilinetextalignment)
 - [var textCase: Text.Case?](/documentation/swiftui/environmentvalues/textcase)
-- [var textInputBorderShape: TextInputBorderShape](/documentation/swiftui/environmentvalues/textinputbordershape)
 - [var textSelectionAffinity: TextSelectionAffinity](/documentation/swiftui/environmentvalues/textselectionaffinity)
 - [var truncationMode: Text.TruncationMode](/documentation/swiftui/environmentvalues/truncationmode)
 #### View attributes
@@ -2817,6 +2819,7 @@ timestamp: 2026-06-26T06:39:36.817Z
 - [var surfaceSnappingInfo: SurfaceSnappingInfo](/documentation/swiftui/environmentvalues/surfacesnappinginfo)
 - [var symbolColorRenderingMode: SymbolColorRenderingMode?](/documentation/swiftui/environmentvalues/symbolcolorrenderingmode)
 - [var symbolVariableValueMode: SymbolVariableValueMode?](/documentation/swiftui/environmentvalues/symbolvariablevaluemode)
+- [var systemPrefersReducedResourceUsage: Bool](/documentation/swiftui/environmentvalues/systemprefersreducedresourceusage)
 - [var tabBarPlacement: TabBarPlacement?](/documentation/swiftui/environmentvalues/tabbarplacement)
 - [var tabViewBottomAccessoryPlacement: TabViewBottomAccessoryPlacement?](/documentation/swiftui/environmentvalues/tabviewbottomaccessoryplacement)
 - [var windowClippingMargins: EdgeInsets3D](/documentation/swiftui/environmentvalues/windowclippingmargins)
@@ -3061,15 +3064,43 @@ timestamp: 2026-06-26T06:39:36.817Z
 - [macro Preview(String?, traits: PreviewTrait<Preview.ViewTraits>, PreviewTrait<Preview.ViewTraits>..., body: () -> any View)](/documentation/swiftui/preview(_:traits:_:body:))
 - [macro Preview(String?, traits: PreviewTrait<Preview.ViewTraits>..., body: () -> any View, cameras: () -> [PreviewCamera])](/documentation/swiftui/preview(_:traits:body:cameras:))
 - [macro Preview<T>(String?, traits: PreviewTrait<Preview.ViewTraits>..., arguments: [T], body: (T) -> any View)](/documentation/swiftui/preview(_:traits:arguments:body:))
+##### Customizing a preview
+
+- [macro Previewable()](/documentation/swiftui/previewable())
+- [PreviewModifier](/documentation/swiftui/previewmodifier)
+###### Associated Types
+
+- [Body](/documentation/swiftui/previewmodifier/body)
+- [Context](/documentation/swiftui/previewmodifier/context)
+###### Instance Methods
+
+- [func body(content: Self.Content, context: Self.Context) -> Self.Body](/documentation/swiftui/previewmodifier/body(content:context:))
+###### Type Aliases
+
+- [PreviewModifier.Content](/documentation/swiftui/previewmodifier/content)
+###### Type Methods
+
+- [static func makeSharedContext() async throws -> Self.Context](/documentation/swiftui/previewmodifier/makesharedcontext())
+###### PreviewModifier Implementations
+
+- [static func makeSharedContext() async throws -> Self.Context](/documentation/swiftui/previewmodifier/makesharedcontext()-4zi8r)
+
+
+- [PreviewModifierContent](/documentation/swiftui/previewmodifiercontent)
 ##### Creating a preview in the context of a scene
 
 - [macro Preview<Style>(String?, immersionStyle: Style, traits: PreviewTrait<Preview.ViewTraits>..., body: () -> any View)](/documentation/swiftui/preview(_:immersionstyle:traits:body:))
 - [macro Preview<Style>(String?, immersionStyle: Style, traits: PreviewTrait<Preview.ViewTraits>..., body: () -> any View, cameras: () -> [PreviewCamera])](/documentation/swiftui/preview(_:immersionstyle:traits:body:cameras:))
 - [macro Preview<Style>(String?, windowStyle: Style, traits: PreviewTrait<Preview.ViewTraits>..., body: () -> any View)](/documentation/swiftui/preview(_:windowstyle:traits:body:))
 - [macro Preview<Style>(String?, windowStyle: Style, traits: PreviewTrait<Preview.ViewTraits>..., body: () -> any View, cameras: () -> [PreviewCamera])](/documentation/swiftui/preview(_:windowstyle:traits:body:cameras:))
-##### Defining a preview
+##### Building in debug mode
 
-- [macro Previewable()](/documentation/swiftui/previewable())
+- [DebugReplaceableView](/documentation/swiftui/debugreplaceableview)
+##### Deprecated
+
+- [Deprecated](/documentation/swiftui/previews-deprecated)
+###### Defining a preview
+
 - [PreviewProvider](/documentation/swiftui/previewprovider)
 ###### Creating a preview
 
@@ -3092,27 +3123,7 @@ timestamp: 2026-06-26T06:39:36.817Z
 - [case watchOS](/documentation/swiftui/previewplatform/watchos)
 
 - [func previewDisplayName(String?) -> some View](/documentation/swiftui/view/previewdisplayname(_:))
-- [PreviewModifier](/documentation/swiftui/previewmodifier)
-###### Associated Types
-
-- [Body](/documentation/swiftui/previewmodifier/body)
-- [Context](/documentation/swiftui/previewmodifier/context)
-###### Instance Methods
-
-- [func body(content: Self.Content, context: Self.Context) -> Self.Body](/documentation/swiftui/previewmodifier/body(content:context:))
-###### Type Aliases
-
-- [PreviewModifier.Content](/documentation/swiftui/previewmodifier/content)
-###### Type Methods
-
-- [static func makeSharedContext() async throws -> Self.Context](/documentation/swiftui/previewmodifier/makesharedcontext())
-###### PreviewModifier Implementations
-
-- [static func makeSharedContext() async throws -> Self.Context](/documentation/swiftui/previewmodifier/makesharedcontext()-4zi8r)
-
-
-- [PreviewModifierContent](/documentation/swiftui/previewmodifiercontent)
-##### Customizing a preview
+###### Customizing a preview
 
 - [func previewDevice(PreviewDevice?) -> some View](/documentation/swiftui/view/previewdevice(_:))
 - [PreviewDevice](/documentation/swiftui/previewdevice)
@@ -3126,7 +3137,7 @@ timestamp: 2026-06-26T06:39:36.817Z
 - [static let landscapeLeft: InterfaceOrientation](/documentation/swiftui/interfaceorientation/landscapeleft)
 - [static let landscapeRight: InterfaceOrientation](/documentation/swiftui/interfaceorientation/landscaperight)
 
-##### Setting a context
+###### Setting a context
 
 - [func previewContext<C>(C) -> some View](/documentation/swiftui/view/previewcontext(_:))
 - [PreviewContext](/documentation/swiftui/previewcontext)
@@ -3140,9 +3151,7 @@ timestamp: 2026-06-26T06:39:36.817Z
 - [static var defaultValue: Self.Value](/documentation/swiftui/previewcontextkey/defaultvalue)
 - [Value](/documentation/swiftui/previewcontextkey/value)
 
-##### Building in debug mode
 
-- [DebugReplaceableView](/documentation/swiftui/debugreplaceableview)
 
 #### Configuring view elements
 
@@ -3516,8 +3525,9 @@ timestamp: 2026-06-26T06:39:36.817Z
 - [func toolbarColorScheme(ColorScheme?, for: ToolbarPlacement...) -> some View](/documentation/swiftui/view/toolbarcolorscheme(_:for:))
 - [func toolbarOverflowMenu<C>(content: () -> C) -> some View](/documentation/swiftui/view/toolbaroverflowmenu(content:))
 - [func toolbarRole(ToolbarRole) -> some View](/documentation/swiftui/view/toolbarrole(_:))
+- [func toolbarMinimizationBehavior(ToolbarMinimizationBehavior, for: ToolbarPlacement...) -> some View](/documentation/swiftui/view/toolbarminimizationbehavior(_:for:))
+- [func toolbarMinimizationRestoration(ToolbarMinimizationRestoration, for: ToolbarPlacement...) -> some View](/documentation/swiftui/view/toolbarminimizationrestoration(_:for:))
 - [func toolbarMinimizationSafeAreaAdjustment(ToolbarMinimizationSafeAreaAdjustment, for: ToolbarPlacement...) -> some View](/documentation/swiftui/view/toolbarminimizationsafeareaadjustment(_:for:))
-- [func toolbarMinimizeBehavior(ToolbarMinimizeBehavior, for: ToolbarPlacement...) -> some View](/documentation/swiftui/view/toolbarminimizebehavior(_:for:))
 - [func toolbarTitleMenu<C>(content: () -> C) -> some View](/documentation/swiftui/view/toolbartitlemenu(content:))
 - [func toolbarTitleDisplayMode(ToolbarTitleDisplayMode) -> some View](/documentation/swiftui/view/toolbartitledisplaymode(_:))
 - [func ornament<Content>(visibility: Visibility, attachmentAnchor: OrnamentAttachmentAnchor, contentAlignment: Alignment3D, ornament: () -> Content) -> some View](/documentation/swiftui/view/ornament(visibility:attachmentanchor:contentalignment:ornament:))
@@ -3526,7 +3536,6 @@ timestamp: 2026-06-26T06:39:36.817Z
 - [func contextMenu<MenuItems>(menuItems: () -> MenuItems) -> some View](/documentation/swiftui/view/contextmenu(menuitems:))
 - [func contextMenu<M, P>(menuItems: () -> M, preview: () -> P) -> some View](/documentation/swiftui/view/contextmenu(menuitems:preview:))
 - [func contextMenu<I, M>(forSelectionType: I.Type, menu: (Set<I>) -> M, primaryAction: ((Set<I>) -> Void)?) -> some View](/documentation/swiftui/view/contextmenu(forselectiontype:menu:primaryaction:))
-- [func onMenuItemHighlight(perform: (Bool) -> Void) -> some View](/documentation/swiftui/view/onmenuitemhighlight(perform:))
 ##### Badges
 
 - [func badge(_:)](/documentation/swiftui/view/badge(_:))
@@ -4070,7 +4079,7 @@ timestamp: 2026-06-26T06:39:36.817Z
 - [func onOpenURL(perform: (URL) -> ()) -> some View](/documentation/swiftui/view/onopenurl(perform:))
 - [func onOpenURL(prefersInApp: Bool) -> some View](/documentation/swiftui/view/onopenurl(prefersinapp:))
 - [func widgetURL(URL?) -> some View](/documentation/swiftui/view/widgeturl(_:))
-##### Asyncronous image loading
+##### Asynchronous image loading
 
 - [func asyncImageURLSession(URLSession) -> some View](/documentation/swiftui/view/asyncimageurlsession(_:))
 ##### Publisher events
@@ -4144,14 +4153,14 @@ timestamp: 2026-06-26T06:39:36.817Z
 - [func alert(_:isPresented:actions:)](/documentation/swiftui/view/alert(_:ispresented:actions:))
 - [func alert(_:isPresented:presenting:actions:)](/documentation/swiftui/view/alert(_:ispresented:presenting:actions:))
 - [func alert(_:item:actions:)](/documentation/swiftui/view/alert(_:item:actions:))
-- [func alert<E, A>(error: Binding<E?>, actions: () -> A) -> some View](/documentation/swiftui/view/alert(error:actions:))
+- [func alert(error:actions:)](/documentation/swiftui/view/alert(error:actions:))
 - [func alert<E, A>(isPresented: Binding<Bool>, error: E?, actions: () -> A) -> some View](/documentation/swiftui/view/alert(ispresented:error:actions:))
 ##### Alerts with a message
 
 - [func alert(_:isPresented:actions:message:)](/documentation/swiftui/view/alert(_:ispresented:actions:message:))
 - [func alert(_:isPresented:presenting:actions:message:)](/documentation/swiftui/view/alert(_:ispresented:presenting:actions:message:))
 - [func alert(_:item:actions:message:)](/documentation/swiftui/view/alert(_:item:actions:message:))
-- [func alert<E, A, M>(error: Binding<E?>, actions: (E) -> A, message: (E) -> M) -> some View](/documentation/swiftui/view/alert(error:actions:message:))
+- [func alert(error:actions:message:)](/documentation/swiftui/view/alert(error:actions:message:))
 - [func alert<E, A, M>(isPresented: Binding<Bool>, error: E?, actions: (E) -> A, message: (E) -> M) -> some View](/documentation/swiftui/view/alert(ispresented:error:actions:message:))
 ##### Confirmation dialogs
 
@@ -7064,6 +7073,10 @@ timestamp: 2026-06-26T06:39:36.817Z
 - [init(title: () -> Title, icon: () -> Icon)](/documentation/swiftui/label/init(title:icon:))
 - [init(_:)](/documentation/swiftui/label/init(_:))
 - [init(_:image:)](/documentation/swiftui/label/init(_:image:))
+#### Configuring a Label
+
+- [func labelIconToTitleSpacing(CGFloat) -> some View](/documentation/swiftui/view/labelicontotitlespacing(_:))
+- [func labelReservedIconWidth(CGFloat) -> some View](/documentation/swiftui/view/labelreservediconwidth(_:))
 
 - [func labelStyle<S>(S) -> some View](/documentation/swiftui/view/labelstyle(_:))
 ### Getting text input
@@ -8647,9 +8660,6 @@ timestamp: 2026-06-26T06:39:36.817Z
 
 - [func menuIndicator(Visibility) -> some View](/documentation/swiftui/view/menuindicator(_:))
 - [var menuIndicatorVisibility: Visibility](/documentation/swiftui/environmentvalues/menuindicatorvisibility)
-### Responding to menu item interaction
-
-- [func onMenuItemHighlight(perform: (Bool) -> Void) -> some View](/documentation/swiftui/view/onmenuitemhighlight(perform:))
 ### Configuring menu dismissal
 
 - [func menuActionDismissBehavior(MenuActionDismissBehavior) -> some View](/documentation/swiftui/view/menuactiondismissbehavior(_:))
@@ -9868,7 +9878,6 @@ timestamp: 2026-06-26T06:39:36.817Z
 
 - [func scaledToFill() -> some View](/documentation/swiftui/view/scaledtofill())
 - [func scaledToFit() -> some View](/documentation/swiftui/view/scaledtofit())
-- [func scaleEffect(_:anchor:)](/documentation/swiftui/view/scaleeffect(_:anchor:))
 - [func scaleEffect(_:anchor:)](/documentation/swiftui/view/scaleeffect(_:anchor:))
 - [func scaleEffect(x: CGFloat, y: CGFloat, anchor: UnitPoint) -> some View](/documentation/swiftui/view/scaleeffect(x:y:anchor:))
 - [func scaleEffect(x: CGFloat, y: CGFloat, z: CGFloat, anchor: UnitPoint3D) -> some View](/documentation/swiftui/view/scaleeffect(x:y:z:anchor:))
@@ -14773,37 +14782,9 @@ timestamp: 2026-06-26T06:39:36.817Z
 - [macro Preview(String?, traits: PreviewTrait<Preview.ViewTraits>, PreviewTrait<Preview.ViewTraits>..., body: () -> any View)](/documentation/swiftui/preview(_:traits:_:body:))
 - [macro Preview(String?, traits: PreviewTrait<Preview.ViewTraits>..., body: () -> any View, cameras: () -> [PreviewCamera])](/documentation/swiftui/preview(_:traits:body:cameras:))
 - [macro Preview<T>(String?, traits: PreviewTrait<Preview.ViewTraits>..., arguments: [T], body: (T) -> any View)](/documentation/swiftui/preview(_:traits:arguments:body:))
-### Creating a preview in the context of a scene
-
-- [macro Preview<Style>(String?, immersionStyle: Style, traits: PreviewTrait<Preview.ViewTraits>..., body: () -> any View)](/documentation/swiftui/preview(_:immersionstyle:traits:body:))
-- [macro Preview<Style>(String?, immersionStyle: Style, traits: PreviewTrait<Preview.ViewTraits>..., body: () -> any View, cameras: () -> [PreviewCamera])](/documentation/swiftui/preview(_:immersionstyle:traits:body:cameras:))
-- [macro Preview<Style>(String?, windowStyle: Style, traits: PreviewTrait<Preview.ViewTraits>..., body: () -> any View)](/documentation/swiftui/preview(_:windowstyle:traits:body:))
-- [macro Preview<Style>(String?, windowStyle: Style, traits: PreviewTrait<Preview.ViewTraits>..., body: () -> any View, cameras: () -> [PreviewCamera])](/documentation/swiftui/preview(_:windowstyle:traits:body:cameras:))
-### Defining a preview
+### Customizing a preview
 
 - [macro Previewable()](/documentation/swiftui/previewable())
-- [PreviewProvider](/documentation/swiftui/previewprovider)
-#### Creating a preview
-
-- [static var previews: Self.Previews](/documentation/swiftui/previewprovider/previews-swift.type.property)
-- [Previews](/documentation/swiftui/previewprovider/previews-swift.associatedtype)
-#### Specifying the platform
-
-- [static var platform: PreviewPlatform?](/documentation/swiftui/previewprovider/platform)
-##### PreviewProvider Implementations
-
-- [static var platform: PreviewPlatform?](/documentation/swiftui/previewprovider/platform-5gkzc)
-
-
-- [PreviewPlatform](/documentation/swiftui/previewplatform)
-#### Getting an operating system
-
-- [case iOS](/documentation/swiftui/previewplatform/ios)
-- [case macOS](/documentation/swiftui/previewplatform/macos)
-- [case tvOS](/documentation/swiftui/previewplatform/tvos)
-- [case watchOS](/documentation/swiftui/previewplatform/watchos)
-
-- [func previewDisplayName(String?) -> some View](/documentation/swiftui/view/previewdisplayname(_:))
 - [PreviewModifier](/documentation/swiftui/previewmodifier)
 #### Associated Types
 
@@ -14824,37 +14805,71 @@ timestamp: 2026-06-26T06:39:36.817Z
 
 
 - [PreviewModifierContent](/documentation/swiftui/previewmodifiercontent)
-### Customizing a preview
+### Creating a preview in the context of a scene
+
+- [macro Preview<Style>(String?, immersionStyle: Style, traits: PreviewTrait<Preview.ViewTraits>..., body: () -> any View)](/documentation/swiftui/preview(_:immersionstyle:traits:body:))
+- [macro Preview<Style>(String?, immersionStyle: Style, traits: PreviewTrait<Preview.ViewTraits>..., body: () -> any View, cameras: () -> [PreviewCamera])](/documentation/swiftui/preview(_:immersionstyle:traits:body:cameras:))
+- [macro Preview<Style>(String?, windowStyle: Style, traits: PreviewTrait<Preview.ViewTraits>..., body: () -> any View)](/documentation/swiftui/preview(_:windowstyle:traits:body:))
+- [macro Preview<Style>(String?, windowStyle: Style, traits: PreviewTrait<Preview.ViewTraits>..., body: () -> any View, cameras: () -> [PreviewCamera])](/documentation/swiftui/preview(_:windowstyle:traits:body:cameras:))
+### Building in debug mode
+
+- [DebugReplaceableView](/documentation/swiftui/debugreplaceableview)
+### Deprecated
+
+- [Deprecated](/documentation/swiftui/previews-deprecated)
+#### Defining a preview
+
+- [PreviewProvider](/documentation/swiftui/previewprovider)
+##### Creating a preview
+
+- [static var previews: Self.Previews](/documentation/swiftui/previewprovider/previews-swift.type.property)
+- [Previews](/documentation/swiftui/previewprovider/previews-swift.associatedtype)
+##### Specifying the platform
+
+- [static var platform: PreviewPlatform?](/documentation/swiftui/previewprovider/platform)
+###### PreviewProvider Implementations
+
+- [static var platform: PreviewPlatform?](/documentation/swiftui/previewprovider/platform-5gkzc)
+
+
+- [PreviewPlatform](/documentation/swiftui/previewplatform)
+##### Getting an operating system
+
+- [case iOS](/documentation/swiftui/previewplatform/ios)
+- [case macOS](/documentation/swiftui/previewplatform/macos)
+- [case tvOS](/documentation/swiftui/previewplatform/tvos)
+- [case watchOS](/documentation/swiftui/previewplatform/watchos)
+
+- [func previewDisplayName(String?) -> some View](/documentation/swiftui/view/previewdisplayname(_:))
+#### Customizing a preview
 
 - [func previewDevice(PreviewDevice?) -> some View](/documentation/swiftui/view/previewdevice(_:))
 - [PreviewDevice](/documentation/swiftui/previewdevice)
 - [func previewLayout(PreviewLayout) -> some View](/documentation/swiftui/view/previewlayout(_:))
 - [func previewInterfaceOrientation(InterfaceOrientation) -> some View](/documentation/swiftui/view/previewinterfaceorientation(_:))
 - [InterfaceOrientation](/documentation/swiftui/interfaceorientation)
-#### Getting an orientation
+##### Getting an orientation
 
 - [static let portrait: InterfaceOrientation](/documentation/swiftui/interfaceorientation/portrait)
 - [static let portraitUpsideDown: InterfaceOrientation](/documentation/swiftui/interfaceorientation/portraitupsidedown)
 - [static let landscapeLeft: InterfaceOrientation](/documentation/swiftui/interfaceorientation/landscapeleft)
 - [static let landscapeRight: InterfaceOrientation](/documentation/swiftui/interfaceorientation/landscaperight)
 
-### Setting a context
+#### Setting a context
 
 - [func previewContext<C>(C) -> some View](/documentation/swiftui/view/previewcontext(_:))
 - [PreviewContext](/documentation/swiftui/previewcontext)
-#### Accessing a preview context
+##### Accessing a preview context
 
 - [subscript<Key>(Key.Type) -> Key.Value](/documentation/swiftui/previewcontext/subscript(_:))
 
 - [PreviewContextKey](/documentation/swiftui/previewcontextkey)
-#### Setting a default
+##### Setting a default
 
 - [static var defaultValue: Self.Value](/documentation/swiftui/previewcontextkey/defaultvalue)
 - [Value](/documentation/swiftui/previewcontextkey/value)
 
-### Building in debug mode
 
-- [DebugReplaceableView](/documentation/swiftui/debugreplaceableview)
 
 - [Xcode library customization](/documentation/swiftui/xcode-library-customization)
 ### Creating library items

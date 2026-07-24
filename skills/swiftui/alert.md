@@ -1,10 +1,10 @@
 ---
 title: alert(_:isPresented:actions:)
-description: Presents an alert when a given condition is true, using a text view for the title.
+description: Presents an alert when a given condition is true, using a localized string resource for the title.
 source: https://developer.apple.com/documentation/swiftui/view/alert(_:ispresented:actions:)
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/swiftui/view/alert(_:ispresented:actions:).json
-timestamp: 2026-06-26T06:39:36.581Z
+timestamp: 2026-07-24T07:42:58.822Z
 ---
 
 **Navigation:** [SwiftUI](/documentation/swiftui) › [View](/documentation/swiftui/view)
@@ -13,19 +13,19 @@ timestamp: 2026-06-26T06:39:36.581Z
 
 # alert(_:isPresented:actions:)
 
-**Available on:** iOS 15.0+, iPadOS 15.0+, Mac Catalyst 15.0+, macOS 12.0+, tvOS 15.0+, visionOS 1.0+, watchOS 8.0+
+**Available on:** iOS 16.0+, iPadOS 16.0+, Mac Catalyst 16.0+, macOS 13.0+, tvOS 16.0+, visionOS 1.0+, watchOS 9.0+
 
-> Presents an alert when a given condition is true, using a text view for the title.
+> Presents an alert when a given condition is true, using a localized string resource for the title.
 
 ```swift
-nonisolated func alert<A>(_ title: Text, isPresented: Binding<Bool>, @ContentBuilder actions: () -> A) -> some View where A : View
+@export(implementation) nonisolated func alert<A>(_ titleResource: LocalizedStringResource, isPresented: Binding<Bool>, @ContentBuilder actions: () -> A) -> some View where A : View
 ```
 
 ## Parameters
 
-**title**
+**titleResource**
 
-The title of the alert.
+Text resource for the localized string that describes the title of the alert.
 
 **isPresented**
 
@@ -42,12 +42,11 @@ In the example below, a login form conditionally presents an alert by setting th
 ```swift
 struct Login: View {
     @State private var didFail = false
-    let alertTitle: String = "Login failed."
 
     var body: some View {
         LoginForm(didFail: $didFail)
             .alert(
-                Text(alertTitle),
+                "Login failed.",
                 isPresented: $didFail
             ) {
                 Button("OK") {
@@ -66,15 +65,17 @@ If no actions are present, the system includes a standard “OK” action. No de
 
 On iOS, tvOS, and watchOS, alerts only support controls with labels that are [Text](/documentation/swiftui/text). Passing any other type of view results in the content being omitted.
 
+This modifier creates a [Text](/documentation/swiftui/text) view for the title on your behalf. See [Text](/documentation/swiftui/text) for more information about localizing strings.
+
 ## Presenting an alert
 
 - [AlertScene](/documentation/swiftui/alertscene) A scene that renders itself as a standalone alert dialog.
-- [alert(_:isPresented:presenting:actions:)](/documentation/swiftui/view/alert(_:ispresented:presenting:actions:)) Presents an alert using the given data to produce the alert’s content and a text view as a title.
+- [alert(_:isPresented:presenting:actions:)](/documentation/swiftui/view/alert(_:ispresented:presenting:actions:)) Presents an alert using the given data to produce the alert’s content and a localized string resource for a title.
 - [alert(_:item:actions:)](/documentation/swiftui/view/alert(_:item:actions:)) Presents an alert using the given data to produce the alert’s content and a text view as a title.
 - [alert(error:actions:)](/documentation/swiftui/view/alert(error:actions:)) Presents an alert when an error is present.
 - [alert(isPresented:error:actions:)](/documentation/swiftui/view/alert(ispresented:error:actions:)) Presents an alert when an error is present.
-- [alert(_:isPresented:actions:message:)](/documentation/swiftui/view/alert(_:ispresented:actions:message:)) Presents an alert with a message when a given condition is true using a text view as a title.
-- [alert(_:isPresented:presenting:actions:message:)](/documentation/swiftui/view/alert(_:ispresented:presenting:actions:message:)) Presents an alert with a message using the given data to produce the alert’s content and a text view for a title.
+- [alert(_:isPresented:actions:message:)](/documentation/swiftui/view/alert(_:ispresented:actions:message:)) Presents an alert with a message when a given condition is true, using a localized string resource for a title.
+- [alert(_:isPresented:presenting:actions:message:)](/documentation/swiftui/view/alert(_:ispresented:presenting:actions:message:)) Presents an alert with a message using the given data to produce the alert’s content and a localized string resource for a title.
 - [alert(_:item:actions:message:)](/documentation/swiftui/view/alert(_:item:actions:message:)) Presents an alert with a message using the given data to produce the alert’s content and a localized string key for a title.
 - [alert(error:actions:message:)](/documentation/swiftui/view/alert(error:actions:message:)) Presents an alert with a message when an error is present.
 - [alert(isPresented:error:actions:message:)](/documentation/swiftui/view/alert(ispresented:error:actions:message:)) Presents an alert with a message when an error is present.

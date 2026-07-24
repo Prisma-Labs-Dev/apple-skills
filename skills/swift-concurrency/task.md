@@ -4,7 +4,7 @@ description: A unit of asynchronous work.
 source: https://developer.apple.com/documentation/swift/task
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/swift/task.json
-timestamp: 2026-06-26T06:39:36.525Z
+timestamp: 2026-07-24T07:42:58.766Z
 ---
 
 **Navigation:** [Swift](/documentation/swift)
@@ -129,6 +129,10 @@ deinit actor
 - [value](/documentation/swift/task/value-40dtq) The result from a nonthrowing task, after it completes.
 - [result](/documentation/swift/task/result) The result or error from a throwing task, after it completes.
 
+## Accessing the Current Task’s Name
+
+- [name](/documentation/swift/task/name-swift.type.property) Returns the human-readable name of the current task, if it was set during the tasks’ creation.
+
 ## Canceling Tasks
 
 - [CancellationError](/documentation/swift/cancellationerror) An error that indicates a task was canceled.
@@ -136,8 +140,13 @@ deinit actor
 - [isCancelled](/documentation/swift/task/iscancelled-swift.property) A Boolean value that indicates whether the task should stop executing.
 - [isCancelled](/documentation/swift/task/iscancelled-swift.type.property) A Boolean value that indicates whether the task should stop executing.
 - [checkCancellation()](/documentation/swift/task/checkcancellation()) Throws an error if the task was canceled.
-- [withTaskCancellationHandler(handler:operation:)](/documentation/swift/withtaskcancellationhandler(handler:operation:))
+- [withTaskCancellationHandler(operation:onCancel:)](/documentation/swift/withtaskcancellationhandler(operation:oncancel:)) Execute an operation with a cancellation handler that’s immediately invoked if the current task is canceled.
 - [withTaskCancellationHandler(operation:onCancel:isolation:)](/documentation/swift/withtaskcancellationhandler(operation:oncancel:isolation:)) Execute an operation with a cancellation handler that’s immediately invoked if the current task is canceled.
+
+## Shielding Tasks from Cancellation
+
+- [withTaskCancellationShield(operation:)](/documentation/swift/withtaskcancellationshield(operation:)-2lzl8) Enters a scope in which a task cancellation shield is active.
+- [withTaskCancellationShield(operation:)](/documentation/swift/withtaskcancellationshield(operation:)-8zlgh) Enters a scope in which a task cancellation shield is active.
 
 ## Suspending Execution
 
@@ -172,6 +181,7 @@ deinit actor
 - [runDetached(priority:operation:)](/documentation/swift/task/rundetached(priority:operation:)-8s8lh) Deprecated, available only for source compatibility reasons.
 - [withCancellationHandler(handler:operation:)](/documentation/swift/task/withcancellationhandler(handler:operation:))
 - [withGroup(resultType:returning:body:)](/documentation/swift/task/withgroup(resulttype:returning:body:))
+- [withTaskCancellationHandler(handler:operation:)](/documentation/swift/withtaskcancellationhandler(handler:operation:))
 
 ## Instance Properties
 
@@ -180,7 +190,6 @@ deinit actor
 ## Type Properties
 
 - [hasActiveCancellationShield](/documentation/swift/task/hasactivecancellationshield) Checks if the current task is executing in a scope with a task cancellation shield activated by the `withTaskCancellationShield(operation:)` function.
-- [name](/documentation/swift/task/name-swift.type.property) Returns the human-readable name of the current task, if it was set during the tasks’ creation.
 
 ## Default Implementations
 

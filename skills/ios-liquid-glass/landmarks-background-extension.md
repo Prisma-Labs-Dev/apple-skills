@@ -4,7 +4,7 @@ description: Configure an image to blur and extend under a sidebar or inspector 
 source: https://developer.apple.com/documentation/swiftui/landmarks-applying-a-background-extension-effect
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/swiftui/landmarks-applying-a-background-extension-effect.json
-timestamp: 2026-04-14T13:14:25.977Z
+timestamp: 2026-07-24T07:42:58.588Z
 ---
 
 **Navigation:** [SwiftUI](/documentation/swiftui)
@@ -25,11 +25,11 @@ This sample demonstrates how to apply a background extension effect. In the top 
 
 ### With
 
-![An image of the landmark detail view for Mount Fuji in the Landmarks app on an iPad, with the sidebar visible.](https://docs-assets.developer.apple.com/published/32d9f0bd8395e9cbd92e197c7aa2b4b3/Landmarks-Building-an-app-with-Liquid-Glass-2%402x.png)
+![An image of the landmark detail view for Mount Fuji in the Landmarks app on an iPad, with the sidebar visible.](https://docs-assets.developer.apple.com/published/be1f84499936c8af77caef51f8fe1539/Landmarks-Building-an-app-with-Liquid-Glass-2%402x.png)
 
 ### Without
 
-![An image of the landmark detail view for Mount Fuji in the Landmarks app on an iPad, with the sidebar visible.](https://docs-assets.developer.apple.com/published/bb19adc84554d4ae280227a56db4f08a/Landmarks-Building-an-app-with-Liquid-Glass-2r%402x.png)
+![An image of the landmark detail view for Mount Fuji in the Landmarks app on an iPad, with the sidebar visible.](https://docs-assets.developer.apple.com/published/ba72fc98e5999719b306e3f5b26dc351/Landmarks-Building-an-app-with-Liquid-Glass-2r%402x.png)
 
 To apply the background extension effect, the sample:
 

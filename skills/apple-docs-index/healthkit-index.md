@@ -3,7 +3,7 @@ title: HealthKit
 source: https://developer.apple.com/documentation/healthkit
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/index/healthkit
-timestamp: 2026-06-26T06:39:35.734Z
+timestamp: 2026-07-24T07:42:57.940Z
 ---
 
 **Navigation:** [HealthKit](/documentation/healthkit)
@@ -300,6 +300,7 @@ timestamp: 2026-06-26T06:39:35.734Z
 - [HKHealthStore.HKUserPreferencesDidChangeMessage](/documentation/healthkit/hkhealthstore/hkuserpreferencesdidchangemessage)
 ### Instance Methods
 
+- [func earliestAuthorizedSampleDate(for: Set<HKObjectType>) async throws -> [HKObjectType : Date]](/documentation/healthkit/hkhealthstore/earliestauthorizedsampledate(for:))
 - [func relateWorkoutEffortSample(HKSample, with: HKWorkout, activity: HKWorkoutActivity?, completion: (Bool, (any Error)?) -> Void)](/documentation/healthkit/hkhealthstore/relateworkouteffortsample(_:with:activity:completion:))
 - [func unrelateWorkoutEffortSample(HKSample, from: HKWorkout, activity: HKWorkoutActivity?, completion: (Bool, (any Error)?) -> Void)](/documentation/healthkit/hkhealthstore/unrelateworkouteffortsample(_:from:activity:completion:))
 

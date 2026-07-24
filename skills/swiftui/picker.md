@@ -4,7 +4,7 @@ description: A control for selecting from a set of mutually exclusive values.
 source: https://developer.apple.com/documentation/swiftui/picker
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/swiftui/picker.json
-timestamp: 2026-06-26T06:39:36.760Z
+timestamp: 2026-07-24T07:42:59.007Z
 ---
 
 **Navigation:** [SwiftUI](/documentation/swiftui)
@@ -155,18 +155,18 @@ VStack {
 
 ## Creating a picker
 
-- [init(_:selection:content:)](/documentation/swiftui/picker/init(_:selection:content:)) Creates a picker that generates its label from a localized string key.
+- [init(_:selection:content:)](/documentation/swiftui/picker/init(_:selection:content:)) Creates a picker that generates its label from a localized string resource.
 - [init(selection:content:label:)](/documentation/swiftui/picker/init(selection:content:label:)) Creates a picker that displays a custom label.
 
 ## Creating a picker for a collection
 
-- [init(_:sources:selection:content:)](/documentation/swiftui/picker/init(_:sources:selection:content:)) Creates a picker bound to a collection of bindings that generates its label from a string.
+- [init(_:sources:selection:content:)](/documentation/swiftui/picker/init(_:sources:selection:content:)) Creates a picker that generates its label from a localized string resource.
 - [init(sources:selection:content:label:)](/documentation/swiftui/picker/init(sources:selection:content:label:)) Creates a picker that displays a custom label.
 
 ## Creating a picker with an image label
 
-- [init(_:image:selection:content:)](/documentation/swiftui/picker/init(_:image:selection:content:)) Creates a picker that generates its label from a localized string key and image resource
-- [init(_:image:sources:selection:content:)](/documentation/swiftui/picker/init(_:image:sources:selection:content:)) Creates a picker bound to a collection of bindings that generates its label from a string and image resource.
+- [init(_:image:selection:content:)](/documentation/swiftui/picker/init(_:image:selection:content:)) Creates a picker that generates its label from a localized string resource and image resource
+- [init(_:image:sources:selection:content:)](/documentation/swiftui/picker/init(_:image:sources:selection:content:)) Creates a picker that generates its label from a localized string resource and image resource.
 - [init(_:systemImage:selection:content:)](/documentation/swiftui/picker/init(_:systemimage:selection:content:)) Creates a picker that generates its label from a localized string key and system image.
 - [init(_:systemImage:sources:selection:content:)](/documentation/swiftui/picker/init(_:systemimage:sources:selection:content:)) Creates a picker bound to a collection of bindings that generates its label from a string.
 
@@ -176,10 +176,10 @@ VStack {
 
 ## Initializers
 
-- [init(_:image:selection:content:currentValueLabel:)](/documentation/swiftui/picker/init(_:image:selection:content:currentvaluelabel:)) Creates a picker that accepts a custom current value label and generates its label from a localized string key and image resource
-- [init(_:image:sources:selection:content:currentValueLabel:)](/documentation/swiftui/picker/init(_:image:sources:selection:content:currentvaluelabel:)) Creates a picker bound to a collection of bindings that accepts a custom current value label and generates its label from a string and image resource.
-- [init(_:selection:content:currentValueLabel:)](/documentation/swiftui/picker/init(_:selection:content:currentvaluelabel:)) Creates a picker that generates its label from a localized string key and accepts a custom current value label.
-- [init(_:sources:selection:content:currentValueLabel:)](/documentation/swiftui/picker/init(_:sources:selection:content:currentvaluelabel:)) Creates a picker bound to a collection of bindings that generates its label from a string and accepts a custom current value label.
+- [init(_:image:selection:content:currentValueLabel:)](/documentation/swiftui/picker/init(_:image:selection:content:currentvaluelabel:)) Creates a picker that accepts a custom current value label and generates its label from a localized string key and image resource.
+- [init(_:image:sources:selection:content:currentValueLabel:)](/documentation/swiftui/picker/init(_:image:sources:selection:content:currentvaluelabel:)) Creates a picker that accepts a custom current value label generates its label from a localized string key and image resource.
+- [init(_:selection:content:currentValueLabel:)](/documentation/swiftui/picker/init(_:selection:content:currentvaluelabel:)) Creates a picker that generates its label from a localized string resource and accepts a custom current value label.
+- [init(_:sources:selection:content:currentValueLabel:)](/documentation/swiftui/picker/init(_:sources:selection:content:currentvaluelabel:)) Creates a picker that generates its label from a localized string resource and accepts a custom current value label.
 - [init(_:systemImage:selection:content:currentValueLabel:)](/documentation/swiftui/picker/init(_:systemimage:selection:content:currentvaluelabel:)) Creates a picker that accepts a custom current value label and generates its label from a localized string key and system image.
 - [init(_:systemImage:sources:selection:content:currentValueLabel:)](/documentation/swiftui/picker/init(_:systemimage:sources:selection:content:currentvaluelabel:)) Creates a picker bound to a collection of bindings that accepts a custom current value label and generates its label from a string.
 - [init(selection:content:label:currentValueLabel:)](/documentation/swiftui/picker/init(selection:content:label:currentvaluelabel:)) Creates a picker that displays a custom label and a custom value label where applicable.

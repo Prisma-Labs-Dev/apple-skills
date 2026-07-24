@@ -4,7 +4,7 @@ description: An object that manages a view hierarchy for your UIKit app.
 source: https://developer.apple.com/documentation/uikit/uiviewcontroller
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/uikit/uiviewcontroller.json
-timestamp: 2026-06-26T06:39:37.114Z
+timestamp: 2026-07-24T07:42:59.328Z
 ---
 
 **Navigation:** [UIKit](/documentation/uikit)
@@ -432,14 +432,14 @@ For more information about how the system determines which view controllers to p
 
 - [interactionActivityTrackingBaseName](/documentation/uikit/uiviewcontroller/interactionactivitytrackingbasename) The base name the view controller uses for logging signposts that annotate user interactions.
 
-## Deprecated
-
-- [Deprecated symbols](/documentation/uikit/uiviewcontroller-deprecated-symbols) Symbols that view controllers no longer support.
-
-## Instance Methods
+## Registering scene accessories
 
 - [registerSceneAccessory(_:)](/documentation/uikit/uiviewcontroller/registersceneaccessory(_:)) Registers a new scene accessory configuration associated with this view controller.
 - [unregisterSceneAccessory(_:)](/documentation/uikit/uiviewcontroller/unregistersceneaccessory(_:)) Unregisters a scene accessory with the specified registration.
+
+## Deprecated
+
+- [Deprecated symbols](/documentation/uikit/uiviewcontroller-deprecated-symbols) Symbols that view controllers no longer support.
 
 ## Content view controllers
 

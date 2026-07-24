@@ -4,7 +4,7 @@ description: An interface, consisting of a label and additional content, that yo
 source: https://developer.apple.com/documentation/swiftui/contentunavailableview
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/swiftui/contentunavailableview.json
-timestamp: 2026-06-26T06:39:36.631Z
+timestamp: 2026-07-24T07:42:58.872Z
 ---
 
 **Navigation:** [SwiftUI](/documentation/swiftui)
@@ -76,8 +76,8 @@ struct ContentView: View {
 ## Creating an unavailable view
 
 - [init(label:description:actions:)](/documentation/swiftui/contentunavailableview/init(label:description:actions:)) Creates an interface, consisting of a label and additional content, that you display when the content of your app is unavailable to users.
-- [init(_:image:description:)](/documentation/swiftui/contentunavailableview/init(_:image:description:)) Creates an interface, consisting of a title generated from a localized string, an image and additional content, that you display when the content of your app is unavailable to users.
-- [init(_:systemImage:description:)](/documentation/swiftui/contentunavailableview/init(_:systemimage:description:)) Creates an interface, consisting of a title generated from a localized string, a system icon image and additional content, that you display when the content of your app is unavailable to users.
+- [init(_:image:description:)](/documentation/swiftui/contentunavailableview/init(_:image:description:)) Creates an interface, consisting of a title generated from a localized string resource, an image and additional content, that you display when the content of your app is unavailable to users.
+- [init(_:systemImage:description:)](/documentation/swiftui/contentunavailableview/init(_:systemimage:description:)) Creates an interface, consisting of a title generated from a localized string resource, a system icon image and additional content, that you display when the content of your app is unavailable to users.
 
 ## Supporting types
 

@@ -3,7 +3,7 @@ title: UIKit
 source: https://developer.apple.com/documentation/uikit
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/index/uikit
-timestamp: 2026-06-26T06:39:37.033Z
+timestamp: 2026-07-24T07:42:59.257Z
 ---
 
 **Navigation:** [UIKit](/documentation/uikit)
@@ -592,6 +592,11 @@ timestamp: 2026-06-26T06:39:37.033Z
 
 - [init()](/documentation/uikit/uiapplication/significanttimechangemessage/init())
 
+- [UIApplication.SystemPrefersReducedResourceUsageDidChangeMessage](/documentation/uikit/uiapplication/systemprefersreducedresourceusagedidchangemessage)
+##### Initializers
+
+- [init()](/documentation/uikit/uiapplication/systemprefersreducedresourceusagedidchangemessage/init())
+
 - [UIApplication.UserDidTakeScreenshotMessage](/documentation/uikit/uiapplication/userdidtakescreenshotmessage)
 ##### Initializers
 
@@ -612,6 +617,12 @@ timestamp: 2026-06-26T06:39:37.033Z
 
 - [init()](/documentation/uikit/uiapplication/willterminatemessage/init())
 
+#### Instance Properties
+
+- [var systemPrefersReducedResourceUsage: Bool](/documentation/uikit/uiapplication/systemprefersreducedresourceusage)
+#### Type Properties
+
+- [class let systemPrefersReducedResourceUsageDidChangeNotification: NSNotification.Name](/documentation/uikit/uiapplication/systemprefersreducedresourceusagedidchangenotification)
 
 - [UIApplicationDelegate](/documentation/uikit/uiapplicationdelegate)
 #### Initializing the app
@@ -1322,13 +1333,15 @@ timestamp: 2026-06-26T06:39:37.033Z
 ###### Getting the source app
 
 - [var sourceApplication: String?](/documentation/uikit/uiscene/connectionoptions/sourceapplication)
+###### Getting scene accessory context
+
+- [var sceneAccessoryUserInfo: Any?](/documentation/uikit/uiscene/connectionoptions/sceneaccessoryuserinfo)
 ###### Instance Properties
 
 - [var appIntent: (any UISceneAppIntent)?](/documentation/uikit/uiscene/connectionoptions/appintent)
 - [var credentialSessionEvent: CredentialSessionWindowSceneEvent?](/documentation/uikit/uiscene/connectionoptions/credentialsessionevent)
 - [var gameControllerActivationContext: GCGameControllerActivationContext?](/documentation/uikit/uiscene/connectionoptions/gamecontrolleractivationcontext)
 - [var marketplaceDisplayOption: MarketplaceDisplayOption?](/documentation/uikit/uiscene/connectionoptions/marketplacedisplayoption)
-- [var sceneAccessoryUserInfo: Any?](/documentation/uikit/uiscene/connectionoptions/sceneaccessoryuserinfo)
 - [var shouldHandleActiveWorkoutRecovery: Bool](/documentation/uikit/uiscene/connectionoptions/shouldhandleactiveworkoutrecovery)
 
 ###### Transitioning to the foreground
@@ -1435,6 +1448,8 @@ timestamp: 2026-06-26T06:39:37.033Z
 ###### Creating a configuration object
 
 - [init(name: String?, sessionRole: UISceneSession.Role)](/documentation/uikit/uisceneconfiguration/init(name:sessionrole:))
+- [convenience init(name: String?)](/documentation/uikit/uisceneconfiguration/init(name:))
+- [convenience init()](/documentation/uikit/uisceneconfiguration/init())
 ###### Specifying the scene creation details
 
 - [var sceneClass: AnyClass?](/documentation/uikit/uisceneconfiguration/sceneclass)
@@ -1463,9 +1478,7 @@ timestamp: 2026-06-26T06:39:37.033Z
 
 ###### Initializers
 
-- [convenience init()](/documentation/uikit/uisceneconfiguration/init())
 - [init?(coder: NSCoder)](/documentation/uikit/uisceneconfiguration/init(coder:))
-- [convenience init(name: String?)](/documentation/uikit/uisceneconfiguration/init(name:))
 
 ###### Identifying the scene
 
@@ -1645,13 +1658,15 @@ timestamp: 2026-06-26T06:39:37.033Z
 ###### Getting the source app
 
 - [var sourceApplication: String?](/documentation/uikit/uiscene/connectionoptions/sourceapplication)
+###### Getting scene accessory context
+
+- [var sceneAccessoryUserInfo: Any?](/documentation/uikit/uiscene/connectionoptions/sceneaccessoryuserinfo)
 ###### Instance Properties
 
 - [var appIntent: (any UISceneAppIntent)?](/documentation/uikit/uiscene/connectionoptions/appintent)
 - [var credentialSessionEvent: CredentialSessionWindowSceneEvent?](/documentation/uikit/uiscene/connectionoptions/credentialsessionevent)
 - [var gameControllerActivationContext: GCGameControllerActivationContext?](/documentation/uikit/uiscene/connectionoptions/gamecontrolleractivationcontext)
 - [var marketplaceDisplayOption: MarketplaceDisplayOption?](/documentation/uikit/uiscene/connectionoptions/marketplacedisplayoption)
-- [var sceneAccessoryUserInfo: Any?](/documentation/uikit/uiscene/connectionoptions/sceneaccessoryuserinfo)
 - [var shouldHandleActiveWorkoutRecovery: Bool](/documentation/uikit/uiscene/connectionoptions/shouldhandleactiveworkoutrecovery)
 
 ##### Transitioning to the foreground
@@ -1685,6 +1700,8 @@ timestamp: 2026-06-26T06:39:37.033Z
 ##### Creating a configuration object
 
 - [init(name: String?, sessionRole: UISceneSession.Role)](/documentation/uikit/uisceneconfiguration/init(name:sessionrole:))
+- [convenience init(name: String?)](/documentation/uikit/uisceneconfiguration/init(name:))
+- [convenience init()](/documentation/uikit/uisceneconfiguration/init())
 ##### Specifying the scene creation details
 
 - [var sceneClass: AnyClass?](/documentation/uikit/uisceneconfiguration/sceneclass)
@@ -1713,9 +1730,7 @@ timestamp: 2026-06-26T06:39:37.033Z
 
 ##### Initializers
 
-- [convenience init()](/documentation/uikit/uisceneconfiguration/init())
 - [init?(coder: NSCoder)](/documentation/uikit/uisceneconfiguration/init(coder:))
-- [convenience init(name: String?)](/documentation/uikit/uisceneconfiguration/init(name:))
 
 - [UISceneSession](/documentation/uikit/uiscenesession)
 ##### Getting the scene information
@@ -1746,6 +1761,8 @@ timestamp: 2026-06-26T06:39:37.033Z
 ###### Creating a configuration object
 
 - [init(name: String?, sessionRole: UISceneSession.Role)](/documentation/uikit/uisceneconfiguration/init(name:sessionrole:))
+- [convenience init(name: String?)](/documentation/uikit/uisceneconfiguration/init(name:))
+- [convenience init()](/documentation/uikit/uisceneconfiguration/init())
 ###### Specifying the scene creation details
 
 - [var sceneClass: AnyClass?](/documentation/uikit/uisceneconfiguration/sceneclass)
@@ -1774,9 +1791,7 @@ timestamp: 2026-06-26T06:39:37.033Z
 
 ###### Initializers
 
-- [convenience init()](/documentation/uikit/uisceneconfiguration/init())
 - [init?(coder: NSCoder)](/documentation/uikit/uisceneconfiguration/init(coder:))
-- [convenience init(name: String?)](/documentation/uikit/uisceneconfiguration/init(name:))
 
 ##### Identifying the scene
 
@@ -1836,6 +1851,41 @@ timestamp: 2026-06-26T06:39:37.033Z
 
 
 - [UISceneDestructionRequestOptions](/documentation/uikit/uiscenedestructionrequestoptions)
+- [UISceneClosureConfirmation](/documentation/uikit/uisceneclosureconfirmation)
+##### Initializers
+
+- [init?(coder: NSCoder)](/documentation/uikit/uisceneclosureconfirmation/init(coder:))
+- [convenience init(title: String?, message: String?, actions: [UIAlertAction])](/documentation/uikit/uisceneclosureconfirmation/init(title:message:actions:))
+
+#### Scene accessories
+
+- [UISceneAccessory](/documentation/uikit/uisceneaccessory)
+##### Type Methods
+
+- [class func externalNonInteractive(sceneConfiguration: UISceneConfiguration) -> Self](/documentation/uikit/uisceneaccessory/externalnoninteractive(sceneconfiguration:))
+- [class func externalNonInteractive(sceneConfiguration: UISceneConfiguration, userInfo: Any) -> Self](/documentation/uikit/uisceneaccessory/externalnoninteractive(sceneconfiguration:userinfo:))
+
+- [UISceneAccessoryRegistration](/documentation/uikit/uisceneaccessoryregistration)
+##### Observing availability and controlling display
+
+- [var isAvailable: Bool](/documentation/uikit/uisceneaccessoryregistration/isavailable)
+- [var isEnabled: Bool](/documentation/uikit/uisceneaccessoryregistration/isenabled)
+
+#### Scene accessories
+
+- [Presenting content on a connected display](/documentation/uikit/presenting-content-on-a-connected-display)
+- [UISceneAccessory](/documentation/uikit/uisceneaccessory)
+##### Type Methods
+
+- [class func externalNonInteractive(sceneConfiguration: UISceneConfiguration) -> Self](/documentation/uikit/uisceneaccessory/externalnoninteractive(sceneconfiguration:))
+- [class func externalNonInteractive(sceneConfiguration: UISceneConfiguration, userInfo: Any) -> Self](/documentation/uikit/uisceneaccessory/externalnoninteractive(sceneconfiguration:userinfo:))
+
+- [UISceneAccessoryRegistration](/documentation/uikit/uisceneaccessoryregistration)
+##### Observing availability and controlling display
+
+- [var isAvailable: Bool](/documentation/uikit/uisceneaccessoryregistration/isavailable)
+- [var isEnabled: Bool](/documentation/uikit/uisceneaccessoryregistration/isenabled)
+
 #### URL management
 
 - [UIOpenURLContext](/documentation/uikit/uiopenurlcontext)
@@ -2452,7 +2502,11 @@ timestamp: 2026-06-26T06:39:37.033Z
 - [convenience init<T>(T.Type, value: T.Value)](/documentation/uikit/uitraitcollection/init(_:value:)-836bk)
 - [convenience init<T>(T.Type, value: T.Value)](/documentation/uikit/uitraitcollection/init(_:value:)-8k1t1)
 - [convenience init<T>(T.Type, value: T.Value)](/documentation/uikit/uitraitcollection/init(_:value:)-vvgw)
+- [convenience init(systemPrefersReducedResourceUsage: Bool)](/documentation/uikit/uitraitcollection/init(systemprefersreducedresourceusage:))
 - [init(traitsFromCollections: [UITraitCollection])](/documentation/uikit/uitraitcollection/init(traitsfromcollections:))
+##### Instance Properties
+
+- [var systemPrefersReducedResourceUsage: Bool](/documentation/uikit/uitraitcollection/systemprefersreducedresourceusage-1yl57)
 ##### Instance Methods
 
 - [func replacing<T>(T.Type, value: T.Value) -> UITraitCollection](/documentation/uikit/uitraitcollection/replacing(_:value:)-162et)
@@ -2557,6 +2611,9 @@ timestamp: 2026-06-26T06:39:37.033Z
 - [var userInterfaceLevel: UIUserInterfaceLevel](/documentation/uikit/uimutabletraits-13ja5/userinterfacelevel)
 - [var userInterfaceStyle: UIUserInterfaceStyle](/documentation/uikit/uimutabletraits-13ja5/userinterfacestyle)
 - [var verticalSizeClass: UIUserInterfaceSizeClass](/documentation/uikit/uimutabletraits-13ja5/verticalsizeclass)
+##### Instance Properties
+
+- [var systemPrefersReducedResourceUsage: Bool](/documentation/uikit/uimutabletraits-13ja5/systemprefersreducedresourceusage)
 ##### Subscripts
 
 - [subscript<T>(T.Type) -> T.Value](/documentation/uikit/uimutabletraits-13ja5/subscript(_:)-19j2e)
@@ -2635,6 +2692,9 @@ timestamp: 2026-06-26T06:39:37.033Z
 - [var userInterfaceLevel: UIUserInterfaceLevel](/documentation/uikit/uimutabletraits-13ja5/userinterfacelevel)
 - [var userInterfaceStyle: UIUserInterfaceStyle](/documentation/uikit/uimutabletraits-13ja5/userinterfacestyle)
 - [var verticalSizeClass: UIUserInterfaceSizeClass](/documentation/uikit/uimutabletraits-13ja5/verticalsizeclass)
+##### Instance Properties
+
+- [var systemPrefersReducedResourceUsage: Bool](/documentation/uikit/uimutabletraits-13ja5/systemprefersreducedresourceusage)
 ##### Subscripts
 
 - [subscript<T>(T.Type) -> T.Value](/documentation/uikit/uimutabletraits-13ja5/subscript(_:)-19j2e)
@@ -3014,7 +3074,11 @@ timestamp: 2026-06-26T06:39:37.033Z
 - [convenience init<T>(T.Type, value: T.Value)](/documentation/uikit/uitraitcollection/init(_:value:)-836bk)
 - [convenience init<T>(T.Type, value: T.Value)](/documentation/uikit/uitraitcollection/init(_:value:)-8k1t1)
 - [convenience init<T>(T.Type, value: T.Value)](/documentation/uikit/uitraitcollection/init(_:value:)-vvgw)
+- [convenience init(systemPrefersReducedResourceUsage: Bool)](/documentation/uikit/uitraitcollection/init(systemprefersreducedresourceusage:))
 - [init(traitsFromCollections: [UITraitCollection])](/documentation/uikit/uitraitcollection/init(traitsfromcollections:))
+##### Instance Properties
+
+- [var systemPrefersReducedResourceUsage: Bool](/documentation/uikit/uitraitcollection/systemprefersreducedresourceusage-1yl57)
 ##### Instance Methods
 
 - [func replacing<T>(T.Type, value: T.Value) -> UITraitCollection](/documentation/uikit/uitraitcollection/replacing(_:value:)-162et)
@@ -3653,13 +3717,15 @@ timestamp: 2026-06-26T06:39:37.033Z
 ###### Getting the source app
 
 - [var sourceApplication: String?](/documentation/uikit/uiscene/connectionoptions/sourceapplication)
+###### Getting scene accessory context
+
+- [var sceneAccessoryUserInfo: Any?](/documentation/uikit/uiscene/connectionoptions/sceneaccessoryuserinfo)
 ###### Instance Properties
 
 - [var appIntent: (any UISceneAppIntent)?](/documentation/uikit/uiscene/connectionoptions/appintent)
 - [var credentialSessionEvent: CredentialSessionWindowSceneEvent?](/documentation/uikit/uiscene/connectionoptions/credentialsessionevent)
 - [var gameControllerActivationContext: GCGameControllerActivationContext?](/documentation/uikit/uiscene/connectionoptions/gamecontrolleractivationcontext)
 - [var marketplaceDisplayOption: MarketplaceDisplayOption?](/documentation/uikit/uiscene/connectionoptions/marketplacedisplayoption)
-- [var sceneAccessoryUserInfo: Any?](/documentation/uikit/uiscene/connectionoptions/sceneaccessoryuserinfo)
 - [var shouldHandleActiveWorkoutRecovery: Bool](/documentation/uikit/uiscene/connectionoptions/shouldhandleactiveworkoutrecovery)
 
 ###### Transitioning to the foreground
@@ -3766,6 +3832,8 @@ timestamp: 2026-06-26T06:39:37.033Z
 ###### Creating a configuration object
 
 - [init(name: String?, sessionRole: UISceneSession.Role)](/documentation/uikit/uisceneconfiguration/init(name:sessionrole:))
+- [convenience init(name: String?)](/documentation/uikit/uisceneconfiguration/init(name:))
+- [convenience init()](/documentation/uikit/uisceneconfiguration/init())
 ###### Specifying the scene creation details
 
 - [var sceneClass: AnyClass?](/documentation/uikit/uisceneconfiguration/sceneclass)
@@ -3794,9 +3862,7 @@ timestamp: 2026-06-26T06:39:37.033Z
 
 ###### Initializers
 
-- [convenience init()](/documentation/uikit/uisceneconfiguration/init())
 - [init?(coder: NSCoder)](/documentation/uikit/uisceneconfiguration/init(coder:))
-- [convenience init(name: String?)](/documentation/uikit/uisceneconfiguration/init(name:))
 
 ###### Identifying the scene
 
@@ -3976,13 +4042,15 @@ timestamp: 2026-06-26T06:39:37.033Z
 ###### Getting the source app
 
 - [var sourceApplication: String?](/documentation/uikit/uiscene/connectionoptions/sourceapplication)
+###### Getting scene accessory context
+
+- [var sceneAccessoryUserInfo: Any?](/documentation/uikit/uiscene/connectionoptions/sceneaccessoryuserinfo)
 ###### Instance Properties
 
 - [var appIntent: (any UISceneAppIntent)?](/documentation/uikit/uiscene/connectionoptions/appintent)
 - [var credentialSessionEvent: CredentialSessionWindowSceneEvent?](/documentation/uikit/uiscene/connectionoptions/credentialsessionevent)
 - [var gameControllerActivationContext: GCGameControllerActivationContext?](/documentation/uikit/uiscene/connectionoptions/gamecontrolleractivationcontext)
 - [var marketplaceDisplayOption: MarketplaceDisplayOption?](/documentation/uikit/uiscene/connectionoptions/marketplacedisplayoption)
-- [var sceneAccessoryUserInfo: Any?](/documentation/uikit/uiscene/connectionoptions/sceneaccessoryuserinfo)
 - [var shouldHandleActiveWorkoutRecovery: Bool](/documentation/uikit/uiscene/connectionoptions/shouldhandleactiveworkoutrecovery)
 
 ###### Transitioning to the foreground
@@ -4016,6 +4084,8 @@ timestamp: 2026-06-26T06:39:37.033Z
 ###### Creating a configuration object
 
 - [init(name: String?, sessionRole: UISceneSession.Role)](/documentation/uikit/uisceneconfiguration/init(name:sessionrole:))
+- [convenience init(name: String?)](/documentation/uikit/uisceneconfiguration/init(name:))
+- [convenience init()](/documentation/uikit/uisceneconfiguration/init())
 ###### Specifying the scene creation details
 
 - [var sceneClass: AnyClass?](/documentation/uikit/uisceneconfiguration/sceneclass)
@@ -4044,9 +4114,7 @@ timestamp: 2026-06-26T06:39:37.033Z
 
 ###### Initializers
 
-- [convenience init()](/documentation/uikit/uisceneconfiguration/init())
 - [init?(coder: NSCoder)](/documentation/uikit/uisceneconfiguration/init(coder:))
-- [convenience init(name: String?)](/documentation/uikit/uisceneconfiguration/init(name:))
 
 - [UISceneSession](/documentation/uikit/uiscenesession)
 ###### Getting the scene information
@@ -4077,6 +4145,8 @@ timestamp: 2026-06-26T06:39:37.033Z
 ###### Creating a configuration object
 
 - [init(name: String?, sessionRole: UISceneSession.Role)](/documentation/uikit/uisceneconfiguration/init(name:sessionrole:))
+- [convenience init(name: String?)](/documentation/uikit/uisceneconfiguration/init(name:))
+- [convenience init()](/documentation/uikit/uisceneconfiguration/init())
 ###### Specifying the scene creation details
 
 - [var sceneClass: AnyClass?](/documentation/uikit/uisceneconfiguration/sceneclass)
@@ -4105,9 +4175,7 @@ timestamp: 2026-06-26T06:39:37.033Z
 
 ###### Initializers
 
-- [convenience init()](/documentation/uikit/uisceneconfiguration/init())
 - [init?(coder: NSCoder)](/documentation/uikit/uisceneconfiguration/init(coder:))
-- [convenience init(name: String?)](/documentation/uikit/uisceneconfiguration/init(name:))
 
 ###### Identifying the scene
 
@@ -4167,6 +4235,41 @@ timestamp: 2026-06-26T06:39:37.033Z
 
 
 - [UISceneDestructionRequestOptions](/documentation/uikit/uiscenedestructionrequestoptions)
+- [UISceneClosureConfirmation](/documentation/uikit/uisceneclosureconfirmation)
+###### Initializers
+
+- [init?(coder: NSCoder)](/documentation/uikit/uisceneclosureconfirmation/init(coder:))
+- [convenience init(title: String?, message: String?, actions: [UIAlertAction])](/documentation/uikit/uisceneclosureconfirmation/init(title:message:actions:))
+
+##### Scene accessories
+
+- [UISceneAccessory](/documentation/uikit/uisceneaccessory)
+###### Type Methods
+
+- [class func externalNonInteractive(sceneConfiguration: UISceneConfiguration) -> Self](/documentation/uikit/uisceneaccessory/externalnoninteractive(sceneconfiguration:))
+- [class func externalNonInteractive(sceneConfiguration: UISceneConfiguration, userInfo: Any) -> Self](/documentation/uikit/uisceneaccessory/externalnoninteractive(sceneconfiguration:userinfo:))
+
+- [UISceneAccessoryRegistration](/documentation/uikit/uisceneaccessoryregistration)
+###### Observing availability and controlling display
+
+- [var isAvailable: Bool](/documentation/uikit/uisceneaccessoryregistration/isavailable)
+- [var isEnabled: Bool](/documentation/uikit/uisceneaccessoryregistration/isenabled)
+
+##### Scene accessories
+
+- [Presenting content on a connected display](/documentation/uikit/presenting-content-on-a-connected-display)
+- [UISceneAccessory](/documentation/uikit/uisceneaccessory)
+###### Type Methods
+
+- [class func externalNonInteractive(sceneConfiguration: UISceneConfiguration) -> Self](/documentation/uikit/uisceneaccessory/externalnoninteractive(sceneconfiguration:))
+- [class func externalNonInteractive(sceneConfiguration: UISceneConfiguration, userInfo: Any) -> Self](/documentation/uikit/uisceneaccessory/externalnoninteractive(sceneconfiguration:userinfo:))
+
+- [UISceneAccessoryRegistration](/documentation/uikit/uisceneaccessoryregistration)
+###### Observing availability and controlling display
+
+- [var isAvailable: Bool](/documentation/uikit/uisceneaccessoryregistration/isavailable)
+- [var isEnabled: Bool](/documentation/uikit/uisceneaccessoryregistration/isenabled)
+
 ##### URL management
 
 - [UIOpenURLContext](/documentation/uikit/uiopenurlcontext)
@@ -9419,6 +9522,11 @@ timestamp: 2026-06-26T06:39:37.033Z
 - [var allowsKeyboardScrolling: Bool](/documentation/uikit/uiscrollview/allowskeyboardscrolling)
 - [var lookToScrollAxes: UIAxis](/documentation/uikit/uiscrollview/looktoscrollaxes)
 
+- [UILookToScrollInteraction](/documentation/uikit/uilooktoscrollinteraction)
+#### Excluding regions from Look to Scroll
+
+- [class func exclusionRegion() -> Self](/documentation/uikit/uilooktoscrollinteraction/exclusionregion())
+
 ### Content views
 
 - [UIActivityIndicatorView](/documentation/uikit/uiactivityindicatorview)
@@ -11310,6 +11418,11 @@ timestamp: 2026-06-26T06:39:37.033Z
 - [init?(rawValue: Int)](/documentation/uikit/uiblureffect/style/init(rawvalue:))
 
 
+- [UIColorEffect](/documentation/uikit/uicoloreffect)
+#### Initializers
+
+- [convenience init(color: UIColor?)](/documentation/uikit/uicoloreffect/init(color:))
+
 ### Bars
 
 - [UIBarItem](/documentation/uikit/uibaritem)
@@ -11513,6 +11626,19 @@ timestamp: 2026-06-26T06:39:37.033Z
 #### Type Methods
 
 - [class func fixedSpace() -> UIBarButtonItemGroup](/documentation/uikit/uibarbuttonitemgroup/fixedspace())
+
+- [UIBarButtonItemVisibilityPriority](/documentation/uikit/uibarbuttonitemvisibilitypriority)
+#### Creating a visibility priority
+
+- [init(Int)](/documentation/uikit/uibarbuttonitemvisibilitypriority/init(_:))
+- [init(higherThan: UIBarButtonItemVisibilityPriority)](/documentation/uikit/uibarbuttonitemvisibilitypriority/init(higherthan:))
+- [init(lowerThan: UIBarButtonItemVisibilityPriority)](/documentation/uikit/uibarbuttonitemvisibilitypriority/init(lowerthan:))
+- [init(rawValue: Int)](/documentation/uikit/uibarbuttonitemvisibilitypriority/init(rawvalue:))
+#### Getting visibility priorities
+
+- [static let high: UIBarButtonItemVisibilityPriority](/documentation/uikit/uibarbuttonitemvisibilitypriority/high)
+- [static let low: UIBarButtonItemVisibilityPriority](/documentation/uikit/uibarbuttonitemvisibilitypriority/low)
+- [static let standard: UIBarButtonItemVisibilityPriority](/documentation/uikit/uibarbuttonitemvisibilitypriority/standard)
 
 - [UINavigationBar](/documentation/uikit/uinavigationbar)
 #### Responding to navigation bar changes
@@ -11930,6 +12056,16 @@ timestamp: 2026-06-26T06:39:37.033Z
 #### Positioning Bars
 
 - [func position(for: any UIBarPositioning) -> UIBarPosition](/documentation/uikit/uibarpositioningdelegate/position(for:))
+
+- [UIBarMinimization](/documentation/uikit/uibarminimization-swift.struct)
+#### Creating a bar minimization configuration
+
+- [init()](/documentation/uikit/uibarminimization-swift.struct/init())
+#### Configuring bar minimization
+
+- [var minimizationBehavior: UIBarMinimizationBehavior](/documentation/uikit/uibarminimization-swift.struct/minimizationbehavior)
+- [var restorationBehavior: UIBarMinimizationRestorationBehavior](/documentation/uikit/uibarminimization-swift.struct/restorationbehavior)
+- [var safeAreaAdjustment: UIBarMinimizationSafeAreaAdjustment](/documentation/uikit/uibarminimization-swift.struct/safeareaadjustment)
 
 ### Content viewer
 
@@ -12568,6 +12704,10 @@ timestamp: 2026-06-26T06:39:37.033Z
 #### Logging user interaction intervals
 
 - [var interactionActivityTrackingBaseName: String?](/documentation/uikit/uiviewcontroller/interactionactivitytrackingbasename)
+#### Registering scene accessories
+
+- [func registerSceneAccessory(UISceneAccessory) -> UISceneAccessoryRegistration](/documentation/uikit/uiviewcontroller/registersceneaccessory(_:))
+- [func unregisterSceneAccessory(UISceneAccessoryRegistration)](/documentation/uikit/uiviewcontroller/unregistersceneaccessory(_:))
 #### Deprecated
 
 - [Deprecated symbols](/documentation/uikit/uiviewcontroller-deprecated-symbols)
@@ -12600,10 +12740,6 @@ timestamp: 2026-06-26T06:39:37.033Z
 - [var searchDisplayController: UISearchDisplayController?](/documentation/uikit/uiviewcontroller/searchdisplaycontroller)
 - [var topLayoutGuide: any UILayoutSupport](/documentation/uikit/uiviewcontroller/toplayoutguide)
 
-#### Instance Methods
-
-- [func registerSceneAccessory(UISceneAccessory) -> UISceneAccessoryRegistration](/documentation/uikit/uiviewcontroller/registersceneaccessory(_:))
-- [func unregisterSceneAccessory(UISceneAccessoryRegistration)](/documentation/uikit/uiviewcontroller/unregistersceneaccessory(_:))
 
 - [UITableViewController](/documentation/uikit/uitableviewcontroller)
 #### Creating a table view controller
@@ -13185,8 +13321,7 @@ timestamp: 2026-06-26T06:39:37.033Z
 
 #### Instance Properties
 
-- [var barMinimizationSafeAreaAdjustment: UIBarMinimizationSafeAreaAdjustment](/documentation/uikit/uinavigationitem/barminimizationsafeareaadjustment)
-- [var barMinimizeBehavior: UIBarMinimizeBehavior](/documentation/uikit/uinavigationitem/barminimizebehavior)
+- [var navigationBarMinimization: UIBarMinimization](/documentation/uikit/uinavigationitem/navigationbarminimization-1kj9z)
 
 - [UITabBarController](/documentation/uikit/uitabbarcontroller)
 #### Creating tab bar controllers
@@ -13196,6 +13331,7 @@ timestamp: 2026-06-26T06:39:37.033Z
 
 - [var tabs: [UITab]](/documentation/uikit/uitabbarcontroller/tabs)
 - [func setTabs([UITab], animated: Bool)](/documentation/uikit/uitabbarcontroller/settabs(_:animated:))
+- [func performBatchUpdates(() -> Void)](/documentation/uikit/uitabbarcontroller/performbatchupdates(_:))
 #### Supporting the sidebar
 
 - [var mode: UITabBarController.Mode](/documentation/uikit/uitabbarcontroller/mode-swift.property)
@@ -13377,6 +13513,8 @@ timestamp: 2026-06-26T06:39:37.033Z
 - [func setBottomAccessory(UITabAccessory?, animated: Bool)](/documentation/uikit/uitabbarcontroller/setbottomaccessory(_:animated:))
 - [var compactTabIdentifiers: [String]?](/documentation/uikit/uitabbarcontroller/compacttabidentifiers)
 - [var customizationIdentifier: String?](/documentation/uikit/uitabbarcontroller/customizationidentifier)
+- [var prominentTabIdentifier: String?](/documentation/uikit/uitabbarcontroller/prominenttabidentifier)
+- [func setProminentTabIdentifier(String?, animated: Bool)](/documentation/uikit/uitabbarcontroller/setprominenttabidentifier(_:animated:))
 #### Accessing the tab bar controller properties
 
 - [var tabBar: UITabBar](/documentation/uikit/uitabbarcontroller/tabbar)
@@ -13392,13 +13530,6 @@ timestamp: 2026-06-26T06:39:37.033Z
 - [var selectedTab: UITab?](/documentation/uikit/uitabbarcontroller/selectedtab)
 - [var selectedViewController: UIViewController?](/documentation/uikit/uitabbarcontroller/selectedviewcontroller)
 - [var selectedIndex: Int](/documentation/uikit/uitabbarcontroller/selectedindex)
-#### Instance Properties
-
-- [var prominentTabIdentifier: String?](/documentation/uikit/uitabbarcontroller/prominenttabidentifier)
-#### Instance Methods
-
-- [func performBatchUpdates(() -> Void)](/documentation/uikit/uitabbarcontroller/performbatchupdates(_:))
-- [func setProminentTabIdentifier(String?, animated: Bool)](/documentation/uikit/uitabbarcontroller/setprominenttabidentifier(_:animated:))
 
 - [UITabBar](/documentation/uikit/uitabbar)
 #### Customizing the tab bar behavior
@@ -16051,6 +16182,9 @@ timestamp: 2026-06-26T06:39:37.033Z
 #### Getting the supported idiom
 
 - [var idiom: UIUserInterfaceIdiom](/documentation/uikit/uibarappearance/idiom)
+#### Instance Properties
+
+- [var overrideUserInterfaceStyle: UIUserInterfaceStyle](/documentation/uikit/uibarappearance/overrideuserinterfacestyle)
 
 - [UIBarButtonItemAppearance](/documentation/uikit/uibarbuttonitemappearance)
 #### Creating a bar button item appearance object
@@ -17466,13 +17600,15 @@ timestamp: 2026-06-26T06:39:37.033Z
 ###### Getting the source app
 
 - [var sourceApplication: String?](/documentation/uikit/uiscene/connectionoptions/sourceapplication)
+###### Getting scene accessory context
+
+- [var sceneAccessoryUserInfo: Any?](/documentation/uikit/uiscene/connectionoptions/sceneaccessoryuserinfo)
 ###### Instance Properties
 
 - [var appIntent: (any UISceneAppIntent)?](/documentation/uikit/uiscene/connectionoptions/appintent)
 - [var credentialSessionEvent: CredentialSessionWindowSceneEvent?](/documentation/uikit/uiscene/connectionoptions/credentialsessionevent)
 - [var gameControllerActivationContext: GCGameControllerActivationContext?](/documentation/uikit/uiscene/connectionoptions/gamecontrolleractivationcontext)
 - [var marketplaceDisplayOption: MarketplaceDisplayOption?](/documentation/uikit/uiscene/connectionoptions/marketplacedisplayoption)
-- [var sceneAccessoryUserInfo: Any?](/documentation/uikit/uiscene/connectionoptions/sceneaccessoryuserinfo)
 - [var shouldHandleActiveWorkoutRecovery: Bool](/documentation/uikit/uiscene/connectionoptions/shouldhandleactiveworkoutrecovery)
 
 ###### Transitioning to the foreground
@@ -17579,6 +17715,8 @@ timestamp: 2026-06-26T06:39:37.033Z
 ###### Creating a configuration object
 
 - [init(name: String?, sessionRole: UISceneSession.Role)](/documentation/uikit/uisceneconfiguration/init(name:sessionrole:))
+- [convenience init(name: String?)](/documentation/uikit/uisceneconfiguration/init(name:))
+- [convenience init()](/documentation/uikit/uisceneconfiguration/init())
 ###### Specifying the scene creation details
 
 - [var sceneClass: AnyClass?](/documentation/uikit/uisceneconfiguration/sceneclass)
@@ -17607,9 +17745,7 @@ timestamp: 2026-06-26T06:39:37.033Z
 
 ###### Initializers
 
-- [convenience init()](/documentation/uikit/uisceneconfiguration/init())
 - [init?(coder: NSCoder)](/documentation/uikit/uisceneconfiguration/init(coder:))
-- [convenience init(name: String?)](/documentation/uikit/uisceneconfiguration/init(name:))
 
 ###### Identifying the scene
 
@@ -17789,13 +17925,15 @@ timestamp: 2026-06-26T06:39:37.033Z
 ###### Getting the source app
 
 - [var sourceApplication: String?](/documentation/uikit/uiscene/connectionoptions/sourceapplication)
+###### Getting scene accessory context
+
+- [var sceneAccessoryUserInfo: Any?](/documentation/uikit/uiscene/connectionoptions/sceneaccessoryuserinfo)
 ###### Instance Properties
 
 - [var appIntent: (any UISceneAppIntent)?](/documentation/uikit/uiscene/connectionoptions/appintent)
 - [var credentialSessionEvent: CredentialSessionWindowSceneEvent?](/documentation/uikit/uiscene/connectionoptions/credentialsessionevent)
 - [var gameControllerActivationContext: GCGameControllerActivationContext?](/documentation/uikit/uiscene/connectionoptions/gamecontrolleractivationcontext)
 - [var marketplaceDisplayOption: MarketplaceDisplayOption?](/documentation/uikit/uiscene/connectionoptions/marketplacedisplayoption)
-- [var sceneAccessoryUserInfo: Any?](/documentation/uikit/uiscene/connectionoptions/sceneaccessoryuserinfo)
 - [var shouldHandleActiveWorkoutRecovery: Bool](/documentation/uikit/uiscene/connectionoptions/shouldhandleactiveworkoutrecovery)
 
 ##### Transitioning to the foreground
@@ -17829,6 +17967,8 @@ timestamp: 2026-06-26T06:39:37.033Z
 ##### Creating a configuration object
 
 - [init(name: String?, sessionRole: UISceneSession.Role)](/documentation/uikit/uisceneconfiguration/init(name:sessionrole:))
+- [convenience init(name: String?)](/documentation/uikit/uisceneconfiguration/init(name:))
+- [convenience init()](/documentation/uikit/uisceneconfiguration/init())
 ##### Specifying the scene creation details
 
 - [var sceneClass: AnyClass?](/documentation/uikit/uisceneconfiguration/sceneclass)
@@ -17857,9 +17997,7 @@ timestamp: 2026-06-26T06:39:37.033Z
 
 ##### Initializers
 
-- [convenience init()](/documentation/uikit/uisceneconfiguration/init())
 - [init?(coder: NSCoder)](/documentation/uikit/uisceneconfiguration/init(coder:))
-- [convenience init(name: String?)](/documentation/uikit/uisceneconfiguration/init(name:))
 
 - [UISceneSession](/documentation/uikit/uiscenesession)
 ##### Getting the scene information
@@ -17890,6 +18028,8 @@ timestamp: 2026-06-26T06:39:37.033Z
 ###### Creating a configuration object
 
 - [init(name: String?, sessionRole: UISceneSession.Role)](/documentation/uikit/uisceneconfiguration/init(name:sessionrole:))
+- [convenience init(name: String?)](/documentation/uikit/uisceneconfiguration/init(name:))
+- [convenience init()](/documentation/uikit/uisceneconfiguration/init())
 ###### Specifying the scene creation details
 
 - [var sceneClass: AnyClass?](/documentation/uikit/uisceneconfiguration/sceneclass)
@@ -17918,9 +18058,7 @@ timestamp: 2026-06-26T06:39:37.033Z
 
 ###### Initializers
 
-- [convenience init()](/documentation/uikit/uisceneconfiguration/init())
 - [init?(coder: NSCoder)](/documentation/uikit/uisceneconfiguration/init(coder:))
-- [convenience init(name: String?)](/documentation/uikit/uisceneconfiguration/init(name:))
 
 ##### Identifying the scene
 
@@ -17980,6 +18118,41 @@ timestamp: 2026-06-26T06:39:37.033Z
 
 
 - [UISceneDestructionRequestOptions](/documentation/uikit/uiscenedestructionrequestoptions)
+- [UISceneClosureConfirmation](/documentation/uikit/uisceneclosureconfirmation)
+##### Initializers
+
+- [init?(coder: NSCoder)](/documentation/uikit/uisceneclosureconfirmation/init(coder:))
+- [convenience init(title: String?, message: String?, actions: [UIAlertAction])](/documentation/uikit/uisceneclosureconfirmation/init(title:message:actions:))
+
+#### Scene accessories
+
+- [UISceneAccessory](/documentation/uikit/uisceneaccessory)
+##### Type Methods
+
+- [class func externalNonInteractive(sceneConfiguration: UISceneConfiguration) -> Self](/documentation/uikit/uisceneaccessory/externalnoninteractive(sceneconfiguration:))
+- [class func externalNonInteractive(sceneConfiguration: UISceneConfiguration, userInfo: Any) -> Self](/documentation/uikit/uisceneaccessory/externalnoninteractive(sceneconfiguration:userinfo:))
+
+- [UISceneAccessoryRegistration](/documentation/uikit/uisceneaccessoryregistration)
+##### Observing availability and controlling display
+
+- [var isAvailable: Bool](/documentation/uikit/uisceneaccessoryregistration/isavailable)
+- [var isEnabled: Bool](/documentation/uikit/uisceneaccessoryregistration/isenabled)
+
+#### Scene accessories
+
+- [Presenting content on a connected display](/documentation/uikit/presenting-content-on-a-connected-display)
+- [UISceneAccessory](/documentation/uikit/uisceneaccessory)
+##### Type Methods
+
+- [class func externalNonInteractive(sceneConfiguration: UISceneConfiguration) -> Self](/documentation/uikit/uisceneaccessory/externalnoninteractive(sceneconfiguration:))
+- [class func externalNonInteractive(sceneConfiguration: UISceneConfiguration, userInfo: Any) -> Self](/documentation/uikit/uisceneaccessory/externalnoninteractive(sceneconfiguration:userinfo:))
+
+- [UISceneAccessoryRegistration](/documentation/uikit/uisceneaccessoryregistration)
+##### Observing availability and controlling display
+
+- [var isAvailable: Bool](/documentation/uikit/uisceneaccessoryregistration/isavailable)
+- [var isEnabled: Bool](/documentation/uikit/uisceneaccessoryregistration/isenabled)
+
 #### URL management
 
 - [UIOpenURLContext](/documentation/uikit/uiopenurlcontext)
@@ -22740,9 +22913,6 @@ timestamp: 2026-06-26T06:39:37.033Z
 - [Supporting HDR images in your app](/documentation/uikit/supporting-hdr-images-in-your-app)
 - [func jpegData(compressionQuality: CGFloat) -> Data?](/documentation/uikit/uiimage/jpegdata(compressionquality:))
 - [func pngData() -> Data?](/documentation/uikit/uiimage/pngdata())
-- [func UIGraphicsBeginImageContext(CGSize)](/documentation/uikit/uigraphicsbeginimagecontext(_:))
-- [func UIGraphicsGetImageFromCurrentImageContext() -> UIImage?](/documentation/uikit/uigraphicsgetimagefromcurrentimagecontext())
-- [func UIGraphicsEndImageContext()](/documentation/uikit/uigraphicsendimagecontext())
 ### Photo album
 
 - [func UIImageWriteToSavedPhotosAlbum(UIImage, Any?, Selector?, UnsafeMutableRawPointer?)](/documentation/uikit/uiimagewritetosavedphotosalbum(_:_:_:_:))
@@ -26794,6 +26964,11 @@ timestamp: 2026-06-26T06:39:37.033Z
 ##### Creating a text content type
 
 - [init(rawValue: String)](/documentation/uikit/uitextcontenttype/init(rawvalue:))
+##### Type Properties
+
+- [static let cellularIMEI1: UITextContentType](/documentation/uikit/uitextcontenttype/cellularimei1)
+- [static let cellularIMEI2: UITextContentType](/documentation/uikit/uitextcontenttype/cellularimei2)
+- [static let cellularNAL: UITextContentType](/documentation/uikit/uitextcontenttype/cellularnal)
 
 #### Managing the keyboard behavior
 
@@ -26929,6 +27104,7 @@ timestamp: 2026-06-26T06:39:37.033Z
 
 - [var allowedWritingToolsResultOptions: UIWritingToolsResultOptions](/documentation/uikit/uitextinputtraits/allowedwritingtoolsresultoptions)
 - [var allowsNumberPadPopover: Bool](/documentation/uikit/uitextinputtraits/allowsnumberpadpopover)
+- [var grammarCheckingType: UITextGrammarCheckingType](/documentation/uikit/uitextinputtraits/grammarcheckingtype)
 - [var passwordRules: UITextInputPasswordRules?](/documentation/uikit/uitextinputtraits/passwordrules)
 
 - [UITextInputContext](/documentation/uikit/uitextinputcontext)
@@ -27770,6 +27946,11 @@ timestamp: 2026-06-26T06:39:37.033Z
 
 - [func writingToolsCoordinator(UIWritingToolsCoordinator, requestsSingleContainerSubrangesOf: NSRange, in: UIWritingToolsCoordinator.Context, completion: ([NSValue]) -> Void)](/documentation/uikit/uiwritingtoolscoordinator/delegate-swift.protocol/writingtoolscoordinator(_:requestssinglecontainersubrangesof:in:completion:))
 - [func writingToolsCoordinator(UIWritingToolsCoordinator, requestsDecorationContainerViewFor: NSRange, in: UIWritingToolsCoordinator.Context, completion: (UIView) -> Void)](/documentation/uikit/uiwritingtoolscoordinator/delegate-swift.protocol/writingtoolscoordinator(_:requestsdecorationcontainerviewfor:in:completion:))
+##### Instance Methods
+
+- [func writingToolsCoordinator(UIWritingToolsCoordinator, requestsGrammarResultsFor: UIWritingToolsCoordinator.Context, completion: ([NSTextCheckingResult]) -> Void)](/documentation/uikit/uiwritingtoolscoordinator/delegate-swift.protocol/writingtoolscoordinator(_:requestsgrammarresultsfor:completion:))
+- [func writingToolsCoordinator(UIWritingToolsCoordinator, requestsPreviewFor: UIWritingToolsCoordinator.TextAnimation, of: NSRange, in: UIWritingToolsCoordinator.Context, textDecoration: UIWritingToolsCoordinator.TextDecoration, completion: (UITargetedPreview?) -> Void)](/documentation/uikit/uiwritingtoolscoordinator/delegate-swift.protocol/writingtoolscoordinator(_:requestspreviewfor:of:in:textdecoration:completion:))
+- [func writingToolsCoordinator(UIWritingToolsCoordinator, setGrammarCheckingEnabled: Bool)](/documentation/uikit/uiwritingtoolscoordinator/delegate-swift.protocol/writingtoolscoordinator(_:setgrammarcheckingenabled:))
 
 #### Getting the host views for effects
 
@@ -27826,6 +28007,11 @@ timestamp: 2026-06-26T06:39:37.033Z
 
 - [case interactive](/documentation/uikit/uiwritingtoolscoordinator/textreplacementreason/interactive)
 - [case noninteractive](/documentation/uikit/uiwritingtoolscoordinator/textreplacementreason/noninteractive)
+##### Enumeration Cases
+
+- [case accepted](/documentation/uikit/uiwritingtoolscoordinator/textreplacementreason/accepted)
+- [case rejected](/documentation/uikit/uiwritingtoolscoordinator/textreplacementreason/rejected)
+- [case temporary](/documentation/uikit/uiwritingtoolscoordinator/textreplacementreason/temporary)
 ##### Initializers
 
 - [init?(rawValue: Int)](/documentation/uikit/uiwritingtoolscoordinator/textreplacementreason/init(rawvalue:))
@@ -27836,6 +28022,9 @@ timestamp: 2026-06-26T06:39:37.033Z
 - [case anticipate](/documentation/uikit/uiwritingtoolscoordinator/textanimation/anticipate)
 - [case insert](/documentation/uikit/uiwritingtoolscoordinator/textanimation/insert)
 - [case remove](/documentation/uikit/uiwritingtoolscoordinator/textanimation/remove)
+##### Enumeration Cases
+
+- [case indicateGrammar](/documentation/uikit/uiwritingtoolscoordinator/textanimation/indicategrammar)
 ##### Initializers
 
 - [init?(rawValue: Int)](/documentation/uikit/uiwritingtoolscoordinator/textanimation/init(rawvalue:))
@@ -27843,6 +28032,22 @@ timestamp: 2026-06-26T06:39:37.033Z
 #### Instance Properties
 
 - [var includesTextListMarkers: Bool](/documentation/uikit/uiwritingtoolscoordinator/includestextlistmarkers)
+#### Instance Methods
+
+- [func cancelTextAnimations(identifiers: [UUID])](/documentation/uikit/uiwritingtoolscoordinator/canceltextanimations(identifiers:))
+- [func showGrammarPresentation(for: NSRange, in: UIWritingToolsCoordinator.Context) -> Bool](/documentation/uikit/uiwritingtoolscoordinator/showgrammarpresentation(for:in:))
+- [func startTextAnimation(UIWritingToolsCoordinator.TextAnimation, for: NSRange, in: UIWritingToolsCoordinator.Context, writingDirection: NSWritingDirection) -> UUID?](/documentation/uikit/uiwritingtoolscoordinator/starttextanimation(_:for:in:writingdirection:))
+#### Enumerations
+
+- [UIWritingToolsCoordinator.TextDecoration](/documentation/uikit/uiwritingtoolscoordinator/textdecoration)
+##### Enumeration Cases
+
+- [case grammarUnderline](/documentation/uikit/uiwritingtoolscoordinator/textdecoration/grammarunderline)
+- [case none](/documentation/uikit/uiwritingtoolscoordinator/textdecoration/none)
+##### Initializers
+
+- [init?(rawValue: Int)](/documentation/uikit/uiwritingtoolscoordinator/textdecoration/init(rawvalue:))
+
 
 - [UIWritingToolsCoordinator.Delegate](/documentation/uikit/uiwritingtoolscoordinator/delegate-swift.protocol)
 #### Starting a Writing Tools operation
@@ -27869,6 +28074,11 @@ timestamp: 2026-06-26T06:39:37.033Z
 
 - [func writingToolsCoordinator(UIWritingToolsCoordinator, requestsSingleContainerSubrangesOf: NSRange, in: UIWritingToolsCoordinator.Context, completion: ([NSValue]) -> Void)](/documentation/uikit/uiwritingtoolscoordinator/delegate-swift.protocol/writingtoolscoordinator(_:requestssinglecontainersubrangesof:in:completion:))
 - [func writingToolsCoordinator(UIWritingToolsCoordinator, requestsDecorationContainerViewFor: NSRange, in: UIWritingToolsCoordinator.Context, completion: (UIView) -> Void)](/documentation/uikit/uiwritingtoolscoordinator/delegate-swift.protocol/writingtoolscoordinator(_:requestsdecorationcontainerviewfor:in:completion:))
+#### Instance Methods
+
+- [func writingToolsCoordinator(UIWritingToolsCoordinator, requestsGrammarResultsFor: UIWritingToolsCoordinator.Context, completion: ([NSTextCheckingResult]) -> Void)](/documentation/uikit/uiwritingtoolscoordinator/delegate-swift.protocol/writingtoolscoordinator(_:requestsgrammarresultsfor:completion:))
+- [func writingToolsCoordinator(UIWritingToolsCoordinator, requestsPreviewFor: UIWritingToolsCoordinator.TextAnimation, of: NSRange, in: UIWritingToolsCoordinator.Context, textDecoration: UIWritingToolsCoordinator.TextDecoration, completion: (UITargetedPreview?) -> Void)](/documentation/uikit/uiwritingtoolscoordinator/delegate-swift.protocol/writingtoolscoordinator(_:requestspreviewfor:of:in:textdecoration:completion:))
+- [func writingToolsCoordinator(UIWritingToolsCoordinator, setGrammarCheckingEnabled: Bool)](/documentation/uikit/uiwritingtoolscoordinator/delegate-swift.protocol/writingtoolscoordinator(_:setgrammarcheckingenabled:))
 
 - [UIWritingToolsCoordinator.Context](/documentation/uikit/uiwritingtoolscoordinator/context)
 #### Creating a context object
@@ -28645,6 +28855,9 @@ timestamp: 2026-06-26T06:39:37.033Z
 ### Deprecated functions
 
 - [func UIApplicationMain(Int32, UnsafeMutablePointer<UnsafeMutablePointer<Int8>>!, String?, String?) -> Int32](/documentation/uikit/uiapplicationmain(_:_:_:_:)-9jjn8)
+- [func UIGraphicsBeginImageContext(CGSize)](/documentation/uikit/uigraphicsbeginimagecontext(_:))
+- [func UIGraphicsGetImageFromCurrentImageContext() -> UIImage?](/documentation/uikit/uigraphicsgetimagefromcurrentimagecontext())
+- [func UIGraphicsEndImageContext()](/documentation/uikit/uigraphicsendimagecontext())
 ### Deprecated samples
 
 - [Implementing Peek and Pop](/documentation/uikit/implementing-peek-and-pop)
@@ -28687,6 +28900,36 @@ timestamp: 2026-06-26T06:39:37.033Z
 
 - [init?(rawValue: Int)](/documentation/uikit/uifocusitemdeferralmode/init(rawvalue:))
 
+- [UIBarMinimizationBehavior](/documentation/uikit/uibarminimizationbehavior)
+#### Minimizing the bar
+
+- [case automatic](/documentation/uikit/uibarminimizationbehavior/automatic)
+- [case never](/documentation/uikit/uibarminimizationbehavior/never)
+- [case onScrollDown](/documentation/uikit/uibarminimizationbehavior/onscrolldown)
+- [case onScrollUp](/documentation/uikit/uibarminimizationbehavior/onscrollup)
+#### Creating a minimization behavior
+
+- [init?(rawValue: Int)](/documentation/uikit/uibarminimizationbehavior/init(rawvalue:))
+
+- [UIBarMinimizationRestorationBehavior](/documentation/uikit/uibarminimizationrestorationbehavior)
+#### Restoring the bar
+
+- [case atScrollEdge](/documentation/uikit/uibarminimizationrestorationbehavior/atscrolledge)
+- [case automatic](/documentation/uikit/uibarminimizationrestorationbehavior/automatic)
+#### Creating a restoration behavior
+
+- [init?(rawValue: Int)](/documentation/uikit/uibarminimizationrestorationbehavior/init(rawvalue:))
+
+- [UIBarMinimizationSafeAreaAdjustment](/documentation/uikit/uibarminimizationsafeareaadjustment)
+#### Adjusting the safe area
+
+- [case automatic](/documentation/uikit/uibarminimizationsafeareaadjustment/automatic)
+- [case disabled](/documentation/uikit/uibarminimizationsafeareaadjustment/disabled)
+- [case enabled](/documentation/uikit/uibarminimizationsafeareaadjustment/enabled)
+#### Creating a safe area adjustment
+
+- [init?(rawValue: Int)](/documentation/uikit/uibarminimizationsafeareaadjustment/init(rawvalue:))
+
 
 - [UIKit Constants](/documentation/uikit/uikit-constants)
 - [UIKit Data Types](/documentation/uikit/uikit-data-types)
@@ -28727,77 +28970,24 @@ timestamp: 2026-06-26T06:39:37.033Z
 - [func UIInterfaceOrientationIsPortrait(UIInterfaceOrientation) -> Bool](/documentation/uikit/uiinterfaceorientationisportrait(_:))
 - [func UIWritingToolsCoordinatorTextAnimationDebugDescription(UIWritingToolsCoordinator.TextAnimation) -> String](/documentation/uikit/uiwritingtoolscoordinatortextanimationdebugdescription(_:))
 
-## Classes
-
-- [UIColorEffect](/documentation/uikit/uicoloreffect)
-### Initializers
-
-- [convenience init(color: UIColor?)](/documentation/uikit/uicoloreffect/init(color:))
-
-- [UILookToScrollInteraction](/documentation/uikit/uilooktoscrollinteraction)
-### Type Methods
-
-- [class func exclusionRegion() -> Self](/documentation/uikit/uilooktoscrollinteraction/exclusionregion())
-
-- [UISceneAccessory](/documentation/uikit/uisceneaccessory)
-### Type Methods
-
-- [class func externalNonInteractive(sceneConfiguration: UISceneConfiguration) -> Self](/documentation/uikit/uisceneaccessory/externalnoninteractive(sceneconfiguration:))
-- [class func externalNonInteractive(sceneConfiguration: UISceneConfiguration, userInfo: Any) -> Self](/documentation/uikit/uisceneaccessory/externalnoninteractive(sceneconfiguration:userinfo:))
-
-- [UISceneAccessoryRegistration](/documentation/uikit/uisceneaccessoryregistration)
-### Instance Properties
-
-- [var isAvailable: Bool](/documentation/uikit/uisceneaccessoryregistration/isavailable)
-- [var isEnabled: Bool](/documentation/uikit/uisceneaccessoryregistration/isenabled)
-
-- [UISceneClosureConfirmation](/documentation/uikit/uisceneclosureconfirmation)
-### Initializers
-
-- [init?(coder: NSCoder)](/documentation/uikit/uisceneclosureconfirmation/init(coder:))
-- [convenience init(title: String?, message: String?, actions: [UIAlertAction])](/documentation/uikit/uisceneclosureconfirmation/init(title:message:actions:))
-
 ## Structures
 
-- [UIBarButtonItemVisibilityPriority](/documentation/uikit/uibarbuttonitemvisibilitypriority)
-### Initializers
-
-- [init(Int)](/documentation/uikit/uibarbuttonitemvisibilitypriority/init(_:))
-- [init(higherThan: UIBarButtonItemVisibilityPriority)](/documentation/uikit/uibarbuttonitemvisibilitypriority/init(higherthan:))
-- [init(lowerThan: UIBarButtonItemVisibilityPriority)](/documentation/uikit/uibarbuttonitemvisibilitypriority/init(lowerthan:))
-- [init(rawValue: Int)](/documentation/uikit/uibarbuttonitemvisibilitypriority/init(rawvalue:))
-### Type Properties
-
-- [static let high: UIBarButtonItemVisibilityPriority](/documentation/uikit/uibarbuttonitemvisibilitypriority/high)
-- [static let low: UIBarButtonItemVisibilityPriority](/documentation/uikit/uibarbuttonitemvisibilitypriority/low)
-- [static let standard: UIBarButtonItemVisibilityPriority](/documentation/uikit/uibarbuttonitemvisibilitypriority/standard)
-
+- [UITraitSystemPrefersReducedResourceUsage](/documentation/uikit/uitraitsystemprefersreducedresourceusage-swift.struct)
 ## Macros
 
 - [macro Preview<T>(String?, traits: PreviewTrait<Preview.ViewTraits>..., arguments: [T], body: (T) -> UIView)](/documentation/uikit/preview(_:traits:arguments:body:)-6gm4c)
 - [macro Preview<T>(String?, traits: PreviewTrait<Preview.ViewTraits>..., arguments: [T], body: (T) -> UIViewController)](/documentation/uikit/preview(_:traits:arguments:body:)-7cbjv)
 ## Enumerations
 
-- [UIBarMinimizationSafeAreaAdjustment](/documentation/uikit/uibarminimizationsafeareaadjustment)
+- [UITextGrammarCheckingType](/documentation/uikit/uitextgrammarcheckingtype)
 ### Enumeration Cases
 
-- [case automatic](/documentation/uikit/uibarminimizationsafeareaadjustment/automatic)
-- [case disabled](/documentation/uikit/uibarminimizationsafeareaadjustment/disabled)
-- [case enabled](/documentation/uikit/uibarminimizationsafeareaadjustment/enabled)
+- [case `default`](/documentation/uikit/uitextgrammarcheckingtype/default)
+- [case no](/documentation/uikit/uitextgrammarcheckingtype/no)
+- [case yes](/documentation/uikit/uitextgrammarcheckingtype/yes)
 ### Initializers
 
-- [init?(rawValue: Int)](/documentation/uikit/uibarminimizationsafeareaadjustment/init(rawvalue:))
-
-- [UIBarMinimizeBehavior](/documentation/uikit/uibarminimizebehavior)
-### Enumeration Cases
-
-- [case automatic](/documentation/uikit/uibarminimizebehavior/automatic)
-- [case never](/documentation/uikit/uibarminimizebehavior/never)
-- [case onScrollDown](/documentation/uikit/uibarminimizebehavior/onscrolldown)
-- [case onScrollUp](/documentation/uikit/uibarminimizebehavior/onscrollup)
-### Initializers
-
-- [init?(rawValue: Int)](/documentation/uikit/uibarminimizebehavior/init(rawvalue:))
+- [init?(rawValue: Int)](/documentation/uikit/uitextgrammarcheckingtype/init(rawvalue:))
 
 ---
 

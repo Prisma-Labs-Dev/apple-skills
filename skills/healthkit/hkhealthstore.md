@@ -4,7 +4,7 @@ description: The access point for all data managed by HealthKit.
 source: https://developer.apple.com/documentation/healthkit/hkhealthstore
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/healthkit/hkhealthstore.json
-timestamp: 2026-06-26T06:39:36.033Z
+timestamp: 2026-07-24T07:42:58.243Z
 ---
 
 **Navigation:** [HealthKit](/documentation/healthkit)
@@ -127,6 +127,7 @@ For more information, see [Setting up HealthKit](/documentation/healthkit/settin
 
 ## Instance Methods
 
+- [earliestAuthorizedSampleDate(for:)](/documentation/healthkit/hkhealthstore/earliestauthorizedsampledate(for:))
 - [relateWorkoutEffortSample(_:with:activity:completion:)](/documentation/healthkit/hkhealthstore/relateworkouteffortsample(_:with:activity:completion:))
 - [unrelateWorkoutEffortSample(_:from:activity:completion:)](/documentation/healthkit/hkhealthstore/unrelateworkouteffortsample(_:from:activity:completion:))
 

@@ -4,7 +4,7 @@ description: A control that displays an editable text interface.
 source: https://developer.apple.com/documentation/swiftui/textfield
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/swiftui/textfield.json
-timestamp: 2026-06-26T06:39:36.838Z
+timestamp: 2026-07-24T07:42:59.095Z
 ---
 
 **Navigation:** [SwiftUI](/documentation/swiftui)
@@ -128,21 +128,21 @@ var body: some View {
 ## Creating a text field with a string
 
 - [init(_:text:)](/documentation/swiftui/textfield/init(_:text:)) Creates a text field with a text label generated from a localized title string.
-- [init(_:text:prompt:)](/documentation/swiftui/textfield/init(_:text:prompt:)) Creates a text field with a text label generated from a localized title string.
+- [init(_:text:prompt:)](/documentation/swiftui/textfield/init(_:text:prompt:)) Creates a text field with a text label generated from a localized title string resource.
 - [init(text:prompt:label:)](/documentation/swiftui/textfield/init(text:prompt:label:)) Creates a text field with a prompt generated from a `Text`.
 
 ## Creating a scrollable text field
 
-- [init(_:text:axis:)](/documentation/swiftui/textfield/init(_:text:axis:)) Creates a text field with a preferred axis and a text label generated from a localized title string.
-- [init(_:text:prompt:axis:)](/documentation/swiftui/textfield/init(_:text:prompt:axis:)) Creates a text field with a preferred axis and a text label generated from a localized title string.
+- [init(_:text:axis:)](/documentation/swiftui/textfield/init(_:text:axis:)) Creates a text field with a preferred axis and a text label generated from a localized title string resource.
+- [init(_:text:prompt:axis:)](/documentation/swiftui/textfield/init(_:text:prompt:axis:)) Creates a text field with a preferred axis and a text label generated from a localized title string resource.
 - [init(text:prompt:axis:label:)](/documentation/swiftui/textfield/init(text:prompt:axis:label:)) Creates a text field with a preferred axis and a prompt generated from a `Text`.
 
 ## Creating a text field with a value
 
-- [init(_:value:format:prompt:)](/documentation/swiftui/textfield/init(_:value:format:prompt:)) Creates a text field that applies a format style to a bound value, with a label generated from a localized title string.
+- [init(_:value:format:prompt:)](/documentation/swiftui/textfield/init(_:value:format:prompt:)) Creates a text field that applies a format style to a bound value, with a label generated from a localized title string resource.
 - [init(value:format:prompt:label:)](/documentation/swiftui/textfield/init(value:format:prompt:label:)) Creates a text field that applies a format style to a bound value, with a label generated from a content builder.
 - [init(_:value:formatter:)](/documentation/swiftui/textfield/init(_:value:formatter:)) Create an instance which binds over an arbitrary type, `V`.
-- [init(_:value:formatter:prompt:)](/documentation/swiftui/textfield/init(_:value:formatter:prompt:)) Creates a text field that applies a formatter to a bound value, with a label generated from a title string.
+- [init(_:value:formatter:prompt:)](/documentation/swiftui/textfield/init(_:value:formatter:prompt:)) Creates a text field that applies a formatter to a bound value, with a label generated from a localized title string resource.
 - [init(value:formatter:prompt:label:)](/documentation/swiftui/textfield/init(value:formatter:prompt:label:)) Creates a text field that applies a formatter to a bound optional value, with a label generated from a content builder.
 
 ## Deprecated initializers
@@ -151,7 +151,7 @@ var body: some View {
 
 ## Initializers
 
-- [init(_:text:selection:prompt:axis:)](/documentation/swiftui/textfield/init(_:text:selection:prompt:axis:)) Creates a text field with a binding to the current selection and a text label generated from a localized title string.
+- [init(_:text:selection:prompt:axis:)](/documentation/swiftui/textfield/init(_:text:selection:prompt:axis:)) Creates a text field with a binding to the current selection and a text label generated from a localized title string resource.
 - [init(text:selection:prompt:axis:label:)](/documentation/swiftui/textfield/init(text:selection:prompt:axis:label:)) Creates a text field with a binding to the current selection and a prompt generated from a `Text`.
 
 ## Getting text input

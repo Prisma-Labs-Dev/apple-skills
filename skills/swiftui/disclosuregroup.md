@@ -4,7 +4,7 @@ description: A view that shows or hides another content view, based on the state
 source: https://developer.apple.com/documentation/swiftui/disclosuregroup
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/swiftui/disclosuregroup.json
-timestamp: 2026-06-26T06:39:36.634Z
+timestamp: 2026-07-24T07:42:58.875Z
 ---
 
 **Navigation:** [SwiftUI](/documentation/swiftui)
@@ -52,9 +52,9 @@ var body: some View {
 
 ## Creating a disclosure group
 
-- [init(_:content:)](/documentation/swiftui/disclosuregroup/init(_:content:)) Creates a disclosure group, using a provided localized string key to create a text view for the label.
+- [init(_:content:)](/documentation/swiftui/disclosuregroup/init(_:content:)) Creates a disclosure group, using a provided localized string resource to create a text view for the label.
 - [init(content:label:)](/documentation/swiftui/disclosuregroup/init(content:label:)) Creates a disclosure group with the given label and content views.
-- [init(_:isExpanded:content:)](/documentation/swiftui/disclosuregroup/init(_:isexpanded:content:)) Creates a disclosure group, using a provided localized string key to create a text view for the label, and a binding to the expansion state (expanded or collapsed).
+- [init(_:isExpanded:content:)](/documentation/swiftui/disclosuregroup/init(_:isexpanded:content:)) Creates a disclosure group, using a provided localized string resource to create a text view for the label, and a binding to the expansion state (expanded or collapsed).
 - [init(isExpanded:content:label:)](/documentation/swiftui/disclosuregroup/init(isexpanded:content:label:)) Creates a disclosure group with the given label and content views, and a binding to the expansion state (expanded or collapsed).
 
 ## Disclosing information progressively

@@ -4,7 +4,7 @@ description: A type that defines a preconfigured shortcut for a specific app int
 source: https://developer.apple.com/documentation/appintents/appshortcut
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/appintents/appshortcut.json
-timestamp: 2026-06-26T06:39:35.606Z
+timestamp: 2026-07-24T07:42:57.872Z
 ---
 
 **Navigation:** [App Intents](/documentation/appintents)
@@ -13,7 +13,7 @@ timestamp: 2026-06-26T06:39:35.606Z
 
 # AppShortcut
 
-**Available on:** iOS 16.0+, iPadOS 16.0+, Mac Catalyst, macOS 13.0+, tvOS 16.0+, visionOS, watchOS 9.0+
+**Available on:** iOS 16.0+, iPadOS 16.0+, Mac Catalyst 16.0+, macOS 13.0+, tvOS 16.0+, visionOS, watchOS 9.0+
 
 > A type that defines a preconfigured shortcut for a specific app intent.
 

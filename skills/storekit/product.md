@@ -4,7 +4,7 @@ description: Information about a product that you configure in App Store Connect
 source: https://developer.apple.com/documentation/storekit/product
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/storekit/product.json
-timestamp: 2026-05-10T06:22:48.799Z
+timestamp: 2026-07-24T07:42:58.707Z
 ---
 
 **Navigation:** [StoreKit](/documentation/storekit)
@@ -13,7 +13,7 @@ timestamp: 2026-05-10T06:22:48.799Z
 
 # Product
 
-**Available on:** iOS 15.0+, iPadOS 15.0+, Mac Catalyst 15.0+, macOS 12.0+, tvOS 15.0+, visionOS 1.0+, watchOS 8.0+
+**Available on:** iOS 15.0+, iPadOS 15.0+, macOS 12.0+, tvOS 15.0+, visionOS 1.0+, watchOS 8.0+
 
 > Information about a product that you configure in App Store Connect.
 

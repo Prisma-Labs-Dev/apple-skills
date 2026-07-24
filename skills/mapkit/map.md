@@ -4,7 +4,7 @@ description: A view that displays an embedded map interface.
 source: https://developer.apple.com/documentation/mapkit/map
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/mapkit/map.json
-timestamp: 2026-05-25T06:52:04.965Z
+timestamp: 2026-07-24T07:42:58.623Z
 ---
 
 **Navigation:** [MapKit](/documentation/mapkit)
@@ -13,7 +13,7 @@ timestamp: 2026-05-25T06:52:04.965Z
 
 # Map
 
-**Available on:** iOS 14.0+, iPadOS 14.0+, Mac Catalyst, macOS 11.0+, tvOS 14.0+, visionOS, watchOS 7.0+
+**Available on:** iOS 14.0+, iPadOS 14.0+, Mac Catalyst 14.0+, macOS 11.0+, tvOS 14.0+, visionOS, watchOS 7.0+
 
 > A view that displays an embedded map interface.
 

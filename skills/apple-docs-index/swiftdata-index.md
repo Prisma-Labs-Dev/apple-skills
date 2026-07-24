@@ -3,7 +3,7 @@ title: SwiftData
 source: https://developer.apple.com/documentation/swiftdata
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/index/swiftdata
-timestamp: 2026-06-26T06:39:35.806Z
+timestamp: 2026-07-24T07:42:58.027Z
 ---
 
 **Navigation:** [SwiftData](/documentation/swiftdata)
@@ -511,7 +511,9 @@ timestamp: 2026-06-26T06:39:35.806Z
 - [init(for: Schema, configurations: [any DataStoreConfiguration]) throws](/documentation/swiftdata/modelcontainer/init(for:configurations:)-93ifi)
 ### Instance Methods
 
+- [func configurationName(forStoreIdentifier: String) -> String?](/documentation/swiftdata/modelcontainer/configurationname(forstoreidentifier:))
 - [func erase() throws](/documentation/swiftdata/modelcontainer/erase())
+- [func storeIdentifier(forConfigurationNamed: String) -> String?](/documentation/swiftdata/modelcontainer/storeidentifier(forconfigurationnamed:))
 
 - [ModelContext](/documentation/swiftdata/modelcontext)
 ### Creating a model context
@@ -1001,7 +1003,9 @@ timestamp: 2026-06-26T06:39:35.806Z
 - [init(for: Schema, configurations: [any DataStoreConfiguration]) throws](/documentation/swiftdata/modelcontainer/init(for:configurations:)-93ifi)
 #### Instance Methods
 
+- [func configurationName(forStoreIdentifier: String) -> String?](/documentation/swiftdata/modelcontainer/configurationname(forstoreidentifier:))
 - [func erase() throws](/documentation/swiftdata/modelcontainer/erase())
+- [func storeIdentifier(forConfigurationNamed: String) -> String?](/documentation/swiftdata/modelcontainer/storeidentifier(forconfigurationnamed:))
 
 ### Fetching models
 
@@ -1504,7 +1508,6 @@ timestamp: 2026-06-26T06:39:35.806Z
 - [static func == (DefaultHistoryUpdate<Model>, DefaultHistoryUpdate<Model>) -> Bool](/documentation/swiftdata/defaulthistoryupdate/==(_:_:))
 ### Instance Methods
 
-- [func containsAttribute(any PartialKeyPath<Model> & Sendable) -> Bool](/documentation/swiftdata/defaulthistoryupdate/containsattribute(_:))
 - [func hash(into: inout Hasher)](/documentation/swiftdata/defaulthistoryupdate/hash(into:))
 ### Type Aliases
 

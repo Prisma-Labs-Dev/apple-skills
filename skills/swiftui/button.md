@@ -4,7 +4,7 @@ description: A control that initiates an action.
 source: https://developer.apple.com/documentation/swiftui/button
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/swiftui/button.json
-timestamp: 2026-06-26T06:39:36.603Z
+timestamp: 2026-07-24T07:42:58.845Z
 ---
 
 **Navigation:** [SwiftUI](/documentation/swiftui)
@@ -137,15 +137,15 @@ You can also create custom styles. To add a custom appearance with standard inte
 ## Creating a button
 
 - [init(action:label:)](/documentation/swiftui/button/init(action:label:)) Creates a button that displays a custom label.
-- [init(_:action:)](/documentation/swiftui/button/init(_:action:)) Creates a button that generates its label from a localized string key.
-- [init(_:image:action:)](/documentation/swiftui/button/init(_:image:action:)) Creates a button that generates its label from a localized string key and image resource.
+- [init(_:action:)](/documentation/swiftui/button/init(_:action:)) Creates a button that generates its label from a localized string resource.
+- [init(_:image:action:)](/documentation/swiftui/button/init(_:image:action:)) Creates a button that generates its label from a localized string resource and image resource.
 - [init(_:systemImage:action:)](/documentation/swiftui/button/init(_:systemimage:action:)) Creates a button that generates its label from a localized string key and system image name.
 
 ## Creating a button with a role
 
 - [init(role:action:label:)](/documentation/swiftui/button/init(role:action:label:)) Creates a button with a specified role that displays a custom label.
-- [init(_:role:action:)](/documentation/swiftui/button/init(_:role:action:)) Creates a button with a specified role that generates its label from a localized string key.
-- [init(_:image:role:action:)](/documentation/swiftui/button/init(_:image:role:action:)) Creates a button with a specified role that generates its label from a localized string key and an image resource.
+- [init(_:role:action:)](/documentation/swiftui/button/init(_:role:action:)) Creates a button with a specified role that generates its label from a localized string resource.
+- [init(_:image:role:action:)](/documentation/swiftui/button/init(_:image:role:action:)) Creates a button with a specified role that generates its label from a localized string resource and an image resource.
 - [init(_:systemImage:role:action:)](/documentation/swiftui/button/init(_:systemimage:role:action:)) Creates a button with a specified role that generates its label from a localized string key and a system image.
 
 ## Creating a button from a configuration

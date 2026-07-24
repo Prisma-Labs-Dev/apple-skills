@@ -4,7 +4,7 @@ description: A structure that describes how to position the map’s camera withi
 source: https://developer.apple.com/documentation/mapkit/mapcameraposition
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/mapkit/mapcameraposition.json
-timestamp: 2026-04-14T13:14:27.964Z
+timestamp: 2026-07-24T07:42:58.627Z
 ---
 
 **Navigation:** [MapKit](/documentation/mapkit)
@@ -13,7 +13,7 @@ timestamp: 2026-04-14T13:14:27.964Z
 
 # MapCameraPosition
 
-**Available on:** iOS 17.0+, iPadOS 17.0+, Mac Catalyst, macOS 14.0+, tvOS 17.0+, visionOS, watchOS 10.0+
+**Available on:** iOS 17.0+, iPadOS 17.0+, Mac Catalyst 17.0+, macOS 14.0+, tvOS 17.0+, visionOS, watchOS 10.0+
 
 > A structure that describes how to position the map’s camera within the map.
 

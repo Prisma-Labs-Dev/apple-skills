@@ -4,7 +4,7 @@ description: Information about an auto-renewable subscription, such as its statu
 source: https://developer.apple.com/documentation/storekit/product/subscriptioninfo
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/storekit/product/subscriptioninfo.json
-timestamp: 2026-06-26T06:39:36.488Z
+timestamp: 2026-07-24T07:42:58.732Z
 ---
 
 **Navigation:** [StoreKit](/documentation/storekit) › [Product](/documentation/storekit/product)
@@ -13,7 +13,7 @@ timestamp: 2026-06-26T06:39:36.488Z
 
 # Product.SubscriptionInfo
 
-**Available on:** iOS 15.0+, iPadOS 15.0+, Mac Catalyst 15.0+, macOS 12.0+, tvOS 15.0+, visionOS 1.0+, watchOS 8.0+
+**Available on:** iOS 15.0+, iPadOS 15.0+, macOS 12.0+, tvOS 15.0+, visionOS 1.0+, watchOS 8.0+
 
 > Information about an auto-renewable subscription, such as its status, period, subscription group, and subscription offer details.
 

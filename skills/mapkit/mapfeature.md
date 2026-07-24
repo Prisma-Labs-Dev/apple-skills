@@ -4,7 +4,7 @@ description: A tappable map feature.
 source: https://developer.apple.com/documentation/mapkit/mapfeature
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/mapkit/mapfeature.json
-timestamp: 2026-06-26T06:39:36.430Z
+timestamp: 2026-07-24T07:42:58.634Z
 ---
 
 **Navigation:** [MapKit](/documentation/mapkit)
@@ -13,7 +13,7 @@ timestamp: 2026-06-26T06:39:36.430Z
 
 # MapFeature
 
-**Available on:** iOS 17.0+, iPadOS 17.0+, Mac Catalyst, macOS 14.0+, tvOS 17.0+, visionOS, watchOS 10.0+
+**Available on:** iOS 17.0+, iPadOS 17.0+, Mac Catalyst 17.0+, macOS 14.0+, tvOS 17.0+, visionOS, watchOS 10.0+
 
 > A tappable map feature.
 

@@ -4,7 +4,7 @@ description: A customizable annotation used to indicate a location on a map.
 source: https://developer.apple.com/documentation/mapkit/annotation
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/mapkit/annotation.json
-timestamp: 2026-04-14T13:14:27.548Z
+timestamp: 2026-07-24T07:42:58.618Z
 ---
 
 **Navigation:** [MapKit](/documentation/mapkit)
@@ -13,7 +13,7 @@ timestamp: 2026-04-14T13:14:27.548Z
 
 # Annotation
 
-**Available on:** iOS 17.0+, iPadOS 17.0+, Mac Catalyst, macOS 14.0+, tvOS 17.0+, visionOS, watchOS 10.0+
+**Available on:** iOS 17.0+, iPadOS 17.0+, Mac Catalyst 17.0+, macOS 14.0+, tvOS 17.0+, visionOS, watchOS 10.0+
 
 > A customizable annotation used to indicate a location on a map.
 

@@ -4,7 +4,7 @@ description: A type that advises WidgetKit when to update a widget’s display.
 source: https://developer.apple.com/documentation/widgetkit/timelineprovider
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/widgetkit/timelineprovider.json
-timestamp: 2026-04-14T13:14:57.164Z
+timestamp: 2026-07-24T07:42:59.380Z
 ---
 
 **Navigation:** [WidgetKit](/documentation/widgetkit)
@@ -13,7 +13,7 @@ timestamp: 2026-04-14T13:14:57.164Z
 
 # TimelineProvider
 
-**Available on:** iOS 14.0+, iPadOS 14.0+, Mac Catalyst, macOS 11.0+, visionOS 26.0+, watchOS 9.0+
+**Available on:** iOS 14.0+, iPadOS 14.0+, Mac Catalyst 14.0+, macOS 11.0+, visionOS 26.0+, watchOS 9.0+
 
 > A type that advises WidgetKit when to update a widget’s display.
 

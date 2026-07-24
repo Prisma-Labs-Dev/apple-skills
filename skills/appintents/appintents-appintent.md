@@ -4,7 +4,7 @@ description: An interface you use to express app-specific actions and make them 
 source: https://developer.apple.com/documentation/appintents/appintent
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/appintents/appintent.json
-timestamp: 2026-06-26T06:39:35.592Z
+timestamp: 2026-07-24T07:42:57.862Z
 ---
 
 **Navigation:** [App Intents](/documentation/appintents)
@@ -13,7 +13,7 @@ timestamp: 2026-06-26T06:39:35.592Z
 
 # AppIntent
 
-**Available on:** iOS 16.0+, iPadOS 16.0+, Mac Catalyst, macOS 13.0+, tvOS 16.0+, visionOS, watchOS 9.0+
+**Available on:** iOS 16.0+, iPadOS 16.0+, Mac Catalyst 16.0+, macOS 13.0+, tvOS 16.0+, visionOS, watchOS 9.0+
 
 > An interface you use to express app-specific actions and make them available to the rest of the system.
 

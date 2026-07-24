@@ -3,7 +3,7 @@ title: WidgetKit
 source: https://developer.apple.com/documentation/widgetkit
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/index/widgetkit
-timestamp: 2026-05-10T06:22:51.135Z
+timestamp: 2026-07-24T07:42:59.372Z
 ---
 
 **Navigation:** [WidgetKit](/documentation/widgetkit)
@@ -13,6 +13,7 @@ timestamp: 2026-05-10T06:22:51.135Z
 - [Developing a WidgetKit strategy](/documentation/widgetkit/developing-a-widgetkit-strategy)
 - [WidgetKit updates](/documentation/updates/widgetkit)
 - [Creating a widget extension](/documentation/widgetkit/creating-a-widget-extension)
+- [Building Widgets Using WidgetKit and SwiftUI](/documentation/widgetkit/building-widgets-using-widgetkit-and-swiftui)
 - [Emoji Rangers: Supporting Live Activities, interactivity, and animations](/documentation/widgetkit/emoji-rangers-supporting-live-activities-interactivity-and-animations)
 - [WidgetBundle](/documentation/swiftui/widgetbundle)
 ## System experiences

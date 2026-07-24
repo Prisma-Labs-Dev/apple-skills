@@ -4,7 +4,7 @@ description: A mechanism to interface between synchronous and asynchronous code,
 source: https://developer.apple.com/documentation/swift/checkedcontinuation
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/swift/checkedcontinuation.json
-timestamp: 2026-06-26T06:39:36.515Z
+timestamp: 2026-07-24T07:42:58.757Z
 ---
 
 **Navigation:** [Swift](/documentation/swift)
@@ -51,12 +51,14 @@ Resuming from a continuation more than once is undefined behavior. Never resumin
 
 ## Continuations
 
-- [withCheckedContinuation(isolation:function:_:)](/documentation/swift/withcheckedcontinuation(isolation:function:_:)) Source-compatibility overload; replaced by [withCheckedContinuation(function:_:)](/documentation/swift/withcheckedcontinuation(function:_:)).
-- [withCheckedThrowingContinuation(isolation:function:_:)](/documentation/swift/withcheckedthrowingcontinuation(isolation:function:_:)) Source-compatibility overload; replaced by `withCheckedThrowingContinuation(function:_:)`.
+- [Continuation](/documentation/swift/continuation) A mechanism to interface between synchronous and asynchronous code, which enforces that the continuation is resumed exactly once.
+- [withContinuation(of:_:)](/documentation/swift/withcontinuation(of:_:)) Invokes the passed in closure with a non-copyable continuation for the current task.
+- [withContinuation(of:throwing:_:)](/documentation/swift/withcontinuation(of:throwing:_:)) Invokes the passed in closure with a non-copyable continuation for the current task.
+- [withCheckedContinuation(function:_:)](/documentation/swift/withcheckedcontinuation(function:_:)) Invokes the passed in closure with a checked continuation for the current task.
+- [withCheckedThrowingContinuation(function:_:)](/documentation/swift/withcheckedthrowingcontinuation(function:_:)-13yf6)
+- [withCheckedThrowingContinuation(function:_:)](/documentation/swift/withcheckedthrowingcontinuation(function:_:)-2k46m) Invokes the passed in closure with a checked continuation for the current task.
 - [UnsafeContinuation](/documentation/swift/unsafecontinuation) A mechanism to interface between synchronous and asynchronous code, without correctness checking.
-- [withUnsafeContinuation(isolation:_:)](/documentation/swift/withunsafecontinuation(isolation:_:)) Source-compatibility overload; replaced by [withUnsafeContinuation(_:)](/documentation/swift/withunsafecontinuation(_:)).
-- [UnsafeThrowingContinuation](/documentation/swift/unsafethrowingcontinuation)
-- [withUnsafeThrowingContinuation(isolation:_:)](/documentation/swift/withunsafethrowingcontinuation(isolation:_:)) Source-compatibility overload; replaced by `withUnsafeThrowingContinuation(_:)`.
+- [withUnsafeContinuation(_:)](/documentation/swift/withunsafecontinuation(_:)) Invokes the passed in closure with a unsafe continuation for the current task.
 
 ---
 

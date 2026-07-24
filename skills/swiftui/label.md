@@ -4,7 +4,7 @@ description: A standard label for user interface items, consisting of an icon wi
 source: https://developer.apple.com/documentation/swiftui/label
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/swiftui/label.json
-timestamp: 2026-06-26T06:39:36.670Z
+timestamp: 2026-07-24T07:42:58.907Z
 ---
 
 **Navigation:** [SwiftUI](/documentation/swiftui)
@@ -105,6 +105,11 @@ Label {
 - [init(title:icon:)](/documentation/swiftui/label/init(title:icon:)) Creates a label with a custom title and icon.
 - [init(_:)](/documentation/swiftui/label/init(_:)) Creates a label representing a family activity application.
 - [init(_:image:)](/documentation/swiftui/label/init(_:image:)) Creates a label with an icon image and a title generated from a localized string.
+
+## Configuring a Label
+
+- [labelIconToTitleSpacing(_:)](/documentation/swiftui/view/labelicontotitlespacing(_:)) Set the spacing between the icon and title in labels.
+- [labelReservedIconWidth(_:)](/documentation/swiftui/view/labelreservediconwidth(_:)) Set the width reserved for icons in labels.
 
 ## Displaying text
 

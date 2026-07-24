@@ -4,7 +4,7 @@ description: A type that specifies the date to display a widget, and, optionally
 source: https://developer.apple.com/documentation/widgetkit/timelineentry
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/widgetkit/timelineentry.json
-timestamp: 2026-04-14T13:14:56.916Z
+timestamp: 2026-07-24T07:42:59.376Z
 ---
 
 **Navigation:** [WidgetKit](/documentation/widgetkit)
@@ -13,7 +13,7 @@ timestamp: 2026-04-14T13:14:56.916Z
 
 # TimelineEntry
 
-**Available on:** iOS 14.0+, iPadOS 14.0+, Mac Catalyst, macOS 11.0+, visionOS 26.0+, watchOS 9.0+
+**Available on:** iOS 14.0+, iPadOS 14.0+, Mac Catalyst 14.0+, macOS 11.0+, visionOS 26.0+, watchOS 9.0+
 
 > A type that specifies the date to display a widget, and, optionally, indicates the current relevance of the widget’s content.
 

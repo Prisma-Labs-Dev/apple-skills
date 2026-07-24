@@ -4,7 +4,7 @@ description: The centralized point of control and coordination for apps running 
 source: https://developer.apple.com/documentation/uikit/uiapplication
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/uikit/uiapplication.json
-timestamp: 2026-06-26T06:39:36.913Z
+timestamp: 2026-07-24T07:42:59.153Z
 ---
 
 **Navigation:** [UIKit](/documentation/uikit)
@@ -221,10 +221,19 @@ Intercepting events is only rarely required and you should avoid it if possible.
 - [UIApplication.ProtectedDataDidBecomeAvailableMessage](/documentation/uikit/uiapplication/protecteddatadidbecomeavailablemessage)
 - [UIApplication.ProtectedDataWillBecomeUnavailableMessage](/documentation/uikit/uiapplication/protecteddatawillbecomeunavailablemessage)
 - [UIApplication.SignificantTimeChangeMessage](/documentation/uikit/uiapplication/significanttimechangemessage)
+- [UIApplication.SystemPrefersReducedResourceUsageDidChangeMessage](/documentation/uikit/uiapplication/systemprefersreducedresourceusagedidchangemessage)
 - [UIApplication.UserDidTakeScreenshotMessage](/documentation/uikit/uiapplication/userdidtakescreenshotmessage)
 - [UIApplication.WillEnterForegroundMessage](/documentation/uikit/uiapplication/willenterforegroundmessage)
 - [UIApplication.WillResignActiveMessage](/documentation/uikit/uiapplication/willresignactivemessage)
 - [UIApplication.WillTerminateMessage](/documentation/uikit/uiapplication/willterminatemessage)
+
+## Instance Properties
+
+- [systemPrefersReducedResourceUsage](/documentation/uikit/uiapplication/systemprefersreducedresourceusage) A Boolean value that indicates whether the system prefers that the app reduce its resource usage.
+
+## Type Properties
+
+- [systemPrefersReducedResourceUsageDidChangeNotification](/documentation/uikit/uiapplication/systemprefersreducedresourceusagedidchangenotification) A notification that posts when [systemPrefersReducedResourceUsage](/documentation/uikit/uiapplication/systemprefersreducedresourceusage) changes.
 
 ## Life cycle
 

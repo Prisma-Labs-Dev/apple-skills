@@ -4,7 +4,7 @@ description: Perform asynchronous and parallel operations.
 source: https://developer.apple.com/documentation/swift/concurrency
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/swift/concurrency.json
-timestamp: 2026-06-26T06:39:36.519Z
+timestamp: 2026-07-24T07:42:58.762Z
 ---
 
 **Navigation:** [Swift](/documentation/swift)
@@ -43,27 +43,24 @@ timestamp: 2026-06-26T06:39:36.519Z
 
 ## Continuations
 
+- [Continuation](/documentation/swift/continuation) A mechanism to interface between synchronous and asynchronous code, which enforces that the continuation is resumed exactly once.
+- [withContinuation(of:_:)](/documentation/swift/withcontinuation(of:_:)) Invokes the passed in closure with a non-copyable continuation for the current task.
+- [withContinuation(of:throwing:_:)](/documentation/swift/withcontinuation(of:throwing:_:)) Invokes the passed in closure with a non-copyable continuation for the current task.
 - [CheckedContinuation](/documentation/swift/checkedcontinuation) A mechanism to interface between synchronous and asynchronous code, logging correctness violations.
-- [withCheckedContinuation(isolation:function:_:)](/documentation/swift/withcheckedcontinuation(isolation:function:_:)) Source-compatibility overload; replaced by [withCheckedContinuation(function:_:)](/documentation/swift/withcheckedcontinuation(function:_:)).
-- [withCheckedThrowingContinuation(isolation:function:_:)](/documentation/swift/withcheckedthrowingcontinuation(isolation:function:_:)) Source-compatibility overload; replaced by `withCheckedThrowingContinuation(function:_:)`.
+- [withCheckedContinuation(function:_:)](/documentation/swift/withcheckedcontinuation(function:_:)) Invokes the passed in closure with a checked continuation for the current task.
+- [withCheckedThrowingContinuation(function:_:)](/documentation/swift/withcheckedthrowingcontinuation(function:_:)-13yf6)
+- [withCheckedThrowingContinuation(function:_:)](/documentation/swift/withcheckedthrowingcontinuation(function:_:)-2k46m) Invokes the passed in closure with a checked continuation for the current task.
 - [UnsafeContinuation](/documentation/swift/unsafecontinuation) A mechanism to interface between synchronous and asynchronous code, without correctness checking.
-- [withUnsafeContinuation(isolation:_:)](/documentation/swift/withunsafecontinuation(isolation:_:)) Source-compatibility overload; replaced by [withUnsafeContinuation(_:)](/documentation/swift/withunsafecontinuation(_:)).
-- [UnsafeThrowingContinuation](/documentation/swift/unsafethrowingcontinuation)
-- [withUnsafeThrowingContinuation(isolation:_:)](/documentation/swift/withunsafethrowingcontinuation(isolation:_:)) Source-compatibility overload; replaced by `withUnsafeThrowingContinuation(_:)`.
+- [withUnsafeContinuation(_:)](/documentation/swift/withunsafecontinuation(_:)) Invokes the passed in closure with a unsafe continuation for the current task.
 
 ## Actors
 
 - [Sendable](/documentation/swift/sendable) A thread-safe type whose values can be shared across arbitrary concurrent contexts without introducing a risk of data races.
 - [Actor](/documentation/swift/actor) Common protocol to which all actors conform.
-- [AnyActor](/documentation/swift/anyactor) Common marker protocol providing a shared “base” for both (local) `Actor` and (potentially remote) `DistributedActor` types.
 - [MainActor](/documentation/swift/mainactor) A singleton actor whose executor is equivalent to the main dispatch queue.
 - [GlobalActor](/documentation/swift/globalactor) A type that represents a globally-unique actor that can be used to isolate various declarations anywhere in the program.
 - [SendableMetatype](/documentation/swift/sendablemetatype) A type whose metatype can be shared across arbitrary isolation domains without introducing a risk of data races.
-- [ConcurrentValue](/documentation/swift/concurrentvalue)
-- [UnsafeSendable](/documentation/swift/unsafesendable) A type whose values can safely be passed across concurrency domains by copying, but which disables some safety checking at the conformance site.
-- [UnsafeConcurrentValue](/documentation/swift/unsafeconcurrentvalue)
 - [isolation()](/documentation/swift/isolation()) Produce a reference to the actor to which the enclosing code is isolated, or `nil` if the code is nonisolated.
-- [extractIsolation(_:)](/documentation/swift/extractisolation(_:))
 
 ## Task-Local Storage
 
@@ -76,7 +73,6 @@ timestamp: 2026-06-26T06:39:36.519Z
 - [ExecutorJob](/documentation/swift/executorjob) A unit of schedulable work.
 - [SerialExecutor](/documentation/swift/serialexecutor) A service that executes jobs.
 - [TaskExecutor](/documentation/swift/taskexecutor) An executor that may be used as preferred executor by a task.
-- [PartialAsyncTask](/documentation/swift/partialasynctask)
 - [UnownedJob](/documentation/swift/unownedjob) A unit of schedulable work.
 - [JobPriority](/documentation/swift/jobpriority) The priority of this job.
 - [UnownedSerialExecutor](/documentation/swift/unownedserialexecutor) An unowned reference to a serial executor (a `SerialExecutor` value).
@@ -86,7 +82,20 @@ timestamp: 2026-06-26T06:39:36.519Z
 
 ## Deprecated
 
+- [extractIsolation(_:)](/documentation/swift/extractisolation(_:))
+- [withCheckedContinuation(isolation:function:_:)](/documentation/swift/withcheckedcontinuation(isolation:function:_:)) Source-compatibility overload; replaced by [withCheckedContinuation(function:_:)](/documentation/swift/withcheckedcontinuation(function:_:)).
+- [withCheckedThrowingContinuation(isolation:function:_:)](/documentation/swift/withcheckedthrowingcontinuation(isolation:function:_:)) Source-compatibility overload; replaced by `withCheckedThrowingContinuation(function:_:)`.
+- [withUnsafeContinuation(isolation:_:)](/documentation/swift/withunsafecontinuation(isolation:_:)) Source-compatibility overload; replaced by [withUnsafeContinuation(_:)](/documentation/swift/withunsafecontinuation(_:)).
+- [AnyActor](/documentation/swift/anyactor) Common marker protocol providing a shared “base” for both (local) `Actor` and (potentially remote) `DistributedActor` types.
+- [ConcurrentValue](/documentation/swift/concurrentvalue)
 - [Job](/documentation/swift/job) Deprecated equivalent of [ExecutorJob](/documentation/swift/executorjob).
+- [PartialAsyncTask](/documentation/swift/partialasynctask)
+- [UnsafeConcurrentValue](/documentation/swift/unsafeconcurrentvalue)
+- [UnsafeSendable](/documentation/swift/unsafesendable) A type whose values can safely be passed across concurrency domains by copying, but which disables some safety checking at the conformance site.
+- [UnsafeThrowingContinuation](/documentation/swift/unsafethrowingcontinuation)
+- [withUnsafeThrowingContinuation(_:)](/documentation/swift/withunsafethrowingcontinuation(_:)-32nwt) Invokes the passed in closure with a unsafe continuation for the current task.
+- [withUnsafeThrowingContinuation(_:)](/documentation/swift/withunsafethrowingcontinuation(_:)-7zhvy)
+- [withUnsafeThrowingContinuation(isolation:_:)](/documentation/swift/withunsafethrowingcontinuation(isolation:_:)) Source-compatibility overload; replaced by `withUnsafeThrowingContinuation(_:)`.
 
 ## Programming Tasks
 
