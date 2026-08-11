@@ -4,7 +4,7 @@ description: MapKit for SwiftUI allows you to build map-centric views and apps a
 source: https://developer.apple.com/documentation/mapkit/mapkit_for_swiftui
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/mapkit/mapkit_for_swiftui.json
-timestamp: 2026-04-14T13:14:28.904Z
+timestamp: 2026-08-11T06:08:56.053Z
 ---
 
 **Navigation:** [MapKit](/documentation/mapkit)
@@ -67,7 +67,14 @@ Like MapKit for AppKit and UIKit, MapKit for SwiftUI allows you to take advantag
 
 - [MapItemDetailSelectionAccessoryStyle](/documentation/mapkit/mapitemdetailselectionaccessorystyle) The map item detail selection accessory style.
 - [mapItemDetailSelectionAccessory(_:)](/documentation/mapkit/mapcontent/mapitemdetailselectionaccessory(_:)) Specifies the selection accessory to display for the selected map item content.
+- [mapFeatureSelectionAccessory(_:)](/documentation/SwiftUI/View/mapFeatureSelectionAccessory(_:)) Specifies the selection accessory to display for a `MapFeature`
 - [callout(_:)](/documentation/mapkit/mapitemdetailselectionaccessorystyle/callout(_:)) Presents the accessory as an annotation callout on the map.
+- [mapItemDetailPopover(isPresented:item:displaysMap:attachmentAnchor:)](/documentation/SwiftUI/View/mapItemDetailPopover(isPresented:item:displaysMap:attachmentAnchor:)) Presents a map item detail popover.
+- [mapItemDetailPopover(isPresented:item:displaysMap:attachmentAnchor:arrowEdge:)](/documentation/SwiftUI/View/mapItemDetailPopover(isPresented:item:displaysMap:attachmentAnchor:arrowEdge:)) Presents a map item detail popover.
+- [mapItemDetailPopover(item:displaysMap:attachmentAnchor:)](/documentation/SwiftUI/View/mapItemDetailPopover(item:displaysMap:attachmentAnchor:)) Presents a map item detail popover.
+- [mapItemDetailPopover(item:displaysMap:attachmentAnchor:arrowEdge:)](/documentation/SwiftUI/View/mapItemDetailPopover(item:displaysMap:attachmentAnchor:arrowEdge:)) Presents a map item detail popover.
+- [mapItemDetailSheet(isPresented:item:displaysMap:)](/documentation/SwiftUI/View/mapItemDetailSheet(isPresented:item:displaysMap:)) Presents a map item detail sheet.
+- [mapItemDetailSheet(item:displaysMap:)](/documentation/SwiftUI/View/mapItemDetailSheet(item:displaysMap:)) Presents a map item detail sheet.
 
 ## Geocoding
 

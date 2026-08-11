@@ -3,7 +3,7 @@ title: HealthKit
 source: https://developer.apple.com/documentation/healthkit
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/index/healthkit
-timestamp: 2026-06-26T06:39:35.734Z
+timestamp: 2026-08-11T06:08:55.027Z
 ---
 
 **Navigation:** [HealthKit](/documentation/healthkit)
@@ -73,6 +73,7 @@ timestamp: 2026-06-26T06:39:35.734Z
 - [func handleAuthorizationForExtension(completion: (Bool, (any Error)?) -> Void)](/documentation/healthkit/hkhealthstore/handleauthorizationforextension(completion:))
 - [var authorizationViewControllerPresenter: UIViewController?](/documentation/healthkit/hkhealthstore/authorizationviewcontrollerpresenter)
 - [func getEarliestAuthorizedSampleDate(for: Set<HKObjectType>, completion: ([HKObjectType : Date]?, (any Error)?) -> Void)](/documentation/healthkit/hkhealthstore/getearliestauthorizedsampledate(for:completion:))
+- [func earliestAuthorizedSampleDate(for: Set<HKObjectType>) async throws -> [HKObjectType : Date]](/documentation/healthkit/hkhealthstore/earliestauthorizedsampledate(for:))
 - [func earliestPermittedSampleDate() -> Date](/documentation/healthkit/hkhealthstore/earliestpermittedsampledate())
 ### Querying HealthKit data
 
@@ -563,6 +564,7 @@ timestamp: 2026-06-26T06:39:35.734Z
 ##### Mindfulness and Sleep
 
 - [static let appleSleepingWristTemperature: HKQuantityTypeIdentifier](/documentation/healthkit/hkquantitytypeidentifier/applesleepingwristtemperature)
+- [static let appleSleepingBreathingDisturbances: HKQuantityTypeIdentifier](/documentation/healthkit/hkquantitytypeidentifier/applesleepingbreathingdisturbances)
 ##### Nutrition
 
 - [static let dietaryBiotin: HKQuantityTypeIdentifier](/documentation/healthkit/hkquantitytypeidentifier/dietarybiotin)
@@ -636,9 +638,6 @@ timestamp: 2026-06-26T06:39:35.734Z
 ##### Initializers
 
 - [init(rawValue: String)](/documentation/healthkit/hkquantitytypeidentifier/init(rawvalue:))
-##### Type Properties
-
-- [static let appleSleepingBreathingDisturbances: HKQuantityTypeIdentifier](/documentation/healthkit/hkquantitytypeidentifier/applesleepingbreathingdisturbances)
 
 #### Creating category types
 
@@ -1607,19 +1606,19 @@ timestamp: 2026-06-26T06:39:35.734Z
 - [init?(rawValue: Int)](/documentation/healthkit/hkcategoryvaluelowcardiofitnessevent/init(rawvalue:))
 
 - [HKAppleWalkingSteadinessClassification](/documentation/healthkit/hkapplewalkingsteadinessclassification)
-##### Accessing Classifications
+##### Accessing classifications
 
 - [case ok](/documentation/healthkit/hkapplewalkingsteadinessclassification/ok)
 - [case low](/documentation/healthkit/hkapplewalkingsteadinessclassification/low)
 - [case veryLow](/documentation/healthkit/hkapplewalkingsteadinessclassification/verylow)
+##### Accessing extremes
+
+- [var minimum: HKQuantity](/documentation/healthkit/hkapplewalkingsteadinessclassification/minimum)
+- [var maximum: HKQuantity](/documentation/healthkit/hkapplewalkingsteadinessclassification/maximum)
 ##### Initializers
 
 - [init(for: HKQuantity) throws](/documentation/healthkit/hkapplewalkingsteadinessclassification/init(for:))
 - [init?(rawValue: Int)](/documentation/healthkit/hkapplewalkingsteadinessclassification/init(rawvalue:))
-##### Instance Properties
-
-- [var maximum: HKQuantity](/documentation/healthkit/hkapplewalkingsteadinessclassification/maximum)
-- [var minimum: HKQuantity](/documentation/healthkit/hkapplewalkingsteadinessclassification/minimum)
 ##### Default Implementations
 
 - [CaseIterable Implementations](/documentation/healthkit/hkapplewalkingsteadinessclassification/caseiterable-implementations)
@@ -2666,19 +2665,19 @@ timestamp: 2026-06-26T06:39:35.734Z
 ### Walking steadiness classifications
 
 - [HKAppleWalkingSteadinessClassification](/documentation/healthkit/hkapplewalkingsteadinessclassification)
-#### Accessing Classifications
+#### Accessing classifications
 
 - [case ok](/documentation/healthkit/hkapplewalkingsteadinessclassification/ok)
 - [case low](/documentation/healthkit/hkapplewalkingsteadinessclassification/low)
 - [case veryLow](/documentation/healthkit/hkapplewalkingsteadinessclassification/verylow)
+#### Accessing extremes
+
+- [var minimum: HKQuantity](/documentation/healthkit/hkapplewalkingsteadinessclassification/minimum)
+- [var maximum: HKQuantity](/documentation/healthkit/hkapplewalkingsteadinessclassification/maximum)
 #### Initializers
 
 - [init(for: HKQuantity) throws](/documentation/healthkit/hkapplewalkingsteadinessclassification/init(for:))
 - [init?(rawValue: Int)](/documentation/healthkit/hkapplewalkingsteadinessclassification/init(rawvalue:))
-#### Instance Properties
-
-- [var maximum: HKQuantity](/documentation/healthkit/hkapplewalkingsteadinessclassification/maximum)
-- [var minimum: HKQuantity](/documentation/healthkit/hkapplewalkingsteadinessclassification/minimum)
 #### Default Implementations
 
 - [CaseIterable Implementations](/documentation/healthkit/hkapplewalkingsteadinessclassification/caseiterable-implementations)
@@ -3513,15 +3512,9 @@ timestamp: 2026-06-26T06:39:35.734Z
 - [func result(for: HKHealthStore) async throws -> HKStatisticsCollection](/documentation/healthkit/hkstatisticscollectionquerydescriptor/result(for:))
 - [func results(for: HKHealthStore) -> HKStatisticsCollectionQueryDescriptor.Results](/documentation/healthkit/hkstatisticscollectionquerydescriptor/results(for:))
 - [HKStatisticsCollectionQueryDescriptor.Results](/documentation/healthkit/hkstatisticscollectionquerydescriptor/results)
-##### Creating an Iterator
+##### Structures
 
 - [HKStatisticsCollectionQueryDescriptor.Results.Iterator](/documentation/healthkit/hkstatisticscollectionquerydescriptor/results/iterator)
-- [HKStatisticsCollectionQueryDescriptor.Result](/documentation/healthkit/hkstatisticscollectionquerydescriptor/result)
-###### Accessing Statistical Data
-
-- [let statisticsCollection: HKStatisticsCollection](/documentation/healthkit/hkstatisticscollectionquerydescriptor/result/statisticscollection)
-- [let updatedStatistics: [HKStatistics]?](/documentation/healthkit/hkstatisticscollectionquerydescriptor/result/updatedstatistics)
-
 
 #### Accessing Query Properties
 
@@ -3855,6 +3848,7 @@ timestamp: 2026-06-26T06:39:35.734Z
 #### Accessing zone data
 
 - [var zoneGroupsByType: [HKQuantityType : HKWorkoutZoneGroup]?](/documentation/healthkit/hkworkout/zonegroupsbytype)
+- [func zoneGroup(for: HKQuantityType) -> HKWorkoutZoneGroup?](/documentation/healthkit/hkworkout/zonegroup(for:))
 #### Specifying sort identifiers
 
 - [let HKWorkoutSortIdentifierDuration: String](/documentation/healthkit/hkworkoutsortidentifierduration)
@@ -3990,9 +3984,6 @@ timestamp: 2026-06-26T06:39:35.734Z
 - [convenience init(activityType: HKWorkoutActivityType, startDate: Date, endDate: Date, workoutEvents: [HKWorkoutEvent]?, totalEnergyBurned: HKQuantity?, totalDistance: HKQuantity?, metadata: [String : Any]?)](/documentation/healthkit/hkworkout/init(activitytype:startdate:enddate:workoutevents:totalenergyburned:totaldistance:metadata:))
 - [convenience init(activityType: HKWorkoutActivityType, startDate: Date, endDate: Date, workoutEvents: [HKWorkoutEvent]?, totalEnergyBurned: HKQuantity?, totalDistance: HKQuantity?, totalFlightsClimbed: HKQuantity?, device: HKDevice?, metadata: [String : Any]?)](/documentation/healthkit/hkworkout/init(activitytype:startdate:enddate:workoutevents:totalenergyburned:totaldistance:totalflightsclimbed:device:metadata:))
 - [convenience init(activityType: HKWorkoutActivityType, startDate: Date, endDate: Date, workoutEvents: [HKWorkoutEvent]?, totalEnergyBurned: HKQuantity?, totalDistance: HKQuantity?, totalSwimmingStrokeCount: HKQuantity?, device: HKDevice?, metadata: [String : Any]?)](/documentation/healthkit/hkworkout/init(activitytype:startdate:enddate:workoutevents:totalenergyburned:totaldistance:totalswimmingstrokecount:device:metadata:))
-#### Instance Methods
-
-- [func zoneGroup(for: HKQuantityType) -> HKWorkoutZoneGroup?](/documentation/healthkit/hkworkout/zonegroup(for:))
 
 - [HKWorkoutActivity](/documentation/healthkit/hkworkoutactivity)
 #### Creating workout activities
@@ -4012,6 +4003,7 @@ timestamp: 2026-06-26T06:39:35.734Z
 #### Accessing zone data
 
 - [var zoneGroupsByType: [HKQuantityType : HKWorkoutZoneGroup]?](/documentation/healthkit/hkworkoutactivity/zonegroupsbytype)
+- [func zoneGroup(for: HKQuantityType) -> HKWorkoutZoneGroup?](/documentation/healthkit/hkworkoutactivity/zonegroup(for:))
 #### Specifying predicate key paths
 
 - [let HKPredicateKeyPathWorkoutActivity: String](/documentation/healthkit/hkpredicatekeypathworkoutactivity)
@@ -4027,9 +4019,6 @@ timestamp: 2026-06-26T06:39:35.734Z
 
 - [init?(coder: NSCoder)](/documentation/healthkit/hkworkoutactivity/init(coder:))
 - [init(workoutConfiguration: HKWorkoutConfiguration, startDate: Date, endDate: Date?, metadata: [String : Any]?)](/documentation/healthkit/hkworkoutactivity/init(workoutconfiguration:startdate:enddate:metadata:))
-#### Instance Methods
-
-- [func zoneGroup(for: HKQuantityType) -> HKWorkoutZoneGroup?](/documentation/healthkit/hkworkoutactivity/zonegroup(for:))
 
 - [HKWorkoutBuilder](/documentation/healthkit/hkworkoutbuilder)
 #### Creating the builder
@@ -4074,8 +4063,6 @@ timestamp: 2026-06-26T06:39:35.734Z
 
 - [func setCustomZoneConfiguration(HKWorkoutZoneConfiguration?, for: HKQuantityType) async throws](/documentation/healthkit/hkworkoutbuilder/setcustomzoneconfiguration(_:for:))
 - [func zoneConfiguration(for: HKQuantityType) async throws -> HKWorkoutZoneConfiguration?](/documentation/healthkit/hkworkoutbuilder/zoneconfiguration(for:))
-#### Instance Methods
-
 - [func zoneGroup(for: HKQuantityType) -> HKWorkoutZoneGroup?](/documentation/healthkit/hkworkoutbuilder/zonegroup(for:))
 
 - [HKWorkoutType](/documentation/healthkit/hkworkouttype)
@@ -4366,19 +4353,29 @@ timestamp: 2026-06-26T06:39:35.734Z
 #### Accessing data
 
 - [var elapsedTime: TimeInterval](/documentation/healthkit/hkliveworkoutbuilder/elapsedtime)
+#### Receiving zone updates
+
+- [HKLiveWorkoutZoneUpdate](/documentation/healthkit/hkliveworkoutzoneupdate)
+##### Accessing update information
+
+- [var lastSampleProcessedDate: Date?](/documentation/healthkit/hkliveworkoutzoneupdate/lastsampleprocesseddate)
+##### Accessing zone data
+
+- [var currentZoneDuration: HKWorkoutZoneDuration?](/documentation/healthkit/hkliveworkoutzoneupdate/currentzoneduration)
+- [var previousZoneDuration: HKWorkoutZoneDuration?](/documentation/healthkit/hkliveworkoutzoneupdate/previouszoneduration)
+- [var zoneGroup: HKWorkoutZoneGroup?](/documentation/healthkit/hkliveworkoutzoneupdate/zonegroup)
+
 
 - [HKLiveWorkoutBuilderDelegate](/documentation/healthkit/hkliveworkoutbuilderdelegate)
 #### Receiving data updates
 
+- [func workoutBuilder(HKLiveWorkoutBuilder, didCollectDataOf: Set<HKSampleType>)](/documentation/healthkit/hkliveworkoutbuilderdelegate/workoutbuilder(_:didcollectdataof:))
 - [func workoutBuilderDidCollectEvent(HKLiveWorkoutBuilder)](/documentation/healthkit/hkliveworkoutbuilderdelegate/workoutbuilderdidcollectevent(_:))
 #### Receiving activity updates
 
 - [func workoutBuilder(HKLiveWorkoutBuilder, didBegin: HKWorkoutActivity)](/documentation/healthkit/hkliveworkoutbuilderdelegate/workoutbuilder(_:didbegin:))
 - [func workoutBuilder(HKLiveWorkoutBuilder, didEnd: HKWorkoutActivity)](/documentation/healthkit/hkliveworkoutbuilderdelegate/workoutbuilder(_:didend:))
 #### Receiving zone updates
-
-- [func workoutBuilder(HKLiveWorkoutBuilder, didCollectDataOf: Set<HKSampleType>)](/documentation/healthkit/hkliveworkoutbuilderdelegate/workoutbuilder(_:didcollectdataof:))
-#### Instance Methods
 
 - [func workoutBuilder(HKLiveWorkoutBuilder, didUpdateWorkoutZone: HKLiveWorkoutZoneUpdate)](/documentation/healthkit/hkliveworkoutbuilderdelegate/workoutbuilder(_:didupdateworkoutzone:))
 
@@ -4574,7 +4571,7 @@ timestamp: 2026-06-26T06:39:35.734Z
 - [case user](/documentation/healthkit/hkworkoutzoneconfiguration/source-swift.enum/user)
 - [case app](/documentation/healthkit/hkworkoutzoneconfiguration/source-swift.enum/app)
 
-#### Comparing configurations
+#### Comparing zone configurations
 
 - [static func == (HKWorkoutZoneConfiguration, HKWorkoutZoneConfiguration) -> Bool](/documentation/healthkit/hkworkoutzoneconfiguration/==(_:_:))
 
@@ -4589,6 +4586,16 @@ timestamp: 2026-06-26T06:39:35.734Z
 
 - [let configuration: HKWorkoutZoneConfiguration](/documentation/healthkit/hkworkoutzonegroup/configuration)
 - [let zoneDurations: [HKWorkoutZoneDuration]](/documentation/healthkit/hkworkoutzonegroup/zonedurations)
+
+- [HKLiveWorkoutZoneUpdate](/documentation/healthkit/hkliveworkoutzoneupdate)
+#### Accessing update information
+
+- [var lastSampleProcessedDate: Date?](/documentation/healthkit/hkliveworkoutzoneupdate/lastsampleprocesseddate)
+#### Accessing zone data
+
+- [var currentZoneDuration: HKWorkoutZoneDuration?](/documentation/healthkit/hkliveworkoutzoneupdate/currentzoneduration)
+- [var previousZoneDuration: HKWorkoutZoneDuration?](/documentation/healthkit/hkliveworkoutzoneupdate/previouszoneduration)
+- [var zoneGroup: HKWorkoutZoneGroup?](/documentation/healthkit/hkliveworkoutzoneupdate/zonegroup)
 
 
 ## Errors
@@ -5153,16 +5160,6 @@ timestamp: 2026-06-26T06:39:35.734Z
 - [let HKPredicateKeyPathStatus: String](/documentation/healthkit/hkpredicatekeypathstatus)
 - [let HKUserAnnotatedMedicationPredicateKeyPathHasSchedule: String](/documentation/healthkit/hkuserannotatedmedicationpredicatekeypathhasschedule)
 - [let HKUserAnnotatedMedicationPredicateKeyPathIsArchived: String](/documentation/healthkit/hkuserannotatedmedicationpredicatekeypathisarchived)
-
-## Classes
-
-- [HKLiveWorkoutZoneUpdate](/documentation/healthkit/hkliveworkoutzoneupdate)
-### Instance Properties
-
-- [var currentZoneDuration: HKWorkoutZoneDuration?](/documentation/healthkit/hkliveworkoutzoneupdate/currentzoneduration)
-- [var lastSampleProcessedDate: Date?](/documentation/healthkit/hkliveworkoutzoneupdate/lastsampleprocesseddate)
-- [var previousZoneDuration: HKWorkoutZoneDuration?](/documentation/healthkit/hkliveworkoutzoneupdate/previouszoneduration)
-- [var zoneGroup: HKWorkoutZoneGroup?](/documentation/healthkit/hkliveworkoutzoneupdate/zonegroup)
 
 ---
 

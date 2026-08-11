@@ -3,7 +3,7 @@ title: Swift Testing
 source: https://developer.apple.com/documentation/testing
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/index/testing
-timestamp: 2026-06-26T06:39:36.556Z
+timestamp: 2026-08-11T06:08:56.164Z
 ---
 
 **Navigation:** [Testing](/documentation/testing)
@@ -293,7 +293,7 @@ timestamp: 2026-06-26T06:39:36.556Z
 - [TestTrait](/documentation/testing/testtrait)
 #### Type Methods
 
-- [static func evaluates(any Evaluation, info: [String : String]) -> Self](/documentation/testing/testtrait/evaluates(_:info:))
+- [static func evaluates(any Evaluation, info: [String : String], recordTranscripts: Bool) -> Self](/documentation/testing/testtrait/evaluates(_:info:recordtranscripts:))
 
 - [SuiteTrait](/documentation/testing/suitetrait)
 #### Instance Properties

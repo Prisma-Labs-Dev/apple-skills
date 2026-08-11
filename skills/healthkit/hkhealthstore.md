@@ -4,7 +4,7 @@ description: The access point for all data managed by HealthKit.
 source: https://developer.apple.com/documentation/healthkit/hkhealthstore
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/healthkit/hkhealthstore.json
-timestamp: 2026-06-26T06:39:36.033Z
+timestamp: 2026-08-11T06:08:55.309Z
 ---
 
 **Navigation:** [HealthKit](/documentation/healthkit)
@@ -56,6 +56,7 @@ For more information, see [Setting up HealthKit](/documentation/healthkit/settin
 - [handleAuthorizationForExtension(completion:)](/documentation/healthkit/hkhealthstore/handleauthorizationforextension(completion:)) Requests permission to save and read the data types specified by an extension.
 - [authorizationViewControllerPresenter](/documentation/healthkit/hkhealthstore/authorizationviewcontrollerpresenter) The view controller that presents HealthKit authorization sheets.
 - [getEarliestAuthorizedSampleDate(for:completion:)](/documentation/healthkit/hkhealthstore/getearliestauthorizedsampledate(for:completion:)) Returns the earliest date that the person permits your app to read samples for the given data types.
+- [earliestAuthorizedSampleDate(for:)](/documentation/healthkit/hkhealthstore/earliestauthorizedsampledate(for:)) Returns the earliest date that the person permits your app to read samples for the given data types.
 - [earliestPermittedSampleDate()](/documentation/healthkit/hkhealthstore/earliestpermittedsampledate()) Returns the earliest date that the framework permits your app to save or read samples.
 
 ## Querying HealthKit data
@@ -83,7 +84,7 @@ For more information, see [Setting up HealthKit](/documentation/healthkit/settin
 ## Accessing the preferred units
 
 - [preferredUnits(for:completion:)](/documentation/healthkit/hkhealthstore/preferredunits(for:completion:)) Returns the user’s preferred units for the given quantity types.
-- [preferredWorkoutZoneConfiguration(for:)](/documentation/healthkit/hkhealthstore/preferredworkoutzoneconfiguration(for:)) Returns someone’s preferred zone configuration for the specified quantity type.
+- [preferredWorkoutZoneConfiguration(for:)](/documentation/healthkit/hkhealthstore/preferredworkoutzoneconfiguration(for:)) Returns a person’s preferred zone configuration for a quantity type.
 - [HKUserPreferencesDidChange](/documentation/Foundation/NSNotification/Name-swift.struct/HKUserPreferencesDidChange) Notifies observers whenever the user changes his or her preferred units.
 
 ## Managing background delivery

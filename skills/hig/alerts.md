@@ -4,7 +4,7 @@ description: An alert gives people critical information they need right away.
 source: https://developer.apple.com/design/human-interface-guidelines/alerts
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/design/human-interface-guidelines/alerts.json
-timestamp: 2026-04-14T13:14:13.116Z
+timestamp: 2026-08-11T06:08:55.466Z
 ---
 
 **Navigation:** [Human Interface Guidelines](/design/human-interface-guidelines)
@@ -15,7 +15,7 @@ timestamp: 2026-04-14T13:14:13.116Z
 
 > An alert gives people critical information they need right away.
 
-![A stylized representation of an alert mockup that includes a title, description, primary button, and secondary button. The image is tinted red to subtly reflect the red in the original six-color Apple logo.](https://docs-assets.developer.apple.com/published/e74ac90d149b111c3f2c7d21e3484100/components-alert-intro%402x.png)
+![A stylized representation of an alert mockup that includes a title, description, primary button, and secondary button. The image is tinted red to subtly reflect the red in the original six-color Apple logo.](https://docs-assets.developer.apple.com/published/f4fdba56c558ef37266a7b9d0a74fae0/components-alert-intro%402x.png)
 
 For example, an alert can tell people about a problem, warn them when their action might destroy data, and give them an opportunity to confirm a purchase or another important action they initiated.
 
@@ -35,23 +35,23 @@ An alert is a modal view that can look different in different platforms and devi
 
 ### iOS
 
-![An illustration of an alert in the middle of the screen on iPhone.](https://docs-assets.developer.apple.com/published/ec9df875e228750105a393c96279bea5/alert-ios%402x.png)
+![An illustration of an alert in the middle of the screen on iPhone.](https://docs-assets.developer.apple.com/published/ffcf067802103e18b21a564c68ad83b8/alert-ios%402x.png)
 
 ### macOS
 
-![An illustration of an alert in the middle of the screen on a Mac.](https://docs-assets.developer.apple.com/published/0dfc6fd9de495ce3b7201169d829d760/alert-macos%402x.png)
+![An illustration of an alert in the middle of the screen on a Mac.](https://docs-assets.developer.apple.com/published/395b514e45a0b99e94354904b33ffe1b/alert-macos%402x.png)
 
 ### tvOS
 
-![An illustration of an alert on tvOS.](https://docs-assets.developer.apple.com/published/63dde83c2b156231420f095a4d9dfae3/alert-tvos%402x.jpg)
+![An illustration of an alert on tvOS.](https://docs-assets.developer.apple.com/published/99adef0fa60e5d2a584625fa24da4136/alert-tvos%402x.jpg)
 
 ### visionOS
 
-![An illustration of an alert on Apple Vision Pro.](https://docs-assets.developer.apple.com/published/1abb6467cc401af501648da039b2b317/alert-visionos%402x.png)
+![An illustration of an alert on Apple Vision Pro.](https://docs-assets.developer.apple.com/published/727367d7396261a6d131b21f91ffe8f7/alert-visionos%402x.png)
 
 ### watchOS
 
-![An illustration of an alert on Apple Watch.](https://docs-assets.developer.apple.com/published/a452534204f5ddb4aaa6ba7679946f2e/alert-watchos%402x.png)
+![An illustration of an alert on Apple Watch.](https://docs-assets.developer.apple.com/published/0be0cda5d57ebc76e60de40c97115fbb/alert-watchos%402x.png)
 
 ## Content
 

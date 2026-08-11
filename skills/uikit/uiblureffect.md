@@ -4,7 +4,7 @@ description: An object that applies a blurring effect to the content layered beh
 source: https://developer.apple.com/documentation/uikit/uiblureffect
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/uikit/uiblureffect.json
-timestamp: 2026-04-14T13:14:49.093Z
+timestamp: 2026-08-11T06:08:56.522Z
 ---
 
 **Navigation:** [UIKit](/documentation/uikit)
@@ -56,6 +56,7 @@ Views that you add to the [contentView](/documentation/uikit/uivisualeffectview/
 - [UIVisualEffect](/documentation/uikit/uivisualeffect) An initializer for visual effect views and blur and vibrancy effect objects.
 - [UIVisualEffectView](/documentation/uikit/uivisualeffectview) An object that implements some complex visual effects.
 - [UIVibrancyEffect](/documentation/uikit/uivibrancyeffect) An object that amplifies and adjusts the color of the content layered behind a visual effect view.
+- [UIColorEffect](/documentation/uikit/uicoloreffect) A visual effect that applies a solid color background.
 
 ---
 

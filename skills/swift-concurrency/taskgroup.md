@@ -4,7 +4,7 @@ description: A group that contains dynamically created child tasks.
 source: https://developer.apple.com/documentation/swift/taskgroup
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/swift/taskgroup.json
-timestamp: 2026-04-14T13:14:33.000Z
+timestamp: 2026-08-11T06:08:56.130Z
 ---
 
 **Navigation:** [Swift](/documentation/swift)
@@ -78,7 +78,7 @@ A task group becomes canceled in one of the following ways:
 
 Because a `TaskGroup` is a structured concurrency primitive, cancellation is automatically propagated through all of its child-tasks (and their child tasks).
 
-A canceled task group can still keep adding tasks, however they will start being immediately canceled, and might respond accordingly. To avoid adding new tasks to an already canceled task group, use `addTaskUnlessCancelled(name:priority:body:)` rather than the plain `addTask(name:priority:body:)` which adds tasks unconditionally.
+A canceled task group can still keep adding tasks, however they will start being immediately canceled, and might respond accordingly. To avoid adding new tasks to an already canceled task group, use [addTaskUnlessCancelled(name:priority:operation:)](/documentation/swift/taskgroup/addtaskunlesscancelled(name:priority:operation:)) rather than the plain [addTask(name:priority:operation:)](/documentation/swift/taskgroup/addtask(name:priority:operation:)) which adds tasks unconditionally.
 
 For information about the language-level concurrency model that `TaskGroup` is part of, see [Concurrency](https://docs.swift.org/swift-book/LanguageGuide/Concurrency.html) in [The Swift Programming Language](https://docs.swift.org/swift-book/).
 
@@ -113,7 +113,7 @@ For information about the language-level concurrency model that `TaskGroup` is p
 - [next()](/documentation/swift/taskgroup/next())
 - [next(isolation:)](/documentation/swift/taskgroup/next(isolation:)) Waits for the next child task to complete, and returns the value it returned.
 - [isEmpty](/documentation/swift/taskgroup/isempty) A Boolean value that indicates whether the group has any remaining tasks.
-- [waitForAll(isolation:)](/documentation/swift/taskgroup/waitforall(isolation:)) Wait for all of the group’s remaining tasks to complete.
+- [waitForAll()](/documentation/swift/taskgroup/waitforall()) Wait for all of the group’s remaining tasks to complete.
 
 ## Accessing an Asynchronous Sequence of Results
 
@@ -157,6 +157,7 @@ For information about the language-level concurrency model that `TaskGroup` is p
 - [asyncUnlessCancelled(priority:operation:)](/documentation/swift/taskgroup/asyncunlesscancelled(priority:operation:))
 - [spawn(priority:operation:)](/documentation/swift/taskgroup/spawn(priority:operation:))
 - [spawnUnlessCancelled(priority:operation:)](/documentation/swift/taskgroup/spawnunlesscancelled(priority:operation:))
+- [waitForAll(isolation:)](/documentation/swift/taskgroup/waitforall(isolation:)) Wait for all of the group’s remaining tasks to complete.
 
 ## Default Implementations
 

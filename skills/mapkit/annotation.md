@@ -4,7 +4,7 @@ description: A customizable annotation used to indicate a location on a map.
 source: https://developer.apple.com/documentation/mapkit/annotation
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/mapkit/annotation.json
-timestamp: 2026-04-14T13:14:27.548Z
+timestamp: 2026-08-11T06:08:55.996Z
 ---
 
 **Navigation:** [MapKit](/documentation/mapkit)
@@ -13,7 +13,7 @@ timestamp: 2026-04-14T13:14:27.548Z
 
 # Annotation
 
-**Available on:** iOS 17.0+, iPadOS 17.0+, Mac Catalyst, macOS 14.0+, tvOS 17.0+, visionOS, watchOS 10.0+
+**Available on:** iOS 17.0+, iPadOS 17.0+, Mac Catalyst 17.0+, macOS 14.0+, tvOS 17.0+, visionOS, watchOS 10.0+
 
 > A customizable annotation used to indicate a location on a map.
 
@@ -40,6 +40,19 @@ Use this view to annotations in the closure you provide to the `content` paramet
 - [init(_:coordinate:anchor:content:)](/documentation/mapkit/annotation/init(_:coordinate:anchor:content:)-2w242) Creates an annotation that displays a view at a coordinate on the map.
 - [init(_:coordinate:anchor:content:)](/documentation/mapkit/annotation/init(_:coordinate:anchor:content:)-6wnoh) Creates an annotation that displays a view at a coordinate on the map using a title key, coordinate, anchor location, and view you provide.
 - [init(coordinate:anchor:content:label:)](/documentation/mapkit/annotation/init(coordinate:anchor:content:label:)) Creates an annotation that displays a view on the map using coordinates, anchor location, view, and label you provide.
+
+## Setting the visibility of the title and subtitle
+
+- [annotationTitles(_:)](/documentation/mapkit/mapcontent/annotationtitles(_:)) Sets the visibility of titles for markers and annotations.
+- [annotationSubtitles(_:)](/documentation/mapkit/mapcontent/annotationsubtitles(_:)) Sets the visibility of subtitles for markers and annotations.
+
+## Setting the tag
+
+- [tag(_:)](/documentation/mapkit/mapcontent/tag(_:)) Sets the unique tag value of this piece of map content.
+
+## Type aliases
+
+- [Body](/documentation/mapkit/mapcontent/body-swift.associatedtype) The content and behavior of the view.
 
 ## Displaying place information
 

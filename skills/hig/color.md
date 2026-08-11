@@ -4,7 +4,7 @@ description: Judicious use of color can enhance communication, evoke your brand,
 source: https://developer.apple.com/design/human-interface-guidelines/color
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/design/human-interface-guidelines/color.json
-timestamp: 2026-04-14T13:14:14.104Z
+timestamp: 2026-08-11T06:08:55.484Z
 ---
 
 **Navigation:** [Human Interface Guidelines](/design/human-interface-guidelines)
@@ -27,13 +27,13 @@ You may also want to use custom colors to enhance the visual experience of your 
 
 **Make sure all your app’s colors work well in light, dark, and increased contrast contexts.** iOS, iPadOS, macOS, and tvOS offer both light and [Dark Mode](/design/human-interface-guidelines/dark-mode) appearance settings. [System colors](/design/human-interface-guidelines/color#System-colors) vary subtly depending on the system appearance, adjusting to ensure proper color differentiation and contrast for text, symbols, and other elements. With the Increase Contrast setting turned on, the color differences become far more apparent. When possible, use system colors, which already define variants for all these contexts. If you define a custom color, make sure to supply light and dark variants, and an increased contrast option for each variant that provides a significantly higher amount of visual differentiation. Even if your app ships in a single appearance mode, provide both light and dark colors to support Liquid Glass adaptivity in these contexts.
 
-![A screenshot of the Notes app in iOS with the light system appearance and default contrast. The Notes app is open to a note with the text 'Note'. The text is selected, which shows a yellow selection highlight and text editing menu. The Done button appears in the upper-right corner. The Liquid Glass background of the button is yellow, and its label, which shows a checkmark, is white. The shade of yellow is vibrant.](https://docs-assets.developer.apple.com/published/033f3f6540cc36385bc5993e2152895b/color-context-light-mode%402x.png)
+![A screenshot of the Notes app in iOS with the light system appearance and default contrast. The Notes app is open to a note with the text 'Note'. The text is selected, which shows a yellow selection highlight and text editing menu. The Done button appears in the upper-right corner. The Liquid Glass background of the button is yellow, and its label, which shows a checkmark, is white. The shade of yellow is vibrant.](https://docs-assets.developer.apple.com/published/7bf34491d03ed278b571bd4597dfa30e/color-context-light-mode%402x.png)
 
-![A screenshot of the Notes app in iOS with the light system appearance and increased contrast. The Notes app is open to a note with the text 'Note'. The text is selected, which shows a yellow selection highlight and text editing menu. The Done button appears in the upper-right corner. The Liquid Glass background of the button is yellow, and its label, which shows a checkmark, is black. The shade of yellow is darker to provide more contrast and differentiation against the note's white background.](https://docs-assets.developer.apple.com/published/9fa4e239f30421b0f00ee77dcace0c14/color-context-light-mode-high-contrast%402x.png)
+![A screenshot of the Notes app in iOS with the light system appearance and increased contrast. The Notes app is open to a note with the text 'Note'. The text is selected, which shows a yellow selection highlight and text editing menu. The Done button appears in the upper-right corner. The Liquid Glass background of the button is yellow, and its label, which shows a checkmark, is black. The shade of yellow is darker to provide more contrast and differentiation against the note's white background.](https://docs-assets.developer.apple.com/published/b8d64ca399270b0369ac2eba09826f1a/color-context-light-mode-high-contrast%402x.png)
 
-![A screenshot of the Notes app in iOS with the dark system appearance and default contrast. The Notes app is open to a note with the text 'Note'. The text is selected, which shows a yellow selection highlight and text editing menu. The Done button appears in the upper-right corner. The Liquid Glass background of the button is yellow, and its label, which shows a checkmark, is white.](https://docs-assets.developer.apple.com/published/dc3523da3cba1dd53d3501c763335e6c/color-context-dark-mode%402x.png)
+![A screenshot of the Notes app in iOS with the dark system appearance and default contrast. The Notes app is open to a note with the text 'Note'. The text is selected, which shows a yellow selection highlight and text editing menu. The Done button appears in the upper-right corner. The Liquid Glass background of the button is yellow, and its label, which shows a checkmark, is white.](https://docs-assets.developer.apple.com/published/772d6f92ba3bdeb1d3cc364fb6195f02/color-context-dark-mode%402x.png)
 
-![A screenshot of the Notes app in iOS with the dark system appearance and increased contrast. The Notes app is open to a note with the text 'Note'. The text is selected, which shows a yellow selection highlight and text editing menu. The Done button appears in the upper-right corner. The Liquid Glass background of the button is yellow, and its label, which shows a checkmark, is black.](https://docs-assets.developer.apple.com/published/95af2bc7dece914a5f870f38edac2998/color-context-dark-mode-high-contrast%402x.png)
+![A screenshot of the Notes app in iOS with the dark system appearance and increased contrast. The Notes app is open to a note with the text 'Note'. The text is selected, which shows a yellow selection highlight and text editing menu. The Done button appears in the upper-right corner. The Liquid Glass background of the button is yellow, and its label, which shows a checkmark, is black.](https://docs-assets.developer.apple.com/published/3c6735246b0e8da65d4d2624cf6211df/color-context-dark-mode-high-contrast%402x.png)
 
 **Test your app’s color scheme under a variety of lighting conditions.** Colors can look different when you view your app outside on a sunny day or in dim light. In bright surroundings, colors look darker and more muted. In dark environments, colors appear bright and saturated. In visionOS, colors can look different depending on the colors of a wall or object in a person’s physical surroundings and how it reflects light. Adjust app colors to provide an optimal viewing experience in the majority of use cases.
 
@@ -67,21 +67,21 @@ iOS, iPadOS, macOS, and visionOS also define sets of *dynamic system colors* tha
 
 By default, [Liquid Glass](/design/human-interface-guidelines/materials#Liquid-Glass) has no inherent color, and instead takes on colors from the content directly behind it. You can apply color to some Liquid Glass elements, giving them the appearance of colored or stained glass. This is useful for drawing emphasis to a specific control, like a primary call to action, and is the approach the system uses for prominent button styling. Symbols or text labels on Liquid Glass controls can also have color.
 
-![A screenshot of the Done button in iOS, which appears as a checkmark on a blue Liquid Glass background.](https://docs-assets.developer.apple.com/published/df4d0a0bca32edb16d7ff86e34d6fe2d/color-liquid-glass-overview-tinted%402x.png)
+![A screenshot of the Done button in iOS, which appears as a checkmark on a blue Liquid Glass background.](https://docs-assets.developer.apple.com/published/0996d0f78d6ec57861e6d63359e8f112/color-liquid-glass-overview-tinted%402x.png)
 
-![A screenshot of a tab bar in iOS, with the first tab selected. The symbol and text label of the selected tab bar item are blue.](https://docs-assets.developer.apple.com/published/5a9078b2ea4baec1f15773638c9377c6/color-liquid-glass-overview-color-over-tab-bar%402x.png)
+![A screenshot of a tab bar in iOS, with the first tab selected. The symbol and text label of the selected tab bar item are blue.](https://docs-assets.developer.apple.com/published/834b8a7e8e78fb18e3f7de7b8453ca41/color-liquid-glass-overview-color-over-tab-bar%402x.png)
 
-![A screenshot of the Share button in iOS over a colorful image. The colors from the background image infuse the Liquid Glass in the button, affecting its color.](https://docs-assets.developer.apple.com/published/9cf610d972c97dee46b9e206525b2ae7/color-liquid-glass-overview-clear%402x.png)
+![A screenshot of the Share button in iOS over a colorful image. The colors from the background image infuse the Liquid Glass in the button, affecting its color.](https://docs-assets.developer.apple.com/published/35dc86c5d1930edab3fe983859818631/color-liquid-glass-overview-clear%402x.png)
 
 For smaller elements like toolbars and tab bars, the system can adapt Liquid Glass between a light and dark appearance in response to the underlying content. By default, symbols and text on these elements follow a monochromatic color scheme, becoming darker when the underlying content is light, and lighter when it’s dark. Liquid Glass appears more opaque in larger elements like sidebars to preserve legibility over complex backgrounds and accommodate richer content on the material’s surface.
 
 **Apply color sparingly to the Liquid Glass material, and to symbols or text on the material.** If you apply color, reserve it for elements that truly benefit from emphasis, such as status indicators or primary actions. To emphasize primary actions, apply color to the background rather than to symbols or text. For example, the system applies the app accent color to the background in prominent buttons — such as the Done button — to draw attention and elevate their visual prominence. Refrain from adding color to the background of multiple controls.
 
-![A screenshot of the top half of an iPhone app that shows a toolbar with several buttons. All of the buttons in the toolbar use a blue accent color for their Liquid Glass background.](https://docs-assets.developer.apple.com/published/9b7b9adb67ee5f70839540534fdeb374/colors-liquid-glass-usage-incorrect%402x.png)
+![A screenshot of the top half of an iPhone app that shows a toolbar with several buttons. All of the buttons in the toolbar use a blue accent color for their Liquid Glass background.](https://docs-assets.developer.apple.com/published/e827bfd64dd5e75b1dbcca2a08144e16/colors-liquid-glass-usage-incorrect%402x.png)
 
 ![An X in a circle to indicate incorrect usage.](https://docs-assets.developer.apple.com/published/209f6f0fc8ad99d9bf59e12d82d06584/crossout%402x.png)
 
-![A screenshot of the top half of an iPhone app that shows a toolbar with several buttons. Only the Done button in the toolbar uses a blue accent color for its Liquid Glass background.](https://docs-assets.developer.apple.com/published/3897d0d7c8736728d130dcc820e9a688/colors-liquid-glass-usage-correct%402x.png)
+![A screenshot of the top half of an iPhone app that shows a toolbar with several buttons. Only the Done button in the toolbar uses a blue accent color for its Liquid Glass background.](https://docs-assets.developer.apple.com/published/ab7c4f530a3df8993ca280afd90e2606/colors-liquid-glass-usage-correct%402x.png)
 
 ![A checkmark in a circle to indicate correct usage.](https://docs-assets.developer.apple.com/published/88662da92338267bb64cd2275c84e484/checkmark%402x.png)
 
@@ -93,7 +93,7 @@ For smaller elements like toolbars and tab bars, the system can adapt Liquid Gla
 
 A *color space* represents the colors in a *color model* like RGB or CMYK. Common color spaces — sometimes called *gamuts* — are sRGB and Display P3.
 
-![Diagram showing the colors included in the sRGB space, compared to the larger number of colors included in the P3 color space.](https://docs-assets.developer.apple.com/published/c10d0ec4c78a6b824552058caac031b5/color-graphic-wide-color%402x.png)
+![Diagram showing the colors included in the sRGB space, compared to the larger number of colors included in the P3 color space.](https://docs-assets.developer.apple.com/published/adbc51703950572ace3440f957f42f0b/color-graphic-wide-color%402x.png)
 
 A *color profile* describes the colors in a color space using, for example, mathematical formulas or tables of data that map colors to numerical representations. An image embeds its color profile so that a device can interpret the image’s colors correctly and reproduce them on a display.
 

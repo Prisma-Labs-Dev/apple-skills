@@ -4,7 +4,7 @@ description: A view that displays an embedded map interface.
 source: https://developer.apple.com/documentation/mapkit/map
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/mapkit/map.json
-timestamp: 2026-05-25T06:52:04.965Z
+timestamp: 2026-08-11T06:08:56.000Z
 ---
 
 **Navigation:** [MapKit](/documentation/mapkit)
@@ -13,7 +13,7 @@ timestamp: 2026-05-25T06:52:04.965Z
 
 # Map
 
-**Available on:** iOS 14.0+, iPadOS 14.0+, Mac Catalyst, macOS 11.0+, tvOS 14.0+, visionOS, watchOS 7.0+
+**Available on:** iOS 14.0+, iPadOS 14.0+, Mac Catalyst 14.0+, macOS 11.0+, tvOS 14.0+, visionOS, watchOS 7.0+
 
 > A view that displays an embedded map interface.
 
@@ -59,7 +59,7 @@ You create markers, annotations, and overlays using [MapContentBuilder](/docume
 You can also add a variety of controls to allow a person to interact with the map to change the map’s scale, display or hide the device’s current location, and so on:
 
 - [MapCompass](/documentation/mapkit/mapcompass)
-- `MapPitchButton`
+- [MapPitchToggle](/documentation/mapkit/mappitchtoggle)
 - [MapPitchSlider](/documentation/mapkit/mappitchslider)
 - [MapScaleView](/documentation/mapkit/mapscaleview)
 - [MapUserLocationButton](/documentation/mapkit/mapuserlocationbutton)
@@ -91,22 +91,48 @@ You can also add a variety of controls to allow a person to interact with the ma
 - [init(position:bounds:interactionModes:selection:scope:content:)](/documentation/mapkit/map/init(position:bounds:interactionmodes:selection:scope:content:)-9xq1q) Creates a new map with the initial camera position, bounds, interaction modes, selected feature, scope, and content you provide.
 - [MapInteractionModes](/documentation/mapkit/mapinteractionmodes) Options that indicate the user interactions that the map responds to.
 
+## Managing feature selection
+
+- [mapFeatureSelectionContent(content:)](/documentation/SwiftUI/View/mapFeatureSelectionContent(content:)) Specifies a custom presentation for the currently selected feature.
+- [mapFeatureSelectionDisabled(_:)](/documentation/SwiftUI/View/mapFeatureSelectionDisabled(_:)) Specifies which map features should have selection disabled.
+
+## Managing Look Around view presentation
+
+- [lookAroundViewer(isPresented:initialScene:allowsNavigation:showsRoadLabels:pointsOfInterest:onDismiss:)](/documentation/SwiftUI/View/lookAroundViewer(isPresented:initialScene:allowsNavigation:showsRoadLabels:pointsOfInterest:onDismiss:))
+- [lookAroundViewer(isPresented:scene:allowsNavigation:showsRoadLabels:pointsOfInterest:onDismiss:)](/documentation/SwiftUI/View/lookAroundViewer(isPresented:scene:allowsNavigation:showsRoadLabels:pointsOfInterest:onDismiss:))
+
+## Managing map control sizing and visibility
+
+- [mapControlVisibility(_:)](/documentation/SwiftUI/View/mapControlVisibility(_:)) Configures all Map controls in the environment to have the specified visibility
+- [mapControls(_:)](/documentation/SwiftUI/View/mapControls(_:)) Configures all `Map` views in the associated environment to have standard size and position controls
+
+## Managing the camera
+
+- [mapCameraKeyframeAnimator(trigger:keyframes:)](/documentation/SwiftUI/View/mapCameraKeyframeAnimator(trigger:keyframes:)) Uses the given keyframes to animate the camera of a `Map` when the given trigger value changes.
+- [onMapCameraChange(frequency:_:)](/documentation/SwiftUI/View/onMapCameraChange(frequency:_:)-2pcga) Performs an action when Map camera framing changes
+- [onMapCameraChange(frequency:_:)](/documentation/SwiftUI/View/onMapCameraChange(frequency:_:)) Performs an action when Map camera framing changes
+
+## Setting the namespace Identifier
+
+- [mapScope(_:)](/documentation/SwiftUI/View/mapScope(_:)) Creates a mapScope that SwiftUI uses to connect map controls to an associated map.
+
+## Setting the map style
+
+- [mapStyle(_:)](/documentation/SwiftUI/View/mapStyle(_:)) Specifies the map style to be used.
+
 ## Deprecated
 
 - [Deprecated Symbols](/documentation/mapkit/deprecated-symbols) Map protocols and view modifiers that are no longer supported.
 
 ## Displaying place information
 
+- [mapFeatureSelectionAccessory(_:)](/documentation/SwiftUI/View/mapFeatureSelectionAccessory(_:)) Specifies the selection accessory to display for a `MapFeature`
 - [mapItemDetailSelectionAccessory(_:)](/documentation/mapkit/mapcontent/mapitemdetailselectionaccessory(_:)) Specifies the selection accessory to display for the selected map item content.
 
 ## Initializers
 
 - [init(bounds:interactionModes:selection:scope:content:)](/documentation/mapkit/map/init(bounds:interactionmodes:selection:scope:content:)-335qt)
-- [init(coordinateRegion:interactionModes:showsUserLocation:userTrackingMode:)](/documentation/mapkit/map/init(coordinateregion:interactionmodes:showsuserlocation:usertrackingmode:)) Creates a map that displays a coordinate region and optionally configures available interactions, user location, and tracking behavior.
-- [init(coordinateRegion:interactionModes:showsUserLocation:userTrackingMode:annotationItems:annotationContent:)](/documentation/mapkit/map/init(coordinateregion:interactionmodes:showsuserlocation:usertrackingmode:annotationitems:annotationcontent:)) Creates a map that displays a coordinate region with annotations, and optionally configures available interactions, user location, and tracking behavior.
 - [init(initialPosition:bounds:interactionModes:selection:scope:content:)](/documentation/mapkit/map/init(initialposition:bounds:interactionmodes:selection:scope:content:)-2u4ry)
-- [init(mapRect:interactionModes:showsUserLocation:userTrackingMode:)](/documentation/mapkit/map/init(maprect:interactionmodes:showsuserlocation:usertrackingmode:)) Creates a map that displays a map rectangle and optionally configures available interactions, user location, and tracking behavior.
-- [init(mapRect:interactionModes:showsUserLocation:userTrackingMode:annotationItems:annotationContent:)](/documentation/mapkit/map/init(maprect:interactionmodes:showsuserlocation:usertrackingmode:annotationitems:annotationcontent:)) Creates a map that displays a map rectangle with annotations, and optionally configures available interactions, user location, and tracking behavior.
 - [init(position:bounds:interactionModes:selection:scope:content:)](/documentation/mapkit/map/init(position:bounds:interactionmodes:selection:scope:content:)-96bhq)
 
 ## Essentials

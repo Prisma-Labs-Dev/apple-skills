@@ -3,7 +3,7 @@ title: PhotoKit
 source: https://developer.apple.com/documentation/photosui
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/index/photosui
-timestamp: 2026-06-26T06:39:36.464Z
+timestamp: 2026-08-11T06:08:56.075Z
 ---
 
 **Navigation:** [PhotosUI](/documentation/photosui)
@@ -71,20 +71,19 @@ timestamp: 2026-06-26T06:39:36.464Z
 - [var location: CLLocation?](/documentation/photos/phassetchangerequest/location)
 - [var isFavorite: Bool](/documentation/photos/phassetchangerequest/isfavorite)
 - [var isHidden: Bool](/documentation/photos/phassetchangerequest/ishidden)
+- [var caption: String?](/documentation/photos/phassetchangerequest/caption)
+- [func addKeyword(String)](/documentation/photos/phassetchangerequest/addkeyword(_:))
+- [func removeKeyword(String)](/documentation/photos/phassetchangerequest/removekeyword(_:))
+- [var rating: PHAsset.Rating](/documentation/photos/phassetchangerequest/rating)
+- [func setLivePhotoVideoPlaybackEnabled(Bool)](/documentation/photos/phassetchangerequest/setlivephotovideoplaybackenabled(_:))
 ##### Editing Asset Content
 
 - [var contentEditingOutput: PHContentEditingOutput?](/documentation/photos/phassetchangerequest/contenteditingoutput)
 - [func revertAssetContentToOriginal()](/documentation/photos/phassetchangerequest/revertassetcontenttooriginal())
+- [func revertAssetContent(to: PHAsset.OriginalResourceChoice)](/documentation/photos/phassetchangerequest/revertassetcontent(to:))
 ##### Initializers
 
 - [convenience init(forAsset: PHAsset)](/documentation/photos/phassetchangerequest/init(forasset:))
-##### Instance Properties
-
-- [var rating: PHAsset.Rating](/documentation/photos/phassetchangerequest/rating)
-##### Instance Methods
-
-- [func revertAssetContent(to: PHAsset.OriginalResourceChoice)](/documentation/photos/phassetchangerequest/revertassetcontent(to:))
-- [func setLivePhotoVideoPlaybackEnabled(Bool)](/documentation/photos/phassetchangerequest/setlivephotovideoplaybackenabled(_:))
 
 - [PHAssetCollectionChangeRequest](/documentation/photos/phassetcollectionchangerequest)
 ##### Adding New Asset Collections
@@ -269,10 +268,16 @@ timestamp: 2026-06-26T06:39:36.464Z
 
 - [var uploadJobExtensionEnabled: Bool](/documentation/photos/phphotolibrary/uploadjobextensionenabled)
 - [func setUploadJobExtensionEnabled(Bool) throws](/documentation/photos/phphotolibrary/setuploadjobextensionenabled(_:))
+#### Instance Properties
+
+- [var uploadJobExtensionOptions: PHAssetResourceUploadJobOptions?](/documentation/photos/phphotolibrary/uploadjobextensionoptions)
 #### Instance Methods
 
+- [func disableUploadJobExtension() throws](/documentation/photos/phphotolibrary/disableuploadjobextension())
+- [func enableUploadJobExtension(with: PHAssetResourceUploadJobOptions?) throws](/documentation/photos/phphotolibrary/enableuploadjobextension(with:))
 - [func localIdentifierMappings(forSynced: [PHCloudIdentifier]) -> [PHCloudIdentifier : Result<String, any Error>]](/documentation/photos/phphotolibrary/localidentifiermappings(forsynced:))
 - [func register(any PHPhotoLibraryPersistentChangesObserver)](/documentation/photos/phphotolibrary/register(_:)-7lhue)
+- [func setUploadJobExtensionOptions(PHAssetResourceUploadJobOptions) throws](/documentation/photos/phphotolibrary/setuploadjobextensionoptions(_:))
 - [func unregisterPersistentChangesObserver(any PHPhotoLibraryPersistentChangesObserver)](/documentation/photos/phphotolibrary/unregisterpersistentchangesobserver(_:))
 
 ### Asset retrieval
@@ -339,7 +344,7 @@ timestamp: 2026-06-26T06:39:36.464Z
 
 - [var pixelWidth: Int](/documentation/photos/phasset/pixelwidth)
 - [var pixelHeight: Int](/documentation/photos/phasset/pixelheight)
-- [var addedDate: Date](/documentation/photos/phasset/addeddate)
+- [var addedDate: Date?](/documentation/photos/phasset/addeddate)
 - [var creationDate: Date?](/documentation/photos/phasset/creationdate)
 - [var modificationDate: Date?](/documentation/photos/phasset/modificationdate)
 - [var location: CLLocation?](/documentation/photos/phasset/location)
@@ -349,6 +354,30 @@ timestamp: 2026-06-26T06:39:36.464Z
 - [var hasAdjustments: Bool](/documentation/photos/phasset/hasadjustments)
 - [var adjustmentFormatIdentifier: String?](/documentation/photos/phasset/adjustmentformatidentifier)
 - [var isSyncFailureHidden: Bool](/documentation/photos/phasset/issyncfailurehidden)
+- [var extendedMetadata: PHAssetExtendedMetadata](/documentation/photos/phasset/extendedmetadata)
+- [PHAssetExtendedMetadata](/documentation/photos/phassetextendedmetadata)
+##### Reading metadata
+
+- [var caption: String?](/documentation/photos/phassetextendedmetadata/caption)
+- [var keywords: [String]](/documentation/photos/phassetextendedmetadata/keywords)
+##### Instance Properties
+
+- [var originalFilename: String?](/documentation/photos/phassetextendedmetadata/originalfilename)
+
+- [var rating: PHAsset.Rating](/documentation/photos/phasset/rating-swift.property)
+- [PHAsset.Rating](/documentation/photos/phasset/rating-swift.enum)
+##### Ratings
+
+- [case unset](/documentation/photos/phasset/rating-swift.enum/unset)
+- [case one](/documentation/photos/phasset/rating-swift.enum/one)
+- [case two](/documentation/photos/phasset/rating-swift.enum/two)
+- [case three](/documentation/photos/phasset/rating-swift.enum/three)
+- [case four](/documentation/photos/phasset/rating-swift.enum/four)
+- [case five](/documentation/photos/phasset/rating-swift.enum/five)
+##### Initializers
+
+- [init?(rawValue: Int)](/documentation/photos/phasset/rating-swift.enum/init(rawvalue:))
+
 #### Displaying an Asset
 
 - [var playbackStyle: PHAsset.PlaybackStyle](/documentation/photos/phasset/playbackstyle-swift.property)
@@ -476,14 +505,12 @@ timestamp: 2026-06-26T06:39:36.464Z
 ##### Specifying Edting Request Options
 
 - [var canHandleAdjustmentData: (PHAdjustmentData) -> Bool](/documentation/photos/phcontenteditinginputrequestoptions/canhandleadjustmentdata)
+- [var originalResourceChoice: PHAsset.OriginalResourceChoice](/documentation/photos/phcontenteditinginputrequestoptions/originalresourcechoice)
+- [var skipsDisplaySizeImage: Bool](/documentation/photos/phcontenteditinginputrequestoptions/skipsdisplaysizeimage)
 ##### Fetching Asset Data from iCloud
 
 - [var isNetworkAccessAllowed: Bool](/documentation/photos/phcontenteditinginputrequestoptions/isnetworkaccessallowed)
 - [var progressHandler: ((Double, UnsafeMutablePointer<ObjCBool>) -> Void)?](/documentation/photos/phcontenteditinginputrequestoptions/progresshandler)
-##### Instance Properties
-
-- [var originalResourceChoice: PHAsset.OriginalResourceChoice](/documentation/photos/phcontenteditinginputrequestoptions/originalresourcechoice)
-- [var skipsDisplaySizeImage: Bool](/documentation/photos/phcontenteditinginputrequestoptions/skipsdisplaysizeimage)
 
 - [PHLivePhotoEditingContext](/documentation/photos/phlivephotoeditingcontext)
 ##### Creating a Live Photo Editing Context
@@ -559,6 +586,15 @@ timestamp: 2026-06-26T06:39:36.464Z
 - [func requestContentEditingInput(with: PHContentEditingInputRequestOptions?, completionHandler: (PHContentEditingInput?, [AnyHashable : Any]) -> Void) -> PHContentEditingInputRequestID](/documentation/photos/phasset/requestcontenteditinginput(with:completionhandler:))
 - [func cancelContentEditingInputRequest(PHContentEditingInputRequestID)](/documentation/photos/phasset/cancelcontenteditinginputrequest(_:))
 - [PHContentEditingInputRequestID](/documentation/photos/phcontenteditinginputrequestid)
+- [PHAsset.OriginalResourceChoice](/documentation/photos/phasset/originalresourcechoice-swift.enum)
+##### Choices
+
+- [case compressed](/documentation/photos/phasset/originalresourcechoice-swift.enum/compressed)
+- [case raw](/documentation/photos/phasset/originalresourcechoice-swift.enum/raw)
+##### Initializers
+
+- [init?(rawValue: Int)](/documentation/photos/phasset/originalresourcechoice-swift.enum/init(rawvalue:))
+
 - [Editing Request Info Keys](/documentation/photokit/editing-request-info-keys)
 ##### Constants
 
@@ -585,7 +621,7 @@ timestamp: 2026-06-26T06:39:36.464Z
 - [var adjustmentTimestamp: Date?](/documentation/photos/phasset/adjustmenttimestamp)
 - [var adjustmentsState: PHAsset.AdjustmentsState](/documentation/photos/phasset/adjustmentsstate-swift.property)
 - [var originalResourceChoice: PHAsset.OriginalResourceChoice](/documentation/photos/phasset/originalresourcechoice-swift.property)
-- [var rating: PHAsset.Rating](/documentation/photos/phasset/rating-swift.property)
+- [var playbackVariation: PHAsset.PlaybackVariation](/documentation/photos/phasset/playbackvariation-swift.property)
 #### Type Aliases
 
 - [PHAsset.Specification](/documentation/photos/phasset/specification)
@@ -606,27 +642,16 @@ timestamp: 2026-06-26T06:39:36.464Z
 
 - [init?(rawValue: Int)](/documentation/photos/phasset/adjustmentsstate-swift.enum/init(rawvalue:))
 
-- [PHAsset.OriginalResourceChoice](/documentation/photos/phasset/originalresourcechoice-swift.enum)
+- [PHAsset.PlaybackVariation](/documentation/photos/phasset/playbackvariation-swift.enum)
 ##### Enumeration Cases
 
-- [case compressed](/documentation/photos/phasset/originalresourcechoice-swift.enum/compressed)
-- [case raw](/documentation/photos/phasset/originalresourcechoice-swift.enum/raw)
+- [case autoloop](/documentation/photos/phasset/playbackvariation-swift.enum/autoloop)
+- [case longExposure](/documentation/photos/phasset/playbackvariation-swift.enum/longexposure)
+- [case mirror](/documentation/photos/phasset/playbackvariation-swift.enum/mirror)
+- [case none](/documentation/photos/phasset/playbackvariation-swift.enum/none)
 ##### Initializers
 
-- [init?(rawValue: Int)](/documentation/photos/phasset/originalresourcechoice-swift.enum/init(rawvalue:))
-
-- [PHAsset.Rating](/documentation/photos/phasset/rating-swift.enum)
-##### Enumeration Cases
-
-- [case five](/documentation/photos/phasset/rating-swift.enum/five)
-- [case four](/documentation/photos/phasset/rating-swift.enum/four)
-- [case one](/documentation/photos/phasset/rating-swift.enum/one)
-- [case three](/documentation/photos/phasset/rating-swift.enum/three)
-- [case two](/documentation/photos/phasset/rating-swift.enum/two)
-- [case unset](/documentation/photos/phasset/rating-swift.enum/unset)
-##### Initializers
-
-- [init?(rawValue: Int)](/documentation/photos/phasset/rating-swift.enum/init(rawvalue:))
+- [init?(rawValue: Int)](/documentation/photos/phasset/playbackvariation-swift.enum/init(rawvalue:))
 
 #### Default Implementations
 
@@ -688,6 +713,8 @@ timestamp: 2026-06-26T06:39:36.464Z
 - [case smartAlbumScreenshots](/documentation/photos/phassetcollectionsubtype/smartalbumscreenshots)
 - [case smartAlbumSelfPortraits](/documentation/photos/phassetcollectionsubtype/smartalbumselfportraits)
 - [case smartAlbumSlomoVideos](/documentation/photos/phassetcollectionsubtype/smartalbumslomovideos)
+- [case smartAlbumScreenRecordings](/documentation/photos/phassetcollectionsubtype/smartalbumscreenrecordings)
+- [case smartAlbumSpatial](/documentation/photos/phassetcollectionsubtype/smartalbumspatial)
 - [case smartAlbumTimelapses](/documentation/photos/phassetcollectionsubtype/smartalbumtimelapses)
 - [case smartAlbumUnableToUpload](/documentation/photos/phassetcollectionsubtype/smartalbumunabletoupload)
 - [case smartAlbumUserLibrary](/documentation/photos/phassetcollectionsubtype/smartalbumuserlibrary)
@@ -695,10 +722,6 @@ timestamp: 2026-06-26T06:39:36.464Z
 ##### Wildcard Search
 
 - [case any](/documentation/photos/phassetcollectionsubtype/any)
-##### Enumeration Cases
-
-- [case smartAlbumScreenRecordings](/documentation/photos/phassetcollectionsubtype/smartalbumscreenrecordings)
-- [case smartAlbumSpatial](/documentation/photos/phassetcollectionsubtype/smartalbumspatial)
 ##### Initializers
 
 - [init?(rawValue: Int)](/documentation/photos/phassetcollectionsubtype/init(rawvalue:))
@@ -772,12 +795,10 @@ timestamp: 2026-06-26T06:39:36.464Z
 - [case momentListCluster](/documentation/photos/phcollectionlistsubtype/momentlistcluster)
 - [case momentListYear](/documentation/photos/phcollectionlistsubtype/momentlistyear)
 - [case regularFolder](/documentation/photos/phcollectionlistsubtype/regularfolder)
+- [case rootFolder](/documentation/photos/phcollectionlistsubtype/rootfolder)
 - [case smartFolderEvents](/documentation/photos/phcollectionlistsubtype/smartfolderevents)
 - [case smartFolderFaces](/documentation/photos/phcollectionlistsubtype/smartfolderfaces)
 - [case any](/documentation/photos/phcollectionlistsubtype/any)
-##### Enumeration Cases
-
-- [case rootFolder](/documentation/photos/phcollectionlistsubtype/rootfolder)
 ##### Initializers
 
 - [init?(rawValue: Int)](/documentation/photos/phcollectionlistsubtype/init(rawvalue:))
@@ -830,6 +851,7 @@ timestamp: 2026-06-26T06:39:36.464Z
 - [var includeAllBurstAssets: Bool](/documentation/photos/phfetchoptions/includeallburstassets)
 - [var includeHiddenAssets: Bool](/documentation/photos/phfetchoptions/includehiddenassets)
 - [var includeAssetSourceTypes: PHAssetSourceType](/documentation/photos/phfetchoptions/includeassetsourcetypes)
+- [var prefetchAssetExtendedMetadata: Bool](/documentation/photos/phfetchoptions/prefetchassetextendedmetadata)
 
 ### Asset loading
 
@@ -979,6 +1001,20 @@ timestamp: 2026-06-26T06:39:36.464Z
 
 - [var isNetworkAccessAllowed: Bool](/documentation/photos/phlivephotorequestoptions/isnetworkaccessallowed)
 - [var progressHandler: PHAssetImageProgressHandler?](/documentation/photos/phlivephotorequestoptions/progresshandler)
+#### Instance Properties
+
+- [var preferHDR: Bool](/documentation/photos/phlivephotorequestoptions/preferhdr)
+
+### Asset metadata
+
+- [PHAssetExtendedMetadata](/documentation/photos/phassetextendedmetadata)
+#### Reading metadata
+
+- [var caption: String?](/documentation/photos/phassetextendedmetadata/caption)
+- [var keywords: [String]](/documentation/photos/phassetextendedmetadata/keywords)
+#### Instance Properties
+
+- [var originalFilename: String?](/documentation/photos/phassetextendedmetadata/originalfilename)
 
 ### Asset resource management
 
@@ -1021,6 +1057,7 @@ timestamp: 2026-06-26T06:39:36.464Z
 #### Instance Properties
 
 - [var dataSize: Int?](/documentation/photos/phassetresource/datasize-5lxva)
+- [var filename: String?](/documentation/photos/phassetresource/filename)
 #### Type Methods
 
 - [class func assetResource(forUploadJob: PHAssetResourceUploadJob) -> PHAssetResource?](/documentation/photos/phassetresource/assetresource(foruploadjob:))
@@ -1305,6 +1342,11 @@ timestamp: 2026-06-26T06:39:36.464Z
 
 - [func removeAssets<T>(T)](/documentation/photos/phprojectchangerequest/removeassets(_:)-n825)
 - [func removeAssets(PHFetchResult<PHAsset>)](/documentation/photos/phprojectchangerequest/removeassets(_:)-3ytt3)
+
+- [PHAssetResourceUploadJobOptions](/documentation/photos/phassetresourceuploadjoboptions)
+#### Instance Properties
+
+- [var preventsExpensiveNetworkAccess: Bool](/documentation/photos/phassetresourceuploadjoboptions/preventsexpensivenetworkaccess)
 
 ### Protocols
 
@@ -2078,6 +2120,7 @@ timestamp: 2026-06-26T06:39:36.464Z
 #### Initializers
 
 - [init(String)](/documentation/photosui/phpickersearchtext-swift.struct/init(_:))
+- [init(photoSearchSuggestion: UIPhotoSearchSuggestion)](/documentation/photosui/phpickersearchtext-swift.struct/init(photosearchsuggestion:))
 
 - [PHSharedAlbumCreationConfiguration](/documentation/photosui/phsharedalbumcreationconfiguration-swift.struct)
 #### Initializers
@@ -2092,8 +2135,9 @@ timestamp: 2026-06-26T06:39:36.464Z
 - [PHSharedAlbumCreationResult](/documentation/photosui/phsharedalbumcreationresult-swift.struct)
 #### Instance Properties
 
-- [var albumIdentifier: String](/documentation/photosui/phsharedalbumcreationresult-swift.struct/albumidentifier)
-- [var albumURL: URL](/documentation/photosui/phsharedalbumcreationresult-swift.struct/albumurl)
+- [var albumIdentifier: String?](/documentation/photosui/phsharedalbumcreationresult-swift.struct/albumidentifier)
+- [var albumURL: URL?](/documentation/photosui/phsharedalbumcreationresult-swift.struct/albumurl)
+- [var error: (any Error)?](/documentation/photosui/phsharedalbumcreationresult-swift.struct/error)
 
 ### Enumerations
 

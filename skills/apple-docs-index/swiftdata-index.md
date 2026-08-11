@@ -3,7 +3,7 @@ title: SwiftData
 source: https://developer.apple.com/documentation/swiftdata
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/index/swiftdata
-timestamp: 2026-06-26T06:39:35.806Z
+timestamp: 2026-08-11T06:08:55.126Z
 ---
 
 **Navigation:** [SwiftData](/documentation/swiftdata)
@@ -511,7 +511,9 @@ timestamp: 2026-06-26T06:39:35.806Z
 - [init(for: Schema, configurations: [any DataStoreConfiguration]) throws](/documentation/swiftdata/modelcontainer/init(for:configurations:)-93ifi)
 ### Instance Methods
 
+- [func configurationName(forStoreIdentifier: String) -> String?](/documentation/swiftdata/modelcontainer/configurationname(forstoreidentifier:))
 - [func erase() throws](/documentation/swiftdata/modelcontainer/erase())
+- [func storeIdentifier(forConfigurationNamed: String) -> String?](/documentation/swiftdata/modelcontainer/storeidentifier(forconfigurationnamed:))
 
 - [ModelContext](/documentation/swiftdata/modelcontext)
 ### Creating a model context
@@ -1001,7 +1003,9 @@ timestamp: 2026-06-26T06:39:35.806Z
 - [init(for: Schema, configurations: [any DataStoreConfiguration]) throws](/documentation/swiftdata/modelcontainer/init(for:configurations:)-93ifi)
 #### Instance Methods
 
+- [func configurationName(forStoreIdentifier: String) -> String?](/documentation/swiftdata/modelcontainer/configurationname(forstoreidentifier:))
 - [func erase() throws](/documentation/swiftdata/modelcontainer/erase())
+- [func storeIdentifier(forConfigurationNamed: String) -> String?](/documentation/swiftdata/modelcontainer/storeidentifier(forconfigurationnamed:))
 
 ### Fetching models
 
@@ -1181,27 +1185,6 @@ timestamp: 2026-06-26T06:39:35.806Z
 - [init(filter: Predicate<Element>?, sort: [SortDescriptor<Element>], transaction: Transaction?)](/documentation/swiftdata/query/init(filter:sort:transaction:))
 - [init<Value>(filter: Predicate<Element>?, sort: KeyPath<Element, Value>, order: SortOrder, transaction: Transaction?)](/documentation/swiftdata/query/init(filter:sort:order:transaction:)-2bx9a)
 - [init<Value>(filter: Predicate<Element>?, sort: KeyPath<Element, Value?>, order: SortOrder, transaction: Transaction?)](/documentation/swiftdata/query/init(filter:sort:order:transaction:)-8q7vs)
-### Creating an unsorted, sectioned query
-
-- [init(FetchDescriptor<Element>, animation: Animation, sectionBy: KeyPath<Element, String>?)](/documentation/swiftdata/query/init(_:animation:sectionby:)-2em2m)
-- [init(FetchDescriptor<Element>, animation: Animation, sectionBy: KeyPath<Element, String?>?)](/documentation/swiftdata/query/init(_:animation:sectionby:)-2pqhv)
-- [init(FetchDescriptor<Element>, transaction: Transaction?, sectionBy: KeyPath<Element, String?>?)](/documentation/swiftdata/query/init(_:transaction:sectionby:)-5814o)
-- [init(FetchDescriptor<Element>, transaction: Transaction?, sectionBy: KeyPath<Element, String>?)](/documentation/swiftdata/query/init(_:transaction:sectionby:)-9sb87)
-### Creating a sorted, sectioned query
-
-- [init(filter: Predicate<Element>?, sort: [SortDescriptor<Element>], animation: Animation, sectionBy: KeyPath<Element, String>?)](/documentation/swiftdata/query/init(filter:sort:animation:sectionby:)-5wk67)
-- [init(filter: Predicate<Element>?, sort: [SortDescriptor<Element>], animation: Animation, sectionBy: KeyPath<Element, String?>?)](/documentation/swiftdata/query/init(filter:sort:animation:sectionby:)-8e78r)
-- [init<Value>(filter: Predicate<Element>?, sort: KeyPath<Element, Value>, order: SortOrder, animation: Animation, sectionBy: KeyPath<Element, String?>?)](/documentation/swiftdata/query/init(filter:sort:order:animation:sectionby:)-2e9oh)
-- [init<Value>(filter: Predicate<Element>?, sort: KeyPath<Element, Value>, order: SortOrder, animation: Animation, sectionBy: KeyPath<Element, String?>?)](/documentation/swiftdata/query/init(filter:sort:order:animation:sectionby:)-2e9oh)
-- [init<Value>(filter: Predicate<Element>?, sort: KeyPath<Element, Value?>, order: SortOrder, animation: Animation, sectionBy: KeyPath<Element, String?>?)](/documentation/swiftdata/query/init(filter:sort:order:animation:sectionby:)-4pdmu)
-- [init<Value>(filter: Predicate<Element>?, sort: KeyPath<Element, Value>, order: SortOrder, animation: Animation, sectionBy: KeyPath<Element, String>?)](/documentation/swiftdata/query/init(filter:sort:order:animation:sectionby:)-6b4tq)
-- [init<Value>(filter: Predicate<Element>?, sort: KeyPath<Element, Value?>, order: SortOrder, animation: Animation, sectionBy: KeyPath<Element, String>?)](/documentation/swiftdata/query/init(filter:sort:order:animation:sectionby:)-7d51r)
-- [init<Value>(filter: Predicate<Element>?, sort: KeyPath<Element, Value>, order: SortOrder, transaction: Transaction?, sectionBy: KeyPath<Element, String>?)](/documentation/swiftdata/query/init(filter:sort:order:transaction:sectionby:)-5ym3e)
-- [init<Value>(filter: Predicate<Element>?, sort: KeyPath<Element, Value?>, order: SortOrder, transaction: Transaction?, sectionBy: KeyPath<Element, String?>?)](/documentation/swiftdata/query/init(filter:sort:order:transaction:sectionby:)-8hx6i)
-- [init<Value>(filter: Predicate<Element>?, sort: KeyPath<Element, Value>, order: SortOrder, transaction: Transaction?, sectionBy: KeyPath<Element, String?>?)](/documentation/swiftdata/query/init(filter:sort:order:transaction:sectionby:)-930wx)
-- [init<Value>(filter: Predicate<Element>?, sort: KeyPath<Element, Value?>, order: SortOrder, transaction: Transaction?, sectionBy: KeyPath<Element, String>?)](/documentation/swiftdata/query/init(filter:sort:order:transaction:sectionby:)-l6d4)
-- [init(filter: Predicate<Element>?, sort: [SortDescriptor<Element>], transaction: Transaction?, sectionBy: KeyPath<Element, String>?)](/documentation/swiftdata/query/init(filter:sort:transaction:sectionby:)-2b0zd)
-- [init(filter: Predicate<Element>?, sort: [SortDescriptor<Element>], transaction: Transaction?, sectionBy: KeyPath<Element, String?>?)](/documentation/swiftdata/query/init(filter:sort:transaction:sectionby:)-965mg)
 ### Getting query configuration
 
 - [var modelContext: ModelContext](/documentation/swiftdata/query/modelcontext)
@@ -1211,23 +1194,25 @@ timestamp: 2026-06-26T06:39:35.806Z
 - [var wrappedValue: Result](/documentation/swiftdata/query/wrappedvalue)
 ### Accessing sections
 
-- [var sections: ResultsSectionCollection<Element, String>](/documentation/swiftdata/query/sections)
-- [ResultsSectionCollection](/documentation/swiftdata/resultssectioncollection)
-#### Finding sections
+- [var sections: SectionedResults<Element, String>](/documentation/swiftdata/query/sections)
+### Initializers
 
-- [var sectionNames: [SectionName]](/documentation/swiftdata/resultssectioncollection/sectionnames)
-- [func contains(sectionName: SectionName) -> Bool](/documentation/swiftdata/resultssectioncollection/contains(sectionname:))
-- [func index(ofSectionNamed: SectionName) -> Int?](/documentation/swiftdata/resultssectioncollection/index(ofsectionnamed:))
-#### Retrieving sections
-
-- [subscript(sectionName _: SectionName) -> ResultsSection<Element, SectionName>?](/documentation/swiftdata/resultssectioncollection/subscript(sectionname:))
-- [ResultsSection](/documentation/swiftdata/resultssection)
-##### Accessing section properties
-
-- [var id: SectionName](/documentation/swiftdata/resultssection/id)
-- [let name: SectionName](/documentation/swiftdata/resultssection/name)
-
-
+- [init(FetchDescriptor<Element>, animation: Animation, sectionBy: KeyPath<Element, String>)](/documentation/swiftdata/query/init(_:animation:sectionby:)-1yoyc)
+- [init(FetchDescriptor<Element>, animation: Animation, sectionBy: KeyPath<Element, String?>)](/documentation/swiftdata/query/init(_:animation:sectionby:)-8yip7)
+- [init(FetchDescriptor<Element>, transaction: Transaction?, sectionBy: KeyPath<Element, String>)](/documentation/swiftdata/query/init(_:transaction:sectionby:)-3pg23)
+- [init(FetchDescriptor<Element>, transaction: Transaction?, sectionBy: KeyPath<Element, String?>)](/documentation/swiftdata/query/init(_:transaction:sectionby:)-8ecyq)
+- [init(filter: Predicate<Element>?, sort: [SortDescriptor<Element>], animation: Animation, sectionBy: KeyPath<Element, String?>)](/documentation/swiftdata/query/init(filter:sort:animation:sectionby:)-1sjv1)
+- [init(filter: Predicate<Element>?, sort: [SortDescriptor<Element>], animation: Animation, sectionBy: KeyPath<Element, String>)](/documentation/swiftdata/query/init(filter:sort:animation:sectionby:)-35eif)
+- [init<Value>(filter: Predicate<Element>?, sort: KeyPath<Element, Value?>, order: SortOrder, animation: Animation, sectionBy: KeyPath<Element, String?>)](/documentation/swiftdata/query/init(filter:sort:order:animation:sectionby:)-39v3n)
+- [init<Value>(filter: Predicate<Element>?, sort: KeyPath<Element, Value>, order: SortOrder, animation: Animation, sectionBy: KeyPath<Element, String>)](/documentation/swiftdata/query/init(filter:sort:order:animation:sectionby:)-3myq0)
+- [init<Value>(filter: Predicate<Element>?, sort: KeyPath<Element, Value>, order: SortOrder, animation: Animation, sectionBy: KeyPath<Element, String?>)](/documentation/swiftdata/query/init(filter:sort:order:animation:sectionby:)-4peqq)
+- [init<Value>(filter: Predicate<Element>?, sort: KeyPath<Element, Value?>, order: SortOrder, animation: Animation, sectionBy: KeyPath<Element, String>)](/documentation/swiftdata/query/init(filter:sort:order:animation:sectionby:)-6td6n)
+- [init<Value>(filter: Predicate<Element>?, sort: KeyPath<Element, Value?>, order: SortOrder, transaction: Transaction?, sectionBy: KeyPath<Element, String>)](/documentation/swiftdata/query/init(filter:sort:order:transaction:sectionby:)-2kk0t)
+- [init<Value>(filter: Predicate<Element>?, sort: KeyPath<Element, Value?>, order: SortOrder, transaction: Transaction?, sectionBy: KeyPath<Element, String?>)](/documentation/swiftdata/query/init(filter:sort:order:transaction:sectionby:)-62fdm)
+- [init<Value>(filter: Predicate<Element>?, sort: KeyPath<Element, Value>, order: SortOrder, transaction: Transaction?, sectionBy: KeyPath<Element, String?>)](/documentation/swiftdata/query/init(filter:sort:order:transaction:sectionby:)-68vqy)
+- [init<Value>(filter: Predicate<Element>?, sort: KeyPath<Element, Value>, order: SortOrder, transaction: Transaction?, sectionBy: KeyPath<Element, String>)](/documentation/swiftdata/query/init(filter:sort:order:transaction:sectionby:)-8finq)
+- [init(filter: Predicate<Element>?, sort: [SortDescriptor<Element>], transaction: Transaction?, sectionBy: KeyPath<Element, String?>)](/documentation/swiftdata/query/init(filter:sort:transaction:sectionby:)-353r3)
+- [init(filter: Predicate<Element>?, sort: [SortDescriptor<Element>], transaction: Transaction?, sectionBy: KeyPath<Element, String>)](/documentation/swiftdata/query/init(filter:sort:transaction:sectionby:)-90bbe)
 
 - [FetchDescriptor](/documentation/swiftdata/fetchdescriptor)
 ### Creating a fetch descriptor
@@ -1453,6 +1438,7 @@ timestamp: 2026-06-26T06:39:35.806Z
 - [TokenType](/documentation/swiftdata/historytoken/tokentype)
 ### Instance Properties
 
+- [var storeIdentifier: String](/documentation/swiftdata/historytoken/storeidentifier)
 - [var tokenValue: Self.TokenType?](/documentation/swiftdata/historytoken/tokenvalue)
 
 - [HistoryTransaction](/documentation/swiftdata/historytransaction)
@@ -1504,7 +1490,6 @@ timestamp: 2026-06-26T06:39:35.806Z
 - [static func == (DefaultHistoryUpdate<Model>, DefaultHistoryUpdate<Model>) -> Bool](/documentation/swiftdata/defaulthistoryupdate/==(_:_:))
 ### Instance Methods
 
-- [func containsAttribute(any PartialKeyPath<Model> & Sendable) -> Bool](/documentation/swiftdata/defaulthistoryupdate/containsattribute(_:))
 - [func hash(into: inout Hasher)](/documentation/swiftdata/defaulthistoryupdate/hash(into:))
 ### Type Aliases
 
@@ -1519,6 +1504,10 @@ timestamp: 2026-06-26T06:39:35.806Z
 - [func hash(into: inout Hasher)](/documentation/swiftdata/defaulthistorydelete/hash(into:))
 
 - [DefaultHistoryToken](/documentation/swiftdata/defaulthistorytoken)
+### Instance Properties
+
+- [var storeIdentifier: String](/documentation/swiftdata/defaulthistorytoken/storeidentifier)
+
 - [DefaultHistoryTransaction](/documentation/swiftdata/defaulthistorytransaction)
 ### Instance Properties
 
@@ -1551,23 +1540,7 @@ timestamp: 2026-06-26T06:39:35.806Z
 - [let modelContext: ModelContext](/documentation/swiftdata/resultsobserver/modelcontext)
 - [var sortBy: [SortDescriptor<Element>]](/documentation/swiftdata/resultsobserver/sortby)
 - [var sectionBy: PartialKeyPath<Element>?](/documentation/swiftdata/resultsobserver/sectionby)
-- [var sections: ResultsSectionCollection<Element, SectionName>?](/documentation/swiftdata/resultsobserver/sections)
-- [ResultsSectionCollection](/documentation/swiftdata/resultssectioncollection)
-#### Finding sections
-
-- [var sectionNames: [SectionName]](/documentation/swiftdata/resultssectioncollection/sectionnames)
-- [func contains(sectionName: SectionName) -> Bool](/documentation/swiftdata/resultssectioncollection/contains(sectionname:))
-- [func index(ofSectionNamed: SectionName) -> Int?](/documentation/swiftdata/resultssectioncollection/index(ofsectionnamed:))
-#### Retrieving sections
-
-- [subscript(sectionName _: SectionName) -> ResultsSection<Element, SectionName>?](/documentation/swiftdata/resultssectioncollection/subscript(sectionname:))
-- [ResultsSection](/documentation/swiftdata/resultssection)
-##### Accessing section properties
-
-- [var id: SectionName](/documentation/swiftdata/resultssection/id)
-- [let name: SectionName](/documentation/swiftdata/resultssection/name)
-
-
+- [var sections: SectionedResults<Element, SectionTitle>?](/documentation/swiftdata/resultsobserver/sections)
 ### Accessing observer results
 
 - [var results: FetchResultsCollection<Element>](/documentation/swiftdata/resultsobserver/results)
@@ -1638,6 +1611,41 @@ timestamp: 2026-06-26T06:39:35.806Z
 - [case preferInMemoryFilter](/documentation/swiftdata/datastoreerror/preferinmemoryfilter)
 - [case preferInMemorySort](/documentation/swiftdata/datastoreerror/preferinmemorysort)
 - [case unsupportedFeature](/documentation/swiftdata/datastoreerror/unsupportedfeature)
+
+## Structures
+
+- [ResultsSection](/documentation/swiftdata/resultssection)
+### Accessing section properties
+
+- [var id: SectionTitle](/documentation/swiftdata/resultssection/id)
+### Instance Properties
+
+- [let title: SectionTitle](/documentation/swiftdata/resultssection/title)
+### Default Implementations
+
+- [Equatable Implementations](/documentation/swiftdata/resultssection/equatable-implementations)
+#### Operators
+
+- [static func == (ResultsSection<Element, SectionTitle>, ResultsSection<Element, SectionTitle>) -> Bool](/documentation/swiftdata/resultssection/==(_:_:))
+
+
+- [SectionedResults](/documentation/swiftdata/sectionedresults)
+### Instance Properties
+
+- [var sectionTitles: [SectionTitle]](/documentation/swiftdata/sectionedresults/sectiontitles)
+### Instance Methods
+
+- [func contains(sectionTitle: SectionTitle) -> Bool](/documentation/swiftdata/sectionedresults/contains(sectiontitle:))
+- [func index(ofSectionTitled: SectionTitle) -> Int?](/documentation/swiftdata/sectionedresults/index(ofsectiontitled:))
+### Subscripts
+
+- [subscript(sectionTitle _: SectionTitle) -> ResultsSection<Element, SectionTitle>?](/documentation/swiftdata/sectionedresults/subscript(sectiontitle:))
+### Default Implementations
+
+- [Equatable Implementations](/documentation/swiftdata/sectionedresults/equatable-implementations)
+#### Operators
+
+- [static func == (SectionedResults<Element, SectionTitle>, SectionedResults<Element, SectionTitle>) -> Bool](/documentation/swiftdata/sectionedresults/==(_:_:))
 
 ---
 

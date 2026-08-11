@@ -3,7 +3,7 @@ title: Swift
 source: https://developer.apple.com/documentation/observation
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/index/observation
-timestamp: 2026-06-26T06:39:35.781Z
+timestamp: 2026-08-11T06:08:55.092Z
 ---
 
 **Navigation:** [Observation](/documentation/observation)
@@ -4109,7 +4109,6 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [func isTriviallyIdentical(to: ContiguousArray<Element>) -> Bool](/documentation/swift/contiguousarray/istriviallyidentical(to:))
 - [func remove(at: Int) -> Element](/documentation/swift/contiguousarray/remove(at:))
 - [func reserveCapacity(Int)](/documentation/swift/contiguousarray/reservecapacity(_:))
-- [func withBytes<R, E>((RawSpan) throws(E) -> R) throws(E) -> R](/documentation/swift/contiguousarray/withbytes(_:))
 - [func withUnsafeBufferPointer<R, E>((UnsafeBufferPointer<Element>) throws(E) -> R) throws(E) -> R](/documentation/swift/contiguousarray/withunsafebufferpointer(_:))
 - [func withUnsafeBytes<R>((UnsafeRawBufferPointer) throws -> R) rethrows -> R](/documentation/swift/contiguousarray/withunsafebytes(_:))
 - [func withUnsafeMutableBufferPointer<R, E>((inout UnsafeMutableBufferPointer<Element>) throws(E) -> R) throws(E) -> R](/documentation/swift/contiguousarray/withunsafemutablebufferpointer(_:))
@@ -4374,7 +4373,6 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [func isTriviallyIdentical(to: ArraySlice<Element>) -> Bool](/documentation/swift/arrayslice/istriviallyidentical(to:))
 - [func remove(at: Int) -> Element](/documentation/swift/arrayslice/remove(at:))
 - [func reserveCapacity(Int)](/documentation/swift/arrayslice/reservecapacity(_:))
-- [func withBytes<R, E>((RawSpan) throws(E) -> R) throws(E) -> R](/documentation/swift/arrayslice/withbytes(_:))
 - [func withUnsafeBufferPointer<R, E>((UnsafeBufferPointer<Element>) throws(E) -> R) throws(E) -> R](/documentation/swift/arrayslice/withunsafebufferpointer(_:))
 - [func withUnsafeBytes<R>((UnsafeRawBufferPointer) throws -> R) rethrows -> R](/documentation/swift/arrayslice/withunsafebytes(_:))
 - [func withUnsafeMutableBufferPointer<R, E>((inout UnsafeMutableBufferPointer<Element>) throws(E) -> R) throws(E) -> R](/documentation/swift/arrayslice/withunsafemutablebufferpointer(_:))
@@ -4655,15 +4653,12 @@ timestamp: 2026-06-26T06:39:35.781Z
 ### Instance Methods
 
 - [func append<E>(addingCapacity: Int, initializingWith: (inout OutputSpan<Element>) throws(E) -> Void) throws(E)](/documentation/swift/array/append(addingcapacity:initializingwith:))
-- [func applyListOrder([String])](/documentation/swift/array/applylistorder(_:)-33po6)
-- [func applyListOrder([USDToken])](/documentation/swift/array/applylistorder(_:)-8ncuj)
 - [func isTriviallyIdentical(to: Array<Element>) -> Bool](/documentation/swift/array/istriviallyidentical(to:))
 - [func makeSamples<T>(Prompt, targetCount: Int, sessionProvider: (() -> LanguageModelSession)?, validator: ((ModelSample<T>) async throws -> Bool)?) -> some AsyncSequence<ModelSample<T>, any Error>
 ](/documentation/swift/array/makesamples(_:targetcount:sessionprovider:validator:)-5j7t0)
 - [func makeSamples(Prompt, targetCount: Int, sessionProvider: (() -> LanguageModelSession)?, validator: ((Element) async throws -> Bool)?) -> some AsyncSequence<Element, any Error>
 ](/documentation/swift/array/makesamples(_:targetcount:sessionprovider:validator:)-5s9y1)
 - [func toDictionary<Key>(with: (Element) -> Key) -> [Key : Element]](/documentation/swift/array/todictionary(with:))
-- [func withBytes<R, E>((RawSpan) throws(E) -> R) throws(E) -> R](/documentation/swift/array/withbytes(_:))
 - [func withUnsafeTaggedBuffers<R>(([CMTaggedBuffer]) throws -> sending R) rethrows -> sending R](/documentation/swift/array/withunsafetaggedbuffers(_:))
 ### Subscripts
 
@@ -5390,11 +5385,6 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [func merge<S, E>(S, uniquingKeysWith: (Value, Value) throws(E) -> Value) throws(E)](/documentation/swift/dictionary/merge(_:uniquingkeyswith:)-84ffe)
 - [func merging<E>([Key : Value], uniquingKeysWith: (Value, Value) throws(E) -> Value) throws(E) -> [Key : Value]](/documentation/swift/dictionary/merging(_:uniquingkeyswith:)-4vrqz)
 - [func merging<S, E>(S, uniquingKeysWith: (Value, Value) throws(E) -> Value) throws(E) -> [Key : Value]](/documentation/swift/dictionary/merging(_:uniquingkeyswith:)-6cztu)
-### Subscripts
-
-- [subscript(String) -> USDValue?](/documentation/swift/dictionary/subscript(_:)-1uuzk)
-- [subscript([String]) -> USDValue?](/documentation/swift/dictionary/subscript(_:)-7mdw0)
-- [subscript(String, String) -> USDValue?](/documentation/swift/dictionary/subscript(_:_:))
 ### Type Aliases
 
 - [Dictionary.Element](/documentation/swift/dictionary/element)
@@ -7936,7 +7926,6 @@ timestamp: 2026-06-26T06:39:35.781Z
 ##### Converting a Throwing Expression to a Result
 
 - [Preserving the Results of a Throwing Expression](/documentation/swift/preserving-the-results-of-a-throwing-expression)
-- [init(catching: () throws(Failure) -> Success)](/documentation/swift/result/init(catching:))
 ##### Converting a Result to a Throwing Expression
 
 - [func get() throws(Failure) -> Success](/documentation/swift/result/get())
@@ -7995,6 +7984,10 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [func tryRemoveDuplicates(by: (Result<Success, Failure>.Publisher.Output, Result<Success, Failure>.Publisher.Output) throws -> Bool) -> Result<Result<Success, Failure>.Publisher.Output, any Error>.Publisher](/documentation/swift/result/publisher-swift.struct/tryremoveduplicates(by:))
 - [func tryScan<T>(T, (T, Result<Success, Failure>.Publisher.Output) throws -> T) -> Result<T, any Error>.Publisher](/documentation/swift/result/publisher-swift.struct/tryscan(_:_:))
 
+##### Initializers
+
+- [init(catching: nonisolated(nonsending) () async throws(Failure) -> Success) async](/documentation/swift/result/init(catching:)-1tno)
+- [init(catching: () throws(Failure) -> Success)](/documentation/swift/result/init(catching:)-62kyq)
 ##### Default Implementations
 
 - [Equatable Implementations](/documentation/swift/result/equatable-implementations)
@@ -21787,7 +21780,6 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [func isTriviallyIdentical(to: ContiguousArray<Element>) -> Bool](/documentation/swift/contiguousarray/istriviallyidentical(to:))
 - [func remove(at: Int) -> Element](/documentation/swift/contiguousarray/remove(at:))
 - [func reserveCapacity(Int)](/documentation/swift/contiguousarray/reservecapacity(_:))
-- [func withBytes<R, E>((RawSpan) throws(E) -> R) throws(E) -> R](/documentation/swift/contiguousarray/withbytes(_:))
 - [func withUnsafeBufferPointer<R, E>((UnsafeBufferPointer<Element>) throws(E) -> R) throws(E) -> R](/documentation/swift/contiguousarray/withunsafebufferpointer(_:))
 - [func withUnsafeBytes<R>((UnsafeRawBufferPointer) throws -> R) rethrows -> R](/documentation/swift/contiguousarray/withunsafebytes(_:))
 - [func withUnsafeMutableBufferPointer<R, E>((inout UnsafeMutableBufferPointer<Element>) throws(E) -> R) throws(E) -> R](/documentation/swift/contiguousarray/withunsafemutablebufferpointer(_:))
@@ -22052,7 +22044,6 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [func isTriviallyIdentical(to: ArraySlice<Element>) -> Bool](/documentation/swift/arrayslice/istriviallyidentical(to:))
 - [func remove(at: Int) -> Element](/documentation/swift/arrayslice/remove(at:))
 - [func reserveCapacity(Int)](/documentation/swift/arrayslice/reservecapacity(_:))
-- [func withBytes<R, E>((RawSpan) throws(E) -> R) throws(E) -> R](/documentation/swift/arrayslice/withbytes(_:))
 - [func withUnsafeBufferPointer<R, E>((UnsafeBufferPointer<Element>) throws(E) -> R) throws(E) -> R](/documentation/swift/arrayslice/withunsafebufferpointer(_:))
 - [func withUnsafeBytes<R>((UnsafeRawBufferPointer) throws -> R) rethrows -> R](/documentation/swift/arrayslice/withunsafebytes(_:))
 - [func withUnsafeMutableBufferPointer<R, E>((inout UnsafeMutableBufferPointer<Element>) throws(E) -> R) throws(E) -> R](/documentation/swift/arrayslice/withunsafemutablebufferpointer(_:))
@@ -22333,15 +22324,12 @@ timestamp: 2026-06-26T06:39:35.781Z
 ##### Instance Methods
 
 - [func append<E>(addingCapacity: Int, initializingWith: (inout OutputSpan<Element>) throws(E) -> Void) throws(E)](/documentation/swift/array/append(addingcapacity:initializingwith:))
-- [func applyListOrder([String])](/documentation/swift/array/applylistorder(_:)-33po6)
-- [func applyListOrder([USDToken])](/documentation/swift/array/applylistorder(_:)-8ncuj)
 - [func isTriviallyIdentical(to: Array<Element>) -> Bool](/documentation/swift/array/istriviallyidentical(to:))
 - [func makeSamples<T>(Prompt, targetCount: Int, sessionProvider: (() -> LanguageModelSession)?, validator: ((ModelSample<T>) async throws -> Bool)?) -> some AsyncSequence<ModelSample<T>, any Error>
 ](/documentation/swift/array/makesamples(_:targetcount:sessionprovider:validator:)-5j7t0)
 - [func makeSamples(Prompt, targetCount: Int, sessionProvider: (() -> LanguageModelSession)?, validator: ((Element) async throws -> Bool)?) -> some AsyncSequence<Element, any Error>
 ](/documentation/swift/array/makesamples(_:targetcount:sessionprovider:validator:)-5s9y1)
 - [func toDictionary<Key>(with: (Element) -> Key) -> [Key : Element]](/documentation/swift/array/todictionary(with:))
-- [func withBytes<R, E>((RawSpan) throws(E) -> R) throws(E) -> R](/documentation/swift/array/withbytes(_:))
 - [func withUnsafeTaggedBuffers<R>(([CMTaggedBuffer]) throws -> sending R) rethrows -> sending R](/documentation/swift/array/withunsafetaggedbuffers(_:))
 ##### Subscripts
 
@@ -23068,11 +23056,6 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [func merge<S, E>(S, uniquingKeysWith: (Value, Value) throws(E) -> Value) throws(E)](/documentation/swift/dictionary/merge(_:uniquingkeyswith:)-84ffe)
 - [func merging<E>([Key : Value], uniquingKeysWith: (Value, Value) throws(E) -> Value) throws(E) -> [Key : Value]](/documentation/swift/dictionary/merging(_:uniquingkeyswith:)-4vrqz)
 - [func merging<S, E>(S, uniquingKeysWith: (Value, Value) throws(E) -> Value) throws(E) -> [Key : Value]](/documentation/swift/dictionary/merging(_:uniquingkeyswith:)-6cztu)
-##### Subscripts
-
-- [subscript(String) -> USDValue?](/documentation/swift/dictionary/subscript(_:)-1uuzk)
-- [subscript([String]) -> USDValue?](/documentation/swift/dictionary/subscript(_:)-7mdw0)
-- [subscript(String, String) -> USDValue?](/documentation/swift/dictionary/subscript(_:_:))
 ##### Type Aliases
 
 - [Dictionary.Element](/documentation/swift/dictionary/element)
@@ -23274,7 +23257,6 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [func index(after: InlineArray<count, Element>.Index) -> InlineArray<count, Element>.Index](/documentation/swift/inlinearray/index(after:))
 - [func index(before: InlineArray<count, Element>.Index) -> InlineArray<count, Element>.Index](/documentation/swift/inlinearray/index(before:))
 - [func swapAt(InlineArray<count, Element>.Index, InlineArray<count, Element>.Index)](/documentation/swift/inlinearray/swapat(_:_:))
-- [func withBytes<R, E>((RawSpan) throws(E) -> R) throws(E) -> R](/documentation/swift/inlinearray/withbytes(_:))
 ##### Subscripts
 
 - [subscript(InlineArray<count, Element>.Index) -> Element](/documentation/swift/inlinearray/subscript(_:))
@@ -23284,17 +23266,19 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [InlineArray.Index](/documentation/swift/inlinearray/index)
 ##### Default Implementations
 
-- [BorrowingSequence Implementations](/documentation/swift/inlinearray/borrowingsequence-implementations)
+- [Iterable Implementations](/documentation/swift/inlinearray/iterable-implementations)
 ###### Instance Properties
 
 - [var underestimatedCount: Int](/documentation/swift/inlinearray/underestimatedcount)
+- [var underestimatedCount: Int](/documentation/swift/inlinearray/underestimatedcount-8v9fs)
 ###### Instance Methods
 
-- [func makeBorrowingIterator() -> SpanIterator<Element>](/documentation/swift/inlinearray/makeborrowingiterator())
+- [func makeBorrowingIterator() -> InlineArray<count, Element>.BorrowingIterator](/documentation/swift/inlinearray/makeborrowingiterator())
 ###### Type Aliases
 
 - [InlineArray.BorrowingIterator](/documentation/swift/inlinearray/borrowingiterator)
 - [InlineArray.Element](/documentation/swift/inlinearray/element)
+- [InlineArray.Failure](/documentation/swift/inlinearray/failure)
 
 
 #### Sets
@@ -24271,9 +24255,6 @@ timestamp: 2026-06-26T06:39:35.781Z
 
 - [var mutableSpan: MutableSpan<Element>](/documentation/swift/collectionofone/mutablespan)
 - [var span: Span<Element>](/documentation/swift/collectionofone/span)
-##### Instance Methods
-
-- [func withBytes<R, E>((RawSpan) throws(E) -> R) throws(E) -> R](/documentation/swift/collectionofone/withbytes(_:))
 ##### Default Implementations
 
 - [BidirectionalCollection Implementations](/documentation/swift/collectionofone/bidirectionalcollection-implementations)
@@ -24448,16 +24429,14 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [func split(separator: Self.Element, maxSplits: Int, omittingEmptySubsequences: Bool) -> [ArraySlice<Self.Element>]](/documentation/swift/collectionofone/split(separator:maxsplits:omittingemptysubsequences:)-628bu)
 - [func starts<PossiblePrefix>(with: PossiblePrefix) -> Bool](/documentation/swift/collectionofone/starts(with:))
 - [func starts<PossiblePrefix>(with: PossiblePrefix, by: (Self.Element, PossiblePrefix.Element) throws -> Bool) rethrows -> Bool](/documentation/swift/collectionofone/starts(with:by:))
-- [func withContiguousStorageIfAvailable<R>((UnsafeBufferPointer<Self.Element>) throws -> R) rethrows -> R?](/documentation/swift/collectionofone/withcontiguousstorageifavailable(_:))
+- [func withContiguousStorageIfAvailable<R, E>((UnsafeBufferPointer<Element>) throws(E) -> R) throws(E) -> R?](/documentation/swift/collectionofone/withcontiguousstorageifavailable(_:))
+- [func withContiguousStorageIfAvailable<R>((UnsafeBufferPointer<Self.Element>) throws -> R) rethrows -> R?](/documentation/swift/collectionofone/withcontiguousstorageifavailable(_:)-4oidv)
 
 
 - [EmptyCollection](/documentation/swift/emptycollection)
 ##### Initializers
 
 - [init()](/documentation/swift/emptycollection/init())
-##### Instance Methods
-
-- [func withBytes<R, E>((RawSpan) throws(E) -> R) throws(E) -> R](/documentation/swift/emptycollection/withbytes(_:))
 ##### Default Implementations
 
 - [BidirectionalCollection Implementations](/documentation/swift/emptycollection/bidirectionalcollection-implementations)
@@ -24684,7 +24663,8 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [func split(separator: Self.Element, maxSplits: Int, omittingEmptySubsequences: Bool) -> [ArraySlice<Self.Element>]](/documentation/swift/emptycollection/split(separator:maxsplits:omittingemptysubsequences:)-4y9zq)
 - [func starts<PossiblePrefix>(with: PossiblePrefix) -> Bool](/documentation/swift/emptycollection/starts(with:))
 - [func starts<PossiblePrefix>(with: PossiblePrefix, by: (Self.Element, PossiblePrefix.Element) throws -> Bool) rethrows -> Bool](/documentation/swift/emptycollection/starts(with:by:))
-- [func withContiguousStorageIfAvailable<R>((UnsafeBufferPointer<Self.Element>) throws -> R) rethrows -> R?](/documentation/swift/emptycollection/withcontiguousstorageifavailable(_:))
+- [func withContiguousStorageIfAvailable<R, E>((UnsafeBufferPointer<Element>) throws(E) -> R) throws(E) -> R?](/documentation/swift/emptycollection/withcontiguousstorageifavailable(_:))
+- [func withContiguousStorageIfAvailable<R>((UnsafeBufferPointer<Self.Element>) throws -> R) rethrows -> R?](/documentation/swift/emptycollection/withcontiguousstorageifavailable(_:)-5tfdr)
 
 
 - [KeyValuePairs](/documentation/swift/keyvaluepairs)
@@ -24864,9 +24844,9 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [var underestimatedCount: Int](/documentation/swift/sequence/underestimatedcount)
 ###### Sequence Implementations
 
-- [var underestimatedCount: Int](/documentation/swift/sequence/underestimatedcount-1uzd0)
 - [var underestimatedCount: Int](/documentation/swift/sequence/underestimatedcount-3n9ne)
-- [var underestimatedCount: Int](/documentation/swift/sequence/underestimatedcount-8gzwv)
+- [var underestimatedCount: Int](/documentation/swift/sequence/underestimatedcount-7sn1i)
+- [var underestimatedCount: Int](/documentation/swift/sequence/underestimatedcount-7vi5w)
 - [var underestimatedCount: Int](/documentation/swift/sequence/underestimatedcount-9oyup)
 
 ###### Sorting Elements
@@ -25265,7 +25245,7 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [func randomElement<T>(using: inout T) -> Self.Element?](/documentation/swift/collection/randomelement(using:))
 - [func ranges<C>(of: C) -> [Range<Self.Index>]](/documentation/swift/collection/ranges(of:))
 - [func removingSubranges(RangeSet<Self.Index>) -> DiscontiguousSlice<Self>](/documentation/swift/collection/removingsubranges(_:))
-- [func saveJSONLines(to: URL, includeReportMetadata: Bool) throws -> URL](/documentation/swift/collection/savejsonlines(to:includereportmetadata:))
+- [func saveJSONLines(to: URL, includeReportMetadata: Bool, includeTranscripts: Bool) throws -> URL](/documentation/swift/collection/savejsonlines(to:includereportmetadata:includetranscripts:))
 - [func suffix(Int) -> Self.SubSequence](/documentation/swift/collection/suffix(_:))
 - [func suffix(from: Self.Index) -> Self.SubSequence](/documentation/swift/collection/suffix(from:))
 - [func trimPrefix<Prefix>(Prefix)](/documentation/swift/collection/trimprefix(_:))
@@ -25623,6 +25603,41 @@ timestamp: 2026-06-26T06:39:35.781Z
 ###### Instance Methods
 
 - [func next() -> Self.Element?](/documentation/swift/iteratorprotocol/next())
+
+- [BorrowingIteratorProtocol](/documentation/swift/borrowingiteratorprotocol)
+###### Associated Types
+
+- [Element](/documentation/swift/borrowingiteratorprotocol/element)
+- [Failure](/documentation/swift/borrowingiteratorprotocol/failure)
+###### Instance Methods
+
+- [func nextSpan() throws(Self.Failure) -> Span<Self.Element>](/documentation/swift/borrowingiteratorprotocol/nextspan())
+- [func nextSpan(maxCount: Int) throws(Self.Failure) -> Span<Self.Element>](/documentation/swift/borrowingiteratorprotocol/nextspan(maxcount:))
+- [func skip(by: Int) throws(Self.Failure) -> Int](/documentation/swift/borrowingiteratorprotocol/skip(by:))
+###### BorrowingIteratorProtocol Implementations
+
+- [func skip(by: Int) throws(Self.Failure) -> Int](/documentation/swift/borrowingiteratorprotocol/skip(by:)-2c2z4)
+
+
+- [BorrowingIteratorAdapter](/documentation/swift/borrowingiteratoradapter)
+###### Initializers
+
+- [init(iterator: Iterator)](/documentation/swift/borrowingiteratoradapter/init(iterator:))
+###### Instance Methods
+
+- [func nextSpan(maxCount: Int) -> Span<Iterator.Element>](/documentation/swift/borrowingiteratoradapter/nextspan(maxcount:))
+###### Type Aliases
+
+- [BorrowingIteratorAdapter.Element](/documentation/swift/borrowingiteratoradapter/element)
+- [BorrowingIteratorAdapter.Failure](/documentation/swift/borrowingiteratoradapter/failure)
+###### Default Implementations
+
+- [BorrowingIteratorProtocol Implementations](/documentation/swift/borrowingiteratoradapter/borrowingiteratorprotocol-implementations)
+###### Instance Methods
+
+- [func nextSpan() throws(Self.Failure) -> Span<Self.Element>](/documentation/swift/borrowingiteratoradapter/nextspan())
+- [func skip(by: Int) throws(Self.Failure) -> Int](/documentation/swift/borrowingiteratoradapter/skip(by:))
+
 
 ##### Algebraic Sets
 
@@ -29575,7 +29590,8 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [var now: Self.Instant](/documentation/swift/clock/now)
 ##### Instance Methods
 
-- [func measure(() throws -> Void) rethrows -> Self.Instant.Duration](/documentation/swift/clock/measure(_:))
+- [func measure(() throws -> Void) rethrows -> Self.Instant.Duration](/documentation/swift/clock/measure(_:)-2emvx)
+- [func measure(nonisolated(nonsending) () async throws -> Void) async rethrows -> Self.Instant.Duration](/documentation/swift/clock/measure(_:)-7l47m)
 - [func measure(isolation: isolated (any Actor)?, () async throws -> Void) async rethrows -> Self.Instant.Duration](/documentation/swift/clock/measure(isolation:_:))
 - [func sleep(for: Self.Instant.Duration, tolerance: Self.Instant.Duration?) async throws](/documentation/swift/clock/sleep(for:tolerance:))
 - [func sleep(until: Self.Instant, tolerance: Self.Instant.Duration?) async throws](/documentation/swift/clock/sleep(until:tolerance:))
@@ -29665,7 +29681,8 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [var now: ContinuousClock.Instant](/documentation/swift/continuousclock/now-swift.property)
 ###### Instance Methods
 
-- [func measure(() throws -> Void) rethrows -> Self.Instant.Duration](/documentation/swift/continuousclock/measure(_:))
+- [func measure(() throws -> Void) rethrows -> Self.Instant.Duration](/documentation/swift/continuousclock/measure(_:)-73b0n)
+- [func measure(nonisolated(nonsending) () async throws -> Void) async rethrows -> Self.Instant.Duration](/documentation/swift/continuousclock/measure(_:)-9npzl)
 - [func measure(isolation: isolated (any Actor)?, () async throws -> Void) async rethrows -> Self.Instant.Duration](/documentation/swift/continuousclock/measure(isolation:_:))
 - [func sleep(for: Self.Instant.Duration, tolerance: Self.Instant.Duration?) async throws](/documentation/swift/continuousclock/sleep(for:tolerance:))
 - [func sleep(until: ContinuousClock.Instant, tolerance: Duration?) async throws](/documentation/swift/continuousclock/sleep(until:tolerance:))
@@ -29758,7 +29775,8 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [var now: SuspendingClock.Instant](/documentation/swift/suspendingclock/now-swift.property)
 ###### Instance Methods
 
-- [func measure(() throws -> Void) rethrows -> Self.Instant.Duration](/documentation/swift/suspendingclock/measure(_:))
+- [func measure(nonisolated(nonsending) () async throws -> Void) async rethrows -> Self.Instant.Duration](/documentation/swift/suspendingclock/measure(_:)-1zuvn)
+- [func measure(() throws -> Void) rethrows -> Self.Instant.Duration](/documentation/swift/suspendingclock/measure(_:)-6nlcy)
 - [func measure(isolation: isolated (any Actor)?, () async throws -> Void) async rethrows -> Self.Instant.Duration](/documentation/swift/suspendingclock/measure(isolation:_:))
 - [func sleep(for: Self.Instant.Duration, tolerance: Self.Instant.Duration?) async throws](/documentation/swift/suspendingclock/sleep(for:tolerance:))
 - [func sleep(until: SuspendingClock.Instant, tolerance: Duration?) async throws](/documentation/swift/suspendingclock/sleep(until:tolerance:))
@@ -30199,6 +30217,26 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [Copyable](/documentation/swift/copyable)
 - [BitwiseCopyable](/documentation/swift/bitwisecopyable)
 - [Escapable](/documentation/swift/escapable)
+#### Borrowing
+
+- [Ref](/documentation/swift/ref)
+##### Initializers
+
+- [init(borrowing Value)](/documentation/swift/ref/init(_:))
+- [init<Owner>(unsafeAddress: UnsafePointer<Value>, borrowing: borrowing Owner)](/documentation/swift/ref/init(unsafeaddress:borrowing:))
+##### Instance Properties
+
+- [var value: Value](/documentation/swift/ref/value)
+
+- [MutableRef](/documentation/swift/mutableref)
+##### Initializers
+
+- [init(inout Value)](/documentation/swift/mutableref/init(_:))
+- [init<Owner>(unsafeAddress: UnsafeMutablePointer<Value>, mutating: inout Owner)](/documentation/swift/mutableref/init(unsafeaddress:mutating:))
+##### Instance Properties
+
+- [var value: Value](/documentation/swift/mutableref/value)
+
 #### Sets and Dictionaries
 
 - [Hashable](/documentation/swift/hashable)
@@ -33411,6 +33449,9 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [var value: Success](/documentation/swift/task/value-60t02)
 - [var value: Success](/documentation/swift/task/value-40dtq)
 - [var result: Result<Success, Failure>](/documentation/swift/task/result)
+##### Accessing the Current Task’s Name
+
+- [static var name: String?](/documentation/swift/task/name-swift.type.property)
 ##### Canceling Tasks
 
 - [CancellationError](/documentation/swift/cancellationerror)
@@ -33422,8 +33463,12 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [var isCancelled: Bool](/documentation/swift/task/iscancelled-swift.property)
 - [static var isCancelled: Bool](/documentation/swift/task/iscancelled-swift.type.property)
 - [static func checkCancellation() throws](/documentation/swift/task/checkcancellation())
-- [func withTaskCancellationHandler<T>(handler: () -> Void, operation: () async throws -> T) async rethrows -> T](/documentation/swift/withtaskcancellationhandler(handler:operation:))
+- [func withTaskCancellationHandler<Return, Failure>(operation: nonisolated(nonsending) () async throws(Failure) -> Return, onCancel: sending () -> Void) async throws(Failure) -> Return](/documentation/swift/withtaskcancellationhandler(operation:oncancel:))
 - [func withTaskCancellationHandler<T>(operation: () async throws -> T, onCancel: () -> Void, isolation: isolated (any Actor)?) async rethrows -> T](/documentation/swift/withtaskcancellationhandler(operation:oncancel:isolation:))
+##### Shielding Tasks from Cancellation
+
+- [func withTaskCancellationShield<Value, Failure>(operation: () throws(Failure) -> Value) throws(Failure) -> Value](/documentation/swift/withtaskcancellationshield(operation:)-2lzl8)
+- [func withTaskCancellationShield<Value, Failure>(operation: nonisolated(nonsending) () async throws(Failure) -> Value) async throws(Failure) -> Value](/documentation/swift/withtaskcancellationshield(operation:)-8zlgh)
 ##### Suspending Execution
 
 - [static func yield() async](/documentation/swift/task/yield())
@@ -33454,13 +33499,13 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [static func runDetached(priority: TaskPriority?, operation: () async -> Success) -> Task<Success, Never>](/documentation/swift/task/rundetached(priority:operation:)-8s8lh)
 - [static func withCancellationHandler<T>(handler: () -> Void, operation: () async throws -> T) async rethrows -> T](/documentation/swift/task/withcancellationhandler(handler:operation:))
 - [static func withGroup<TaskResult, BodyResult>(resultType: TaskResult.Type, returning: BodyResult.Type, body: (inout Task<Success, Failure>.Group<TaskResult>) async throws -> BodyResult) async rethrows -> BodyResult](/documentation/swift/task/withgroup(resulttype:returning:body:))
+- [func withTaskCancellationHandler<T>(handler: () -> Void, operation: () async throws -> T) async rethrows -> T](/documentation/swift/withtaskcancellationhandler(handler:operation:))
 ##### Instance Properties
 
 - [var name: String?](/documentation/swift/task/name-swift.property)
 ##### Type Properties
 
 - [static var hasActiveCancellationShield: Bool](/documentation/swift/task/hasactivecancellationshield)
-- [static var name: String?](/documentation/swift/task/name-swift.type.property)
 ##### Default Implementations
 
 - [Equatable Implementations](/documentation/swift/task/equatable-implementations)
@@ -33496,7 +33541,7 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [func next() async -> ChildTaskResult?](/documentation/swift/taskgroup/next())
 - [func next(isolation: isolated (any Actor)?) async -> ChildTaskResult?](/documentation/swift/taskgroup/next(isolation:))
 - [var isEmpty: Bool](/documentation/swift/taskgroup/isempty)
-- [func waitForAll(isolation: isolated (any Actor)?) async](/documentation/swift/taskgroup/waitforall(isolation:))
+- [func waitForAll() async](/documentation/swift/taskgroup/waitforall())
 ##### Accessing an Asynchronous Sequence of Results
 
 - [func makeAsyncIterator() -> TaskGroup<ChildTaskResult>.Iterator](/documentation/swift/taskgroup/makeasynciterator())
@@ -33553,6 +33598,7 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [func asyncUnlessCancelled(priority: TaskPriority?, operation: () async -> ChildTaskResult) -> Bool](/documentation/swift/taskgroup/asyncunlesscancelled(priority:operation:))
 - [func spawn(priority: TaskPriority?, operation: () async -> ChildTaskResult)](/documentation/swift/taskgroup/spawn(priority:operation:))
 - [func spawnUnlessCancelled(priority: TaskPriority?, operation: () async -> ChildTaskResult) -> Bool](/documentation/swift/taskgroup/spawnunlesscancelled(priority:operation:))
+- [func waitForAll(isolation: isolated (any Actor)?) async](/documentation/swift/taskgroup/waitforall(isolation:))
 ##### Default Implementations
 
 - [AsyncSequence Implementations](/documentation/swift/taskgroup/asyncsequence-implementations)
@@ -33605,10 +33651,10 @@ timestamp: 2026-06-26T06:39:35.781Z
 ##### Accessing Individual Results
 
 - [func next() async throws -> ChildTaskResult?](/documentation/swift/throwingtaskgroup/next())
-- [func nextResult(isolation: isolated (any Actor)?) async -> Result<ChildTaskResult, Failure>?](/documentation/swift/throwingtaskgroup/nextresult(isolation:))
+- [func nextResult() async -> Result<ChildTaskResult, Failure>?](/documentation/swift/throwingtaskgroup/nextresult())
 - [func next(isolation: isolated (any Actor)?) async throws -> ChildTaskResult?](/documentation/swift/throwingtaskgroup/next(isolation:))
 - [var isEmpty: Bool](/documentation/swift/throwingtaskgroup/isempty)
-- [func waitForAll(isolation: isolated (any Actor)?) async throws](/documentation/swift/throwingtaskgroup/waitforall(isolation:))
+- [func waitForAll() async throws](/documentation/swift/throwingtaskgroup/waitforall())
 ##### Accessing an Asynchronous Sequence of Results
 
 - [func makeAsyncIterator() -> ThrowingTaskGroup<ChildTaskResult, Failure>.Iterator](/documentation/swift/throwingtaskgroup/makeasynciterator())
@@ -33662,8 +33708,10 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [func add(priority: TaskPriority?, operation: () async throws -> ChildTaskResult) async -> Bool](/documentation/swift/throwingtaskgroup/add(priority:operation:))
 - [func async(priority: TaskPriority?, operation: () async throws -> ChildTaskResult)](/documentation/swift/throwingtaskgroup/async(priority:operation:))
 - [func asyncUnlessCancelled(priority: TaskPriority?, operation: () async throws -> ChildTaskResult) -> Bool](/documentation/swift/throwingtaskgroup/asyncunlesscancelled(priority:operation:))
+- [func nextResult(isolation: isolated (any Actor)?) async -> Result<ChildTaskResult, Failure>?](/documentation/swift/throwingtaskgroup/nextresult(isolation:))
 - [func spawn(priority: TaskPriority?, operation: () async throws -> ChildTaskResult)](/documentation/swift/throwingtaskgroup/spawn(priority:operation:))
 - [func spawnUnlessCancelled(priority: TaskPriority?, operation: () async throws -> ChildTaskResult) -> Bool](/documentation/swift/throwingtaskgroup/spawnunlesscancelled(priority:operation:))
+- [func waitForAll(isolation: isolated (any Actor)?) async throws](/documentation/swift/throwingtaskgroup/waitforall(isolation:))
 ##### Default Implementations
 
 - [AsyncSequence Implementations](/documentation/swift/throwingtaskgroup/asyncsequence-implementations)
@@ -33807,7 +33855,7 @@ timestamp: 2026-06-26T06:39:35.781Z
 ##### Getting an Unsafe Reference to the Current Task
 
 - [func withUnsafeCurrentTask<T>(body: (UnsafeCurrentTask?) throws -> T) rethrows -> T](/documentation/swift/withunsafecurrenttask(body:)-6gvhl)
-- [func withUnsafeCurrentTask<T>(body: (UnsafeCurrentTask?) async throws -> T) async rethrows -> T](/documentation/swift/withunsafecurrenttask(body:)-2cbzn)
+- [func withUnsafeCurrentTask<T>(body: nonisolated(nonsending) (UnsafeCurrentTask?) async throws -> T) async rethrows -> T](/documentation/swift/withunsafecurrenttask(body:)-udlb)
 ##### Instance Properties
 
 - [var basePriority: TaskPriority](/documentation/swift/unsafecurrenttask/basepriority)
@@ -35050,6 +35098,17 @@ timestamp: 2026-06-26T06:39:35.781Z
 
 #### Continuations
 
+- [Continuation](/documentation/swift/continuation)
+##### Instance Methods
+
+- [func resume()](/documentation/swift/continuation/resume())
+- [func resume(returning: consuming sending Success)](/documentation/swift/continuation/resume(returning:)-5fa8w)
+- [func resume(returning: consuming sending Success)](/documentation/swift/continuation/resume(returning:)-8uw9b)
+- [func resume(throwing: Failure)](/documentation/swift/continuation/resume(throwing:))
+- [func resume(with: consuming sending Result<Success, Failure>)](/documentation/swift/continuation/resume(with:))
+
+- [func withContinuation<Success>(of: Success.Type, (consuming Continuation<Success, Never>) -> Void) async -> sending Success](/documentation/swift/withcontinuation(of:_:))
+- [func withContinuation<Success, Failure>(of: Success.Type, throwing: Failure.Type, (consuming Continuation<Success, Failure>) -> Void) async throws(Failure) -> sending Success](/documentation/swift/withcontinuation(of:throwing:_:))
 - [CheckedContinuation](/documentation/swift/checkedcontinuation)
 ##### Initializers
 
@@ -35063,8 +35122,9 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [func resume(with: sending Result<T, E>)](/documentation/swift/checkedcontinuation/resume(with:)-3gh60)
 - [func resume<Er>(with: sending Result<T, Er>)](/documentation/swift/checkedcontinuation/resume(with:)-5n1a5)
 
-- [func withCheckedContinuation<T>(isolation: isolated (any Actor)?, function: String, (CheckedContinuation<T, Never>) -> Void) async -> sending T](/documentation/swift/withcheckedcontinuation(isolation:function:_:))
-- [func withCheckedThrowingContinuation<T>(isolation: isolated (any Actor)?, function: String, (CheckedContinuation<T, any Error>) -> Void) async throws -> sending T](/documentation/swift/withcheckedthrowingcontinuation(isolation:function:_:))
+- [func withCheckedContinuation<T>(function: String, (CheckedContinuation<T, Never>) -> Void) async -> sending T](/documentation/swift/withcheckedcontinuation(function:_:))
+- [func withCheckedThrowingContinuation<T>(function: String, (CheckedContinuation<T, any Error>) -> Void) async throws -> sending T](/documentation/swift/withcheckedthrowingcontinuation(function:_:)-13yf6)
+- [func withCheckedThrowingContinuation<T, E>(function: String, (CheckedContinuation<T, E>) -> Void) async throws(E) -> sending T](/documentation/swift/withcheckedthrowingcontinuation(function:_:)-2k46m)
 - [UnsafeContinuation](/documentation/swift/unsafecontinuation)
 ##### Initializers
 
@@ -35078,9 +35138,7 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [func resume(with: sending Result<T, E>)](/documentation/swift/unsafecontinuation/resume(with:)-4t59h)
 - [func resume<Er>(with: sending Result<T, Er>)](/documentation/swift/unsafecontinuation/resume(with:)-7t959)
 
-- [func withUnsafeContinuation<T>(isolation: isolated (any Actor)?, (UnsafeContinuation<T, Never>) -> Void) async -> sending T](/documentation/swift/withunsafecontinuation(isolation:_:))
-- [UnsafeThrowingContinuation](/documentation/swift/unsafethrowingcontinuation)
-- [func withUnsafeThrowingContinuation<T>(isolation: isolated (any Actor)?, (UnsafeContinuation<T, any Error>) -> Void) async throws -> sending T](/documentation/swift/withunsafethrowingcontinuation(isolation:_:))
+- [func withUnsafeContinuation<T>((UnsafeContinuation<T, Never>) -> Void) async -> sending T](/documentation/swift/withunsafecontinuation(_:))
 #### Actors
 
 - [Sendable](/documentation/swift/sendable)
@@ -35096,7 +35154,6 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [func withSerialExecutor<T, E>(nonisolated(nonsending) (any SerialExecutor) async throws(E) -> T) async throws(E) -> T](/documentation/swift/actor/withserialexecutor(_:)-4ff11)
 - [func withSerialExecutor<T, E>((any SerialExecutor) throws(E) -> T) throws(E) -> T](/documentation/swift/actor/withserialexecutor(_:)-4ucv5)
 
-- [AnyActor](/documentation/swift/anyactor)
 - [MainActor](/documentation/swift/mainactor)
 ##### Instance Properties
 
@@ -35150,11 +35207,7 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [static func preconditionIsolated(@autoclosure () -> String, file: StaticString, line: UInt)](/documentation/swift/globalactor/preconditionisolated(_:file:line:))
 
 - [SendableMetatype](/documentation/swift/sendablemetatype)
-- [ConcurrentValue](/documentation/swift/concurrentvalue)
-- [UnsafeSendable](/documentation/swift/unsafesendable)
-- [UnsafeConcurrentValue](/documentation/swift/unsafeconcurrentvalue)
 - [macro isolation<T>() -> T](/documentation/swift/isolation())
-- [func extractIsolation<each Arg, Result>((repeat each Arg) async throws -> Result) -> (any Actor)?](/documentation/swift/extractisolation(_:))
 #### Task-Local Storage
 
 - [TaskLocal](/documentation/swift/tasklocal)
@@ -35169,7 +35222,8 @@ timestamp: 2026-06-26T06:39:35.781Z
 ##### Instance Methods
 
 - [func get() -> Value](/documentation/swift/tasklocal/get())
-- [func withValue<R>(Value, operation: () throws -> R, file: String, line: UInt) rethrows -> R](/documentation/swift/tasklocal/withvalue(_:operation:file:line:))
+- [func withValue<R>(Value, operation: nonisolated(nonsending) () async throws -> R, file: String, line: UInt) async rethrows -> R](/documentation/swift/tasklocal/withvalue(_:operation:file:line:)-5oj8d)
+- [func withValue<R>(Value, operation: () throws -> R, file: String, line: UInt) rethrows -> R](/documentation/swift/tasklocal/withvalue(_:operation:file:line:)-79atg)
 - [func withValue<R>(Value, operation: () async throws -> R, isolation: isolated (any Actor)?, file: String, line: UInt) async rethrows -> R](/documentation/swift/tasklocal/withvalue(_:operation:isolation:file:line:))
 
 - [macro TaskLocal()](/documentation/swift/tasklocal())
@@ -35260,7 +35314,6 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [func enqueue(consuming Job)](/documentation/swift/taskexecutor/enqueue(_:)-6vkr9)
 - [func enqueue(UnownedJob)](/documentation/swift/taskexecutor/enqueue(_:)-91eir)
 
-- [PartialAsyncTask](/documentation/swift/partialasynctask)
 - [UnownedJob](/documentation/swift/unownedjob)
 ##### Initializers
 
@@ -35362,6 +35415,12 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [func withTaskExecutorPreference<T, Failure>((any TaskExecutor)?, isolation: isolated (any Actor)?, operation: () async throws(Failure) -> T) async throws(Failure) -> T](/documentation/swift/withtaskexecutorpreference(_:isolation:operation:))
 #### Deprecated
 
+- [func extractIsolation<each Arg, Result>((repeat each Arg) async throws -> Result) -> (any Actor)?](/documentation/swift/extractisolation(_:))
+- [func withCheckedContinuation<T>(isolation: isolated (any Actor)?, function: String, (CheckedContinuation<T, Never>) -> Void) async -> sending T](/documentation/swift/withcheckedcontinuation(isolation:function:_:))
+- [func withCheckedThrowingContinuation<T>(isolation: isolated (any Actor)?, function: String, (CheckedContinuation<T, any Error>) -> Void) async throws -> sending T](/documentation/swift/withcheckedthrowingcontinuation(isolation:function:_:))
+- [func withUnsafeContinuation<T>(isolation: isolated (any Actor)?, (UnsafeContinuation<T, Never>) -> Void) async -> sending T](/documentation/swift/withunsafecontinuation(isolation:_:))
+- [AnyActor](/documentation/swift/anyactor)
+- [ConcurrentValue](/documentation/swift/concurrentvalue)
 - [Job](/documentation/swift/job)
 ##### Initializers
 
@@ -35375,6 +35434,13 @@ timestamp: 2026-06-26T06:39:35.781Z
 
 - [func runSynchronously(on: UnownedSerialExecutor)](/documentation/swift/job/runsynchronously(on:))
 
+- [PartialAsyncTask](/documentation/swift/partialasynctask)
+- [UnsafeConcurrentValue](/documentation/swift/unsafeconcurrentvalue)
+- [UnsafeSendable](/documentation/swift/unsafesendable)
+- [UnsafeThrowingContinuation](/documentation/swift/unsafethrowingcontinuation)
+- [func withUnsafeThrowingContinuation<T, E>((UnsafeContinuation<T, E>) -> Void) async throws(E) -> sending T](/documentation/swift/withunsafethrowingcontinuation(_:)-32nwt)
+- [func withUnsafeThrowingContinuation<T>((UnsafeContinuation<T, any Error>) -> Void) async throws -> sending T](/documentation/swift/withunsafethrowingcontinuation(_:)-7zhvy)
+- [func withUnsafeThrowingContinuation<T>(isolation: isolated (any Actor)?, (UnsafeContinuation<T, any Error>) -> Void) async throws -> sending T](/documentation/swift/withunsafethrowingcontinuation(isolation:_:))
 
 - [Key-Path Expressions](/documentation/swift/key-path-expressions)
 #### Key Paths
@@ -35446,7 +35512,6 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [func indices(of: borrowing Span<Element>) -> Range<Span<Element>.Index>?](/documentation/swift/span/indices(of:))
 - [func isIdentical(to: Span<Element>) -> Bool](/documentation/swift/span/isidentical(to:))
 - [func isTriviallyIdentical(to: Span<Element>) -> Bool](/documentation/swift/span/istriviallyidentical(to:))
-- [func withBytes<R, E>((RawSpan) throws(E) -> R) throws(E) -> R](/documentation/swift/span/withbytes(_:))
 - [func withUnsafeBufferPointer<E, Result>((UnsafeBufferPointer<Element>) throws(E) -> Result) throws(E) -> Result](/documentation/swift/span/withunsafebufferpointer(_:))
 - [func withUnsafeBytes<E, Result>((UnsafeRawBufferPointer) throws(E) -> Result) throws(E) -> Result](/documentation/swift/span/withunsafebytes(_:))
 ##### Subscripts
@@ -35460,16 +35525,39 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [Span.Index](/documentation/swift/span/index)
 ##### Default Implementations
 
-- [BorrowingSequence Implementations](/documentation/swift/span/borrowingsequence-implementations)
+- [Iterable Implementations](/documentation/swift/span/iterable-implementations)
+###### Structures
+
+- [Span.BorrowingIterator](/documentation/swift/span/borrowingiterator)
+###### Initializers
+
+- [init(Span<Element>)](/documentation/swift/span/borrowingiterator/init(_:))
+###### Instance Methods
+
+- [func nextSpan(maxCount: Int) -> Span<Element>](/documentation/swift/span/borrowingiterator/nextspan(maxcount:))
+- [func skip(by: Int) -> Int](/documentation/swift/span/borrowingiterator/skip(by:))
+###### Type Aliases
+
+- [Span.BorrowingIterator.Failure](/documentation/swift/span/borrowingiterator/failure)
+###### Default Implementations
+
+- [BorrowingIteratorProtocol Implementations](/documentation/swift/span/borrowingiterator/borrowingiteratorprotocol-implementations)
+###### Instance Methods
+
+- [func nextSpan() throws(Self.Failure) -> Span<Self.Element>](/documentation/swift/span/borrowingiterator/nextspan())
+- [func skip(by: Int) throws(Self.Failure) -> Int](/documentation/swift/span/borrowingiterator/skip(by:)-7429v)
+
+
 ###### Instance Properties
 
 - [var underestimatedCount: Int](/documentation/swift/span/underestimatedcount)
+- [var underestimatedCount: Int](/documentation/swift/span/underestimatedcount-8hm9l)
 ###### Instance Methods
 
-- [func makeBorrowingIterator() -> SpanIterator<Element>](/documentation/swift/span/makeborrowingiterator())
+- [func makeBorrowingIterator() -> Span<Element>.BorrowingIterator](/documentation/swift/span/makeborrowingiterator())
 ###### Type Aliases
 
-- [Span.BorrowingIterator](/documentation/swift/span/borrowingiterator)
+- [Span.Failure](/documentation/swift/span/failure)
 
 
 - [RawSpan](/documentation/swift/rawspan)
@@ -35503,7 +35591,6 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [func unsafeLoad<T>(fromUncheckedByteOffset: Int, as: T.Type) -> T](/documentation/swift/rawspan/unsafeload(fromuncheckedbyteoffset:as:))
 - [func unsafeLoadUnaligned<T>(fromByteOffset: Int, as: T.Type) -> T](/documentation/swift/rawspan/unsafeloadunaligned(frombyteoffset:as:))
 - [func unsafeLoadUnaligned<T>(fromUncheckedByteOffset: Int, as: T.Type) -> T](/documentation/swift/rawspan/unsafeloadunaligned(fromuncheckedbyteoffset:as:))
-- [func withBytes<R, E>((RawSpan) throws(E) -> R) throws(E) -> R](/documentation/swift/rawspan/withbytes(_:))
 - [func withUnsafeBytes<E, Result>((UnsafeRawBufferPointer) throws(E) -> Result) throws(E) -> Result](/documentation/swift/rawspan/withunsafebytes(_:))
 ##### Subscripts
 
@@ -35511,17 +35598,19 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [subscript(unchecked _: Int) -> UInt8](/documentation/swift/rawspan/subscript(unchecked:))
 ##### Default Implementations
 
-- [BorrowingSequence Implementations](/documentation/swift/rawspan/borrowingsequence-implementations)
+- [Iterable Implementations](/documentation/swift/rawspan/iterable-implementations)
 ###### Instance Properties
 
 - [var underestimatedCount: Int](/documentation/swift/rawspan/underestimatedcount)
+- [var underestimatedCount: Int](/documentation/swift/rawspan/underestimatedcount-41yxr)
 ###### Instance Methods
 
-- [func makeBorrowingIterator() -> SpanIterator<UInt8>](/documentation/swift/rawspan/makeborrowingiterator())
+- [func makeBorrowingIterator() -> Span<UInt8>.BorrowingIterator](/documentation/swift/rawspan/makeborrowingiterator())
 ###### Type Aliases
 
 - [RawSpan.BorrowingIterator](/documentation/swift/rawspan/borrowingiterator)
 - [RawSpan.Element](/documentation/swift/rawspan/element)
+- [RawSpan.Failure](/documentation/swift/rawspan/failure)
 
 
 - [OutputSpan](/documentation/swift/outputspan)
@@ -35551,7 +35640,6 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [func removeLast(Int)](/documentation/swift/outputspan/removelast(_:))
 - [func swapAt(OutputSpan<Element>.Index, OutputSpan<Element>.Index)](/documentation/swift/outputspan/swapat(_:_:))
 - [func swapAt(unchecked: OutputSpan<Element>.Index, unchecked: OutputSpan<Element>.Index)](/documentation/swift/outputspan/swapat(unchecked:unchecked:))
-- [func withBytes<R, E>((RawSpan) throws(E) -> R) throws(E) -> R](/documentation/swift/outputspan/withbytes(_:))
 - [func withUnsafeMutableBufferPointer<E, R>((UnsafeMutableBufferPointer<Element>, inout Int) throws(E) -> R) throws(E) -> R](/documentation/swift/outputspan/withunsafemutablebufferpointer(_:))
 ##### Subscripts
 
@@ -35560,6 +35648,21 @@ timestamp: 2026-06-26T06:39:35.781Z
 ##### Type Aliases
 
 - [OutputSpan.Index](/documentation/swift/outputspan/index)
+##### Default Implementations
+
+- [Iterable Implementations](/documentation/swift/outputspan/iterable-implementations)
+###### Instance Properties
+
+- [var underestimatedCount: Int](/documentation/swift/outputspan/underestimatedcount)
+- [var underestimatedCount: Int](/documentation/swift/outputspan/underestimatedcount-2kbxv)
+###### Instance Methods
+
+- [func makeBorrowingIterator() -> Span<Element>.BorrowingIterator](/documentation/swift/outputspan/makeborrowingiterator())
+###### Type Aliases
+
+- [OutputSpan.BorrowingIterator](/documentation/swift/outputspan/borrowingiterator)
+- [OutputSpan.Failure](/documentation/swift/outputspan/failure)
+
 
 - [OutputRawSpan](/documentation/swift/outputrawspan)
 ##### Initializers
@@ -35591,12 +35694,27 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [func removeAll()](/documentation/swift/outputrawspan/removeall())
 - [func removeLast() -> UInt8](/documentation/swift/outputrawspan/removelast())
 - [func removeLast(Int)](/documentation/swift/outputrawspan/removelast(_:))
-- [func withBytes<R, E>((RawSpan) throws(E) -> R) throws(E) -> R](/documentation/swift/outputrawspan/withbytes(_:))
 - [func withUnsafeMutableBytes<E, R>((UnsafeMutableRawBufferPointer, inout Int) throws(E) -> R) throws(E) -> R](/documentation/swift/outputrawspan/withunsafemutablebytes(_:))
 ##### Subscripts
 
 - [subscript(Int) -> UInt8](/documentation/swift/outputrawspan/subscript(_:))
 - [subscript(unchecked _: Int) -> UInt8](/documentation/swift/outputrawspan/subscript(unchecked:))
+##### Default Implementations
+
+- [Iterable Implementations](/documentation/swift/outputrawspan/iterable-implementations)
+###### Instance Properties
+
+- [var underestimatedCount: Int](/documentation/swift/outputrawspan/underestimatedcount)
+- [var underestimatedCount: Int](/documentation/swift/outputrawspan/underestimatedcount-5303s)
+###### Instance Methods
+
+- [func makeBorrowingIterator() -> Span<UInt8>.BorrowingIterator](/documentation/swift/outputrawspan/makeborrowingiterator())
+###### Type Aliases
+
+- [OutputRawSpan.BorrowingIterator](/documentation/swift/outputrawspan/borrowingiterator)
+- [OutputRawSpan.Element](/documentation/swift/outputrawspan/element)
+- [OutputRawSpan.Failure](/documentation/swift/outputrawspan/failure)
+
 
 - [UTF8Span](/documentation/swift/utf8span)
 ##### Structures
@@ -35668,7 +35786,6 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [func makeCharacterIterator() -> UTF8Span.CharacterIterator](/documentation/swift/utf8span/makecharacteriterator())
 - [func makeUnicodeScalarIterator() -> UTF8Span.UnicodeScalarIterator](/documentation/swift/utf8span/makeunicodescalariterator())
 - [func unicodeScalarsEqual(to: some Sequence<Unicode.Scalar>) -> Bool](/documentation/swift/utf8span/unicodescalarsequal(to:))
-- [func withBytes<R, E>((RawSpan) throws(E) -> R) throws(E) -> R](/documentation/swift/utf8span/withbytes(_:))
 
 - [MutableSpan](/documentation/swift/mutablespan)
 ##### Initializers
@@ -35700,7 +35817,6 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [func swapAt(MutableSpan<Element>.Index, MutableSpan<Element>.Index)](/documentation/swift/mutablespan/swapat(_:_:))
 - [func swapAt(unchecked: MutableSpan<Element>.Index, unchecked: MutableSpan<Element>.Index)](/documentation/swift/mutablespan/swapat(unchecked:unchecked:))
 - [func update(repeating: consuming Element)](/documentation/swift/mutablespan/update(repeating:))
-- [func withBytes<R, E>((RawSpan) throws(E) -> R) throws(E) -> R](/documentation/swift/mutablespan/withbytes(_:))
 - [func withUnsafeBufferPointer<E, Result>((UnsafeBufferPointer<Element>) throws(E) -> Result) throws(E) -> Result](/documentation/swift/mutablespan/withunsafebufferpointer(_:))
 - [func withUnsafeBytes<E, Result>((UnsafeRawBufferPointer) throws(E) -> Result) throws(E) -> Result](/documentation/swift/mutablespan/withunsafebytes(_:))
 - [func withUnsafeMutableBufferPointer<E, Result>((UnsafeMutableBufferPointer<Element>) throws(E) -> Result) throws(E) -> Result](/documentation/swift/mutablespan/withunsafemutablebufferpointer(_:))
@@ -35714,16 +35830,18 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [MutableSpan.Index](/documentation/swift/mutablespan/index)
 ##### Default Implementations
 
-- [BorrowingSequence Implementations](/documentation/swift/mutablespan/borrowingsequence-implementations)
+- [Iterable Implementations](/documentation/swift/mutablespan/iterable-implementations)
 ###### Instance Properties
 
 - [var underestimatedCount: Int](/documentation/swift/mutablespan/underestimatedcount)
+- [var underestimatedCount: Int](/documentation/swift/mutablespan/underestimatedcount-5p19x)
 ###### Instance Methods
 
-- [func makeBorrowingIterator() -> SpanIterator<Element>](/documentation/swift/mutablespan/makeborrowingiterator())
+- [func makeBorrowingIterator() -> Span<Element>.BorrowingIterator](/documentation/swift/mutablespan/makeborrowingiterator())
 ###### Type Aliases
 
 - [MutableSpan.BorrowingIterator](/documentation/swift/mutablespan/borrowingiterator)
+- [MutableSpan.Failure](/documentation/swift/mutablespan/failure)
 
 
 - [MutableRawSpan](/documentation/swift/mutablerawspan)
@@ -35763,7 +35881,6 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [func unsafeLoad<T>(fromUncheckedByteOffset: Int, as: T.Type) -> T](/documentation/swift/mutablerawspan/unsafeload(fromuncheckedbyteoffset:as:))
 - [func unsafeLoadUnaligned<T>(fromByteOffset: Int, as: T.Type) -> T](/documentation/swift/mutablerawspan/unsafeloadunaligned(frombyteoffset:as:))
 - [func unsafeLoadUnaligned<T>(fromUncheckedByteOffset: Int, as: T.Type) -> T](/documentation/swift/mutablerawspan/unsafeloadunaligned(fromuncheckedbyteoffset:as:))
-- [func withBytes<R, E>((RawSpan) throws(E) -> R) throws(E) -> R](/documentation/swift/mutablerawspan/withbytes(_:))
 - [func withUnsafeBytes<E, Result>((UnsafeRawBufferPointer) throws(E) -> Result) throws(E) -> Result](/documentation/swift/mutablerawspan/withunsafebytes(_:))
 - [func withUnsafeMutableBytes<E, Result>((UnsafeMutableRawBufferPointer) throws(E) -> Result) throws(E) -> Result](/documentation/swift/mutablerawspan/withunsafemutablebytes(_:))
 ##### Subscripts
@@ -35772,19 +35889,52 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [subscript(unchecked _: Int) -> UInt8](/documentation/swift/mutablerawspan/subscript(unchecked:))
 ##### Default Implementations
 
-- [BorrowingSequence Implementations](/documentation/swift/mutablerawspan/borrowingsequence-implementations)
+- [Iterable Implementations](/documentation/swift/mutablerawspan/iterable-implementations)
 ###### Instance Properties
 
 - [var underestimatedCount: Int](/documentation/swift/mutablerawspan/underestimatedcount)
+- [var underestimatedCount: Int](/documentation/swift/mutablerawspan/underestimatedcount-31d2p)
 ###### Instance Methods
 
-- [func makeBorrowingIterator() -> SpanIterator<UInt8>](/documentation/swift/mutablerawspan/makeborrowingiterator())
+- [func makeBorrowingIterator() -> Span<UInt8>.BorrowingIterator](/documentation/swift/mutablerawspan/makeborrowingiterator())
 ###### Type Aliases
 
 - [MutableRawSpan.BorrowingIterator](/documentation/swift/mutablerawspan/borrowingiterator)
 - [MutableRawSpan.Element](/documentation/swift/mutablerawspan/element)
+- [MutableRawSpan.Failure](/documentation/swift/mutablerawspan/failure)
 
 
+#### Safe Access to Raw Bytes
+
+- [FullyInhabited](/documentation/swift/fullyinhabited)
+- [ConvertibleFromBytes](/documentation/swift/convertiblefrombytes)
+- [ConvertibleToBytes](/documentation/swift/convertibletobytes)
+- [ByteOrder](/documentation/swift/byteorder)
+##### Operators
+
+- [static func == (ByteOrder, ByteOrder) -> Bool](/documentation/swift/byteorder/==(_:_:))
+##### Enumeration Cases
+
+- [case bigEndian](/documentation/swift/byteorder/bigendian)
+- [case littleEndian](/documentation/swift/byteorder/littleendian)
+##### Instance Properties
+
+- [var hashValue: Int](/documentation/swift/byteorder/hashvalue)
+##### Instance Methods
+
+- [func hash(into: inout Hasher)](/documentation/swift/byteorder/hash(into:))
+##### Type Properties
+
+- [static var native: ByteOrder](/documentation/swift/byteorder/native)
+##### Default Implementations
+
+- [Equatable Implementations](/documentation/swift/byteorder/equatable-implementations)
+###### Operators
+
+- [static func != (borrowing Self, borrowing Self) -> Bool](/documentation/swift/byteorder/!=(_:_:))
+
+
+- [func bitCast<T, U>(T, to: U.Type) -> U](/documentation/swift/bitcast(_:to:))
 #### Typed Pointers
 
 - [UnsafePointer](/documentation/swift/unsafepointer)
@@ -36004,7 +36154,6 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [func extracting(UnboundedRange) -> UnsafeBufferPointer<Element>](/documentation/swift/unsafebufferpointer/extracting(_:)-4bn8q)
 - [func extracting(Range<Int>) -> UnsafeBufferPointer<Element>](/documentation/swift/unsafebufferpointer/extracting(_:)-nivx)
 - [func isTriviallyIdentical(to: UnsafeBufferPointer<Element>) -> Bool](/documentation/swift/unsafebufferpointer/istriviallyidentical(to:))
-- [func withBytes<R, E>((RawSpan) throws(E) -> R) throws(E) -> R](/documentation/swift/unsafebufferpointer/withbytes(_:))
 - [func withMemoryRebound<T, E, Result>(to: T.Type, (UnsafeBufferPointer<T>) throws(E) -> Result) throws(E) -> Result](/documentation/swift/unsafebufferpointer/withmemoryrebound(to:_:))
 ##### Subscripts
 
@@ -36195,7 +36344,6 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [func update<S>(from: S) -> (unwritten: S.Iterator, index: UnsafeMutableBufferPointer<Element>.Index)](/documentation/swift/unsafemutablebufferpointer/update(from:))
 - [func update(fromContentsOf: some Collection<Element>) -> UnsafeMutableBufferPointer<Element>.Index](/documentation/swift/unsafemutablebufferpointer/update(fromcontentsof:))
 - [func update(repeating: Element)](/documentation/swift/unsafemutablebufferpointer/update(repeating:))
-- [func withBytes<R, E>((RawSpan) throws(E) -> R) throws(E) -> R](/documentation/swift/unsafemutablebufferpointer/withbytes(_:))
 - [func withMemoryRebound<T, E, Result>(to: T.Type, (UnsafeMutableBufferPointer<T>) throws(E) -> Result) throws(E) -> Result](/documentation/swift/unsafemutablebufferpointer/withmemoryrebound(to:_:))
 ##### Subscripts
 
@@ -36592,7 +36740,6 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [func load<T>(fromByteOffset: Int, as: T.Type) -> T](/documentation/swift/unsaferawbufferpointer/load(frombyteoffset:as:))
 - [func loadUnaligned<T>(fromByteOffset: Int, as: T.Type) -> T](/documentation/swift/unsaferawbufferpointer/loadunaligned(frombyteoffset:as:)-4ll4e)
 - [func loadUnaligned<T>(fromByteOffset: Int, as: T.Type) -> T](/documentation/swift/unsaferawbufferpointer/loadunaligned(frombyteoffset:as:)-95fln)
-- [func withBytes<R, E>((RawSpan) throws(E) -> R) throws(E) -> R](/documentation/swift/unsaferawbufferpointer/withbytes(_:))
 - [func withMemoryRebound<T, E, Result>(to: T.Type, (UnsafeBufferPointer<T>) throws(E) -> Result) throws(E) -> Result](/documentation/swift/unsaferawbufferpointer/withmemoryrebound(to:_:))
 ##### Default Implementations
 
@@ -36819,7 +36966,6 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [func moveInitializeMemory<T>(as: T.Type, fromContentsOf: UnsafeMutableBufferPointer<T>) -> UnsafeMutableBufferPointer<T>](/documentation/swift/unsafemutablerawbufferpointer/moveinitializememory(as:fromcontentsof:)-3gs5r)
 - [func moveInitializeMemory<T>(as: T.Type, fromContentsOf: Slice<UnsafeMutableBufferPointer<T>>) -> UnsafeMutableBufferPointer<T>](/documentation/swift/unsafemutablerawbufferpointer/moveinitializememory(as:fromcontentsof:)-8gjm9)
 - [func storeBytes<T>(of: T, toByteOffset: Int, as: T.Type)](/documentation/swift/unsafemutablerawbufferpointer/storebytes(of:tobyteoffset:as:))
-- [func withBytes<R, E>((RawSpan) throws(E) -> R) throws(E) -> R](/documentation/swift/unsafemutablerawbufferpointer/withbytes(_:))
 - [func withMemoryRebound<T, E, Result>(to: T.Type, (UnsafeMutableBufferPointer<T>) throws(E) -> Result) throws(E) -> Result](/documentation/swift/unsafemutablerawbufferpointer/withmemoryrebound(to:_:))
 ##### Type Methods
 
@@ -36982,8 +37128,10 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [func withUnsafePointer<T, E, Result>(to: inout T, (UnsafePointer<T>) throws(E) -> Result) throws(E) -> Result](/documentation/swift/withunsafepointer(to:_:)-9fjn6)
 - [func withUnsafePointer<T, E, Result>(to: borrowing T, (UnsafePointer<T>) throws(E) -> Result) throws(E) -> Result](/documentation/swift/withunsafepointer(to:_:)-35wrn)
 - [func withUnsafeMutablePointer<T, E, Result>(to: inout T, (UnsafeMutablePointer<T>) throws(E) -> Result) throws(E) -> Result](/documentation/swift/withunsafemutablepointer(to:_:))
-- [func withUnsafeBytes<T, E, Result>(of: borrowing T, (UnsafeRawBufferPointer) throws(E) -> Result) throws(E) -> Result](/documentation/swift/withunsafebytes(of:_:)-5gesg)
+- [func withUnsafeBytes<T, E, Result>(of: inout T, (UnsafeRawBufferPointer) throws(E) -> Result) throws(E) -> Result](/documentation/swift/withunsafebytes(of:_:)-3ywhh)
 - [func withUnsafeMutableBytes<T, E, Result>(of: inout T, (UnsafeMutableRawBufferPointer) throws(E) -> Result) throws(E) -> Result](/documentation/swift/withunsafemutablebytes(of:_:))
+- [func withTemporaryAllocation<R, E>(byteCount: Int, alignment: Int, (inout OutputRawSpan) throws(E) -> R) throws(E) -> R](/documentation/swift/withtemporaryallocation(bytecount:alignment:_:))
+- [func withTemporaryAllocation<T, R, E>(of: T.Type, capacity: Int, (inout OutputSpan<T>) throws(E) -> R) throws(E) -> R](/documentation/swift/withtemporaryallocation(of:capacity:_:))
 - [func withUnsafeTemporaryAllocation<T, R, E>(of: T.Type, capacity: Int, (UnsafeMutableBufferPointer<T>) throws(E) -> R) throws(E) -> R](/documentation/swift/withunsafetemporaryallocation(of:capacity:_:))
 - [func withUnsafeTemporaryAllocation<R, E>(byteCount: Int, alignment: Int, (UnsafeMutableRawBufferPointer) throws(E) -> R) throws(E) -> R](/documentation/swift/withunsafetemporaryallocation(bytecount:alignment:_:))
 - [func swap<T>(inout T, inout T)](/documentation/swift/swap(_:_:))
@@ -37004,6 +37152,127 @@ timestamp: 2026-06-26T06:39:35.781Z
 ##### Querying Type Properties
 
 - [static func offset(of: PartialKeyPath<T>) -> Int?](/documentation/swift/memorylayout/offset(of:))
+
+#### Heap Storage
+
+- [UniqueArray](/documentation/swift/uniquearray)
+##### Initializers
+
+- [init()](/documentation/swift/uniquearray/init())
+- [init(capacity: Int)](/documentation/swift/uniquearray/init(capacity:))
+- [init(capacity: Int?, copying: some Sequence<Element>)](/documentation/swift/uniquearray/init(capacity:copying:)-5tkhn)
+- [init(capacity: Int?, copying: Span<Element>)](/documentation/swift/uniquearray/init(capacity:copying:)-991h4)
+- [init<E>(capacity: Int, initializingWith: (inout OutputSpan<Element>) throws(E) -> Void) throws(E)](/documentation/swift/uniquearray/init(capacity:initializingwith:))
+- [init(minimumCapacity: Int)](/documentation/swift/uniquearray/init(minimumcapacity:))
+- [init(repeating: Element, count: Int)](/documentation/swift/uniquearray/init(repeating:count:))
+##### Instance Properties
+
+- [var capacity: Int](/documentation/swift/uniquearray/capacity)
+- [var count: Int](/documentation/swift/uniquearray/count)
+- [var debugDescription: String](/documentation/swift/uniquearray/debugdescription)
+- [var description: String](/documentation/swift/uniquearray/description)
+- [var endIndex: Int](/documentation/swift/uniquearray/endindex)
+- [var freeCapacity: Int](/documentation/swift/uniquearray/freecapacity)
+- [var indices: Range<Int>](/documentation/swift/uniquearray/indices)
+- [var isEmpty: Bool](/documentation/swift/uniquearray/isempty)
+- [var mutableSpan: MutableSpan<Element>](/documentation/swift/uniquearray/mutablespan)
+- [var span: Span<Element>](/documentation/swift/uniquearray/span)
+- [var startIndex: Int](/documentation/swift/uniquearray/startindex)
+##### Instance Methods
+
+- [func append(consuming Element)](/documentation/swift/uniquearray/append(_:))
+- [func append<E>(addingCount: Int, initializingWith: (inout OutputSpan<Element>) throws(E) -> Void) throws(E)](/documentation/swift/uniquearray/append(addingcount:initializingwith:))
+- [func append(copying: UnsafeBufferPointer<Element>)](/documentation/swift/uniquearray/append(copying:)-1qhpn)
+- [func append(copying: Span<Element>)](/documentation/swift/uniquearray/append(copying:)-3aouw)
+- [func append(copying: some Sequence<Element>)](/documentation/swift/uniquearray/append(copying:)-7ntgb)
+- [func append(copying: UnsafeMutableBufferPointer<Element>)](/documentation/swift/uniquearray/append(copying:)-90c4t)
+- [func append(moving: UnsafeMutableBufferPointer<Element>)](/documentation/swift/uniquearray/append(moving:)-71oaj)
+- [func append(moving: inout OutputSpan<Element>)](/documentation/swift/uniquearray/append(moving:)-9p4vs)
+- [func clone() -> UniqueArray<Element>](/documentation/swift/uniquearray/clone())
+- [func clone(capacity: Int) -> UniqueArray<Element>](/documentation/swift/uniquearray/clone(capacity:))
+- [func distance(from: UniqueArray<Element>.Index, to: UniqueArray<Element>.Index) -> Int](/documentation/swift/uniquearray/distance(from:to:))
+- [func edit<E, R>((inout OutputSpan<Element>) throws(E) -> R) throws(E) -> R](/documentation/swift/uniquearray/edit(_:))
+- [func formIndex(inout UniqueArray<Element>.Index, offsetBy: inout Int, limitedBy: UniqueArray<Element>.Index)](/documentation/swift/uniquearray/formindex(_:offsetby:limitedby:))
+- [func formIndex(after: inout Int)](/documentation/swift/uniquearray/formindex(after:))
+- [func formIndex(before: inout Int)](/documentation/swift/uniquearray/formindex(before:))
+- [func index(Int, offsetBy: Int) -> Int](/documentation/swift/uniquearray/index(_:offsetby:))
+- [func index(after: Int) -> Int](/documentation/swift/uniquearray/index(after:))
+- [func index(before: Int) -> Int](/documentation/swift/uniquearray/index(before:))
+- [func insert(consuming Element, at: Int)](/documentation/swift/uniquearray/insert(_:at:))
+- [func insert<E>(addingCount: Int, at: Int, initializingWith: (inout OutputSpan<Element>) throws(E) -> Void) throws(E)](/documentation/swift/uniquearray/insert(addingcount:at:initializingwith:))
+- [func insert(copying: Span<Element>, at: Int)](/documentation/swift/uniquearray/insert(copying:at:)-2g824)
+- [func insert(copying: some Collection<Element>, at: Int)](/documentation/swift/uniquearray/insert(copying:at:)-4823q)
+- [func insert(copying: UnsafeMutableBufferPointer<Element>, at: Int)](/documentation/swift/uniquearray/insert(copying:at:)-6kuy5)
+- [func insert(copying: UnsafeBufferPointer<Element>, at: Int)](/documentation/swift/uniquearray/insert(copying:at:)-9wt40)
+- [func insert(moving: UnsafeMutableBufferPointer<Element>, at: Int)](/documentation/swift/uniquearray/insert(moving:at:)-4f2qc)
+- [func insert(moving: inout OutputSpan<Element>, at: Int)](/documentation/swift/uniquearray/insert(moving:at:)-6d5t1)
+- [func isTriviallyIdentical(to: borrowing UniqueArray<Element>) -> Bool](/documentation/swift/uniquearray/istriviallyidentical(to:))
+- [func popLast() -> Element?](/documentation/swift/uniquearray/poplast())
+- [func remove(at: Int) -> Element](/documentation/swift/uniquearray/remove(at:))
+- [func removeAll()](/documentation/swift/uniquearray/removeall())
+- [func removeLast() -> Element](/documentation/swift/uniquearray/removelast())
+- [func removeLast(Int)](/documentation/swift/uniquearray/removelast(_:))
+- [func removeSubrange(some RangeExpression<Int>)](/documentation/swift/uniquearray/removesubrange(_:)-6hkdt)
+- [func removeSubrange(Range<Int>)](/documentation/swift/uniquearray/removesubrange(_:)-6t21j)
+- [func replaceSubrange<E>(Range<Int>, addingCount: Int, initializingWith: (inout OutputSpan<Element>) throws(E) -> Void) throws(E)](/documentation/swift/uniquearray/replacesubrange(_:addingcount:initializingwith:))
+- [func replaceSubrange(Range<Int>, copying: UnsafeBufferPointer<Element>)](/documentation/swift/uniquearray/replacesubrange(_:copying:)-5cbxf)
+- [func replaceSubrange(Range<Int>, copying: Span<Element>)](/documentation/swift/uniquearray/replacesubrange(_:copying:)-70i0j)
+- [func replaceSubrange(Range<Int>, copying: consuming some Collection<Element>)](/documentation/swift/uniquearray/replacesubrange(_:copying:)-7599g)
+- [func replaceSubrange(Range<Int>, copying: UnsafeMutableBufferPointer<Element>)](/documentation/swift/uniquearray/replacesubrange(_:copying:)-8tpt1)
+- [func replaceSubrange(Range<Int>, moving: UnsafeMutableBufferPointer<Element>)](/documentation/swift/uniquearray/replacesubrange(_:moving:)-4de3f)
+- [func replaceSubrange(Range<Int>, moving: inout OutputSpan<Element>)](/documentation/swift/uniquearray/replacesubrange(_:moving:)-6vpdp)
+- [func reserveCapacity(Int)](/documentation/swift/uniquearray/reservecapacity(_:))
+- [func setCapacity(Int)](/documentation/swift/uniquearray/setcapacity(_:))
+- [func swapAt(Int, Int)](/documentation/swift/uniquearray/swapat(_:_:))
+##### Subscripts
+
+- [subscript(Int) -> Element](/documentation/swift/uniquearray/subscript(_:))
+##### Type Aliases
+
+- [UniqueArray.Index](/documentation/swift/uniquearray/index)
+##### Default Implementations
+
+- [Equatable Implementations](/documentation/swift/uniquearray/equatable-implementations)
+###### Operators
+
+- [static func != (borrowing Self, borrowing Self) -> Bool](/documentation/swift/uniquearray/!=(_:_:))
+- [static func == (borrowing UniqueArray<Element>, borrowing UniqueArray<Element>) -> Bool](/documentation/swift/uniquearray/==(_:_:))
+
+- [Hashable Implementations](/documentation/swift/uniquearray/hashable-implementations)
+###### Instance Properties
+
+- [var hashValue: Int](/documentation/swift/uniquearray/hashvalue)
+###### Instance Methods
+
+- [func hash(into: inout Hasher)](/documentation/swift/uniquearray/hash(into:))
+
+- [Iterable Implementations](/documentation/swift/uniquearray/iterable-implementations)
+###### Instance Properties
+
+- [var underestimatedCount: Int](/documentation/swift/uniquearray/underestimatedcount)
+- [var underestimatedCount: Int](/documentation/swift/uniquearray/underestimatedcount-37sh4)
+###### Instance Methods
+
+- [func makeBorrowingIterator() -> UniqueArray<Element>.BorrowingIterator](/documentation/swift/uniquearray/makeborrowingiterator())
+###### Type Aliases
+
+- [UniqueArray.BorrowingIterator](/documentation/swift/uniquearray/borrowingiterator)
+- [UniqueArray.Failure](/documentation/swift/uniquearray/failure)
+
+
+- [UniqueBox](/documentation/swift/uniquebox)
+##### Initializers
+
+- [init(consuming Value)](/documentation/swift/uniquebox/init(_:))
+##### Instance Properties
+
+- [var mutableSpan: MutableSpan<Value>](/documentation/swift/uniquebox/mutablespan)
+- [var span: Span<Value>](/documentation/swift/uniquebox/span)
+- [var value: Value](/documentation/swift/uniquebox/value)
+##### Instance Methods
+
+- [func clone() -> UniqueBox<Value>](/documentation/swift/uniquebox/clone())
+- [func consume() -> Value](/documentation/swift/uniquebox/consume())
 
 #### Reference Counting
 
@@ -37207,6 +37476,7 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [func withUnsafePointer<T, E, Result>(to: inout T, (UnsafePointer<T>) throws(E) -> Result) throws(E) -> Result](/documentation/swift/withunsafepointer(to:_:)-9fjn6)
 - [func withUnsafePointer<T, E, Result>(to: borrowing T, (UnsafePointer<T>) throws(E) -> Result) throws(E) -> Result](/documentation/swift/withunsafepointer(to:_:)-35wrn)
 - [func withUnsafeMutablePointer<T, E, Result>(to: inout T, (UnsafeMutablePointer<T>) throws(E) -> Result) throws(E) -> Result](/documentation/swift/withunsafemutablepointer(to:_:))
+- [func withUnsafeBytes<T, E, Result>(of: inout T, (UnsafeRawBufferPointer) throws(E) -> Result) throws(E) -> Result](/documentation/swift/withunsafebytes(of:_:)-3ywhh)
 - [func withUnsafeBytes<T, E, Result>(of: borrowing T, (UnsafeRawBufferPointer) throws(E) -> Result) throws(E) -> Result](/documentation/swift/withunsafebytes(of:_:)-5gesg)
 - [func withUnsafeMutableBytes<T, E, Result>(of: inout T, (UnsafeMutableRawBufferPointer) throws(E) -> Result) throws(E) -> Result](/documentation/swift/withunsafemutablebytes(of:_:))
 #### Aliases for Imported C Types
@@ -38428,162 +38698,25 @@ timestamp: 2026-06-26T06:39:35.781Z
 - [Calling APIs Across Language Boundaries](/documentation/swift/callingapisacrosslanguageboundaries)
 ## Protocols
 
-- [BorrowingIteratorProtocol](/documentation/swift/borrowingiteratorprotocol)
+- [Iterable](/documentation/swift/iterable)
 ### Associated Types
 
-- [Element](/documentation/swift/borrowingiteratorprotocol/element)
-### Instance Methods
-
-- [func nextSpan() -> Span<Self.Element>](/documentation/swift/borrowingiteratorprotocol/nextspan())
-- [func nextSpan(maximumCount: Int) -> Span<Self.Element>](/documentation/swift/borrowingiteratorprotocol/nextspan(maximumcount:))
-- [func skip(by: Int) -> Int](/documentation/swift/borrowingiteratorprotocol/skip(by:))
-#### BorrowingIteratorProtocol Implementations
-
-- [func skip(by: Int) -> Int](/documentation/swift/borrowingiteratorprotocol/skip(by:)-1sm4a)
-
-
-- [BorrowingSequence](/documentation/swift/borrowingsequence)
-### Associated Types
-
-- [BorrowingIterator](/documentation/swift/borrowingsequence/borrowingiterator)
-- [Element](/documentation/swift/borrowingsequence/element)
+- [BorrowingIterator](/documentation/swift/iterable/borrowingiterator)
+- [Element](/documentation/swift/iterable/element)
+- [Failure](/documentation/swift/iterable/failure)
 ### Instance Properties
 
-- [var underestimatedCount: Int](/documentation/swift/borrowingsequence/underestimatedcount)
-#### BorrowingSequence Implementations
+- [var underestimatedCount: Int](/documentation/swift/iterable/underestimatedcount)
+#### Iterable Implementations
 
-- [var underestimatedCount: Int](/documentation/swift/borrowingsequence/underestimatedcount-6uanx)
+- [var underestimatedCount: Int](/documentation/swift/iterable/underestimatedcount-83ybl)
 
 ### Instance Methods
 
-- [func makeBorrowingIterator() -> Self.BorrowingIterator](/documentation/swift/borrowingsequence/makeborrowingiterator())
+- [func makeBorrowingIterator() -> Self.BorrowingIterator](/documentation/swift/iterable/makeborrowingiterator())
+#### Iterable Implementations
 
-- [ConvertibleFromBytes](/documentation/swift/convertiblefrombytes)
-- [ConvertibleToBytes](/documentation/swift/convertibletobytes)
-## Structures
-
-- [BorrowingIteratorAdapter](/documentation/swift/borrowingiteratoradapter)
-### Initializers
-
-- [init(iterator: Iterator)](/documentation/swift/borrowingiteratoradapter/init(iterator:))
-### Instance Methods
-
-- [func nextSpan(maximumCount: Int) -> Span<Iterator.Element>](/documentation/swift/borrowingiteratoradapter/nextspan(maximumcount:))
-### Type Aliases
-
-- [BorrowingIteratorAdapter.Element](/documentation/swift/borrowingiteratoradapter/element)
-### Default Implementations
-
-- [BorrowingIteratorProtocol Implementations](/documentation/swift/borrowingiteratoradapter/borrowingiteratorprotocol-implementations)
-#### Instance Methods
-
-- [func nextSpan() -> Span<Self.Element>](/documentation/swift/borrowingiteratoradapter/nextspan())
-- [func skip(by: Int) -> Int](/documentation/swift/borrowingiteratoradapter/skip(by:))
-
-
-- [Continuation](/documentation/swift/continuation)
-### Instance Methods
-
-- [func resume()](/documentation/swift/continuation/resume())
-- [func resume(returning: consuming sending Success)](/documentation/swift/continuation/resume(returning:)-5fa8w)
-- [func resume(returning: consuming sending Success)](/documentation/swift/continuation/resume(returning:)-8uw9b)
-- [func resume(throwing: Failure)](/documentation/swift/continuation/resume(throwing:))
-- [func resume(with: consuming sending Result<Success, Failure>)](/documentation/swift/continuation/resume(with:))
-
-- [MutableRef](/documentation/swift/mutableref)
-### Initializers
-
-- [init(inout Value)](/documentation/swift/mutableref/init(_:))
-- [init<Owner>(unsafeAddress: UnsafeMutablePointer<Value>, mutating: inout Owner)](/documentation/swift/mutableref/init(unsafeaddress:mutating:))
-### Instance Properties
-
-- [var value: Value](/documentation/swift/mutableref/value)
-
-- [Ref](/documentation/swift/ref)
-### Initializers
-
-- [init(borrowing Value)](/documentation/swift/ref/init(_:))
-- [init<Owner>(unsafeAddress: UnsafePointer<Value>, borrowing: borrowing Owner)](/documentation/swift/ref/init(unsafeaddress:borrowing:))
-### Instance Properties
-
-- [var value: Value](/documentation/swift/ref/value)
-
-- [SpanIterator](/documentation/swift/spaniterator)
-### Initializers
-
-- [init(Span<Element>)](/documentation/swift/spaniterator/init(_:))
-### Instance Methods
-
-- [func nextSpan(maximumCount: Int) -> Span<Element>](/documentation/swift/spaniterator/nextspan(maximumcount:))
-- [func skip(by: Int) -> Int](/documentation/swift/spaniterator/skip(by:))
-### Default Implementations
-
-- [BorrowingIteratorProtocol Implementations](/documentation/swift/spaniterator/borrowingiteratorprotocol-implementations)
-#### Instance Methods
-
-- [func nextSpan() -> Span<Self.Element>](/documentation/swift/spaniterator/nextspan())
-- [func skip(by: Int) -> Int](/documentation/swift/spaniterator/skip(by:)-45lk)
-
-
-- [UniqueBox](/documentation/swift/uniquebox)
-### Initializers
-
-- [init(consuming Value)](/documentation/swift/uniquebox/init(_:))
-### Instance Properties
-
-- [var mutableSpan: MutableSpan<Value>](/documentation/swift/uniquebox/mutablespan)
-- [var span: Span<Value>](/documentation/swift/uniquebox/span)
-- [var value: Value](/documentation/swift/uniquebox/value)
-### Instance Methods
-
-- [func clone() -> UniqueBox<Value>](/documentation/swift/uniquebox/clone())
-- [func consume() -> Value](/documentation/swift/uniquebox/consume())
-
-## Functions
-
-- [func bitCast<T, U>(T, to: U.Type) -> U](/documentation/swift/bitcast(_:to:))
-- [func withCheckedContinuation<T>(function: String, (CheckedContinuation<T, Never>) -> Void) async -> sending T](/documentation/swift/withcheckedcontinuation(function:_:))
-- [func withCheckedThrowingContinuation<T>(function: String, (CheckedContinuation<T, any Error>) -> Void) async throws -> sending T](/documentation/swift/withcheckedthrowingcontinuation(function:_:)-13yf6)
-- [func withCheckedThrowingContinuation<T, E>(function: String, (CheckedContinuation<T, E>) -> Void) async throws(E) -> sending T](/documentation/swift/withcheckedthrowingcontinuation(function:_:)-2k46m)
-- [func withContinuation<Success>(of: Success.Type, (consuming Continuation<Success, Never>) -> Void) async -> sending Success](/documentation/swift/withcontinuation(of:_:))
-- [func withContinuation<Success, Failure>(of: Success.Type, throwing: Failure.Type, (consuming Continuation<Success, Failure>) -> Void) async throws(Failure) -> sending Success](/documentation/swift/withcontinuation(of:throwing:_:))
-- [func withTaskCancellationHandler<Return, Failure>(operation: nonisolated(nonsending) () async throws(Failure) -> Return, onCancel: sending () -> Void) async throws(Failure) -> Return](/documentation/swift/withtaskcancellationhandler(operation:oncancel:))
-- [func withTaskCancellationShield<Value, Failure>(operation: () throws(Failure) -> Value) throws(Failure) -> Value](/documentation/swift/withtaskcancellationshield(operation:)-2lzl8)
-- [func withTaskCancellationShield<Value, Failure>(operation: nonisolated(nonsending) () async throws(Failure) -> Value) async throws(Failure) -> Value](/documentation/swift/withtaskcancellationshield(operation:)-8zlgh)
-- [func withTemporaryAllocation<R, E>(byteCount: Int, alignment: Int, (inout OutputRawSpan) throws(E) -> R) throws(E) -> R](/documentation/swift/withtemporaryallocation(bytecount:alignment:_:))
-- [func withTemporaryAllocation<T, R, E>(of: T.Type, capacity: Int, (inout OutputSpan<T>) throws(E) -> R) throws(E) -> R](/documentation/swift/withtemporaryallocation(of:capacity:_:))
-- [func withUnsafeBytes<T, E, Result>(of: inout T, (UnsafeRawBufferPointer) throws(E) -> Result) throws(E) -> Result](/documentation/swift/withunsafebytes(of:_:)-3ywhh)
-- [func withUnsafeContinuation<T>((UnsafeContinuation<T, Never>) -> Void) async -> sending T](/documentation/swift/withunsafecontinuation(_:))
-- [func withUnsafeThrowingContinuation<T, E>((UnsafeContinuation<T, E>) -> Void) async throws(E) -> sending T](/documentation/swift/withunsafethrowingcontinuation(_:)-32nwt)
-- [func withUnsafeThrowingContinuation<T>((UnsafeContinuation<T, any Error>) -> Void) async throws -> sending T](/documentation/swift/withunsafethrowingcontinuation(_:)-7zhvy)
-## Type Aliases
-
-- [FullyInhabited](/documentation/swift/fullyinhabited)
-## Enumerations
-
-- [ByteOrder](/documentation/swift/byteorder)
-### Operators
-
-- [static func == (ByteOrder, ByteOrder) -> Bool](/documentation/swift/byteorder/==(_:_:))
-### Enumeration Cases
-
-- [case bigEndian](/documentation/swift/byteorder/bigendian)
-- [case littleEndian](/documentation/swift/byteorder/littleendian)
-### Instance Properties
-
-- [var hashValue: Int](/documentation/swift/byteorder/hashvalue)
-### Instance Methods
-
-- [func hash(into: inout Hasher)](/documentation/swift/byteorder/hash(into:))
-### Type Properties
-
-- [static var native: ByteOrder](/documentation/swift/byteorder/native)
-### Default Implementations
-
-- [Equatable Implementations](/documentation/swift/byteorder/equatable-implementations)
-#### Operators
-
-- [static func != (borrowing Self, borrowing Self) -> Bool](/documentation/swift/byteorder/!=(_:_:))
+- [func makeBorrowingIterator() -> Self](/documentation/swift/iterable/makeborrowingiterator()-37ib)
 
 ---
 

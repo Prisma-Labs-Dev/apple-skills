@@ -3,7 +3,7 @@ title: MapKit
 source: https://developer.apple.com/documentation/mapkit
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/index/mapkit
-timestamp: 2026-06-26T06:39:36.450Z
+timestamp: 2026-08-11T06:08:56.060Z
 ---
 
 **Navigation:** [MapKit](/documentation/mapkit)
@@ -2043,8 +2043,9 @@ timestamp: 2026-06-26T06:39:36.450Z
 
 - [init?(rawValue: UInt)](/documentation/mapkit/mkerror/code/init(rawvalue:))
 
-#### Type Properties
+#### Accessing error properties
 
+- [var localizedDescription: String](/documentation/swift/error/localizeddescription)
 - [static var errorDomain: String](/documentation/mapkit/mkerror/errordomain)
 
 - [MKError.Code](/documentation/mapkit/mkerror/code)
@@ -2128,7 +2129,73 @@ timestamp: 2026-06-26T06:39:36.450Z
 - [static let zoom: MapInteractionModes](/documentation/mapkit/mapinteractionmodes/zoom)
 - [static let pitch: MapInteractionModes](/documentation/mapkit/mapinteractionmodes/pitch)
 - [static let rotate: MapInteractionModes](/documentation/mapkit/mapinteractionmodes/rotate)
+##### Creating interaction modes
 
+- [init()](/documentation/swift/setalgebra/init())
+- [init<S>(S)](/documentation/swift/setalgebra/init(_:))
+- [init(arrayLiteral: Self.ArrayLiteralElement...)](/documentation/swift/expressiblebyarrayliteral/init(arrayliteral:))
+- [ArrayLiteralElement](/documentation/swift/expressiblebyarrayliteral/arrayliteralelement)
+- [Element](/documentation/swift/optionset/element)
+##### Accessing members
+
+- [var isEmpty: Bool](/documentation/swift/setalgebra/isempty)
+##### Comparing sets of modes
+
+- [func contains(Self.Element) -> Bool](/documentation/swift/setalgebra/contains(_:))
+- [func isDisjoint(with: Self) -> Bool](/documentation/swift/setalgebra/isdisjoint(with:))
+- [func isStrictSubset(of: Self) -> Bool](/documentation/swift/setalgebra/isstrictsubset(of:))
+- [func isStrictSuperset(of: Self) -> Bool](/documentation/swift/setalgebra/isstrictsuperset(of:))
+- [func isSubset(of: Self) -> Bool](/documentation/swift/setalgebra/issubset(of:))
+- [func isSuperset(of: Self) -> Bool](/documentation/swift/setalgebra/issuperset(of:))
+##### Updating the modes
+
+- [func update(with: Self.Element) -> Self.Element?](/documentation/swift/setalgebra/update(with:))
+- [func insert(Self.Element) -> (inserted: Bool, memberAfterInsert: Self.Element)](/documentation/swift/setalgebra/insert(_:))
+- [func remove(Self.Element) -> Self.Element?](/documentation/swift/setalgebra/remove(_:))
+- [func formSymmetricDifference(Self)](/documentation/swift/setalgebra/formsymmetricdifference(_:))
+- [func subtract(Self)](/documentation/swift/setalgebra/subtract(_:))
+- [func formUnion(Self)](/documentation/swift/setalgebra/formunion(_:))
+- [func formIntersection(Self)](/documentation/swift/setalgebra/formintersection(_:))
+##### Combining sets of modes
+
+- [func union(Self) -> Self](/documentation/swift/setalgebra/union(_:))
+- [func intersection(Self) -> Self](/documentation/swift/setalgebra/intersection(_:))
+- [func subtracting(Self) -> Self](/documentation/swift/setalgebra/subtracting(_:))
+- [func symmetricDifference(Self) -> Self](/documentation/swift/setalgebra/symmetricdifference(_:))
+
+#### Managing feature selection
+
+- [func mapFeatureSelectionContent(content: (MapFeature) -> some MapContent) -> some View
+](/documentation/swiftui/view/mapfeatureselectioncontent(content:))
+- [func mapFeatureSelectionDisabled((MapFeature) -> Bool) -> some View
+](/documentation/swiftui/view/mapfeatureselectiondisabled(_:))
+#### Managing Look Around view presentation
+
+- [func lookAroundViewer(isPresented: Binding<Bool>, initialScene: MKLookAroundScene?, allowsNavigation: Bool, showsRoadLabels: Bool, pointsOfInterest: PointOfInterestCategories, onDismiss: (() -> Void)?) -> some View
+](/documentation/swiftui/view/lookaroundviewer(ispresented:initialscene:allowsnavigation:showsroadlabels:pointsofinterest:ondismiss:))
+- [func lookAroundViewer(isPresented: Binding<Bool>, scene: Binding<MKLookAroundScene?>, allowsNavigation: Bool, showsRoadLabels: Bool, pointsOfInterest: PointOfInterestCategories, onDismiss: (() -> Void)?) -> some View
+](/documentation/swiftui/view/lookaroundviewer(ispresented:scene:allowsnavigation:showsroadlabels:pointsofinterest:ondismiss:))
+#### Managing map control sizing and visibility
+
+- [func mapControlVisibility(Visibility) -> some View
+](/documentation/swiftui/view/mapcontrolvisibility(_:))
+- [func mapControls(() -> some View) -> some View
+](/documentation/swiftui/view/mapcontrols(_:))
+#### Managing the camera
+
+- [func mapCameraKeyframeAnimator(trigger: some Equatable, keyframes: (MapCamera) -> some Keyframes<MapCamera>) -> some View
+](/documentation/swiftui/view/mapcamerakeyframeanimator(trigger:keyframes:))
+- [func onMapCameraChange(frequency: MapCameraUpdateFrequency, (MapCameraUpdateContext) -> Void) -> some View
+](/documentation/swiftui/view/onmapcamerachange(frequency:_:)-2pcga)
+- [func onMapCameraChange(frequency:_:)](/documentation/swiftui/view/onmapcamerachange(frequency:_:))
+#### Setting the namespace Identifier
+
+- [func mapScope(Namespace.ID) -> some View
+](/documentation/swiftui/view/mapscope(_:))
+#### Setting the map style
+
+- [func mapStyle(MapStyle) -> some View
+](/documentation/swiftui/view/mapstyle(_:))
 #### Deprecated
 
 - [Deprecated Symbols](/documentation/mapkit/deprecated-symbols)
@@ -2167,15 +2234,13 @@ timestamp: 2026-06-26T06:39:36.450Z
 
 #### Displaying place information
 
+- [func mapFeatureSelectionAccessory(MapItemDetailSelectionAccessoryStyle?) -> some View
+](/documentation/swiftui/view/mapfeatureselectionaccessory(_:))
 - [func mapItemDetailSelectionAccessory(MapItemDetailSelectionAccessoryStyle?) -> some MapContent](/documentation/mapkit/mapcontent/mapitemdetailselectionaccessory(_:))
 #### Initializers
 
 - [init<SelectedValue, C>(bounds: MapCameraBounds?, interactionModes: MapInteractionModes, selection: Binding<SelectedValue?>, scope: Namespace.ID?, content: () -> C)](/documentation/mapkit/map/init(bounds:interactionmodes:selection:scope:content:)-335qt)
-- [init(coordinateRegion: Binding<MKCoordinateRegion>, interactionModes: MapInteractionModes, showsUserLocation: Bool, userTrackingMode: Binding<MapUserTrackingMode>?)](/documentation/mapkit/map/init(coordinateregion:interactionmodes:showsuserlocation:usertrackingmode:))
-- [init<Items, Annotation>(coordinateRegion: Binding<MKCoordinateRegion>, interactionModes: MapInteractionModes, showsUserLocation: Bool, userTrackingMode: Binding<MapUserTrackingMode>?, annotationItems: Items, annotationContent: (Items.Element) -> Annotation)](/documentation/mapkit/map/init(coordinateregion:interactionmodes:showsuserlocation:usertrackingmode:annotationitems:annotationcontent:))
 - [init<SelectedValue, C>(initialPosition: MapCameraPosition, bounds: MapCameraBounds?, interactionModes: MapInteractionModes, selection: Binding<SelectedValue?>, scope: Namespace.ID?, content: () -> C)](/documentation/mapkit/map/init(initialposition:bounds:interactionmodes:selection:scope:content:)-2u4ry)
-- [init(mapRect: Binding<MKMapRect>, interactionModes: MapInteractionModes, showsUserLocation: Bool, userTrackingMode: Binding<MapUserTrackingMode>?)](/documentation/mapkit/map/init(maprect:interactionmodes:showsuserlocation:usertrackingmode:))
-- [init<Items, Annotation>(mapRect: Binding<MKMapRect>, interactionModes: MapInteractionModes, showsUserLocation: Bool, userTrackingMode: Binding<MapUserTrackingMode>?, annotationItems: Items, annotationContent: (Items.Element) -> Annotation)](/documentation/mapkit/map/init(maprect:interactionmodes:showsuserlocation:usertrackingmode:annotationitems:annotationcontent:))
 - [init<SelectedValue, C>(position: Binding<MapCameraPosition>, bounds: MapCameraBounds?, interactionModes: MapInteractionModes, selection: Binding<SelectedValue?>, scope: Namespace.ID?, content: () -> C)](/documentation/mapkit/map/init(position:bounds:interactionmodes:selection:scope:content:)-96bhq)
 
 - [MapStyle](/documentation/mapkit/mapstyle)
@@ -2215,6 +2280,16 @@ timestamp: 2026-06-26T06:39:36.450Z
 - [init(LocalizedStringKey, coordinate: CLLocationCoordinate2D, anchor: UnitPoint, content: () -> Content)](/documentation/mapkit/annotation/init(_:coordinate:anchor:content:)-2w242)
 - [init<S>(S, coordinate: CLLocationCoordinate2D, anchor: UnitPoint, content: () -> Content)](/documentation/mapkit/annotation/init(_:coordinate:anchor:content:)-6wnoh)
 - [init(coordinate: CLLocationCoordinate2D, anchor: UnitPoint, content: () -> Content, label: () -> Label)](/documentation/mapkit/annotation/init(coordinate:anchor:content:label:))
+#### Setting the visibility of the title and subtitle
+
+- [func annotationTitles(Visibility) -> some MapContent](/documentation/mapkit/mapcontent/annotationtitles(_:))
+- [func annotationSubtitles(Visibility) -> some MapContent](/documentation/mapkit/mapcontent/annotationsubtitles(_:))
+#### Setting the tag
+
+- [func tag<V>(V) -> some MapContent](/documentation/mapkit/mapcontent/tag(_:))
+#### Type aliases
+
+- [Body](/documentation/mapkit/mapcontent/body-swift.associatedtype)
 #### Displaying place information
 
 - [func mapItemDetailSelectionAccessory(MapItemDetailSelectionAccessoryStyle?) -> some MapContent](/documentation/mapkit/mapcontent/mapitemdetailselectionaccessory(_:))
@@ -2229,6 +2304,19 @@ timestamp: 2026-06-26T06:39:36.450Z
 - [init(MKCircle)](/documentation/mapkit/mapcircle/init(_:))
 - [init(center: CLLocationCoordinate2D, radius: CLLocationDistance)](/documentation/mapkit/mapcircle/init(center:radius:))
 - [init(mapRect: MKMapRect)](/documentation/mapkit/mapcircle/init(maprect:))
+#### Styling the circle
+
+- [func foregroundStyle(some ShapeStyle) -> some MapContent](/documentation/mapkit/mapcontent/foregroundstyle(_:))
+- [func stroke(some ShapeStyle, lineWidth: CGFloat) -> some MapContent](/documentation/mapkit/mapcontent/stroke(_:linewidth:))
+- [func stroke(some ShapeStyle, style: StrokeStyle) -> some MapContent](/documentation/mapkit/mapcontent/stroke(_:style:))
+- [func stroke(lineWidth: CGFloat) -> some MapContent](/documentation/mapkit/mapcontent/stroke(linewidth:))
+- [func strokeStyle(style: StrokeStyle) -> some MapContent](/documentation/mapkit/mapcontent/strokestyle(style:))
+#### Setting the overlay level
+
+- [func mapOverlayLevel(level: MKOverlayLevel) -> some MapContent](/documentation/mapkit/mapcontent/mapoverlaylevel(level:))
+#### Type aliases
+
+- [Body](/documentation/mapkit/mapcontent/body-swift.associatedtype)
 
 - [MapPolygon](/documentation/mapkit/mappolygon)
 #### Creating a map polygon
@@ -2236,6 +2324,20 @@ timestamp: 2026-06-26T06:39:36.450Z
 - [init(coordinates: [CLLocationCoordinate2D])](/documentation/mapkit/mappolygon/init(coordinates:))
 - [init(points: [MKMapPoint])](/documentation/mapkit/mappolygon/init(points:))
 - [init(MKPolygon)](/documentation/mapkit/mappolygon/init(_:))
+#### Styling the polygon
+
+- [func foregroundStyle(some ShapeStyle) -> some MapContent](/documentation/mapkit/mapcontent/foregroundstyle(_:))
+- [func stroke(some ShapeStyle, lineWidth: CGFloat) -> some MapContent](/documentation/mapkit/mapcontent/stroke(_:linewidth:))
+- [func stroke(some ShapeStyle, style: StrokeStyle) -> some MapContent](/documentation/mapkit/mapcontent/stroke(_:style:))
+- [func stroke(lineWidth: CGFloat) -> some MapContent](/documentation/mapkit/mapcontent/stroke(linewidth:))
+- [func strokeStyle(style: StrokeStyle) -> some MapContent](/documentation/mapkit/mapcontent/strokestyle(style:))
+- [func tint<S>(S) -> some MapContent](/documentation/mapkit/mapcontent/tint(_:))
+#### Setting the overlay level
+
+- [func mapOverlayLevel(level: MKOverlayLevel) -> some MapContent](/documentation/mapkit/mapcontent/mapoverlaylevel(level:))
+#### Type aliases
+
+- [Body](/documentation/mapkit/mapcontent/body-swift.associatedtype)
 
 - [MapPolyline](/documentation/mapkit/mappolyline)
 #### Creating a polyline
@@ -2246,12 +2348,22 @@ timestamp: 2026-06-26T06:39:36.450Z
 - [init(points: [MKMapPoint], contourStyle: MapPolyline.ContourStyle)](/documentation/mapkit/mappolyline/init(points:contourstyle:))
 #### Styling the polyline
 
+- [func stroke(some ShapeStyle, lineWidth: CGFloat) -> some MapContent](/documentation/mapkit/mapcontent/stroke(_:linewidth:))
+- [func stroke(some ShapeStyle, style: StrokeStyle) -> some MapContent](/documentation/mapkit/mapcontent/stroke(_:style:))
+- [func stroke(lineWidth: CGFloat) -> some MapContent](/documentation/mapkit/mapcontent/stroke(linewidth:))
+- [func strokeStyle(style: StrokeStyle) -> some MapContent](/documentation/mapkit/mapcontent/strokestyle(style:))
 - [MapPolyline.ContourStyle](/documentation/mapkit/mappolyline/contourstyle)
 ##### Styles
 
 - [static var geodesic: MapPolyline.ContourStyle](/documentation/mapkit/mappolyline/contourstyle/geodesic)
 - [static var straight: MapPolyline.ContourStyle](/documentation/mapkit/mappolyline/contourstyle/straight)
 
+#### Setting the overlay level
+
+- [func mapOverlayLevel(level: MKOverlayLevel) -> some MapContent](/documentation/mapkit/mapcontent/mapoverlaylevel(level:))
+#### Type aliases
+
+- [Body](/documentation/mapkit/mapcontent/body-swift.associatedtype)
 
 - [Marker](/documentation/mapkit/marker)
 #### Creating a marker
@@ -2266,6 +2378,19 @@ timestamp: 2026-06-26T06:39:36.450Z
 - [init(LocalizedStringKey, systemImage: String, coordinate: CLLocationCoordinate2D)](/documentation/mapkit/marker/init(_:systemimage:coordinate:)-2t4i0)
 - [init(coordinate: CLLocationCoordinate2D, label: () -> Label)](/documentation/mapkit/marker/init(coordinate:label:))
 - [init(item: MKMapItem)](/documentation/mapkit/marker/init(item:))
+#### Setting the visibility of the title and subtitle
+
+- [func annotationTitles(Visibility) -> some MapContent](/documentation/mapkit/mapcontent/annotationtitles(_:))
+- [func annotationSubtitles(Visibility) -> some MapContent](/documentation/mapkit/mapcontent/annotationsubtitles(_:))
+#### Styling the marker
+
+- [func tint<S>(S) -> some MapContent](/documentation/mapkit/mapcontent/tint(_:))
+#### Setting the tag
+
+- [func tag<V>(V) -> some MapContent](/documentation/mapkit/mapcontent/tag(_:))
+#### Type aliases
+
+- [Body](/documentation/mapkit/mapcontent/body-swift.associatedtype)
 #### Displaying place information
 
 - [func mapItemDetailSelectionAccessory(MapItemDetailSelectionAccessoryStyle?) -> some MapContent](/documentation/mapkit/mapcontent/mapitemdetailselectionaccessory(_:))
@@ -2283,6 +2408,10 @@ timestamp: 2026-06-26T06:39:36.450Z
 - [init(anchor: UnitPoint)](/documentation/mapkit/userannotation/init(anchor:))
 - [init(anchor: UnitPoint, content: (UserLocation) -> Content)](/documentation/mapkit/userannotation/init(anchor:content:)-8u3r4)
 - [init(anchor: UnitPoint, content: () -> Content)](/documentation/mapkit/userannotation/init(anchor:content:)-3e78j)
+#### Setting the visibility of the title and subtitle
+
+- [func annotationTitles(Visibility) -> some MapContent](/documentation/mapkit/mapcontent/annotationtitles(_:))
+- [func annotationSubtitles(Visibility) -> some MapContent](/documentation/mapkit/mapcontent/annotationsubtitles(_:))
 #### Information about a person’s location
 
 - [UserLocation](/documentation/mapkit/userlocation)
@@ -2291,6 +2420,15 @@ timestamp: 2026-06-26T06:39:36.450Z
 - [var heading: CLHeading?](/documentation/mapkit/userlocation/heading)
 - [var location: CLLocation?](/documentation/mapkit/userlocation/location)
 
+#### Setting the overlay level
+
+- [func mapOverlayLevel(level: MKOverlayLevel) -> some MapContent](/documentation/mapkit/mapcontent/mapoverlaylevel(level:))
+#### Setting the tag
+
+- [func tag<V>(V) -> some MapContent](/documentation/mapkit/mapcontent/tag(_:))
+#### Type aliases
+
+- [Body](/documentation/mapkit/mapcontent/body-swift.associatedtype)
 
 ### Map controls
 
@@ -2298,37 +2436,118 @@ timestamp: 2026-06-26T06:39:36.450Z
 #### Creating a map compass
 
 - [init(scope: Namespace.ID?)](/documentation/mapkit/mapcompass/init(scope:))
+#### Managing map control sizing and visibility
+
+- [func mapControlVisibility(Visibility) -> some View
+](/documentation/swiftui/view/mapcontrolvisibility(_:))
+- [func mapControls(() -> some View) -> some View
+](/documentation/swiftui/view/mapcontrols(_:))
+- [func controlSize(_:)](/documentation/swiftui/view/controlsize(_:))
+#### Setting the namespace Identifier
+
+- [func mapScope(Namespace.ID) -> some View
+](/documentation/swiftui/view/mapscope(_:))
 
 - [MapLocationCompass](/documentation/mapkit/maplocationcompass)
 #### Creating a map loction compass
 
 - [init(scope: Namespace.ID?)](/documentation/mapkit/maplocationcompass/init(scope:))
+#### Managing map control sizing and visibility
+
+- [func mapControlVisibility(Visibility) -> some View
+](/documentation/swiftui/view/mapcontrolvisibility(_:))
+- [func mapControls(() -> some View) -> some View
+](/documentation/swiftui/view/mapcontrols(_:))
+#### Setting the namespace Identifier
+
+- [func mapScope(Namespace.ID) -> some View
+](/documentation/swiftui/view/mapscope(_:))
 
 - [MapPitchSlider](/documentation/mapkit/mappitchslider)
 #### Creating a map pitch slider
 
 - [init(scope: Namespace.ID?)](/documentation/mapkit/mappitchslider/init(scope:))
+#### Managing map control sizing and visibility
+
+- [func mapControlVisibility(Visibility) -> some View
+](/documentation/swiftui/view/mapcontrolvisibility(_:))
+- [func mapControls(() -> some View) -> some View
+](/documentation/swiftui/view/mapcontrols(_:))
+- [func controlSize(_:)](/documentation/swiftui/view/controlsize(_:))
+#### Setting the namespace Identifier
+
+- [func mapScope(Namespace.ID) -> some View
+](/documentation/swiftui/view/mapscope(_:))
 
 - [MapPitchToggle](/documentation/mapkit/mappitchtoggle)
 #### Creating a map pitch toggle
 
 - [init(scope: Namespace.ID?)](/documentation/mapkit/mappitchtoggle/init(scope:))
+#### Managing map control sizing and visibility
+
+- [func mapControlVisibility(Visibility) -> some View
+](/documentation/swiftui/view/mapcontrolvisibility(_:))
+- [func mapControls(() -> some View) -> some View
+](/documentation/swiftui/view/mapcontrols(_:))
+- [func controlSize(_:)](/documentation/swiftui/view/controlsize(_:))
+#### Setting the namespace Identifier
+
+- [func mapScope(Namespace.ID) -> some View
+](/documentation/swiftui/view/mapscope(_:))
 
 - [MapScaleView](/documentation/mapkit/mapscaleview)
 #### Creating a map scale view
 
 - [init(anchorEdge: HorizontalEdge, scope: Namespace.ID?)](/documentation/mapkit/mapscaleview/init(anchoredge:scope:))
 - [init(alignment: HorizontalAlignment, scope: Namespace.ID?)](/documentation/mapkit/mapscaleview/init(alignment:scope:))
+#### Managing map control sizing and visibility
+
+- [func mapControlVisibility(Visibility) -> some View
+](/documentation/swiftui/view/mapcontrolvisibility(_:))
+- [func mapControls(() -> some View) -> some View
+](/documentation/swiftui/view/mapcontrols(_:))
+- [func controlSize(_:)](/documentation/swiftui/view/controlsize(_:))
+#### Setting the namespace Identifier
+
+- [func mapScope(Namespace.ID) -> some View
+](/documentation/swiftui/view/mapscope(_:))
 
 - [MapUserLocationButton](/documentation/mapkit/mapuserlocationbutton)
 #### Creating a map user location button
 
 - [init(scope: Namespace.ID?)](/documentation/mapkit/mapuserlocationbutton/init(scope:))
+#### Managing map control sizing and visibility
+
+- [func mapControlVisibility(Visibility) -> some View
+](/documentation/swiftui/view/mapcontrolvisibility(_:))
+- [func mapControls(() -> some View) -> some View
+](/documentation/swiftui/view/mapcontrols(_:))
+- [func controlSize(_:)](/documentation/swiftui/view/controlsize(_:))
+#### Setting the namespace Identifier
+
+- [func mapScope(Namespace.ID) -> some View
+](/documentation/swiftui/view/mapscope(_:))
+#### Setting the tint and border shape
+
+- [func buttonBorderShape(ButtonBorderShape) -> some View
+](/documentation/swiftui/view/buttonbordershape(_:))
+- [func tint<S>(S) -> some MapContent](/documentation/mapkit/mapcontent/tint(_:))
 
 - [MapZoomStepper](/documentation/mapkit/mapzoomstepper)
 #### Creating a zoom stepper
 
 - [init(scope: Namespace.ID?)](/documentation/mapkit/mapzoomstepper/init(scope:))
+#### Managing map control sizing and visibility
+
+- [func mapControlVisibility(Visibility) -> some View
+](/documentation/swiftui/view/mapcontrolvisibility(_:))
+- [func mapControls(() -> some View) -> some View
+](/documentation/swiftui/view/mapcontrols(_:))
+- [func controlSize(_:)](/documentation/swiftui/view/controlsize(_:))
+#### Setting the namespace identifier
+
+- [func mapScope(Namespace.ID) -> some View
+](/documentation/swiftui/view/mapscope(_:))
 
 ### Exploring at street level
 
@@ -2337,6 +2556,12 @@ timestamp: 2026-06-26T06:39:36.450Z
 
 - [init(initialScene: MKLookAroundScene?, allowsNavigation: Bool, showsRoadLabels: Bool, pointsOfInterest: PointOfInterestCategories, badgePosition: MKLookAroundBadgePosition)](/documentation/mapkit/lookaroundpreview/init(initialscene:allowsnavigation:showsroadlabels:pointsofinterest:badgeposition:))
 - [init(scene: Binding<MKLookAroundScene?>, allowsNavigation: Bool, showsRoadLabels: Bool, pointsOfInterest: PointOfInterestCategories, badgePosition: MKLookAroundBadgePosition)](/documentation/mapkit/lookaroundpreview/init(scene:allowsnavigation:showsroadlabels:pointsofinterest:badgeposition:))
+#### Creating a Look Around viewer
+
+- [func lookAroundViewer(isPresented: Binding<Bool>, initialScene: MKLookAroundScene?, allowsNavigation: Bool, showsRoadLabels: Bool, pointsOfInterest: PointOfInterestCategories, onDismiss: (() -> Void)?) -> some View
+](/documentation/swiftui/view/lookaroundviewer(ispresented:initialscene:allowsnavigation:showsroadlabels:pointsofinterest:ondismiss:))
+- [func lookAroundViewer(isPresented: Binding<Bool>, scene: Binding<MKLookAroundScene?>, allowsNavigation: Bool, showsRoadLabels: Bool, pointsOfInterest: PointOfInterestCategories, onDismiss: (() -> Void)?) -> some View
+](/documentation/swiftui/view/lookaroundviewer(ispresented:scene:allowsnavigation:showsroadlabels:pointsofinterest:ondismiss:))
 
 ### Map features
 
@@ -2456,7 +2681,21 @@ timestamp: 2026-06-26T06:39:36.450Z
 - [static func callout(MapItemDetailSelectionAccessoryStyle.CalloutStyle) -> MapItemDetailSelectionAccessoryStyle](/documentation/mapkit/mapitemdetailselectionaccessorystyle/callout(_:))
 
 - [func mapItemDetailSelectionAccessory(MapItemDetailSelectionAccessoryStyle?) -> some MapContent](/documentation/mapkit/mapcontent/mapitemdetailselectionaccessory(_:))
+- [func mapFeatureSelectionAccessory(MapItemDetailSelectionAccessoryStyle?) -> some View
+](/documentation/swiftui/view/mapfeatureselectionaccessory(_:))
 - [static func callout(MapItemDetailSelectionAccessoryStyle.CalloutStyle) -> MapItemDetailSelectionAccessoryStyle](/documentation/mapkit/mapitemdetailselectionaccessorystyle/callout(_:))
+- [func mapItemDetailPopover(isPresented: Binding<Bool>, item: MKMapItem?, displaysMap: Bool, attachmentAnchor: PopoverAttachmentAnchor) -> some View
+](/documentation/swiftui/view/mapitemdetailpopover(ispresented:item:displaysmap:attachmentanchor:))
+- [func mapItemDetailPopover(isPresented: Binding<Bool>, item: MKMapItem?, displaysMap: Bool, attachmentAnchor: PopoverAttachmentAnchor, arrowEdge: Edge) -> some View
+](/documentation/swiftui/view/mapitemdetailpopover(ispresented:item:displaysmap:attachmentanchor:arrowedge:))
+- [func mapItemDetailPopover(item: Binding<MKMapItem?>, displaysMap: Bool, attachmentAnchor: PopoverAttachmentAnchor) -> some View
+](/documentation/swiftui/view/mapitemdetailpopover(item:displaysmap:attachmentanchor:))
+- [func mapItemDetailPopover(item: Binding<MKMapItem?>, displaysMap: Bool, attachmentAnchor: PopoverAttachmentAnchor, arrowEdge: Edge) -> some View
+](/documentation/swiftui/view/mapitemdetailpopover(item:displaysmap:attachmentanchor:arrowedge:))
+- [func mapItemDetailSheet(isPresented: Binding<Bool>, item: MKMapItem?, displaysMap: Bool) -> some View
+](/documentation/swiftui/view/mapitemdetailsheet(ispresented:item:displaysmap:))
+- [func mapItemDetailSheet(item: Binding<MKMapItem?>, displaysMap: Bool) -> some View
+](/documentation/swiftui/view/mapitemdetailsheet(item:displaysmap:))
 ### Geocoding
 
 - [MKGeocodingRequest](/documentation/mapkit/mkgeocodingrequest)
@@ -2603,6 +2842,9 @@ timestamp: 2026-06-26T06:39:36.450Z
 ### Points of interest
 
 - [PointOfInterestCategories](/documentation/mapkit/pointofinterestcategories)
+#### Creating point of interest categories
+
+- [init(arrayLiteral: Self.ArrayLiteralElement...)](/documentation/swift/expressiblebyarrayliteral/init(arrayliteral:))
 #### Categories to include or exclude
 
 - [static var all: PointOfInterestCategories](/documentation/mapkit/pointofinterestcategories/all)
@@ -2613,6 +2855,9 @@ timestamp: 2026-06-26T06:39:36.450Z
 - [static func excluding(MKPointOfInterestCategory...) -> PointOfInterestCategories](/documentation/mapkit/pointofinterestcategories/excluding(_:)-4jo9h)
 - [static func including([MKPointOfInterestCategory]) -> PointOfInterestCategories](/documentation/mapkit/pointofinterestcategories/including(_:)-22f7x)
 - [static func including(MKPointOfInterestCategory...) -> PointOfInterestCategories](/documentation/mapkit/pointofinterestcategories/including(_:)-6flda)
+#### Type aliases
+
+- [ArrayLiteralElement](/documentation/swift/expressiblebyarrayliteral/arrayliteralelement)
 
 ### Protocols
 
@@ -2672,6 +2917,44 @@ timestamp: 2026-06-26T06:39:36.450Z
 - [static func buildBlock<each Content>(repeat each Content) -> TupleMapContent<(repeat each Content)>](/documentation/mapkit/mapcontentbuilder/buildblock(_:)-4omn)
 
 - [MapContentView](/documentation/mapkit/mapcontentview)
+#### Managing feature selection
+
+- [func mapFeatureSelectionContent(content: (MapFeature) -> some MapContent) -> some View
+](/documentation/swiftui/view/mapfeatureselectioncontent(content:))
+- [func mapFeatureSelectionDisabled((MapFeature) -> Bool) -> some View
+](/documentation/swiftui/view/mapfeatureselectiondisabled(_:))
+#### Managing Look Around view presentation
+
+- [func lookAroundViewer(isPresented: Binding<Bool>, initialScene: MKLookAroundScene?, allowsNavigation: Bool, showsRoadLabels: Bool, pointsOfInterest: PointOfInterestCategories, onDismiss: (() -> Void)?) -> some View
+](/documentation/swiftui/view/lookaroundviewer(ispresented:initialscene:allowsnavigation:showsroadlabels:pointsofinterest:ondismiss:))
+- [func lookAroundViewer(isPresented: Binding<Bool>, scene: Binding<MKLookAroundScene?>, allowsNavigation: Bool, showsRoadLabels: Bool, pointsOfInterest: PointOfInterestCategories, onDismiss: (() -> Void)?) -> some View
+](/documentation/swiftui/view/lookaroundviewer(ispresented:scene:allowsnavigation:showsroadlabels:pointsofinterest:ondismiss:))
+#### Managing map control sizing and visibility
+
+- [func mapControlVisibility(Visibility) -> some View
+](/documentation/swiftui/view/mapcontrolvisibility(_:))
+- [func mapControls(() -> some View) -> some View
+](/documentation/swiftui/view/mapcontrols(_:))
+#### Managing the camera
+
+- [func mapCameraKeyframeAnimator(trigger: some Equatable, keyframes: (MapCamera) -> some Keyframes<MapCamera>) -> some View
+](/documentation/swiftui/view/mapcamerakeyframeanimator(trigger:keyframes:))
+- [func onMapCameraChange(frequency: MapCameraUpdateFrequency, (MapCameraUpdateContext) -> Void) -> some View
+](/documentation/swiftui/view/onmapcamerachange(frequency:_:)-2pcga)
+- [func onMapCameraChange(frequency:_:)](/documentation/swiftui/view/onmapcamerachange(frequency:_:))
+#### Setting the visibility of the title and subtitle
+
+- [func annotationTitles(Visibility) -> some MapContent](/documentation/mapkit/mapcontent/annotationtitles(_:))
+- [func annotationSubtitles(Visibility) -> some MapContent](/documentation/mapkit/mapcontent/annotationsubtitles(_:))
+#### Setting the namespace Identifier
+
+- [func mapScope(Namespace.ID) -> some View
+](/documentation/swiftui/view/mapscope(_:))
+#### Setting the map style
+
+- [func mapStyle(MapStyle) -> some View
+](/documentation/swiftui/view/mapstyle(_:))
+
 ### Structures
 
 - [DefaultUserAnnotationContent](/documentation/mapkit/defaultuserannotationcontent)
@@ -2679,6 +2962,12 @@ timestamp: 2026-06-26T06:39:36.450Z
 #### Creating an empty map content structure
 
 - [init()](/documentation/mapkit/emptymapcontent/init())
+#### Setting the tag
+
+- [func tag<V>(V) -> some MapContent](/documentation/mapkit/mapcontent/tag(_:))
+#### Type aliases
+
+- [Body](/documentation/mapkit/mapcontent/body-swift.associatedtype)
 
 - [MapProxy](/documentation/mapkit/mapproxy)
 #### Creating a camera proxy
@@ -2695,11 +2984,47 @@ timestamp: 2026-06-26T06:39:36.450Z
 #### Creating a map reader
 
 - [init(content: (MapProxy) -> Content)](/documentation/mapkit/mapreader/init(content:))
+#### Managing Look Around view presentation
+
+- [func lookAroundViewer(isPresented: Binding<Bool>, initialScene: MKLookAroundScene?, allowsNavigation: Bool, showsRoadLabels: Bool, pointsOfInterest: PointOfInterestCategories, onDismiss: (() -> Void)?) -> some View
+](/documentation/swiftui/view/lookaroundviewer(ispresented:initialscene:allowsnavigation:showsroadlabels:pointsofinterest:ondismiss:))
+- [func lookAroundViewer(isPresented: Binding<Bool>, scene: Binding<MKLookAroundScene?>, allowsNavigation: Bool, showsRoadLabels: Bool, pointsOfInterest: PointOfInterestCategories, onDismiss: (() -> Void)?) -> some View
+](/documentation/swiftui/view/lookaroundviewer(ispresented:scene:allowsnavigation:showsroadlabels:pointsofinterest:ondismiss:))
+#### Managing map controls
+
+- [func mapControlVisibility(Visibility) -> some View
+](/documentation/swiftui/view/mapcontrolvisibility(_:))
+- [func mapControls(() -> some View) -> some View
+](/documentation/swiftui/view/mapcontrols(_:))
+#### Managing the camera
+
+- [func mapCameraKeyframeAnimator(trigger: some Equatable, keyframes: (MapCamera) -> some Keyframes<MapCamera>) -> some View
+](/documentation/swiftui/view/mapcamerakeyframeanimator(trigger:keyframes:))
+- [func onMapCameraChange(frequency: MapCameraUpdateFrequency, (MapCameraUpdateContext) -> Void) -> some View
+](/documentation/swiftui/view/onmapcamerachange(frequency:_:)-2pcga)
+- [func onMapCameraChange(frequency:_:)](/documentation/swiftui/view/onmapcamerachange(frequency:_:))
+#### Managing feature selection
+
+- [func mapFeatureSelectionContent(content: (MapFeature) -> some MapContent) -> some View
+](/documentation/swiftui/view/mapfeatureselectioncontent(content:))
+- [func mapFeatureSelectionDisabled((MapFeature) -> Bool) -> some View
+](/documentation/swiftui/view/mapfeatureselectiondisabled(_:))
+#### Setting the namespace Identifier
+
+- [func mapScope(Namespace.ID) -> some View
+](/documentation/swiftui/view/mapscope(_:))
+#### Setting the map style
+
+- [func mapStyle(MapStyle) -> some View
+](/documentation/swiftui/view/mapstyle(_:))
 
 - [TupleMapContent](/documentation/mapkit/tuplemapcontent)
 #### Accessing the tuple value
 
 - [var value: T](/documentation/mapkit/tuplemapcontent/value)
+#### Type aliases
+
+- [Body](/documentation/mapkit/mapcontent/body-swift.associatedtype)
 
 - [MapSelectableContentView](/documentation/mapkit/mapselectablecontentview)
 

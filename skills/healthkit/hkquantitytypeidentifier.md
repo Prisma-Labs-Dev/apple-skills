@@ -4,7 +4,7 @@ description: The identifiers that create quantity type objects.
 source: https://developer.apple.com/documentation/healthkit/hkquantitytypeidentifier
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/healthkit/hkquantitytypeidentifier.json
-timestamp: 2026-04-14T13:14:11.702Z
+timestamp: 2026-08-11T06:08:55.324Z
 ---
 
 **Navigation:** [HealthKit](/documentation/healthkit)
@@ -120,6 +120,7 @@ To create an [HKQuantityType](/documentation/healthkit/hkquantitytype) instance,
 ## Mindfulness and Sleep
 
 - [appleSleepingWristTemperature](/documentation/healthkit/hkquantitytypeidentifier/applesleepingwristtemperature) A quantity sample type that records the wrist temperature during sleep.
+- [appleSleepingBreathingDisturbances](/documentation/healthkit/hkquantitytypeidentifier/applesleepingbreathingdisturbances)
 
 ## Nutrition
 
@@ -192,10 +193,6 @@ To create an [HKQuantityType](/documentation/healthkit/hkquantitytype) instance,
 ## Initializers
 
 - [init(rawValue:)](/documentation/healthkit/hkquantitytypeidentifier/init(rawvalue:)) Returns a newly initialized quantity type identifier using the provided string.
-
-## Type Properties
-
-- [appleSleepingBreathingDisturbances](/documentation/healthkit/hkquantitytypeidentifier/applesleepingbreathingdisturbances)
 
 ## Creating quantity types
 

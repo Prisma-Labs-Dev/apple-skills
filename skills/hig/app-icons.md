@@ -4,7 +4,7 @@ description: A unique, memorable icon expresses your app’s or game’s purpose
 source: https://developer.apple.com/design/human-interface-guidelines/app-icons
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/design/human-interface-guidelines/app-icons.json
-timestamp: 2026-06-26T06:39:36.088Z
+timestamp: 2026-08-11T06:08:55.470Z
 ---
 
 **Navigation:** [Human Interface Guidelines](/design/human-interface-guidelines)
@@ -35,7 +35,7 @@ You use your favorite design tool to craft the individual foreground layers of y
 
 ![A screenshot of the Photos app icon in Icon Composer.](https://docs-assets.developer.apple.com/published/6b291809e7cc1e2fa57e36ff0b8ef429/app-icons-icon-composer-overview-photos%402x.png)
 
-For tvOS and visionOS app icons, you add your icon layers directly to an image stack in Xcode to form your complete icon. For developer guidance, see [Configuring your app icon using an asset catalog](/documentation/Xcode/configuring-your-app-icon).
+For tvOS and visionOS app icons, you add your icon layers directly to an image stack in Xcode to form your complete icon. You can download Parallax Previewer and Parallax Exporter plug-in from [Apple Design Resources](https://developer.apple.com/design/resources/) to preview and test parallax visual effects. For developer guidance, see [Configuring your app icon using an asset catalog](/documentation/Xcode/configuring-your-app-icon).
 
 **Prefer clearly defined edges in foreground layers.** To ensure system-drawn highlights and shadows look best, avoid soft and feathered edges on foreground layer shapes.
 

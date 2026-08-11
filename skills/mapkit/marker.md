@@ -4,7 +4,7 @@ description: A balloon-shaped annotation that marks a map location.
 source: https://developer.apple.com/documentation/mapkit/marker
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/mapkit/marker.json
-timestamp: 2026-04-14T13:14:29.337Z
+timestamp: 2026-08-11T06:08:56.065Z
 ---
 
 **Navigation:** [MapKit](/documentation/mapkit)
@@ -13,7 +13,7 @@ timestamp: 2026-04-14T13:14:29.337Z
 
 # Marker
 
-**Available on:** iOS 17.0+, iPadOS 17.0+, Mac Catalyst, macOS 14.0+, tvOS 17.0+, visionOS, watchOS 10.0+
+**Available on:** iOS 17.0+, iPadOS 17.0+, Mac Catalyst 17.0+, macOS 14.0+, tvOS 17.0+, visionOS, watchOS 10.0+
 
 > A balloon-shaped annotation that marks a map location.
 
@@ -43,6 +43,23 @@ Use this view to create marker instances in the closure you provide to the `cont
 - [init(_:systemImage:coordinate:)](/documentation/mapkit/marker/init(_:systemimage:coordinate:)-2t4i0) Creates a marker at the given location with a localized title, and a system image the map displays as the balloon’s icon.
 - [init(coordinate:label:)](/documentation/mapkit/marker/init(coordinate:label:)) Creates a marker at the given location with the provided label.
 - [init(item:)](/documentation/mapkit/marker/init(item:)) Creates a marker for a given map item using a MapKit-provided label.
+
+## Setting the visibility of the title and subtitle
+
+- [annotationTitles(_:)](/documentation/mapkit/mapcontent/annotationtitles(_:)) Sets the visibility of titles for markers and annotations.
+- [annotationSubtitles(_:)](/documentation/mapkit/mapcontent/annotationsubtitles(_:)) Sets the visibility of subtitles for markers and annotations.
+
+## Styling the marker
+
+- [tint(_:)](/documentation/mapkit/mapcontent/tint(_:)) The tint shape style to apply to map content.
+
+## Setting the tag
+
+- [tag(_:)](/documentation/mapkit/mapcontent/tag(_:)) Sets the unique tag value of this piece of map content.
+
+## Type aliases
+
+- [Body](/documentation/mapkit/mapcontent/body-swift.associatedtype) The content and behavior of the view.
 
 ## Displaying place information
 

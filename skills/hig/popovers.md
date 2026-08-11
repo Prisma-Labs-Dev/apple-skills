@@ -4,7 +4,7 @@ description: A popover is a transient view that appears above other content when
 source: https://developer.apple.com/design/human-interface-guidelines/popovers
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/design/human-interface-guidelines/popovers.json
-timestamp: 2026-04-14T13:14:18.861Z
+timestamp: 2026-08-11T06:08:55.872Z
 ---
 
 **Navigation:** [Human Interface Guidelines](/design/human-interface-guidelines)
@@ -57,11 +57,11 @@ You can make a popover detachable in macOS, which becomes a separate panel when 
 
 ### Attached popover
 
-![An illustration of an event in Calendar with the attached version of the event's popover next to and pointing to it.](https://docs-assets.developer.apple.com/published/ef05d3cb071e4c11209cce39b596ca99/attached-popover%402x.png)
+![An illustration of an event in Calendar with the attached version of the event's popover next to and pointing to it.](https://docs-assets.developer.apple.com/published/936f81125a67ba6901787ab973efb899/attached-popover%402x.png)
 
 ### Detached popover
 
-![An illustration of an event in Calendar with the detached version of the event's popover next to it.](https://docs-assets.developer.apple.com/published/d0b16d14a582a887f385896669394ee4/detached-popover%402x.png)
+![An illustration of an event in Calendar with the detached version of the event's popover next to it.](https://docs-assets.developer.apple.com/published/cab42e91b714a33f6cbb8c5d5ff123bc/detached-popover%402x.png)
 
 **Consider letting people detach a popover.** People might appreciate being able to convert a popover into a panel if they want to view other information while the popover remains visible.
 

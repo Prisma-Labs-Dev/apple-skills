@@ -4,7 +4,7 @@ description: Progress indicators let people know that your app isn’t stalled w
 source: https://developer.apple.com/design/human-interface-guidelines/progress-indicators
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/design/human-interface-guidelines/progress-indicators.json
-timestamp: 2026-04-14T13:14:19.063Z
+timestamp: 2026-08-11T06:08:55.876Z
 ---
 
 **Navigation:** [Human Interface Guidelines](/design/human-interface-guidelines)
@@ -26,9 +26,9 @@ Because the duration of an operation is either known or unknown, there are two t
 
 Both determinate and indeterminate progress indicators can have different appearances depending on the platform. A determinate progress indicator shows the progress of a task by filling a linear or circular track as the task completes. *Progress bars* include a track that fills from the leading side to the trailing side. *Circular progress indicators* have a track that fills in a clockwise direction.
 
-![An image of a horizontal progress bar in macOS filled almost to the midpoint with solid color.](https://docs-assets.developer.apple.com/published/ec2a80ba694138d5ac65555f5e3b0734/progress-indicator-determinate-bar%402x.png)
+![An image of a horizontal progress bar in macOS filled almost to the midpoint with solid color.](https://docs-assets.developer.apple.com/published/1fb4fc96c9e799ba2d0f1efbff3e9104/progress-indicator-determinate-bar%402x.png)
 
-![An image of a circular progress indicator in macOS filled almost to the eight o'clock position with solid color.](https://docs-assets.developer.apple.com/published/8288f9d55f529f513e7c3bd33bc3e17a/progress-indicator-determinate-circle%402x.png)
+![An image of a circular progress indicator in macOS filled almost to the eight o'clock position with solid color.](https://docs-assets.developer.apple.com/published/4730e503e2b7f9c2095a71c3b057234e/progress-indicator-determinate-circle%402x.png)
 
 An indeterminate progress indicator — also called an *activity indicator* — uses an animated image to indicate progress. All platforms support a circular image that appears to spin; however, macOS also supports an indeterminate progress bar.
 
@@ -68,7 +68,7 @@ For developer guidance, see [ProgressView](/documentation/SwiftUI/ProgressView).
 
 A refresh control lets people immediately reload content, typically in a table view, without waiting for the next automatic content update to occur. A refresh control is a specialized type of activity indicator that’s hidden by default, becoming visible when people drag down the view they want to reload. In Mail, for example, people can drag down the list of Inbox messages to check for new messages.
 
-![A screenshot of a refresh content control spinning while Mail checks for new messages.](https://docs-assets.developer.apple.com/published/861acc5c0d9d6821e3dd4fd7fb42606f/refresh-controls%402x.png)
+![A screenshot of a refresh content control spinning while Mail checks for new messages.](https://docs-assets.developer.apple.com/published/50a9348d9e19b5ca206d8567d1d1fc20/refresh-controls%402x.png)
 
 **Perform automatic content updates.** Although people appreciate being able to do an immediate content refresh, they also expect automatic refreshes to occur periodically. Don’t make people responsible for initiating every update. Keep data fresh by updating it regularly.
 
@@ -80,7 +80,7 @@ For developer guidance, see [UIRefreshControl](/documentation/UIKit/UIRefreshCon
 
 In macOS, an indeterminate progress indicator can have a bar or circular appearance. Both versions use an animated image to indicate that the app is performing a task.
 
-![An image of a completely filled horizontal progress bar in macOS. The fill is animated to cycle through various shade changes as progress continues.](https://docs-assets.developer.apple.com/published/53c298b42043574cfe1d304c01bfc967/progress-indicator-intermediate-bar%402x.png)
+![An image of a completely filled horizontal progress bar in macOS. The fill is animated to cycle through various shade changes as progress continues.](https://docs-assets.developer.apple.com/published/7507cf2f58cb8aa230b7d2f5f8edb6d9/progress-indicator-intermediate-bar%402x.png)
 
 ![An image of a spinning, circular activity indicator in macOS.](https://docs-assets.developer.apple.com/published/6c1e23fcc6e04603423dacd5df6c48a3/progress-indicator-intermediate-spinner%402x.png)
 
@@ -94,7 +94,7 @@ By default the system displays the progress indicators in white over the scene�
 
 ![An image of a progress bar filling from left to right in watchOS.](https://docs-assets.developer.apple.com/published/33bbf8ea9d047a5933e60cb120d3556e/progress-bar-watch%402x.png)
 
-![An image of a circular progress indicator filling clockwise in watchOS.](https://docs-assets.developer.apple.com/published/9327014cf549f926741534698be7d5ee/progress-ring-watch%402x.png)
+![An image of a circular progress indicator filling clockwise in watchOS.](https://docs-assets.developer.apple.com/published/95240440cd8d1384c68b146aad1912b0/progress-ring-watch%402x.png)
 
 ![An image of a spinning activity indicator in watchOS.](https://docs-assets.developer.apple.com/published/02a8427a04f946d9b80d2907f84ab365/activity-indicators-watch%402x.png)
 

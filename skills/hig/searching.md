@@ -4,7 +4,7 @@ description: People use various search techniques to find content on their devic
 source: https://developer.apple.com/design/human-interface-guidelines/searching
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/design/human-interface-guidelines/searching.json
-timestamp: 2026-06-26T06:39:36.282Z
+timestamp: 2026-08-11T06:08:55.883Z
 ---
 
 **Navigation:** [Human Interface Guidelines](/design/human-interface-guidelines)
@@ -25,7 +25,7 @@ In iOS, iPadOS, and macOS, Spotlight helps people find content across all apps i
 
 ## Best practices
 
-**If search is important, give it a primary position in your app or view.** For example, in the Notes app, a search field is in the bottom toolbar alongside other important actions. In apps that use tab bars, like Photos and Apple TV, search is a dedicated tab.
+**If search is important, give it a primary position in your app or view.** For example, in the Notes app, a search field is in the bottom [Toolbars](/design/human-interface-guidelines/toolbars) alongside other important actions. In apps that use [Tab bars](/design/human-interface-guidelines/tab-bars), like Photos and Apple TV, search is a dedicated tab.
 
 **Aim to make your app’s content searchable through a single location.** People appreciate having one clearly identified location they can use to find anything they’re looking for in your app. For apps with clearly distinct sections, it may still be useful to offer a local search. For example, search acts as a filter on the current view when searching your songs and albums in the iOS Music app.
 

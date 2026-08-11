@@ -4,7 +4,7 @@ description: A segmented control is a linear set of two or more segments, each o
 source: https://developer.apple.com/design/human-interface-guidelines/segmented-controls
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/design/human-interface-guidelines/segmented-controls.json
-timestamp: 2026-06-26T06:39:36.286Z
+timestamp: 2026-08-11T06:08:55.887Z
 ---
 
 **Navigation:** [Human Interface Guidelines](/design/human-interface-guidelines)
@@ -31,7 +31,7 @@ In addition to representing the state of a single or multiple-choice selection, 
 
 **Use a segmented control to provide closely related choices that affect an object, state, or view.** For example, a segmented control in an inspector could let people choose one or more attributes to apply to a selection, or a segmented control in a toolbar could offer a set of actions to perform on the current view.
 
-![A screenshot of the top half of the Activity screen in the iOS Health app, showing graphs of Move and Exercise activity. The segmented control above the graphs has D selected, indicating that the graphs show one day of activity.](https://docs-assets.developer.apple.com/published/f82bafe0f162b0181f6d50661109464b/segmented-controls-activity-charts%402x.png)
+![A screenshot of the top half of the Activity screen in the iOS Health app, showing graphs of Move and Exercise activity. The segmented control above the graphs has D selected, indicating that the graphs show one day of activity.](https://docs-assets.developer.apple.com/published/8b19fda023cc66387d947af05d8b2333/segmented-controls-activity-charts%402x.png)
 
 **Consider a segmented control when it’s important to group functions together, or to clearly show their selection state.** Unlike other button styles, segmented controls preserve their grouping regardless of the view size or where they appear. This grouping can also help people understand at a glance which controls are currently selected.
 
@@ -57,7 +57,7 @@ In addition to representing the state of a single or multiple-choice selection, 
 
 **Consider a segmented control to switch between closely related subviews.** A segmented control can be useful as a way to quickly switch between related subviews. For example, the segmented control in Calendar’s New Event sheet switches between the subviews for creating a new event and a new reminder. For switching between completely separate sections of an app, use a [Tab bars](/design/human-interface-guidelines/tab-bars) instead.
 
-![A screenshot of the top half of the iOS Calendar app, showing the New Event sheet. A segmented control provides the ability to switch between adding a new event and a new reminder.](https://docs-assets.developer.apple.com/published/2438acc643ee037a518cad7a15b18709/segmented-controls-calendar-new-event%402x.png)
+![A screenshot of the top half of the iOS Calendar app, showing the New Event sheet. A segmented control provides the ability to switch between adding a new event and a new reminder.](https://docs-assets.developer.apple.com/published/e332c65fedbefd2b5d084f7d70c67183/segmented-controls-calendar-new-event%402x.png)
 
 ### macOS
 
@@ -65,7 +65,7 @@ In addition to representing the state of a single or multiple-choice selection, 
 
 **Use a tab view in the main window area — instead of a segmented control — for view switching.** A [Tab views](/design/human-interface-guidelines/tab-views) supports efficient view switching and is similar in appearance to a [Boxes](/design/human-interface-guidelines/boxes) combined with a segmented control. Consider using a segmented control to help people switch views in a toolbar or inspector pane.
 
-![A screenshot of the macOS Calendar app. The main window area shows a tab view that contains four tabs: Day, Week, Month, and Year. The sidebar shows a segmented control that contains two segments: New and Replied.](https://docs-assets.developer.apple.com/published/e0a8dd930dcd6e099b72c643b6077a7b/macos-calendar-tab-view-segmented-control-comparison%402x.png)
+![A screenshot of the macOS Calendar app. The main window area shows a tab view that contains four tabs: Day, Week, Month, and Year. The sidebar shows a segmented control that contains two segments: New and Replied.](https://docs-assets.developer.apple.com/published/45678627e5bb166ff19d3992605c0900/macos-calendar-tab-view-segmented-control-comparison%402x.png)
 
 **Consider supporting spring loading.** On a Mac equipped with a Magic Trackpad, spring loading lets people activate a segment by dragging selected items over it and force clicking without dropping the selected items. People can also continue dragging the items after a segment activates.
 

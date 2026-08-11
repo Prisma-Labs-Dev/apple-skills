@@ -4,7 +4,7 @@ description: A type that represents part of your app’s user interface and prov
 source: https://developer.apple.com/documentation/swiftui/view
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/swiftui/view.json
-timestamp: 2026-06-26T06:39:36.848Z
+timestamp: 2026-08-11T06:08:56.455Z
 ---
 
 **Navigation:** [SwiftUI](/documentation/swiftui)
@@ -252,6 +252,10 @@ A type conforming to this protocol inherits `@preconcurrency @MainActor` isolati
 ## Deprecated modifiers
 
 - [Deprecated modifiers](/documentation/swiftui/view-deprecated) Review unsupported modifiers and their replacements.
+
+## Instance Methods
+
+- [presentationPlacement(_:)](/documentation/swiftui/view/presentationplacement(_:)) Sets the placement of a presentation within the presenting view.
 
 ## Creating a view
 

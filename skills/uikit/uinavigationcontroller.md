@@ -4,7 +4,7 @@ description: A container view controller that defines a stack-based scheme for n
 source: https://developer.apple.com/documentation/uikit/uinavigationcontroller
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/uikit/uinavigationcontroller.json
-timestamp: 2026-04-14T13:14:52.415Z
+timestamp: 2026-08-11T06:08:56.637Z
 ---
 
 **Navigation:** [UIKit](/documentation/uikit)
@@ -170,7 +170,7 @@ For more information about how state preservation and restoration works, see [Pr
 - [popViewController(animated:)](/documentation/uikit/uinavigationcontroller/popviewcontroller(animated:)) Pops the top view controller from the navigation stack and updates the display.
 - [popToRootViewController(animated:)](/documentation/uikit/uinavigationcontroller/poptorootviewcontroller(animated:)) Pops all the view controllers on the stack except the root view controller and updates the display.
 - [popToViewController(_:animated:)](/documentation/uikit/uinavigationcontroller/poptoviewcontroller(_:animated:)) Pops view controllers until the specified view controller is at the top of the navigation stack.
-- [interactivePopGestureRecognizer](/documentation/uikit/uinavigationcontroller/interactivepopgesturerecognizer) The gesture recognizer responsible for popping the top view controller off the navigation stack when a person swipes from the leading screen edge.
+- [interactivePopGestureRecognizer](/documentation/uikit/uinavigationcontroller/interactivepopgesturerecognizer) The gesture recognizer that handles interactively popping the top view controller off the navigation stack when a person swipes from the leading screen edge.
 - [interactiveContentPopGestureRecognizer](/documentation/uikit/uinavigationcontroller/interactivecontentpopgesturerecognizer) The gesture recognizer that handles interactively popping the top view controller off the navigation stack when a person pans horizontally in the view.
 
 ## Configuring navigation bars

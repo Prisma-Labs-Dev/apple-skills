@@ -3,7 +3,7 @@ title: App Intents
 source: https://developer.apple.com/documentation/appintents
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/index/appintents
-timestamp: 2026-06-26T06:39:35.635Z
+timestamp: 2026-08-11T06:08:54.988Z
 ---
 
 **Navigation:** [App Intents](/documentation/appintents)
@@ -233,8 +233,19 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [static var deprecation: IntentDeprecation<Never>](/documentation/appintents/deprecatedappintent/deprecation-55gu8)
 
 
+#### Search
+
 - [ShowInAppSearchResultsIntent](/documentation/appintents/showinappsearchresultsintent)
-##### Scoping the search
+##### Providing the search criteria
+
+- [var criteria: Self.Criteria](/documentation/appintents/showinappsearchresultsintent/criteria-swift.property)
+- [Criteria](/documentation/appintents/showinappsearchresultsintent/criteria-swift.associatedtype)
+- [SearchCriteria](/documentation/appintents/searchcriteria)
+###### Associated Types
+
+- [SearchScopes](/documentation/appintents/searchcriteria/searchscopes)
+
+##### Limiting the search scope
 
 - [static var searchScopes: Self.Criteria.SearchScopes](/documentation/appintents/showinappsearchresultsintent/searchscopes)
 ###### ShowInAppSearchResultsIntent Implementations
@@ -242,44 +253,33 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [static var searchScopes: [StringSearchScope]](/documentation/appintents/showinappsearchresultsintent/searchscopes-5p2sw)
 - [static var searchScopes: Void](/documentation/appintents/showinappsearchresultsintent/searchscopes-7ve8b)
 
+
+- [StringSearchCriteria](/documentation/appintents/stringsearchcriteria)
+##### Creating the search criteria
+
+- [init(term: String)](/documentation/appintents/stringsearchcriteria/init(term:))
+##### Getting the search term
+
+- [var term: String](/documentation/appintents/stringsearchcriteria/term)
+##### Getting related types
+
+- [static var defaultResolverSpecification: some ResolverSpecification](/documentation/appintents/stringsearchcriteria/defaultresolverspecification)
+- [StringSearchCriteria.Specification](/documentation/appintents/stringsearchcriteria/specification)
+- [StringSearchCriteria.UnwrappedType](/documentation/appintents/stringsearchcriteria/unwrappedtype)
+- [StringSearchCriteria.ValueType](/documentation/appintents/stringsearchcriteria/valuetype)
+
 - [StringSearchScope](/documentation/appintents/stringsearchscope)
-###### Search scopes
+##### Getting the search scopes
 
 - [case freeformVideo](/documentation/appintents/stringsearchscope/freeformvideo)
 - [case general](/documentation/appintents/stringsearchscope/general)
 - [case movies](/documentation/appintents/stringsearchscope/movies)
 - [case tv](/documentation/appintents/stringsearchscope/tv)
-###### Type Aliases
+##### Getting the related types
 
 - [StringSearchScope.Specification](/documentation/appintents/stringsearchscope/specification)
 - [StringSearchScope.UnwrappedType](/documentation/appintents/stringsearchscope/unwrappedtype)
 - [StringSearchScope.ValueType](/documentation/appintents/stringsearchscope/valuetype)
-
-##### Defining the search criteria
-
-- [var criteria: Self.Criteria](/documentation/appintents/showinappsearchresultsintent/criteria-swift.property)
-- [SearchCriteria](/documentation/appintents/searchcriteria)
-###### Associated Types
-
-- [SearchScopes](/documentation/appintents/searchcriteria/searchscopes)
-
-- [StringSearchCriteria](/documentation/appintents/stringsearchcriteria)
-###### Initializers
-
-- [init(term: String)](/documentation/appintents/stringsearchcriteria/init(term:))
-###### Instance Properties
-
-- [var term: String](/documentation/appintents/stringsearchcriteria/term)
-###### Type Aliases
-
-- [StringSearchCriteria.Specification](/documentation/appintents/stringsearchcriteria/specification)
-- [StringSearchCriteria.UnwrappedType](/documentation/appintents/stringsearchcriteria/unwrappedtype)
-- [StringSearchCriteria.ValueType](/documentation/appintents/stringsearchcriteria/valuetype)
-###### Type Properties
-
-- [static var defaultResolverSpecification: some ResolverSpecification](/documentation/appintents/stringsearchcriteria/defaultresolverspecification)
-
-- [Criteria](/documentation/appintents/showinappsearchresultsintent/criteria-swift.associatedtype)
 
 #### Universal link navigation
 
@@ -356,7 +356,16 @@ timestamp: 2026-06-26T06:39:35.635Z
 
 - [PushToTalkTransmissionIntent](/documentation/appintents/pushtotalktransmissionintent)
 - [ShowInAppSearchResultsIntent](/documentation/appintents/showinappsearchresultsintent)
-##### Scoping the search
+##### Providing the search criteria
+
+- [var criteria: Self.Criteria](/documentation/appintents/showinappsearchresultsintent/criteria-swift.property)
+- [Criteria](/documentation/appintents/showinappsearchresultsintent/criteria-swift.associatedtype)
+- [SearchCriteria](/documentation/appintents/searchcriteria)
+###### Associated Types
+
+- [SearchScopes](/documentation/appintents/searchcriteria/searchscopes)
+
+##### Limiting the search scope
 
 - [static var searchScopes: Self.Criteria.SearchScopes](/documentation/appintents/showinappsearchresultsintent/searchscopes)
 ###### ShowInAppSearchResultsIntent Implementations
@@ -364,44 +373,6 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [static var searchScopes: [StringSearchScope]](/documentation/appintents/showinappsearchresultsintent/searchscopes-5p2sw)
 - [static var searchScopes: Void](/documentation/appintents/showinappsearchresultsintent/searchscopes-7ve8b)
 
-- [StringSearchScope](/documentation/appintents/stringsearchscope)
-###### Search scopes
-
-- [case freeformVideo](/documentation/appintents/stringsearchscope/freeformvideo)
-- [case general](/documentation/appintents/stringsearchscope/general)
-- [case movies](/documentation/appintents/stringsearchscope/movies)
-- [case tv](/documentation/appintents/stringsearchscope/tv)
-###### Type Aliases
-
-- [StringSearchScope.Specification](/documentation/appintents/stringsearchscope/specification)
-- [StringSearchScope.UnwrappedType](/documentation/appintents/stringsearchscope/unwrappedtype)
-- [StringSearchScope.ValueType](/documentation/appintents/stringsearchscope/valuetype)
-
-##### Defining the search criteria
-
-- [var criteria: Self.Criteria](/documentation/appintents/showinappsearchresultsintent/criteria-swift.property)
-- [SearchCriteria](/documentation/appintents/searchcriteria)
-###### Associated Types
-
-- [SearchScopes](/documentation/appintents/searchcriteria/searchscopes)
-
-- [StringSearchCriteria](/documentation/appintents/stringsearchcriteria)
-###### Initializers
-
-- [init(term: String)](/documentation/appintents/stringsearchcriteria/init(term:))
-###### Instance Properties
-
-- [var term: String](/documentation/appintents/stringsearchcriteria/term)
-###### Type Aliases
-
-- [StringSearchCriteria.Specification](/documentation/appintents/stringsearchcriteria/specification)
-- [StringSearchCriteria.UnwrappedType](/documentation/appintents/stringsearchcriteria/unwrappedtype)
-- [StringSearchCriteria.ValueType](/documentation/appintents/stringsearchcriteria/valuetype)
-###### Type Properties
-
-- [static var defaultResolverSpecification: some ResolverSpecification](/documentation/appintents/stringsearchcriteria/defaultresolverspecification)
-
-- [Criteria](/documentation/appintents/showinappsearchresultsintent/criteria-swift.associatedtype)
 
 #### Controls, widgets, and Live Activities
 
@@ -422,6 +393,7 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [case accessoryInline](/documentation/appintents/intentwidgetfamily/accessoryinline)
 - [case accessoryRectangular](/documentation/appintents/intentwidgetfamily/accessoryrectangular)
 - [case systemExtraLarge](/documentation/appintents/intentwidgetfamily/systemextralarge)
+- [case systemExtraLargePortrait](/documentation/appintents/intentwidgetfamily/systemextralargeportrait)
 - [case systemLarge](/documentation/appintents/intentwidgetfamily/systemlarge)
 - [case systemMedium](/documentation/appintents/intentwidgetfamily/systemmedium)
 - [case systemSmall](/documentation/appintents/intentwidgetfamily/systemsmall)
@@ -2783,15 +2755,6 @@ timestamp: 2026-06-26T06:39:35.635Z
 
 - [var appEntityIdentifier: EntityIdentifier?](/documentation/appintents/appentityannotatable/appentityidentifier)
 
-- [AppEntityIdentifier](/documentation/appintents/appentityidentifier)
-#### Initializers
-
-- [init(entityType: AttributedTypeIdentifier, instanceIdentifier: String)](/documentation/appintents/appentityidentifier/init(entitytype:instanceidentifier:))
-#### Instance Properties
-
-- [let entityType: AttributedTypeIdentifier](/documentation/appintents/appentityidentifier/entitytype)
-- [let instanceIdentifier: String](/documentation/appintents/appentityidentifier/instanceidentifier)
-
 ### Entity queries
 
 - [Entity queries](/documentation/appintents/entity-queries)
@@ -2823,10 +2786,10 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [Result](/documentation/appintents/entityquery/result)
 ##### Instance Methods
 
-- [func displayRepresentations(for: [Self.Entity.ID], requestedComponents: DisplayRepresentation.Components) async throws -> [Self.Entity.ID : DisplayRepresentation]](/documentation/appintents/entityquery/displayrepresentations(for:requestedcomponents:))
+- [func displayRepresentations(for: [Self.Entity.ID]) async throws -> [Self.Entity.ID : DisplayRepresentation]](/documentation/appintents/entityquery/displayrepresentations(for:))
 ###### EntityQuery Implementations
 
-- [func displayRepresentations(for: [Self.Entity.ID], requestedComponents: DisplayRepresentation.Components) async throws -> [Self.Entity.ID : DisplayRepresentation]](/documentation/appintents/entityquery/displayrepresentations(for:requestedcomponents:)-3werf)
+- [func displayRepresentations(for: [Self.Entity.ID]) async throws -> [Self.Entity.ID : DisplayRepresentation]](/documentation/appintents/entityquery/displayrepresentations(for:)-258xs)
 
 ##### Type Aliases
 
@@ -3111,7 +3074,6 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [EntityProperty](/documentation/appintents/entityproperty)
 #### Initializers
 
-- [convenience init()](/documentation/appintents/entityproperty/init()-1aips)
 - [convenience init()](/documentation/appintents/entityproperty/init()-1rgp4)
 - [convenience init()](/documentation/appintents/entityproperty/init()-24wv7)
 - [convenience init()](/documentation/appintents/entityproperty/init()-2eq1j)
@@ -3181,7 +3143,6 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [convenience init(customIndexingKey: CSCustomAttributeKey)](/documentation/appintents/entityproperty/init(customindexingkey:)-677j5)
 - [convenience init(customIndexingKey: CSCustomAttributeKey)](/documentation/appintents/entityproperty/init(customindexingkey:)-6kbjo)
 - [convenience init(customIndexingKey: CSCustomAttributeKey)](/documentation/appintents/entityproperty/init(customindexingkey:)-6srk9)
-- [convenience init(customIndexingKey: CSCustomAttributeKey)](/documentation/appintents/entityproperty/init(customindexingkey:)-75zc6)
 - [convenience init(customIndexingKey: CSCustomAttributeKey)](/documentation/appintents/entityproperty/init(customindexingkey:)-7gl1i)
 - [convenience init(customIndexingKey: CSCustomAttributeKey)](/documentation/appintents/entityproperty/init(customindexingkey:)-7lok5)
 - [convenience init<Entity>(customIndexingKey: CSCustomAttributeKey)](/documentation/appintents/entityproperty/init(customindexingkey:)-7potr)
@@ -3206,7 +3167,6 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [convenience init(identifier: String)](/documentation/appintents/entityproperty/init(identifier:)-1a528)
 - [convenience init(identifier: String)](/documentation/appintents/entityproperty/init(identifier:)-1a8ak)
 - [convenience init(identifier: String)](/documentation/appintents/entityproperty/init(identifier:)-1hhi9)
-- [convenience init(identifier: String)](/documentation/appintents/entityproperty/init(identifier:)-1uyhg)
 - [convenience init(identifier: String)](/documentation/appintents/entityproperty/init(identifier:)-2de4j)
 - [convenience init(identifier: String)](/documentation/appintents/entityproperty/init(identifier:)-2jt43)
 - [convenience init(identifier: String)](/documentation/appintents/entityproperty/init(identifier:)-2ys0i)
@@ -3265,7 +3225,6 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [convenience init<Entity>(identifier: String, asyncGetter: (Entity) async throws -> Value)](/documentation/appintents/entityproperty/init(identifier:asyncgetter:)-4ug9l)
 - [convenience init<Entity>(identifier: String, asyncGetter: (Entity) async throws -> Value)](/documentation/appintents/entityproperty/init(identifier:asyncgetter:)-4w5mh)
 - [convenience init<Entity>(identifier: String, asyncGetter: (Entity) async throws -> Value)](/documentation/appintents/entityproperty/init(identifier:asyncgetter:)-4zsk5)
-- [convenience init<Entity>(identifier: String, asyncGetter: (Entity) async throws -> Value)](/documentation/appintents/entityproperty/init(identifier:asyncgetter:)-5e927)
 - [convenience init<Entity>(identifier: String, asyncGetter: (Entity) async throws -> Value)](/documentation/appintents/entityproperty/init(identifier:asyncgetter:)-5eiyw)
 - [convenience init<Entity>(identifier: String, asyncGetter: (Entity) async throws -> Value)](/documentation/appintents/entityproperty/init(identifier:asyncgetter:)-5fs2j)
 - [convenience init<Entity>(identifier: String, asyncGetter: (Entity) async throws -> Value)](/documentation/appintents/entityproperty/init(identifier:asyncgetter:)-5uh4)
@@ -3307,7 +3266,6 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [convenience init(identifier: String, customIndexingKey: CSCustomAttributeKey)](/documentation/appintents/entityproperty/init(identifier:customindexingkey:)-42jxe)
 - [convenience init(identifier: String, customIndexingKey: CSCustomAttributeKey)](/documentation/appintents/entityproperty/init(identifier:customindexingkey:)-45sbt)
 - [convenience init(identifier: String, customIndexingKey: CSCustomAttributeKey)](/documentation/appintents/entityproperty/init(identifier:customindexingkey:)-4axu1)
-- [convenience init(identifier: String, customIndexingKey: CSCustomAttributeKey)](/documentation/appintents/entityproperty/init(identifier:customindexingkey:)-4ins4)
 - [convenience init(identifier: String, customIndexingKey: CSCustomAttributeKey)](/documentation/appintents/entityproperty/init(identifier:customindexingkey:)-4kau5)
 - [convenience init(identifier: String, customIndexingKey: CSCustomAttributeKey)](/documentation/appintents/entityproperty/init(identifier:customindexingkey:)-4wqds)
 - [convenience init(identifier: String, customIndexingKey: CSCustomAttributeKey)](/documentation/appintents/entityproperty/init(identifier:customindexingkey:)-5aiat)
@@ -3337,7 +3295,6 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [convenience init(identifier: String, customIndexingKey: CSCustomAttributeKey)](/documentation/appintents/entityproperty/init(identifier:customindexingkey:)-p78n)
 - [convenience init(identifier: String, customIndexingKey: CSCustomAttributeKey)](/documentation/appintents/entityproperty/init(identifier:customindexingkey:)-y5yt)
 - [convenience init<Entity>(identifier: String, customIndexingKey: CSCustomAttributeKey, asyncGetter: (Entity) async throws -> Value)](/documentation/appintents/entityproperty/init(identifier:customindexingkey:asyncgetter:)-10dhr)
-- [convenience init<Entity>(identifier: String, customIndexingKey: CSCustomAttributeKey, asyncGetter: (Entity) async throws -> Value)](/documentation/appintents/entityproperty/init(identifier:customindexingkey:asyncgetter:)-13qnt)
 - [convenience init<Entity>(identifier: String, customIndexingKey: CSCustomAttributeKey, asyncGetter: (Entity) async throws -> Value)](/documentation/appintents/entityproperty/init(identifier:customindexingkey:asyncgetter:)-1pxun)
 - [convenience init<Entity>(identifier: String, customIndexingKey: CSCustomAttributeKey, asyncGetter: (Entity) async throws -> Value)](/documentation/appintents/entityproperty/init(identifier:customindexingkey:asyncgetter:)-1ypy0)
 - [convenience init<Entity>(identifier: String, customIndexingKey: CSCustomAttributeKey, asyncGetter: (Entity) async throws -> Value)](/documentation/appintents/entityproperty/init(identifier:customindexingkey:asyncgetter:)-2hbx8)
@@ -3388,7 +3345,6 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [convenience init<Entity>(identifier: String, customIndexingKey: CSCustomAttributeKey, getSetter: WritableKeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:customindexingkey:getsetter:)-2ykkq)
 - [convenience init<Entity>(identifier: String, customIndexingKey: CSCustomAttributeKey, getSetter: WritableKeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:customindexingkey:getsetter:)-30yhq)
 - [convenience init<Entity>(identifier: String, customIndexingKey: CSCustomAttributeKey, getSetter: WritableKeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:customindexingkey:getsetter:)-38xi)
-- [convenience init<Entity>(identifier: String, customIndexingKey: CSCustomAttributeKey, getSetter: WritableKeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:customindexingkey:getsetter:)-3c95j)
 - [convenience init<Entity>(identifier: String, customIndexingKey: CSCustomAttributeKey, getSetter: WritableKeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:customindexingkey:getsetter:)-3pu07)
 - [convenience init<Entity>(identifier: String, customIndexingKey: CSCustomAttributeKey, getSetter: WritableKeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:customindexingkey:getsetter:)-3rulq)
 - [convenience init<Entity>(identifier: String, customIndexingKey: CSCustomAttributeKey, getSetter: WritableKeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:customindexingkey:getsetter:)-3xrlr)
@@ -3459,7 +3415,6 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [convenience init<Entity>(identifier: String, customIndexingKey: CSCustomAttributeKey, getter: KeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:customindexingkey:getter:)-71o75)
 - [convenience init<Entity>(identifier: String, customIndexingKey: CSCustomAttributeKey, getter: KeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:customindexingkey:getter:)-7c84a)
 - [convenience init<Entity>(identifier: String, customIndexingKey: CSCustomAttributeKey, getter: KeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:customindexingkey:getter:)-7nasr)
-- [convenience init<Entity>(identifier: String, customIndexingKey: CSCustomAttributeKey, getter: KeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:customindexingkey:getter:)-7t3vt)
 - [convenience init<Entity>(identifier: String, customIndexingKey: CSCustomAttributeKey, getter: KeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:customindexingkey:getter:)-7utjm)
 - [convenience init<Entity>(identifier: String, customIndexingKey: CSCustomAttributeKey, getter: KeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:customindexingkey:getter:)-7yufv)
 - [convenience init<Entity>(identifier: String, customIndexingKey: CSCustomAttributeKey, getter: KeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:customindexingkey:getter:)-83v5n)
@@ -3513,7 +3468,6 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [convenience init<Entity>(identifier: String, getSetter: WritableKeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:getsetter:)-9w9av)
 - [convenience init<Entity>(identifier: String, getSetter: WritableKeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:getsetter:)-cbr9)
 - [convenience init<Entity>(identifier: String, getSetter: WritableKeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:getsetter:)-epfk)
-- [convenience init<Entity>(identifier: String, getSetter: WritableKeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:getsetter:)-fwpu)
 - [convenience init<Entity>(identifier: String, getSetter: WritableKeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:getsetter:)-riag)
 - [convenience init<Entity>(identifier: String, getSetter: WritableKeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:getsetter:)-ty5a)
 - [convenience init<Entity>(identifier: String, getter: KeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:getter:)-10ynr)
@@ -3532,7 +3486,6 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [convenience init<Entity>(identifier: String, getter: KeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:getter:)-4sry9)
 - [convenience init<Entity>(identifier: String, getter: KeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:getter:)-4vigz)
 - [convenience init<Entity>(identifier: String, getter: KeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:getter:)-5v2e2)
-- [convenience init<Entity>(identifier: String, getter: KeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:getter:)-5wsq4)
 - [convenience init<Entity>(identifier: String, getter: KeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:getter:)-6j0zg)
 - [convenience init<Entity>(identifier: String, getter: KeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:getter:)-756yu)
 - [convenience init<Entity>(identifier: String, getter: KeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:getter:)-7az66)
@@ -3594,7 +3547,6 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [convenience init(identifier: String, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>)](/documentation/appintents/entityproperty/init(identifier:indexingkey:)-7u2ie)
 - [convenience init(identifier: String, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>)](/documentation/appintents/entityproperty/init(identifier:indexingkey:)-89dlx)
 - [convenience init(identifier: String, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>)](/documentation/appintents/entityproperty/init(identifier:indexingkey:)-8bkuw)
-- [convenience init(identifier: String, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>)](/documentation/appintents/entityproperty/init(identifier:indexingkey:)-8bovj)
 - [convenience init(identifier: String, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>)](/documentation/appintents/entityproperty/init(identifier:indexingkey:)-8pndc)
 - [convenience init(identifier: String, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>)](/documentation/appintents/entityproperty/init(identifier:indexingkey:)-8vhty)
 - [convenience init(identifier: String, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>)](/documentation/appintents/entityproperty/init(identifier:indexingkey:)-90s7c)
@@ -3618,7 +3570,6 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [convenience init<Entity>(identifier: String, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>, asyncGetter: (Entity) async throws -> Value)](/documentation/appintents/entityproperty/init(identifier:indexingkey:asyncgetter:)-2sdck)
 - [convenience init<Entity>(identifier: String, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>, asyncGetter: (Entity) async throws -> Value)](/documentation/appintents/entityproperty/init(identifier:indexingkey:asyncgetter:)-359z7)
 - [convenience init<Entity>(identifier: String, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>, asyncGetter: (Entity) async throws -> Value)](/documentation/appintents/entityproperty/init(identifier:indexingkey:asyncgetter:)-366jr)
-- [convenience init<Entity>(identifier: String, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>, asyncGetter: (Entity) async throws -> Value)](/documentation/appintents/entityproperty/init(identifier:indexingkey:asyncgetter:)-39kjd)
 - [convenience init<Entity>(identifier: String, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>, asyncGetter: (Entity) async throws -> Value)](/documentation/appintents/entityproperty/init(identifier:indexingkey:asyncgetter:)-3euy7)
 - [convenience init<Entity>(identifier: String, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>, asyncGetter: (Entity) async throws -> Value)](/documentation/appintents/entityproperty/init(identifier:indexingkey:asyncgetter:)-3gan8)
 - [convenience init<Entity>(identifier: String, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>, asyncGetter: (Entity) async throws -> Value)](/documentation/appintents/entityproperty/init(identifier:indexingkey:asyncgetter:)-3wq4t)
@@ -3677,7 +3628,6 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [convenience init<Entity>(identifier: String, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>, getSetter: WritableKeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:indexingkey:getsetter:)-5dg1t)
 - [convenience init<Entity>(identifier: String, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>, getSetter: WritableKeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:indexingkey:getsetter:)-5fowl)
 - [convenience init<Entity>(identifier: String, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>, getSetter: WritableKeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:indexingkey:getsetter:)-5mtpi)
-- [convenience init<Entity>(identifier: String, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>, getSetter: WritableKeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:indexingkey:getsetter:)-5n7m2)
 - [convenience init<Entity>(identifier: String, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>, getSetter: WritableKeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:indexingkey:getsetter:)-5nzpa)
 - [convenience init<Entity>(identifier: String, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>, getSetter: WritableKeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:indexingkey:getsetter:)-5qr3z)
 - [convenience init<Entity>(identifier: String, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>, getSetter: WritableKeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:indexingkey:getsetter:)-5r2ir)
@@ -3740,7 +3690,6 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [convenience init<Entity>(identifier: String, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>, getter: KeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:indexingkey:getter:)-9x2qd)
 - [convenience init<Entity>(identifier: String, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>, getter: KeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:indexingkey:getter:)-dboi)
 - [convenience init<Entity>(identifier: String, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>, getter: KeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:indexingkey:getter:)-v7ux)
-- [convenience init<Entity>(identifier: String, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>, getter: KeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:indexingkey:getter:)-vbci)
 - [convenience init(identifier: String, title: LocalizedStringResource)](/documentation/appintents/entityproperty/init(identifier:title:)-117h4)
 - [convenience init(identifier: String, title: LocalizedStringResource)](/documentation/appintents/entityproperty/init(identifier:title:)-14z0w)
 - [convenience init(identifier: String, title: LocalizedStringResource)](/documentation/appintents/entityproperty/init(identifier:title:)-189d8)
@@ -3765,7 +3714,6 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [convenience init(identifier: String, title: LocalizedStringResource)](/documentation/appintents/entityproperty/init(identifier:title:)-51yri)
 - [convenience init(identifier: String, title: LocalizedStringResource)](/documentation/appintents/entityproperty/init(identifier:title:)-583yi)
 - [convenience init(identifier: String, title: LocalizedStringResource)](/documentation/appintents/entityproperty/init(identifier:title:)-5fsj5)
-- [convenience init(identifier: String, title: LocalizedStringResource)](/documentation/appintents/entityproperty/init(identifier:title:)-5oiuy)
 - [convenience init(identifier: String, title: LocalizedStringResource)](/documentation/appintents/entityproperty/init(identifier:title:)-5s1hj)
 - [convenience init(identifier: String, title: LocalizedStringResource)](/documentation/appintents/entityproperty/init(identifier:title:)-5zao5)
 - [convenience init(identifier: String, title: LocalizedStringResource)](/documentation/appintents/entityproperty/init(identifier:title:)-6llym)
@@ -3822,7 +3770,6 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, asyncGetter: (Entity) async throws -> Value)](/documentation/appintents/entityproperty/init(identifier:title:asyncgetter:)-83se5)
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, asyncGetter: (Entity) async throws -> Value)](/documentation/appintents/entityproperty/init(identifier:title:asyncgetter:)-8c6rk)
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, asyncGetter: (Entity) async throws -> Value)](/documentation/appintents/entityproperty/init(identifier:title:asyncgetter:)-8j12u)
-- [convenience init<Entity>(identifier: String, title: LocalizedStringResource, asyncGetter: (Entity) async throws -> Value)](/documentation/appintents/entityproperty/init(identifier:title:asyncgetter:)-8rfd6)
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, asyncGetter: (Entity) async throws -> Value)](/documentation/appintents/entityproperty/init(identifier:title:asyncgetter:)-8rgn4)
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, asyncGetter: (Entity) async throws -> Value)](/documentation/appintents/entityproperty/init(identifier:title:asyncgetter:)-8rhb1)
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, asyncGetter: (Entity) async throws -> Value)](/documentation/appintents/entityproperty/init(identifier:title:asyncgetter:)-8zjbm)
@@ -3859,7 +3806,6 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [convenience init(identifier: String, title: LocalizedStringResource, customIndexingKey: CSCustomAttributeKey)](/documentation/appintents/entityproperty/init(identifier:title:customindexingkey:)-46ynr)
 - [convenience init(identifier: String, title: LocalizedStringResource, customIndexingKey: CSCustomAttributeKey)](/documentation/appintents/entityproperty/init(identifier:title:customindexingkey:)-4fibl)
 - [convenience init(identifier: String, title: LocalizedStringResource, customIndexingKey: CSCustomAttributeKey)](/documentation/appintents/entityproperty/init(identifier:title:customindexingkey:)-4imv0)
-- [convenience init(identifier: String, title: LocalizedStringResource, customIndexingKey: CSCustomAttributeKey)](/documentation/appintents/entityproperty/init(identifier:title:customindexingkey:)-4itpe)
 - [convenience init(identifier: String, title: LocalizedStringResource, customIndexingKey: CSCustomAttributeKey)](/documentation/appintents/entityproperty/init(identifier:title:customindexingkey:)-4muq4)
 - [convenience init(identifier: String, title: LocalizedStringResource, customIndexingKey: CSCustomAttributeKey)](/documentation/appintents/entityproperty/init(identifier:title:customindexingkey:)-4p2vn)
 - [convenience init(identifier: String, title: LocalizedStringResource, customIndexingKey: CSCustomAttributeKey)](/documentation/appintents/entityproperty/init(identifier:title:customindexingkey:)-5acor)
@@ -3882,7 +3828,6 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, customIndexingKey: CSCustomAttributeKey, asyncGetter: (Entity) async throws -> Value)](/documentation/appintents/entityproperty/init(identifier:title:customindexingkey:asyncgetter:)-1degd)
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, customIndexingKey: CSCustomAttributeKey, asyncGetter: (Entity) async throws -> Value)](/documentation/appintents/entityproperty/init(identifier:title:customindexingkey:asyncgetter:)-1g1uu)
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, customIndexingKey: CSCustomAttributeKey, asyncGetter: (Entity) async throws -> Value)](/documentation/appintents/entityproperty/init(identifier:title:customindexingkey:asyncgetter:)-1t0se)
-- [convenience init<Entity>(identifier: String, title: LocalizedStringResource, customIndexingKey: CSCustomAttributeKey, asyncGetter: (Entity) async throws -> Value)](/documentation/appintents/entityproperty/init(identifier:title:customindexingkey:asyncgetter:)-20tgx)
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, customIndexingKey: CSCustomAttributeKey, asyncGetter: (Entity) async throws -> Value)](/documentation/appintents/entityproperty/init(identifier:title:customindexingkey:asyncgetter:)-23cu)
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, customIndexingKey: CSCustomAttributeKey, asyncGetter: (Entity) async throws -> Value)](/documentation/appintents/entityproperty/init(identifier:title:customindexingkey:asyncgetter:)-2g90j)
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, customIndexingKey: CSCustomAttributeKey, asyncGetter: (Entity) async throws -> Value)](/documentation/appintents/entityproperty/init(identifier:title:customindexingkey:asyncgetter:)-2nemk)
@@ -3941,7 +3886,6 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, customIndexingKey: CSCustomAttributeKey, getSetter: WritableKeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:title:customindexingkey:getsetter:)-60qr2)
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, customIndexingKey: CSCustomAttributeKey, getSetter: WritableKeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:title:customindexingkey:getsetter:)-62iyd)
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, customIndexingKey: CSCustomAttributeKey, getSetter: WritableKeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:title:customindexingkey:getsetter:)-6dk4h)
-- [convenience init<Entity>(identifier: String, title: LocalizedStringResource, customIndexingKey: CSCustomAttributeKey, getSetter: WritableKeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:title:customindexingkey:getsetter:)-6grwn)
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, customIndexingKey: CSCustomAttributeKey, getSetter: WritableKeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:title:customindexingkey:getsetter:)-6pk7)
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, customIndexingKey: CSCustomAttributeKey, getSetter: WritableKeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:title:customindexingkey:getsetter:)-6z3sm)
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, customIndexingKey: CSCustomAttributeKey, getSetter: WritableKeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:title:customindexingkey:getsetter:)-70r52)
@@ -3992,7 +3936,6 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, customIndexingKey: CSCustomAttributeKey, getter: KeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:title:customindexingkey:getter:)-7ns8d)
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, customIndexingKey: CSCustomAttributeKey, getter: KeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:title:customindexingkey:getter:)-7pbfj)
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, customIndexingKey: CSCustomAttributeKey, getter: KeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:title:customindexingkey:getter:)-81l94)
-- [convenience init<Entity>(identifier: String, title: LocalizedStringResource, customIndexingKey: CSCustomAttributeKey, getter: KeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:title:customindexingkey:getter:)-85l84)
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, customIndexingKey: CSCustomAttributeKey, getter: KeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:title:customindexingkey:getter:)-87vyt)
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, customIndexingKey: CSCustomAttributeKey, getter: KeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:title:customindexingkey:getter:)-8culv)
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, customIndexingKey: CSCustomAttributeKey, getter: KeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:title:customindexingkey:getter:)-8ilsx)
@@ -4014,7 +3957,6 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, getSetter: WritableKeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:title:getsetter:)-13vpt)
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, getSetter: WritableKeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:title:getsetter:)-1bjxb)
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, getSetter: WritableKeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:title:getsetter:)-1m3gq)
-- [convenience init<Entity>(identifier: String, title: LocalizedStringResource, getSetter: WritableKeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:title:getsetter:)-1tkgg)
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, getSetter: WritableKeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:title:getsetter:)-202nc)
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, getSetter: WritableKeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:title:getsetter:)-22ywl)
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, getSetter: WritableKeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:title:getsetter:)-2ki7h)
@@ -4098,7 +4040,6 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, getter: KeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:title:getter:)-97xts)
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, getter: KeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:title:getter:)-9hvo5)
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, getter: KeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:title:getter:)-9mfy6)
-- [convenience init<Entity>(identifier: String, title: LocalizedStringResource, getter: KeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:title:getter:)-qt8w)
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, getter: KeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:title:getter:)-rgp)
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, getter: KeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:title:getter:)-xk38)
 - [convenience init(identifier: String, title: LocalizedStringResource, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>)](/documentation/appintents/entityproperty/init(identifier:title:indexingkey:)-126me)
@@ -4131,7 +4072,6 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [convenience init(identifier: String, title: LocalizedStringResource, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>)](/documentation/appintents/entityproperty/init(identifier:title:indexingkey:)-5ots1)
 - [convenience init(identifier: String, title: LocalizedStringResource, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>)](/documentation/appintents/entityproperty/init(identifier:title:indexingkey:)-5y81o)
 - [convenience init(identifier: String, title: LocalizedStringResource, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>)](/documentation/appintents/entityproperty/init(identifier:title:indexingkey:)-63pff)
-- [convenience init(identifier: String, title: LocalizedStringResource, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>)](/documentation/appintents/entityproperty/init(identifier:title:indexingkey:)-68p12)
 - [convenience init(identifier: String, title: LocalizedStringResource, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>)](/documentation/appintents/entityproperty/init(identifier:title:indexingkey:)-6njuf)
 - [convenience init(identifier: String, title: LocalizedStringResource, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>)](/documentation/appintents/entityproperty/init(identifier:title:indexingkey:)-6z0g1)
 - [convenience init(identifier: String, title: LocalizedStringResource, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>)](/documentation/appintents/entityproperty/init(identifier:title:indexingkey:)-719ie)
@@ -4167,7 +4107,6 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>, asyncGetter: (Entity) async throws -> Value)](/documentation/appintents/entityproperty/init(identifier:title:indexingkey:asyncgetter:)-4m37m)
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>, asyncGetter: (Entity) async throws -> Value)](/documentation/appintents/entityproperty/init(identifier:title:indexingkey:asyncgetter:)-5oxik)
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>, asyncGetter: (Entity) async throws -> Value)](/documentation/appintents/entityproperty/init(identifier:title:indexingkey:asyncgetter:)-5x9lq)
-- [convenience init<Entity>(identifier: String, title: LocalizedStringResource, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>, asyncGetter: (Entity) async throws -> Value)](/documentation/appintents/entityproperty/init(identifier:title:indexingkey:asyncgetter:)-5y1u0)
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>, asyncGetter: (Entity) async throws -> Value)](/documentation/appintents/entityproperty/init(identifier:title:indexingkey:asyncgetter:)-654kf)
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>, asyncGetter: (Entity) async throws -> Value)](/documentation/appintents/entityproperty/init(identifier:title:indexingkey:asyncgetter:)-6dzc3)
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>, asyncGetter: (Entity) async throws -> Value)](/documentation/appintents/entityproperty/init(identifier:title:indexingkey:asyncgetter:)-6jp2s)
@@ -4228,7 +4167,6 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>, getSetter: WritableKeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:title:indexingkey:getsetter:)-9f972)
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>, getSetter: WritableKeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:title:indexingkey:getsetter:)-9m8x3)
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>, getSetter: WritableKeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:title:indexingkey:getsetter:)-9myyf)
-- [convenience init<Entity>(identifier: String, title: LocalizedStringResource, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>, getSetter: WritableKeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:title:indexingkey:getsetter:)-9ow57)
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>, getSetter: WritableKeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:title:indexingkey:getsetter:)-9peuj)
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>, getSetter: WritableKeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:title:indexingkey:getsetter:)-bkz9)
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>, getSetter: WritableKeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:title:indexingkey:getsetter:)-eep9)
@@ -4269,7 +4207,6 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>, getter: KeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:title:indexingkey:getter:)-7o17a)
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>, getter: KeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:title:indexingkey:getter:)-7qicg)
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>, getter: KeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:title:indexingkey:getter:)-86bq5)
-- [convenience init<Entity>(identifier: String, title: LocalizedStringResource, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>, getter: KeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:title:indexingkey:getter:)-886bd)
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>, getter: KeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:title:indexingkey:getter:)-89tzd)
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>, getter: KeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:title:indexingkey:getter:)-8gtle)
 - [convenience init<Entity>(identifier: String, title: LocalizedStringResource, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>, getter: KeyPath<Entity, Value>)](/documentation/appintents/entityproperty/init(identifier:title:indexingkey:getter:)-8ve8n)
@@ -4317,7 +4254,6 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [convenience init(indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>)](/documentation/appintents/entityproperty/init(indexingkey:)-8igu7)
 - [convenience init(indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>)](/documentation/appintents/entityproperty/init(indexingkey:)-8khyg)
 - [convenience init(indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>)](/documentation/appintents/entityproperty/init(indexingkey:)-8kiad)
-- [convenience init(indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>)](/documentation/appintents/entityproperty/init(indexingkey:)-8ndgm)
 - [convenience init(indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>)](/documentation/appintents/entityproperty/init(indexingkey:)-8ow58)
 - [convenience init(indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>)](/documentation/appintents/entityproperty/init(indexingkey:)-8oyce)
 - [convenience init(indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>)](/documentation/appintents/entityproperty/init(indexingkey:)-8s4qd)
@@ -4359,7 +4295,6 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [convenience init(title: LocalizedStringResource)](/documentation/appintents/entityproperty/init(title:)-7dt1k)
 - [convenience init(title: LocalizedStringResource)](/documentation/appintents/entityproperty/init(title:)-7e0g5)
 - [convenience init(title: LocalizedStringResource)](/documentation/appintents/entityproperty/init(title:)-7txcv)
-- [convenience init(title: LocalizedStringResource)](/documentation/appintents/entityproperty/init(title:)-7ykw2)
 - [convenience init(title: LocalizedStringResource)](/documentation/appintents/entityproperty/init(title:)-7z2pv)
 - [convenience init(title: LocalizedStringResource)](/documentation/appintents/entityproperty/init(title:)-88r0j)
 - [convenience init(title: LocalizedStringResource)](/documentation/appintents/entityproperty/init(title:)-8ayaj)
@@ -4407,7 +4342,6 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [convenience init<Entity>(title: LocalizedStringResource, customIndexingKey: CSCustomAttributeKey)](/documentation/appintents/entityproperty/init(title:customindexingkey:)-646pr)
 - [convenience init(title: LocalizedStringResource, customIndexingKey: CSCustomAttributeKey)](/documentation/appintents/entityproperty/init(title:customindexingkey:)-72srp)
 - [convenience init(title: LocalizedStringResource, customIndexingKey: CSCustomAttributeKey)](/documentation/appintents/entityproperty/init(title:customindexingkey:)-73f5l)
-- [convenience init(title: LocalizedStringResource, customIndexingKey: CSCustomAttributeKey)](/documentation/appintents/entityproperty/init(title:customindexingkey:)-7vbt0)
 - [convenience init(title: LocalizedStringResource, customIndexingKey: CSCustomAttributeKey)](/documentation/appintents/entityproperty/init(title:customindexingkey:)-7wvtv)
 - [convenience init(title: LocalizedStringResource, customIndexingKey: CSCustomAttributeKey)](/documentation/appintents/entityproperty/init(title:customindexingkey:)-8jbsy)
 - [convenience init(title: LocalizedStringResource, customIndexingKey: CSCustomAttributeKey)](/documentation/appintents/entityproperty/init(title:customindexingkey:)-8rlb5)
@@ -4436,7 +4370,6 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [convenience init(title: LocalizedStringResource, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>)](/documentation/appintents/entityproperty/init(title:indexingkey:)-467g1)
 - [convenience init(title: LocalizedStringResource, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>)](/documentation/appintents/entityproperty/init(title:indexingkey:)-4ago)
 - [convenience init(title: LocalizedStringResource, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>)](/documentation/appintents/entityproperty/init(title:indexingkey:)-4dr01)
-- [convenience init(title: LocalizedStringResource, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>)](/documentation/appintents/entityproperty/init(title:indexingkey:)-4j4ec)
 - [convenience init(title: LocalizedStringResource, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>)](/documentation/appintents/entityproperty/init(title:indexingkey:)-4ke5t)
 - [convenience init(title: LocalizedStringResource, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>)](/documentation/appintents/entityproperty/init(title:indexingkey:)-4v678)
 - [convenience init(title: LocalizedStringResource, indexingKey: PartialKeyPath<CSSearchableItemAttributeSet>)](/documentation/appintents/entityproperty/init(title:indexingkey:)-5e492)
@@ -4610,17 +4543,10 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [init(url: URL, width: Double, height: Double, isTemplate: Bool?)](/documentation/appintents/displayrepresentation/image-swift.struct/init(url:width:height:istemplate:))
 - [init(url: URL, width: Double, height: Double, isTemplate: Bool?, displayStyle: DisplayRepresentation.Image.DisplayStyle)](/documentation/appintents/displayrepresentation/image-swift.struct/init(url:width:height:istemplate:displaystyle:))
 
-#### Structures
-
-- [DisplayRepresentation.Components](/documentation/appintents/displayrepresentation/components)
-##### Type Properties
-
-- [static let image: DisplayRepresentation.Components](/documentation/appintents/displayrepresentation/components/image)
-- [static let text: DisplayRepresentation.Components](/documentation/appintents/displayrepresentation/components/text)
-
 #### Initializers
 
 - [init(title: LocalizedStringResource, subtitle: LocalizedStringResource?, image: DisplayRepresentation.Image?, synonyms: [LocalizedStringResource])](/documentation/appintents/displayrepresentation/init(title:subtitle:image:synonyms:))
+- [init(title: LocalizedStringResource, subtitle: LocalizedStringResource?, synonyms: [LocalizedStringResource], image: () async throws -> DisplayRepresentation.Image?)](/documentation/appintents/displayrepresentation/init(title:subtitle:synonyms:image:))
 #### Instance Properties
 
 - [var synonyms: [LocalizedStringResource]](/documentation/appintents/displayrepresentation/synonyms)
@@ -4638,13 +4564,6 @@ timestamp: 2026-06-26T06:39:35.635Z
 #### Providing a localized description
 
 - [var localizedStringResource: LocalizedStringResource](/documentation/appintents/instancedisplayrepresentable/localizedstringresource)
-#### Instance Methods
-
-- [func displayRepresentation(with: DisplayRepresentation.Components) async -> DisplayRepresentation](/documentation/appintents/instancedisplayrepresentable/displayrepresentation(with:))
-##### InstanceDisplayRepresentable Implementations
-
-- [func displayRepresentation(with: DisplayRepresentation.Components) async -> DisplayRepresentation](/documentation/appintents/instancedisplayrepresentable/displayrepresentation(with:)-33aa3)
-
 #### Default Implementations
 
 - [CustomLocalizedStringResourceConvertible Implementations](/documentation/appintents/instancedisplayrepresentable/customlocalizedstringresourceconvertible-implementations)
@@ -4936,7 +4855,7 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [IntentFile.ValueType](/documentation/appintents/intentfile/valuetype)
 #### Type Properties
 
-- [static var defaultResolverSpecification: EmptyResolverSpecification<IntentFile>](/documentation/appintents/intentfile/defaultresolverspecification)
+- [static var defaultResolverSpecification: some ResolverSpecification](/documentation/appintents/intentfile/defaultresolverspecification)
 #### Enumerations
 
 - [IntentFile.IntentFileError](/documentation/appintents/intentfile/intentfileerror)
@@ -5388,21 +5307,21 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [Maps](/documentation/appintents/app-schema-domain-maps)
 #### Actions
 
-- [var addNavigationWaypoints: some AppSchemaIntent](/documentation/appintents/appschema/mapsintent/addnavigationwaypoints)
 - [var reportIncident: some AppSchemaIntent](/documentation/appintents/appschema/mapsintent/reportincident)
 - [var shareETA: some AppSchemaIntent](/documentation/appintents/appschema/mapsintent/shareeta)
 - [var startNavigation: some AppSchemaIntent](/documentation/appintents/appschema/mapsintent/startnavigation)
 - [var stopNavigation: some AppSchemaIntent](/documentation/appintents/appschema/mapsintent/stopnavigation)
 - [var stopShareETA: some AppSchemaIntent](/documentation/appintents/appschema/mapsintent/stopshareeta)
+- [var updateNavigationWaypoints: some AppSchemaIntent](/documentation/appintents/appschema/mapsintent/updatenavigationwaypoints)
 - [AppSchema.MapsIntent](/documentation/appintents/appschema/mapsintent)
 ##### Instance Properties
 
-- [var addNavigationWaypoints: some AppSchemaIntent](/documentation/appintents/appschema/mapsintent/addnavigationwaypoints)
 - [var reportIncident: some AppSchemaIntent](/documentation/appintents/appschema/mapsintent/reportincident)
 - [var shareETA: some AppSchemaIntent](/documentation/appintents/appschema/mapsintent/shareeta)
 - [var startNavigation: some AppSchemaIntent](/documentation/appintents/appschema/mapsintent/startnavigation)
 - [var stopNavigation: some AppSchemaIntent](/documentation/appintents/appschema/mapsintent/stopnavigation)
 - [var stopShareETA: some AppSchemaIntent](/documentation/appintents/appschema/mapsintent/stopshareeta)
+- [var updateNavigationWaypoints: some AppSchemaIntent](/documentation/appintents/appschema/mapsintent/updatenavigationwaypoints)
 
 #### Content and parameter types
 
@@ -5502,6 +5421,7 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [AppSchema.NotesIntent](/documentation/appintents/appschema/notesintent)
 ##### Instance Properties
 
+- [var appendText: some AppSchemaIntent](/documentation/appintents/appschema/notesintent/appendtext)
 - [var createNote: some AppSchemaIntent](/documentation/appintents/appschema/notesintent/createnote)
 - [var updateNote: some AppSchemaIntent](/documentation/appintents/appschema/notesintent/updatenote)
 
@@ -5646,10 +5566,7 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [var createReminder: some AppSchemaIntent](/documentation/appintents/appschema/remindersintent/createreminder)
 - [var createSection: some AppSchemaIntent](/documentation/appintents/appschema/remindersintent/createsection)
 - [var deleteReminders: some AppSchemaIntent](/documentation/appintents/appschema/remindersintent/deletereminders)
-- [var updateGroup: some AppSchemaIntent](/documentation/appintents/appschema/remindersintent/updategroup)
-- [var updateList: some AppSchemaIntent](/documentation/appintents/appschema/remindersintent/updatelist)
 - [var updateReminder: some AppSchemaIntent](/documentation/appintents/appschema/remindersintent/updatereminder)
-- [var updateSection: some AppSchemaIntent](/documentation/appintents/appschema/remindersintent/updatesection)
 #### Content and parameter types
 
 - [var group: some AppSchemaEntity](/documentation/appintents/appschema/remindersentity/group)
@@ -6369,12 +6286,12 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [AppSchema.MapsIntent](/documentation/appintents/appschema/mapsintent)
 ###### Instance Properties
 
-- [var addNavigationWaypoints: some AppSchemaIntent](/documentation/appintents/appschema/mapsintent/addnavigationwaypoints)
 - [var reportIncident: some AppSchemaIntent](/documentation/appintents/appschema/mapsintent/reportincident)
 - [var shareETA: some AppSchemaIntent](/documentation/appintents/appschema/mapsintent/shareeta)
 - [var startNavigation: some AppSchemaIntent](/documentation/appintents/appschema/mapsintent/startnavigation)
 - [var stopNavigation: some AppSchemaIntent](/documentation/appintents/appschema/mapsintent/stopnavigation)
 - [var stopShareETA: some AppSchemaIntent](/documentation/appintents/appschema/mapsintent/stopshareeta)
+- [var updateNavigationWaypoints: some AppSchemaIntent](/documentation/appintents/appschema/mapsintent/updatenavigationwaypoints)
 
 - [AppSchema.MessagesEntity](/documentation/appintents/appschema/messagesentity)
 ###### Instance Properties
@@ -6412,6 +6329,7 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [AppSchema.NotesIntent](/documentation/appintents/appschema/notesintent)
 ###### Instance Properties
 
+- [var appendText: some AppSchemaIntent](/documentation/appintents/appschema/notesintent/appendtext)
 - [var createNote: some AppSchemaIntent](/documentation/appintents/appschema/notesintent/createnote)
 - [var updateNote: some AppSchemaIntent](/documentation/appintents/appschema/notesintent/updatenote)
 
@@ -6549,10 +6467,7 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [var createReminder: some AppSchemaIntent](/documentation/appintents/appschema/remindersintent/createreminder)
 - [var createSection: some AppSchemaIntent](/documentation/appintents/appschema/remindersintent/createsection)
 - [var deleteReminders: some AppSchemaIntent](/documentation/appintents/appschema/remindersintent/deletereminders)
-- [var updateGroup: some AppSchemaIntent](/documentation/appintents/appschema/remindersintent/updategroup)
-- [var updateList: some AppSchemaIntent](/documentation/appintents/appschema/remindersintent/updatelist)
 - [var updateReminder: some AppSchemaIntent](/documentation/appintents/appschema/remindersintent/updatereminder)
-- [var updateSection: some AppSchemaIntent](/documentation/appintents/appschema/remindersintent/updatesection)
 
 - [AppSchema.SpreadsheetEntity](/documentation/appintents/appschema/spreadsheetentity)
 ###### Instance Properties
@@ -7127,9 +7042,6 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [Displaying static and interactive snippets](/documentation/appintents/displaying-static-and-interactive-snippets)
 - [ShowsSnippetIntent](/documentation/appintents/showssnippetintent)
 - [SnippetIntent](/documentation/appintents/snippetintent)
-#### Default implementation
-
-- [EmptySnippetIntent](/documentation/appintents/emptysnippetintent)
 #### Type Methods
 
 - [static func reload()](/documentation/appintents/snippetintent/reload())
@@ -7619,21 +7531,21 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [Maps](/documentation/appintents/app-schema-domain-maps)
 ##### Actions
 
-- [var addNavigationWaypoints: some AppSchemaIntent](/documentation/appintents/appschema/mapsintent/addnavigationwaypoints)
 - [var reportIncident: some AppSchemaIntent](/documentation/appintents/appschema/mapsintent/reportincident)
 - [var shareETA: some AppSchemaIntent](/documentation/appintents/appschema/mapsintent/shareeta)
 - [var startNavigation: some AppSchemaIntent](/documentation/appintents/appschema/mapsintent/startnavigation)
 - [var stopNavigation: some AppSchemaIntent](/documentation/appintents/appschema/mapsintent/stopnavigation)
 - [var stopShareETA: some AppSchemaIntent](/documentation/appintents/appschema/mapsintent/stopshareeta)
+- [var updateNavigationWaypoints: some AppSchemaIntent](/documentation/appintents/appschema/mapsintent/updatenavigationwaypoints)
 - [AppSchema.MapsIntent](/documentation/appintents/appschema/mapsintent)
 ###### Instance Properties
 
-- [var addNavigationWaypoints: some AppSchemaIntent](/documentation/appintents/appschema/mapsintent/addnavigationwaypoints)
 - [var reportIncident: some AppSchemaIntent](/documentation/appintents/appschema/mapsintent/reportincident)
 - [var shareETA: some AppSchemaIntent](/documentation/appintents/appschema/mapsintent/shareeta)
 - [var startNavigation: some AppSchemaIntent](/documentation/appintents/appschema/mapsintent/startnavigation)
 - [var stopNavigation: some AppSchemaIntent](/documentation/appintents/appschema/mapsintent/stopnavigation)
 - [var stopShareETA: some AppSchemaIntent](/documentation/appintents/appschema/mapsintent/stopshareeta)
+- [var updateNavigationWaypoints: some AppSchemaIntent](/documentation/appintents/appschema/mapsintent/updatenavigationwaypoints)
 
 ##### Content and parameter types
 
@@ -7733,6 +7645,7 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [AppSchema.NotesIntent](/documentation/appintents/appschema/notesintent)
 ###### Instance Properties
 
+- [var appendText: some AppSchemaIntent](/documentation/appintents/appschema/notesintent/appendtext)
 - [var createNote: some AppSchemaIntent](/documentation/appintents/appschema/notesintent/createnote)
 - [var updateNote: some AppSchemaIntent](/documentation/appintents/appschema/notesintent/updatenote)
 
@@ -7877,10 +7790,7 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [var createReminder: some AppSchemaIntent](/documentation/appintents/appschema/remindersintent/createreminder)
 - [var createSection: some AppSchemaIntent](/documentation/appintents/appschema/remindersintent/createsection)
 - [var deleteReminders: some AppSchemaIntent](/documentation/appintents/appschema/remindersintent/deletereminders)
-- [var updateGroup: some AppSchemaIntent](/documentation/appintents/appschema/remindersintent/updategroup)
-- [var updateList: some AppSchemaIntent](/documentation/appintents/appschema/remindersintent/updatelist)
 - [var updateReminder: some AppSchemaIntent](/documentation/appintents/appschema/remindersintent/updatereminder)
-- [var updateSection: some AppSchemaIntent](/documentation/appintents/appschema/remindersintent/updatesection)
 ##### Content and parameter types
 
 - [var group: some AppSchemaEntity](/documentation/appintents/appschema/remindersentity/group)
@@ -8600,12 +8510,12 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [AppSchema.MapsIntent](/documentation/appintents/appschema/mapsintent)
 ###### Instance Properties
 
-- [var addNavigationWaypoints: some AppSchemaIntent](/documentation/appintents/appschema/mapsintent/addnavigationwaypoints)
 - [var reportIncident: some AppSchemaIntent](/documentation/appintents/appschema/mapsintent/reportincident)
 - [var shareETA: some AppSchemaIntent](/documentation/appintents/appschema/mapsintent/shareeta)
 - [var startNavigation: some AppSchemaIntent](/documentation/appintents/appschema/mapsintent/startnavigation)
 - [var stopNavigation: some AppSchemaIntent](/documentation/appintents/appschema/mapsintent/stopnavigation)
 - [var stopShareETA: some AppSchemaIntent](/documentation/appintents/appschema/mapsintent/stopshareeta)
+- [var updateNavigationWaypoints: some AppSchemaIntent](/documentation/appintents/appschema/mapsintent/updatenavigationwaypoints)
 
 - [AppSchema.MessagesEntity](/documentation/appintents/appschema/messagesentity)
 ###### Instance Properties
@@ -8643,6 +8553,7 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [AppSchema.NotesIntent](/documentation/appintents/appschema/notesintent)
 ###### Instance Properties
 
+- [var appendText: some AppSchemaIntent](/documentation/appintents/appschema/notesintent/appendtext)
 - [var createNote: some AppSchemaIntent](/documentation/appintents/appschema/notesintent/createnote)
 - [var updateNote: some AppSchemaIntent](/documentation/appintents/appschema/notesintent/updatenote)
 
@@ -8780,10 +8691,7 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [var createReminder: some AppSchemaIntent](/documentation/appintents/appschema/remindersintent/createreminder)
 - [var createSection: some AppSchemaIntent](/documentation/appintents/appschema/remindersintent/createsection)
 - [var deleteReminders: some AppSchemaIntent](/documentation/appintents/appschema/remindersintent/deletereminders)
-- [var updateGroup: some AppSchemaIntent](/documentation/appintents/appschema/remindersintent/updategroup)
-- [var updateList: some AppSchemaIntent](/documentation/appintents/appschema/remindersintent/updatelist)
 - [var updateReminder: some AppSchemaIntent](/documentation/appintents/appschema/remindersintent/updatereminder)
-- [var updateSection: some AppSchemaIntent](/documentation/appintents/appschema/remindersintent/updatesection)
 
 - [AppSchema.SpreadsheetEntity](/documentation/appintents/appschema/spreadsheetentity)
 ###### Instance Properties
@@ -9755,6 +9663,7 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [case accessoryInline](/documentation/appintents/intentwidgetfamily/accessoryinline)
 - [case accessoryRectangular](/documentation/appintents/intentwidgetfamily/accessoryrectangular)
 - [case systemExtraLarge](/documentation/appintents/intentwidgetfamily/systemextralarge)
+- [case systemExtraLargePortrait](/documentation/appintents/intentwidgetfamily/systemextralargeportrait)
 - [case systemLarge](/documentation/appintents/intentwidgetfamily/systemlarge)
 - [case systemMedium](/documentation/appintents/intentwidgetfamily/systemmedium)
 - [case systemSmall](/documentation/appintents/intentwidgetfamily/systemsmall)
@@ -9994,6 +9903,10 @@ timestamp: 2026-06-26T06:39:35.635Z
 - [macro AssistantIntent<T>(schema: T)](/documentation/appintents/assistantintent(schema:))
 - [macro AssistantEntity<T>(schema: T)](/documentation/appintents/assistantentity(schema:))
 - [macro AssistantEnum<T>(schema: T)](/documentation/appintents/assistantenum(schema:))
+
+## Structures
+
+- [EmptySnippetIntent](/documentation/appintents/emptysnippetintent)
 
 ---
 

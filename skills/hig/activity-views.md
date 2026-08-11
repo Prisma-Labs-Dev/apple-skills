@@ -4,7 +4,7 @@ description: An activity view — often called a *share sheet* — presents a ra
 source: https://developer.apple.com/design/human-interface-guidelines/activity-views
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/design/human-interface-guidelines/activity-views.json
-timestamp: 2026-04-14T13:14:12.945Z
+timestamp: 2026-08-11T06:08:55.462Z
 ---
 
 **Navigation:** [Human Interface Guidelines](/design/human-interface-guidelines)
@@ -35,9 +35,9 @@ You can also create app extensions to provide custom share and action activities
 
 **Use the Share button to display an activity view.** People are accustomed to accessing system-provided activities when they choose the Share button. Avoid confusing people by providing an alternative way to do the same thing.
 
-![A screenshot of the Notes app on iPhone, with an open Notes document titled Nature Walks. The top toolbar includes a Share button grouped with a More button on its trailing edge.](https://docs-assets.developer.apple.com/published/5cdc980290422f59da0f79ab5f5efd13/activity-views-share-button%402x.png)
+![A screenshot of the Notes app on iPhone, with an open Notes document titled Nature Walks. The top toolbar includes a Share button grouped with a More button on its trailing edge.](https://docs-assets.developer.apple.com/published/c8c27b1f9b28c5e1ec749260d87cb7dd/activity-views-share-button%402x.png)
 
-![A screenshot of the Notes app on iPhone, with an open Notes document titled Nature Walks. An activity view is open from the Share button, including controls for sharing the document with contacts or other apps, and copying, exporting, or adding markup to the document.](https://docs-assets.developer.apple.com/published/68a789fa9a70048fcef600615af180fd/activity-views-share-sheet%402x.png)
+![A screenshot of the Notes app on iPhone, with an open Notes document titled Nature Walks. An activity view is open from the Share button, including controls for sharing the document with contacts or other apps, and copying, exporting, or adding markup to the document.](https://docs-assets.developer.apple.com/published/3ab7ff791a07ea54bedb1eed8a50f6d7/activity-views-share-sheet%402x.png)
 
 ## Share and action extensions
 

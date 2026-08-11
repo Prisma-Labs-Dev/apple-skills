@@ -4,7 +4,7 @@ description: A type that fetches models using the specified criteria, and manage
 source: https://developer.apple.com/documentation/swiftdata/query
 source_kind: apple-docc
 source_json: https://developer.apple.com/tutorials/data/documentation/swiftdata/query.json
-timestamp: 2026-06-26T06:39:36.576Z
+timestamp: 2026-08-11T06:08:56.183Z
 ---
 
 **Navigation:** [SwiftData](/documentation/swiftdata)
@@ -38,29 +38,6 @@ timestamp: 2026-06-26T06:39:36.576Z
 - [init(filter:sort:order:transaction:)](/documentation/swiftdata/query/init(filter:sort:order:transaction:)-2bx9a) Create a query with a predicate, a key path to a property for sorting, and the order to sort by.
 - [init(filter:sort:order:transaction:)](/documentation/swiftdata/query/init(filter:sort:order:transaction:)-8q7vs) Create a query with a predicate, a key path to a property for sorting, and the order to sort by.
 
-## Creating an unsorted, sectioned query
-
-- [init(_:animation:sectionBy:)](/documentation/swiftdata/query/init(_:animation:sectionby:)-2em2m) Creates a sectioned query from a fetch descriptor, grouped into sections by a String key path.
-- [init(_:animation:sectionBy:)](/documentation/swiftdata/query/init(_:animation:sectionby:)-2pqhv) Creates a sectioned query from a fetch descriptor, grouped by an optional String key path.
-- [init(_:transaction:sectionBy:)](/documentation/swiftdata/query/init(_:transaction:sectionby:)-5814o) Creates a sectioned query from a fetch descriptor, grouped by an optional String key path. Pass `nil` for the key path to disable sectioning.
-- [init(_:transaction:sectionBy:)](/documentation/swiftdata/query/init(_:transaction:sectionby:)-9sb87) Creates a sectioned query from a fetch descriptor, grouped into sections by a String key path. Pass `nil` to disable sectioning.
-
-## Creating a sorted, sectioned query
-
-- [init(filter:sort:animation:sectionBy:)](/documentation/swiftdata/query/init(filter:sort:animation:sectionby:)-5wk67) Creates a sectioned query with sort descriptors, grouped into sections by a String key path. Pass `nil` to disable sectioning.
-- [init(filter:sort:animation:sectionBy:)](/documentation/swiftdata/query/init(filter:sort:animation:sectionby:)-8e78r) Creates a sectioned query with sort descriptors, grouped by an optional String key path. Pass `nil` for the key path to disable sectioning.
-- [init(filter:sort:order:animation:sectionBy:)](/documentation/swiftdata/query/init(filter:sort:order:animation:sectionby:)-2e9oh) Creates a sectioned query sorted by a key path, grouped by an optional String key path. `nil` values share the empty-string section. Pass `nil` for the key path to disable sectioning.
-- [init(filter:sort:order:animation:sectionBy:)](/documentation/swiftdata/query/init(filter:sort:order:animation:sectionby:)-2e9oh) Creates a sectioned query sorted by a key path, grouped by an optional String key path. `nil` values share the empty-string section. Pass `nil` for the key path to disable sectioning.
-- [init(filter:sort:order:animation:sectionBy:)](/documentation/swiftdata/query/init(filter:sort:order:animation:sectionby:)-4pdmu) Creates a sectioned query sorted by an optional key path, grouped by an optional String key path. Pass `nil` for the key path to disable sectioning.
-- [init(filter:sort:order:animation:sectionBy:)](/documentation/swiftdata/query/init(filter:sort:order:animation:sectionby:)-6b4tq) Creates a sectioned query sorted by a key path, grouped into sections by a String key path. Pass `nil` to disable sectioning.
-- [init(filter:sort:order:animation:sectionBy:)](/documentation/swiftdata/query/init(filter:sort:order:animation:sectionby:)-7d51r) Creates a sectioned query sorted by an optional key path, grouped into sections by a String key path. Pass `nil` to disable sectioning.
-- [init(filter:sort:order:transaction:sectionBy:)](/documentation/swiftdata/query/init(filter:sort:order:transaction:sectionby:)-5ym3e) Creates a sectioned query sorted by a key path, grouped into sections by a String key path. Pass `nil` to disable sectioning.
-- [init(filter:sort:order:transaction:sectionBy:)](/documentation/swiftdata/query/init(filter:sort:order:transaction:sectionby:)-8hx6i) Creates a sectioned query sorted by an optional key path, grouped by an optional String key path. Pass `nil` for the key path to disable sectioning.
-- [init(filter:sort:order:transaction:sectionBy:)](/documentation/swiftdata/query/init(filter:sort:order:transaction:sectionby:)-930wx) Creates a sectioned query sorted by a key path, grouped by an optional String key path. Pass `nil` for the key path to disable sectioning.
-- [init(filter:sort:order:transaction:sectionBy:)](/documentation/swiftdata/query/init(filter:sort:order:transaction:sectionby:)-l6d4) Creates a sectioned query sorted by an optional key path, grouped into sections by a String key path. Pass `nil` to disable sectioning.
-- [init(filter:sort:transaction:sectionBy:)](/documentation/swiftdata/query/init(filter:sort:transaction:sectionby:)-2b0zd) Creates a sectioned query with sort descriptors, grouped into sections by a String key path.
-- [init(filter:sort:transaction:sectionBy:)](/documentation/swiftdata/query/init(filter:sort:transaction:sectionby:)-965mg) Creates a sectioned query with sort descriptors, grouped by an optional String key path.
-
 ## Getting query configuration
 
 - [modelContext](/documentation/swiftdata/query/modelcontext) Current model context `Query` interacts with.
@@ -73,7 +50,25 @@ timestamp: 2026-06-26T06:39:36.576Z
 ## Accessing sections
 
 - [sections](/documentation/swiftdata/query/sections) The sections computed from the current results, grouped by the `sectionBy` key path.
-- [ResultsSectionCollection](/documentation/swiftdata/resultssectioncollection) A collection of sections as returned by [sections](/documentation/swiftdata/resultsobserver/sections) or `Query.sections`.
+
+## Initializers
+
+- [init(_:animation:sectionBy:)](/documentation/swiftdata/query/init(_:animation:sectionby:)-1yoyc) Creates a sectioned query from a fetch descriptor, grouped into sections by a required String key path.
+- [init(_:animation:sectionBy:)](/documentation/swiftdata/query/init(_:animation:sectionby:)-8yip7) Creates a sectioned query from a fetch descriptor, grouped by a required optional-String key path.
+- [init(_:transaction:sectionBy:)](/documentation/swiftdata/query/init(_:transaction:sectionby:)-3pg23) Creates a sectioned query from a fetch descriptor, grouped into sections by a required String key path.
+- [init(_:transaction:sectionBy:)](/documentation/swiftdata/query/init(_:transaction:sectionby:)-8ecyq) Creates a sectioned query from a fetch descriptor, grouped by a required optional-String key path.
+- [init(filter:sort:animation:sectionBy:)](/documentation/swiftdata/query/init(filter:sort:animation:sectionby:)-1sjv1) Creates a sectioned query with sort descriptors, grouped by a required optional-String key path.
+- [init(filter:sort:animation:sectionBy:)](/documentation/swiftdata/query/init(filter:sort:animation:sectionby:)-35eif) Creates a sectioned query with sort descriptors, grouped into sections by a required String key path.
+- [init(filter:sort:order:animation:sectionBy:)](/documentation/swiftdata/query/init(filter:sort:order:animation:sectionby:)-39v3n) Creates a sectioned query sorted by an optional key path, grouped by a required optional-String key path.
+- [init(filter:sort:order:animation:sectionBy:)](/documentation/swiftdata/query/init(filter:sort:order:animation:sectionby:)-3myq0) Creates a sectioned query sorted by a key path, grouped into sections by a required String key path.
+- [init(filter:sort:order:animation:sectionBy:)](/documentation/swiftdata/query/init(filter:sort:order:animation:sectionby:)-4peqq) Creates a sectioned query sorted by a key path, grouped by a required optional-String key path. `nil` values share the empty-string section.
+- [init(filter:sort:order:animation:sectionBy:)](/documentation/swiftdata/query/init(filter:sort:order:animation:sectionby:)-6td6n) Creates a sectioned query sorted by an optional key path, grouped into sections by a required String key path.
+- [init(filter:sort:order:transaction:sectionBy:)](/documentation/swiftdata/query/init(filter:sort:order:transaction:sectionby:)-2kk0t) Creates a sectioned query sorted by an optional key path, grouped into sections by a required String key path.
+- [init(filter:sort:order:transaction:sectionBy:)](/documentation/swiftdata/query/init(filter:sort:order:transaction:sectionby:)-62fdm) Creates a sectioned query sorted by an optional key path, grouped by a required optional-String key path.
+- [init(filter:sort:order:transaction:sectionBy:)](/documentation/swiftdata/query/init(filter:sort:order:transaction:sectionby:)-68vqy) Creates a sectioned query sorted by a key path, grouped by a required optional-String key path.
+- [init(filter:sort:order:transaction:sectionBy:)](/documentation/swiftdata/query/init(filter:sort:order:transaction:sectionby:)-8finq) Creates a sectioned query sorted by a key path, grouped into sections by a required String key path.
+- [init(filter:sort:transaction:sectionBy:)](/documentation/swiftdata/query/init(filter:sort:transaction:sectionby:)-353r3) Creates a sectioned query with sort descriptors, grouped by a required optional-String key path.
+- [init(filter:sort:transaction:sectionBy:)](/documentation/swiftdata/query/init(filter:sort:transaction:sectionby:)-90bbe) Creates a sectioned query with sort descriptors, grouped into sections by a required String key path.
 
 ## Model fetch
 
