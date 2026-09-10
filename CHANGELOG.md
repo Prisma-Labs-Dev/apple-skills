@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-10
+
+Xcode 27 ships Apple-authored agent skills (`swiftui-specialist`, `swiftui-whats-new-27`, `app-intents-specialist`, `app-intents-whats-new-27`, `uikit-app-modernization`, `building-document-based-swiftui-applications`, `audit-xcode-security-settings`, `adopt-c-bounds-safety`, plus two string-catalog translation workflows that need Xcode's MCP tools). They are exported into the user skills directory with `xcode-skills-export`.
+
+- Moved `guide-swiftui-ui-patterns` and `guide-swiftui-animations` to `disabled-skills/`: Apple's `swiftui-specialist` covers the same ground authoritatively and current for iOS 27. The `swiftui` API reference, `guide-swiftui-performance-audit` (an Instruments workflow) and `guide-swiftui-charts` stay.
+- `ios-dev`: routes state, pattern, and animation questions to `swiftui-specialist` first, then the `swiftui` reference.
+
 ## 2026-07-04
 
 - `xcuitest`: restructured to match the collection's pattern — `SKILL.md` is now a short intro + table of contents (quick-reference snippet, topic guide table, downloaded-docs table, sources), with the bulk moved into topic files alongside the existing reference docs: `element-queries.md`, `interactions.md`, `waiting.md`, `swift6-concurrency.md`, `assertions.md`, `screenshots.md`, `launch-arguments.md`, `permissions.md`, `test-helpers.md`, and `troubleshooting.md`. No content was removed.

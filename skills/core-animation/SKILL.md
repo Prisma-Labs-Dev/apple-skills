@@ -10,7 +10,7 @@ agent: Explore
 
 Search these docs to answer questions about Core Animation (the QuartzCore framework). Use this skill when working directly with `CALayer`, layer-backed UIKit/AppKit views, explicit keyframe or spring animations on layer properties, particle systems, or per-frame callbacks via `CADisplayLink`.
 
-For SwiftUI's declarative animation API (`withAnimation`, `Animation`, `.animation(_:value:)`, transitions), use `guide-swiftui-animations` instead. For SwiftUI immediate-mode drawing, use `swiftui/canvas.md` and `swiftui/graphicscontext.md`.
+For SwiftUI's declarative animation API (`withAnimation`, `Animation`, `.animation(_:value:)`, transitions), use Apple's `swiftui-specialist` skill (its animations reference) instead. For SwiftUI immediate-mode drawing, use `swiftui/canvas.md` and `swiftui/graphicscontext.md`.
 
 ## Return Format
 

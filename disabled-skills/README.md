@@ -7,5 +7,7 @@ These skills are kept in the repo but intentionally NOT loaded by agents (only `
 | `ios-ui-craft` | Aesthetic manifesto: anti-pattern tables, "design dark first", font/color mandates |
 | `ios-design-consultant` | "Apple-approved" / Design Award framing forces HIG conformity |
 | `guide-swiftui-view-refactor` | Mandates MV over MVVM and strict view property ordering |
+| `guide-swiftui-ui-patterns` | Superseded by Apple's `swiftui-specialist` skill shipped in Xcode 27 (structure, data flow, environment, ForEach identity, modifiers, localization, soft deprecations); the `swiftui` API reference stays |
+| `guide-swiftui-animations` | Superseded by Apple's `swiftui-specialist` animations reference (Xcode 27) |
 
 To re-enable one, move its directory back into `skills/` and bump the plugin version.
