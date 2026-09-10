@@ -30,13 +30,13 @@ Start here. This skill coordinates the Apple skills collection — it tells you 
 
 1. Run the correctness checklist first
 2. For performance issues: use `guide-swiftui-performance-audit`
-3. For navigation, state, or pattern questions: use `guide-swiftui-ui-patterns`
+3. For navigation, state, or pattern questions: use Apple's `swiftui-specialist` (shipped with Xcode 27; exported to the user skills dir), then the `swiftui` API reference
 4. For API details: grep the matching framework reference skill
 
 ### Build a new feature
 
 1. Design data flow first — identify owned vs. injected state
-2. For UI patterns and app wiring: use `guide-swiftui-ui-patterns`
+2. For UI patterns and app wiring: use Apple's `swiftui-specialist`, then the `swiftui` API reference
 3. For API details: grep the matching framework reference skill
 4. Structure views for optimal diffing — extract subviews early
 5. Run the correctness checklist before finishing
@@ -47,20 +47,20 @@ The **Guide** column has opinionated, short pattern guides. The **API Reference*
 
 | Topic | Guide | API Reference |
 |-------|-------|---------------|
-| State management | `guide-swiftui-ui-patterns` | `swiftui` (state.md, binding.md, observation.md, environment.md) |
+| State management | `swiftui-specialist` (Apple, Xcode 27) | `swiftui` (state.md, binding.md, observation.md, environment.md) |
 | View composition | — | `swiftui` (view-protocol.md) |
 | Performance | `guide-swiftui-performance-audit` | — |
-| Navigation | `guide-swiftui-ui-patterns` | `swiftui` (navigationstack.md, navigationsplitview.md, navigationlink.md) |
-| Sheets & modals | `guide-swiftui-ui-patterns` | `swiftui` (sheet.md, inspector.md, alert.md, confirmationdialog.md) |
-| Lists & ForEach | `guide-swiftui-ui-patterns` | `swiftui` (list.md) |
-| ScrollView | `guide-swiftui-ui-patterns` | `swiftui` (scrollview.md) |
+| Navigation | `swiftui-specialist` (Apple, Xcode 27) | `swiftui` (navigationstack.md, navigationsplitview.md, navigationlink.md) |
+| Sheets & modals | `swiftui-specialist` (Apple, Xcode 27) | `swiftui` (sheet.md, inspector.md, alert.md, confirmationdialog.md) |
+| Lists & ForEach | `swiftui-specialist` (Apple, Xcode 27) | `swiftui` (list.md) |
+| ScrollView | `swiftui-specialist` (Apple, Xcode 27) | `swiftui` (scrollview.md) |
 | Forms & input | — | `swiftui` (form.md, textfield.md, picker.md, toggle.md, slider.md) |
 | Charts | `guide-swiftui-charts` | `swiftui` (chart.md, charts-overview.md) |
-| Animations | `guide-swiftui-animations` | `swiftui` (swiftui-overview.md) |
-| Layout | `guide-swiftui-ui-patterns` | `swiftui` (geometryreader.md, grid.md, hstack.md, vstack.md, zstack.md, spacer.md) |
-| TabView | `guide-swiftui-ui-patterns` | `swiftui` (tabview.md) |
+| Animations | `swiftui-specialist` (Apple, Xcode 27) | `swiftui` (swiftui-overview.md) |
+| Layout | `swiftui-specialist` (Apple, Xcode 27) | `swiftui` (geometryreader.md, grid.md, hstack.md, vstack.md, zstack.md, spacer.md) |
+| TabView | `swiftui-specialist` (Apple, Xcode 27) | `swiftui` (tabview.md) |
 | Liquid Glass | — | `ios-liquid-glass` |
-| Accessibility | `guide-swiftui-ui-patterns` | `hig` (a11y/ergonomic facts) |
+| Accessibility | `swiftui-specialist` (Apple, Xcode 27) | `hig` (a11y/ergonomic facts) |
 | macOS apps | `guide-macos-spm-packaging` | `swiftui`, `uikit` |
 | Data persistence | `guide-swiftdata` | `swiftdata` |
 | Testing | `guide-swift-testing` | `swift-testing`, `xcuitest` |
@@ -98,8 +98,8 @@ These are hard rules — violations are always bugs:
 - `/ios-liquid-glass` — Liquid Glass API reference
 
 **Workflow guides:**
-- `/guide-swiftui-ui-patterns` — Navigation, state, sheets, component patterns
-- `/guide-swiftui-animations` — Implicit/explicit animation, transitions, keyframes
+- `/swiftui-specialist` — Apple's SwiftUI best practices (Xcode 27): structure, data flow, environment, ForEach identity, localization, soft deprecations
+- `/swiftui-whats-new-27` — iOS 27 SwiftUI changes (@State macro, @ContentBuilder, reorderable, toolbar overflow)
 - `/guide-swiftui-charts` — Marks, axes, selection, styling, accessibility
 - `/guide-swiftui-performance-audit` — Diagnose and fix performance issues
 - `/guide-swift-testing` — Swift Testing patterns, async tests, common agent mistakes
