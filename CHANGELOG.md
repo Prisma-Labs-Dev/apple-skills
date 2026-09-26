@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-09-26
+
+- Removed `appintents`: Apple's `app-intents-specialist` and `app-intents-whats-new-27` (Xcode 27) cover App Intents and are current for iOS 27. `ios-dev` now routes App Intents questions to them.
+- Removed `simulator-utils`: it booted and drove simulators directly, which collides with other sessions on a shared Mac.
+
 ## 2026-09-10
 
 Xcode 27 ships Apple-authored agent skills (`swiftui-specialist`, `swiftui-whats-new-27`, `app-intents-specialist`, `app-intents-whats-new-27`, `uikit-app-modernization`, `building-document-based-swiftui-applications`, `audit-xcode-security-settings`, `adopt-c-bounds-safety`, plus two string-catalog translation workflows that need Xcode's MCP tools). They are exported into the user skills directory with `xcode-skills-export`.

@@ -74,7 +74,6 @@ npx skills remove -g
 | **storekit** | StoreKit 2 (Product, Transaction, SubscriptionStoreView) |
 | **mapkit** | MapKit for SwiftUI (Map, Marker, Annotation, MapCameraPosition) |
 | **tipkit** | TipKit (Tip protocol, TipView, TipUIPopoverViewController) |
-| **appintents** | App Intents, Siri, Shortcuts, Spotlight integration |
 | **widgetkit** | Widget timelines, entries, providers |
 | **usernotifications** | Local/remote notifications, triggers |
 | **eventkit** | EKEventStore, EKEvent, EKReminder, calendar access |
@@ -124,7 +123,6 @@ Skills in `disabled-skills/` are kept in the repo but not loaded by agents. They
 | Skill | Description |
 |-------|-------------|
 | **apple-docs-index** | Index of Apple developer documentation — start here to find what you need |
-| **simulator-utils** | iOS Simulator commands, screenshots, device management |
 | **apple-aso** | App Store Optimization for metadata |
 
 ## Target Platform
