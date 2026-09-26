@@ -69,7 +69,7 @@ The **Guide** column has opinionated, short pattern guides. The **API Reference*
 | Maps | — | `mapkit` |
 | Health data | — | `healthkit` |
 | Notifications | — | `usernotifications` |
-| App Intents / Siri | — | `appintents` |
+| App Intents / Siri | `app-intents-specialist`, `app-intents-whats-new-27` (Apple, Xcode 27) | — |
 | Widgets | — | `widgetkit` |
 | App Store metadata | `apple-aso` | — |
 | Finding docs | `apple-docs-index` | — |
@@ -109,5 +109,4 @@ These are hard rules — violations are always bugs:
 
 **Utilities:**
 - `/apple-docs-index` — Find the right Apple documentation
-- `/simulator-utils` — Simulator screenshots and device management
 - `/apple-aso` — App Store Optimization

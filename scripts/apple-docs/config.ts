@@ -8,7 +8,6 @@ export const USER_AGENT =
   "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Safari/605.1.15"
 
 export const TITLE_OVERRIDES: Record<string, string> = {
-  appintents: "App Intents",
   appkit: "AppKit",
   backgroundtasks: "BackgroundTasks",
   combine: "Combine",
